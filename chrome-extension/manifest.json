@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Emoji Autocomplete",
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery-3.1.1.slim.min.js","content.js"]
+    }
+  ],
+  "commands": {
+    "emoji-auto-complete": {
+      "suggested_key": {
+        "default": "Ctrl+Space"
+      },
+      "description": "Find Suggested Emojis"
+    }
+  }
+}
