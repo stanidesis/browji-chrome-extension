@@ -13,7 +13,16 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-3.1.1.slim.min.js","content.js"]
+      "css": [
+        "material.min.css"
+      ],
+      "js": [
+        "jquery-3.1.1.min.js",
+        "textarea-caret-position.js",
+        "utils.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
     }
   ],
   "commands": {
@@ -23,5 +32,9 @@
       },
       "description": "Find Suggested Emojis"
     }
-  }
+  },
+  "web_accessible_resources": [
+    "material.min.js",
+    "popup.html"
+  ]
 }

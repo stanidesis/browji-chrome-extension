@@ -16,6 +16,11 @@
 // );
 
 chrome.commands.onCommand.addListener(function(command) {
-  alert("I feel like I'm taking crazy pills!");
-  console.log('What?');
+  if (command === "emoji-auto-complete") {
+    // Received the main keyboard command
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      var activeTab = tabs[0];
+      chrome.tabs.sendMessage(activeTab.id, {"message": "display_popup_at_cursor"});
+    });
+  }
 });
