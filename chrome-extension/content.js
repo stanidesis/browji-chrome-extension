@@ -9,16 +9,21 @@ chrome.runtime.onMessage.addListener(
         // Active element is not an input area
         return;
       }
+      // Get the position of the cursor and input box
       var coordinates = getCaretCoordinates(activeElement, activeElement.selectionEnd);
       var cumulativeOffset = getCumulativeOffset(activeElement);
+      // Calculate the height offset to place the box immediately below/right
+      // of the cursor (for now -- might need a smarter calculation in the future?)
       var fontSize = $(activeElement).css('font-size');
       var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 2.0);
+      // Append popup.html to the body
       $.get(chrome.extension.getURL('/popup.html'), function(data) {
         $($.parseHTML(data)).appendTo('body');
+        // Adjust the absolute position of the popup
         var $emojiPopup = $('#emoji-autocomplete-popup');
         $emojiPopup.css('left', (cumulativeOffset.left + coordinates.left));
         $emojiPopup.css('top', cumulativeOffset.top + lineHeight);
-        // Copied from Material.js
+        // Initialize MDL: Copied from Material.js
         if ('classList' in document.createElement('div') &&
             'querySelector' in document &&
             'addEventListener' in window && Array.prototype.forEach) {
@@ -28,7 +33,10 @@ chrome.runtime.onMessage.addListener(
           componentHandler.upgradeElement = function() {};
           componentHandler.register = function() {};
         }
-        // End copy of Material.js
+        // End copy of Material.js initialization
+
+        // Focus the input element
+        $emojiPopup.find('input')[0].focus();
       });
     }
   }
