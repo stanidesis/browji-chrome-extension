@@ -2,6 +2,7 @@
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.message === 'display_popup_at_cursor') {
+      dismissPopup();
       // This is where we need to present a little auto-complete search input
       var activeElement = document.activeElement;
       console.log('Active Element: ' + activeElement.tagName);
@@ -20,7 +21,7 @@ chrome.runtime.onMessage.addListener(
       $.get(chrome.extension.getURL('/popup.html'), function(data) {
         $($.parseHTML(data)).appendTo('body');
         // Adjust the absolute position of the popup
-        var $emojiPopup = $('#emoji-autocomplete-popup');
+        var $emojiPopup = $('#eac-popup');
         $emojiPopup.css('left', (cumulativeOffset.left + coordinates.left));
         $emojiPopup.css('top', cumulativeOffset.top + lineHeight);
         // Initialize MDL: Copied from Material.js
@@ -37,7 +38,25 @@ chrome.runtime.onMessage.addListener(
 
         // Focus the input element
         $emojiPopup.find('input')[0].focus();
+
+        // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
+        $(document).on('click.eac', function(event) {
+          if(!$(event.target).closest('#eac-popup').length) {
+            if($('#eac-popup').is(':visible')) {
+              dismissPopup();
+            }
+          }
+        });
       });
     }
   }
 );
+
+function dismissPopup() {
+  $(document).off('click.eac');
+  $('#eac-popup').fadeOut('fast', function() {
+    $('#eac-style').remove();
+    $('#eac-link-style').remove();
+    $('#eac-popup').remove();
+  });
+}
