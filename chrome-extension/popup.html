@@ -1,17 +1,26 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
   .eja-popup {
-    width: 300px;
+    z-index: 1000000;
+    width: 320px;
     height: 100px;
     position: absolute;
-    background-color: white;
+    background: #fafafa;
+  }
+  .eja-popup > div {
+    padding: 10px;
+  }
+  .eja-popup > div > div {
+    margin-top: -20px;
   }
 </style>
-<div class="eja-popup mdl-layout mdl-js-layout mdl-shadow--4dp" id="emoji-autocomplete-popup">
-  <form action="#">
-    <div class="mdl-textfield mdl-js-textfield">
-     <input class="mdl-textfield__input" type="text" id="sample1">
-     <label class="mdl-textfield__label" for="sample1">Search... e.g. 'Happy', 'Angry', 'Sunglasses'</label>
-   </div>
- </form>
+<div class="eja-popup mdl-shadow--4dp" id="emoji-autocomplete-popup">
+  <div class="mdl-layout mdl-js-layout">
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield">
+       <input class="mdl-textfield__input" type="text" id="sample1">
+       <label class="mdl-textfield__label" for="sample1">Search... 'Happy', 'Angry', 'Sunglasses'</label>
+     </div>
+   </form>
+  </div>
 </div>

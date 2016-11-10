@@ -19,6 +19,7 @@
       "js": [
         "jquery-3.1.1.min.js",
         "textarea-caret-position.js",
+        "material.min.js",
         "utils.js",
         "content.js"
       ],
@@ -30,11 +31,10 @@
       "suggested_key": {
         "default": "Ctrl+Space"
       },
-      "description": "Find Suggested Emojis"
+      "description": "Search for Emojis"
     }
   },
   "web_accessible_resources": [
-    "material.min.js",
     "popup.html"
   ]
 }
