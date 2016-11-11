@@ -18,7 +18,7 @@ chrome.runtime.onMessage.addListener(
       var fontSize = $(activeElement).css('font-size');
       var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 2.0);
       // Append popup.html to the body
-      $.get(chrome.extension.getURL('/popup.html'), function(data) {
+      $.get(chrome.extension.getURL('/html/popup.html'), function(data) {
         $($.parseHTML(data)).appendTo('body');
         // Adjust the absolute position of the popup
         var $emojiPopup = $('#eac-popup');
