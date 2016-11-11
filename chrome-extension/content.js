@@ -24,6 +24,7 @@ chrome.runtime.onMessage.addListener(
         var $emojiPopup = $('#eac-popup');
         $emojiPopup.css('left', (cumulativeOffset.left + coordinates.left));
         $emojiPopup.css('top', cumulativeOffset.top + lineHeight);
+
         // Initialize MDL: Copied from Material.js
         if ('classList' in document.createElement('div') &&
             'querySelector' in document &&
@@ -35,6 +36,14 @@ chrome.runtime.onMessage.addListener(
           componentHandler.register = function() {};
         }
         // End copy of Material.js initialization
+
+        // Setup form intercept
+        $emojiPopup.find('form')[0].onsubmit = function(event) {
+          // TODO this will actually insert the first suggestion,
+          // if present.
+          event.preventDefault();
+          dismissPopup();
+        }
 
         // Focus the input element
         $emojiPopup.find('input')[0].focus();
