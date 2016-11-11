@@ -47,6 +47,13 @@ chrome.runtime.onMessage.addListener(
             }
           }
         });
+
+        // Bind to escape key
+        $(document).on('keyup.eac', function(event) {
+          if (event.keyCode == 27) {
+            dismissPopup();
+          }
+        });
       });
     }
   }
@@ -54,6 +61,7 @@ chrome.runtime.onMessage.addListener(
 
 function dismissPopup() {
   $(document).off('click.eac');
+  $(document).off('keyup.eac');
   $('#eac-popup').fadeOut('fast', function() {
     $('#eac-style').remove();
     $('#eac-link-style').remove();
