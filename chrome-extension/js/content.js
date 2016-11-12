@@ -86,6 +86,12 @@ chrome.runtime.onMessage.addListener(
         $(document).on('keydown.eac', function(event) {
           if (event.keyCode == ESC) {
             dismissPopup();
+          } else if (event.keyCode == ENTER) {
+            if ($('#eac-popup .active').length == 0) {
+              return;
+            }
+            event.preventDefault();
+            insertSelection();
           } else if (event.keyCode == DOWN || event.keyCode == UP) {
             var $resultList = $('#eac-popup li');
             // with no results, just bail
