@@ -47,9 +47,16 @@ chrome.runtime.onMessage.addListener(
           $('#eac-popup .active').removeClass('active');
         });
 
+
+        // On click, do it!
+        $emojiPopup.find('li').click(function() {
+          // TODO: actually insert the magical character!
+          dismissPopup();
+        });
+
         // Setup form intercept
         $emojiPopup.find('form')[0].onsubmit = function(event) {
-          // TODO this will actually insert the first suggestion, if present.
+          // TODO: this will actually insert the first suggestion, if present.
           event.preventDefault();
           dismissPopup();
         }
