@@ -154,9 +154,7 @@ function dismissPopup() {
   $(document).off('keydown.eac');
   // Remove Interface Elements
   $('#eac-popup').fadeOut('fast', function() {
-    $('#eac-style').remove();
-    $('#eac-link-style').remove();
-    $('#eac-popup').remove();
+    $('#eac-container').remove();
   });
 }
 
@@ -169,6 +167,8 @@ function insertSelection() {
   var textToInsert = $('#eac-popup .active').first().find('span').text().trim();
   $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
     + textToInsert + originalText.substring(triggeredSelectionEnd));
+  triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
+    triggeredSelectionEnd + textToInsert.length);
   focusOriginalTrigger();
 }
 
