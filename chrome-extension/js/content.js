@@ -52,13 +52,13 @@ chrome.runtime.onMessage.addListener(
         // On Hover, remove .active class for list items
         $emojiPopup.find('li').mouseover(function() {
           $('#eac-popup .active').removeClass('active');
+          $(this).addClass('active');
         });
 
 
         // On click, do it!
         $emojiPopup.find('li').click(function() {
-          // TODO: actually insert the magical character!
-          dismissPopup();
+          insertSelection();
         });
 
         // Setup form intercept
