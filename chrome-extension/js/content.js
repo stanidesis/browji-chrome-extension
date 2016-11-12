@@ -51,8 +51,8 @@ chrome.runtime.onMessage.addListener(
 
         // On Hover, remove .active class for list items
         $emojiPopup.find('li').mouseover(function() {
-          $('#eac-popup .active').removeClass('active');
-          $(this).addClass('active');
+          $('#eac-popup .eac-active').removeClass('eac-active');
+          $(this).addClass('eac-active');
         });
 
 
@@ -64,8 +64,13 @@ chrome.runtime.onMessage.addListener(
         // Setup form intercept
         $emojiPopup.find('form')[0].onsubmit = function(event) {
           event.preventDefault();
-          if ($('#eac-popup .active').length == 0) {
-            $('#eac-popup li').first().addClass('active');
+          // Check if any results are present
+          if ($('#eac-popup li').length == 0) {
+            // TODO: notify the user that they need to improve their search?
+            return;
+          }
+          if ($('#eac-popup .eac-active').length == 0) {
+            $('#eac-popup li').first().addClass('eac-active');
           }
           insertSelection();
         }
@@ -87,7 +92,7 @@ chrome.runtime.onMessage.addListener(
           if (event.keyCode == ESC) {
             dismissPopup();
           } else if (event.keyCode == ENTER) {
-            if ($('#eac-popup .active').length == 0) {
+            if ($('#eac-popup .eac-active').length == 0) {
               return;
             }
             event.preventDefault();
@@ -105,28 +110,28 @@ chrome.runtime.onMessage.addListener(
             var goUp = event.keyCode == UP;
             // If the text input is selected
             if (document.activeElement.id === 'eac-search'
-              || $('#eac-popup .active').length == 0) {
+              || $('#eac-popup .eac-active').length == 0) {
               document.activeElement.blur();
               // Remove any actively selected item
-              $resultList.removeClass('active');
+              $resultList.removeClass('eac-active');
               if (goUp) {
                 // Render the last result as active
-                $resultList.last().addClass('active');
+                $resultList.last().addClass('eac-active');
               } else {
                 // Render the first result as active
-                $resultList.first().addClass('active');
+                $resultList.first().addClass('eac-active');
               }
             // We have an active selection already
             } else {
-              var $activeListItem = $('#eac-popup .active');
+              var $activeListItem = $('#eac-popup .eac-active');
               // Remove the active class
-              $activeListItem.removeClass('active');
+              $activeListItem.removeClass('eac-active');
               var index = $resultList.index($activeListItem);
               var length = $resultList.length;
               if (goUp) {
                 if (index > 0) {
                   // Add it to the next item
-                  $activeListItem.prev().addClass('active');
+                  $activeListItem.prev().addClass('eac-active');
                 } else {
                   // Focus the search
                   $('#eac-search')[0].focus();
@@ -134,7 +139,7 @@ chrome.runtime.onMessage.addListener(
               } else {
                 if (index < length - 1) {
                   // Add it to the next item
-                  $activeListItem.next().addClass('active');
+                  $activeListItem.next().addClass('eac-active');
                 } else {
                   // Focus the search
                   $('#eac-search')[0].focus();
@@ -164,7 +169,7 @@ function insertSelection() {
   }
   var $triggeredElement = $(triggeredElement);
   var originalText = $triggeredElement.val();
-  var textToInsert = $('#eac-popup .active').first().find('span').text().trim();
+  var textToInsert = $('#eac-popup .eac-active').first().find('span').text().trim();
   $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
     + textToInsert + originalText.substring(triggeredSelectionEnd));
   triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
