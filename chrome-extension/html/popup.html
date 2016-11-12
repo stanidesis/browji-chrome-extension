@@ -1,0 +1,63 @@
+<link id="eac-link-style" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style id="eac-style">
+  .eac-popup {
+    z-index: 1000000;
+    width: 320px;
+    height: calc(100px + 48px * 5);
+    position: absolute;
+    background: #fafafa;
+  }
+  .eac-popup .mdl-textfield {
+    width: calc(320px - (16px * 2));
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .eac-popup .mdl-list__item {
+    -webkit-transition: background .2s; /* Safari */
+    transition: background .2s;
+    transition-timing-function: ease-in-out;
+  }
+  .eac-popup .mdl-list__item:hover,
+  .eac-popup .active {
+    background: #dadada;
+  }
+</style>
+<div class="eac-popup mdl-shadow--4dp" id="eac-popup">
+  <div class="mdl-layout mdl-js-layout">
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield">
+       <input class="mdl-textfield__input" type="text" id="eac-search">
+       <label class="mdl-textfield__label" for="eac-search">Search... 'Happy', 'Angry', 'Sunglasses'</label>
+     </div>
+   </form>
+   <ul class="mdl-list">
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Bryan Cranston
+      </span>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Aaron Paul
+      </span>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Bob Odenkirk
+      </span>
+    </li>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Fourth Actor
+      </span>
+    </li>
+    </li>
+    <li class="mdl-list__item">
+      <span class="mdl-list__item-primary-content">
+        Fifth Actor
+      </span>
+    </li>
+  </ul>
+  </div>
+</div>

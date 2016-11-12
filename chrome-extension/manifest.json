@@ -6,7 +6,7 @@
     "default_icon": "icon.png"
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["js/background.js"]
   },
   "content_scripts": [
     {
@@ -14,14 +14,14 @@
         "<all_urls>"
       ],
       "css": [
-        "material.min.css"
+        "css/material.min.css"
       ],
       "js": [
-        "jquery-3.1.1.min.js",
-        "textarea-caret-position.js",
-        "material.min.js",
-        "utils.js",
-        "content.js"
+        "js/jquery-3.1.1.min.js",
+        "js/textarea-caret-position.js",
+        "js/material.min.js",
+        "js/utils.js",
+        "js/content.js"
       ],
       "run_at": "document_end"
     }
@@ -35,6 +35,6 @@
     }
   },
   "web_accessible_resources": [
-    "popup.html"
+    "html/popup.html"
   ]
 }
