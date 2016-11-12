@@ -129,7 +129,7 @@ chrome.runtime.onMessage.addListener(
 function dismissPopup() {
   // Remove Listeners
   $(document).off('click.eac');
-  $(document).off('keyup.eac');
+  $(document).off('keydown.eac');
   // Remove Interface Elements
   $('#eac-popup').fadeOut('fast', function() {
     $('#eac-style').remove();
