@@ -67,23 +67,24 @@ chrome.runtime.onMessage.addListener(
         });
 
         // Bind to escape key
-        $(document).on('keyup.eac', function(event) {
+        $(document).on('keydown.eac', function(event) {
           if (event.keyCode == ESC) {
             dismissPopup();
           } else if (event.keyCode == DOWN || event.keyCode == UP) {
+            var $resultList = $('#eac-popup li');
+            // with no results, just bail
+            if ($resultList.length == 0) {
+              // No list to scroll through
+              return;
+            }
+            // Don't do the default thing, please :D
+            event.preventDefault();
+            // Up or down, good user?
             var goUp = event.keyCode == UP;
             // If the text input is selected
             if (document.activeElement.id === 'eac-search'
               || $('#eac-popup .active').length == 0) {
               document.activeElement.blur();
-              var $resultList = $('#eac-popup li');
-              // We should try to go to the first/last search result
-              if ($resultList.length == 0) {
-                // No list to scroll through
-                return;
-              }
-              // Don't do the default thing, please :D
-              event.preventDefault();
               // Remove any actively selected item
               $resultList.removeClass('active');
               if (goUp) {
@@ -98,8 +99,8 @@ chrome.runtime.onMessage.addListener(
               var $activeListItem = $('#eac-popup .active');
               // Remove the active class
               $activeListItem.removeClass('active');
-              var index = $activeListItem.parent().children().index($activeListItem);
-              var length = $activeListItem.parent().children().length;
+              var index = $resultList.index($activeListItem);
+              var length = $resultList.length;
               if (goUp) {
                 if (index > 0) {
                   // Add it to the next item
