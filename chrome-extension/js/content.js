@@ -1,7 +1,13 @@
 // Keycodes
+var ENTER = 13;
 var UP = 38;
 var DOWN = 40;
 var ESC = 27;
+
+// Trigger Input or Textarea
+var triggeredElement;
+// The cursor location at which we insert the content
+var triggeredSelectionEnd;
 
 // Listen to messages from the background
 chrome.runtime.onMessage.addListener(
@@ -10,14 +16,15 @@ chrome.runtime.onMessage.addListener(
       dismissPopup();
       // This is where we need to present a little auto-complete search input
       var activeElement = document.activeElement;
-      console.log('Active Element: ' + activeElement.tagName);
       if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
         // Active element is not an input area
         return;
       }
+      triggeredElement = activeElement;
+      triggeredSelectionEnd = activeElement.selectionEnd;
       // Get the position of the cursor and input box
-      var coordinates = getCaretCoordinates(activeElement, activeElement.selectionEnd);
-      var cumulativeOffset = getCumulativeOffset(activeElement);
+      var coordinates = getCaretCoordinates(triggeredElement, triggeredSelectionEnd);
+      var cumulativeOffset = getCumulativeOffset(triggeredElement);
       // Calculate the height offset to place the box immediately below/right
       // of the cursor (for now -- might need a smarter calculation in the future?)
       var fontSize = $(activeElement).css('font-size');
@@ -56,9 +63,11 @@ chrome.runtime.onMessage.addListener(
 
         // Setup form intercept
         $emojiPopup.find('form')[0].onsubmit = function(event) {
-          // TODO: this will actually insert the first suggestion, if present.
           event.preventDefault();
-          dismissPopup();
+          if ($('#eac-popup .active').length == 0) {
+            $('#eac-popup li').first().addClass('active');
+          }
+          insertSelection();
         }
 
         // Focus the input element
@@ -143,4 +152,25 @@ function dismissPopup() {
     $('#eac-link-style').remove();
     $('#eac-popup').remove();
   });
+}
+
+function insertSelection() {
+  if (!triggeredElement) {
+    return;
+  }
+  var $triggeredElement = $(triggeredElement);
+  var originalText = $triggeredElement.val();
+  var textToInsert = $('#eac-popup .active').first().find('span').text().trim();
+  $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
+    + textToInsert + originalText.substring(triggeredSelectionEnd));
+  focusOriginalTrigger();
+}
+
+function focusOriginalTrigger() {
+  if (triggeredElement) {
+    triggeredElement.focus();
+    triggeredElement = null;
+    triggeredSelectionEnd = null;
+  }
+  dismissPopup();
 }
