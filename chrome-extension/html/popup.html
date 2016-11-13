@@ -4,9 +4,10 @@
     .eac-popup {
       z-index: 1000000;
       width: 320px;
-      height: calc(100px + 48px * 5);
+      height: 220px;
       position: absolute;
       background: #fafafa;
+      overflow: hidden;
     }
     .eac-popup .mdl-textfield {
       width: calc(320px - (16px * 2));
@@ -22,34 +23,37 @@
     .eac-popup .eac-active {
       background: #dadada;
     }
+    .eac-tip {
+      position: absolute;
+      display: inherit;
+      width: 100%;
+      height: 100%;
+      color: rgba(0,0,0,.27);
+    }
+    .eac-results {
+      height: 172px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
   </style>
   <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
     <div class="mdl-layout mdl-js-layout">
-      <form action="#">
-        <div class="mdl-textfield mdl-js-textfield">
-         <input class="mdl-textfield__input" type="text" id="eac-search">
-         <label class="mdl-textfield__label" for="eac-search">Search... 'Happy', 'Angry', 'Sunglasses'</label>
-       </div>
-     </form>
-     <ul class="mdl-list">
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">Bryan Cranston<span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">Aaron Paul</span>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">Bob Odenkirk</span>
-      </li>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">Fourth Actor</span>
-      </li>
-      </li>
-      <li class="mdl-list__item">
-        <span class="mdl-list__item-primary-content">Fifth Actor</span>
-      </li>
-    </ul>
+      <div class="eac-tip">
+        <span style="margin: auto">No results? Search for emojis and emoticons</span>
+      </div>
+      <div>
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="eac-search">
+            <label class="mdl-textfield__label" for="eac-search">'happy,' 'sad,' 'sunglasses,' you get it</label>
+          </div>
+        </form>
+      </div>
+      <div class="eac-results">
+        <ul class="mdl-list" style="display: none">
+          <!-- Empty by default -->
+        </ul>
+      </div>
     </div>
   </div>
 </div>

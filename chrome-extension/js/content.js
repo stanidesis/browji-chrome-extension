@@ -84,6 +84,34 @@ function displayPopup() {
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
 
+    // Listen for input changes and perform the query
+    $emojiPopup.find('input').on('input', function() {
+      // TODO make it work like it's supposed to?
+      var result = $(this).val();
+
+      var $list = $emojiPopup.find('ul');
+      // No results scenario
+      if (result.length == 0) {
+        // Reveal the tip and hide the list
+        $emojiPopup.find('.eac-tip').show();
+        $list.hide();
+        return;
+      }
+      // Otherwise, fill it with data
+      $list.empty();
+      // Hide the tip
+      $emojiPopup.find('.eac-tip').hide();
+      $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
+        for (var i = 0; i < 15; i++) {
+          var replaced = data.replace('{{replace-me}}', result + ' ' + i);
+          $($.parseHTML(replaced)).appendTo($list);
+        }
+        if ($list.is(':hidden')) {
+          $list.show();
+        }
+      });
+    });
+
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
     $(document).on('click.eac', function(event) {
       if(!$(event.target).closest('#eac-popup').length) {
