@@ -16,11 +16,21 @@
 // );
 
 chrome.commands.onCommand.addListener(function(command) {
-  if (command === "emoji-auto-complete") {
+  if (command === 'emoji-auto-complete') {
     // Received the main keyboard command
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       var activeTab = tabs[0];
-      chrome.tabs.sendMessage(activeTab.id, {"message": "display_popup_at_cursor"});
+      chrome.tabs.sendMessage(activeTab.id, {'message': 'display_popup_at_cursor'});
     });
   }
+});
+
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.message == 'get_window_size') {
+      chrome.windows.getCurrent(function(window) {
+        sendResponse({width: window.width, height: window.height});
+      });
+      return true;
+    }
 });
