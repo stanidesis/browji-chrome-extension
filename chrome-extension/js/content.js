@@ -55,18 +55,6 @@ function displayPopup() {
     }
     // End copy of Material.js initialization
 
-    // On Hover, remove .active class for list items
-    $emojiPopup.find('li').mouseover(function() {
-      $('#eac-popup .eac-active').removeClass('eac-active');
-      $(this).addClass('eac-active');
-    });
-
-
-    // On click, do it!
-    $emojiPopup.find('li').click(function() {
-      insertSelection();
-    });
-
     // Setup form intercept
     $emojiPopup.find('form')[0].onsubmit = function(event) {
       event.preventDefault();
@@ -81,12 +69,23 @@ function displayPopup() {
       insertSelection();
     }
 
+    // On click, submit selection
+    $emojiPopup.on('click', 'li', function() {
+      insertSelection();
+    });
+
+    // On Hover, remove .active class for list items
+    $emojiPopup.on('mouseover', 'li', function() {
+      $('#eac-popup .eac-active').removeClass('eac-active');
+      $(this).addClass('eac-active');
+    });
+
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
 
     // Listen for input changes and perform the query
-    $emojiPopup.find('input').on('input', function() {
-      // TODO make it work like it's supposed to?
+    $emojiPopup.on('input', 'input', function() {
+      // TODO: actually connect to search results
       var result = $(this).val();
 
       var $list = $emojiPopup.find('ul');
@@ -214,6 +213,7 @@ function dismissPopup() {
   // Remove Listeners
   $(document).off('click.eac');
   $(document).off('keydown.eac');
+  $('#eac-popup').off();
   // Remove Interface Elements
   $('#eac-popup').fadeOut('fast', function() {
     $('#eac-container').remove();
