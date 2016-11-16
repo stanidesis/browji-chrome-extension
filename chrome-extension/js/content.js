@@ -19,6 +19,9 @@ chrome.runtime.onMessage.addListener(
 );
 
 function displayPopup() {
+  // Add stuff to jQuery
+  apppendToJquery();
+  // Dismiss an active popup if present
   dismissPopup();
   // This is where we need to present a little auto-complete search input
   var activeElement = document.activeElement;
@@ -55,18 +58,6 @@ function displayPopup() {
     }
     // End copy of Material.js initialization
 
-    // On Hover, remove .active class for list items
-    $emojiPopup.find('li').mouseover(function() {
-      $('#eac-popup .eac-active').removeClass('eac-active');
-      $(this).addClass('eac-active');
-    });
-
-
-    // On click, do it!
-    $emojiPopup.find('li').click(function() {
-      insertSelection();
-    });
-
     // Setup form intercept
     $emojiPopup.find('form')[0].onsubmit = function(event) {
       event.preventDefault();
@@ -81,8 +72,47 @@ function displayPopup() {
       insertSelection();
     }
 
+    // On click, submit selection
+    $emojiPopup.on('click', 'li', function() {
+      insertSelection();
+    });
+
+    // On Hover, remove .active class for list items
+    $emojiPopup.on('mouseover', 'li', function() {
+      $('#eac-popup .eac-active').removeClass('eac-active');
+      $(this).addClass('eac-active');
+    });
+
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
+
+    // Listen for input changes and perform the query
+    $emojiPopup.on('input', 'input', function() {
+      // TODO: actually connect to search results
+      var result = $(this).val();
+
+      var $list = $emojiPopup.find('ul');
+      // No results scenario
+      if (result.length == 0) {
+        // Reveal the tip and hide the list
+        $emojiPopup.find('.eac-tip-container').show();
+        $list.hide();
+        return;
+      }
+      // Otherwise, fill it with data
+      $list.empty();
+      // Hide the tip
+      $emojiPopup.find('.eac-tip-container').hide();
+      $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
+        for (var i = 0; i < 15; i++) {
+          var replaced = data.replace('{{replace-me}}', result + ' ' + i);
+          $($.parseHTML(replaced)).appendTo($list);
+        }
+        if ($list.is(':hidden')) {
+          $list.show();
+        }
+      });
+    });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
     $(document).on('click.eac', function(event) {
@@ -130,26 +160,34 @@ function displayPopup() {
         // We have an active selection already
         } else {
           var $activeListItem = $('#eac-popup .eac-active');
+          // The newly selected element
+          var $newActiveElement;
           // Remove the active class
           $activeListItem.removeClass('eac-active');
           var index = $resultList.index($activeListItem);
           var length = $resultList.length;
           if (goUp) {
             if (index > 0) {
+              $newActiveElement = $activeListItem.prev();
               // Add it to the next item
-              $activeListItem.prev().addClass('eac-active');
+              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
             }
           } else {
             if (index < length - 1) {
+              $newActiveElement = $activeListItem.next();
               // Add it to the next item
-              $activeListItem.next().addClass('eac-active');
+              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
             }
+          }
+          // Scroll to the newly selected item
+          if ($newActiveElement) {
+            $activeListItem.parents('div').scrollTo($newActiveElement, 100);
           }
         }
       }
@@ -186,6 +224,7 @@ function dismissPopup() {
   // Remove Listeners
   $(document).off('click.eac');
   $(document).off('keydown.eac');
+  $('#eac-popup').off();
   // Remove Interface Elements
   $('#eac-popup').fadeOut('fast', function() {
     $('#eac-container').remove();
@@ -213,4 +252,14 @@ function focusOriginalTrigger() {
     triggeredSelectionEnd = null;
   }
   dismissPopup();
+}
+
+function apppendToJquery() {
+  // Swiped from http://stackoverflow.com/a/18927969/372884
+  $.fn.scrollTo = function(elem, speed) {
+    $(this).animate({
+        scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+    }, speed == undefined ? 1000 : speed);
+    return this;
+  };
 }
