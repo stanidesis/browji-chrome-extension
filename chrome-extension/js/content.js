@@ -19,6 +19,9 @@ chrome.runtime.onMessage.addListener(
 );
 
 function displayPopup() {
+  // Add stuff to jQuery
+  apppendToJquery();
+  // Dismiss an active popup if present
   dismissPopup();
   // This is where we need to present a little auto-complete search input
   var activeElement = document.activeElement;
@@ -157,26 +160,34 @@ function displayPopup() {
         // We have an active selection already
         } else {
           var $activeListItem = $('#eac-popup .eac-active');
+          // The newly selected element
+          var $newActiveElement;
           // Remove the active class
           $activeListItem.removeClass('eac-active');
           var index = $resultList.index($activeListItem);
           var length = $resultList.length;
           if (goUp) {
             if (index > 0) {
+              $newActiveElement = $activeListItem.prev();
               // Add it to the next item
-              $activeListItem.prev().addClass('eac-active');
+              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
             }
           } else {
             if (index < length - 1) {
+              $newActiveElement = $activeListItem.next();
               // Add it to the next item
-              $activeListItem.next().addClass('eac-active');
+              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
             }
+          }
+          // Scroll to the newly selected item
+          if ($newActiveElement) {
+            $activeListItem.parents('div').scrollTo($newActiveElement, 100);
           }
         }
       }
@@ -241,4 +252,14 @@ function focusOriginalTrigger() {
     triggeredSelectionEnd = null;
   }
   dismissPopup();
+}
+
+function apppendToJquery() {
+  // Swiped from http://stackoverflow.com/a/18927969/372884
+  $.fn.scrollTo = function(elem, speed) {
+    $(this).animate({
+        scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+    }, speed == undefined ? 1000 : speed);
+    return this;
+  };
 }
