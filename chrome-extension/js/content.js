@@ -93,14 +93,14 @@ function displayPopup() {
       // No results scenario
       if (result.length == 0) {
         // Reveal the tip and hide the list
-        $emojiPopup.find('.eac-tip').show();
+        $emojiPopup.find('.eac-tip-container').show();
         $list.hide();
         return;
       }
       // Otherwise, fill it with data
       $list.empty();
       // Hide the tip
-      $emojiPopup.find('.eac-tip').hide();
+      $emojiPopup.find('.eac-tip-container').hide();
       $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
         for (var i = 0; i < 15; i++) {
           var replaced = data.replace('{{replace-me}}', result + ' ' + i);

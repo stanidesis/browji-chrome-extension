@@ -23,12 +23,17 @@
     .eac-popup .eac-active {
       background: #dadada;
     }
-    .eac-tip {
+    .eac-tip-container {
       position: absolute;
-      display: inherit;
       width: 100%;
       height: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .eac-tip {
       color: rgba(0,0,0,.27);
+      margin: 0 auto;
     }
     .eac-results {
       height: 172px;
@@ -38,8 +43,8 @@
   </style>
   <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
     <div class="mdl-layout mdl-js-layout">
-      <div class="eac-tip">
-        <span style="margin: auto">No results? Search for emojis and emoticons</span>
+      <div class="eac-tip-container">
+        <span class="eac-tip">No results? Search for emojis and emoticons</span>
       </div>
       <div>
         <form action="#">
