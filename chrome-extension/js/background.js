@@ -1,27 +1,21 @@
-// // Called when the user clicks on the borwser action
-// chrome.browserAction.onClicked.addListener(function(tab) {
-//   // Send a message to the active tab!
-//   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//     var activeTab = tabs[0];
-//     chrome.tabs.sendMessage(activeTab.id, {"message": "clicked_browser_action"});
-//   });
-// });
-//
-// chrome.runtime.onMessage.addListener(
-//   function(request, sender, sendResponse) {
-//     if (request.message === "open_new_tab") {
-//       chrome.tabs.create({"url": request.url});
-//     }
-//   }
-// );
+// Master DB File
+var db;
 
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
-    // Received the main keyboard command
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-      var activeTab = tabs[0];
-      chrome.tabs.sendMessage(activeTab.id, {'message': 'display_popup_at_cursor'});
-    });
+    if (db == null) {
+      // Open the default DB for now
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET','/database/defaults.sqlite', true);
+      xhr.responseType = 'arraybuffer';
+      xhr.onload = function(e) {
+        db = new SQL.Database(new Uint8Array(this.response));
+        sendDisplayPopupAtCursorMessage();
+      };
+      xhr.send();
+      return;
+    }
+    sendDisplayPopupAtCursorMessage();
   }
 });
 
@@ -34,3 +28,10 @@ chrome.runtime.onMessage.addListener(
       return true;
     }
 });
+
+function sendDisplayPopupAtCursorMessage() {
+  // Received the main keyboard command
+  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+    chrome.tabs.sendMessage(tabs[0].id, {'message': 'display_popup_at_cursor'});
+  });
+}

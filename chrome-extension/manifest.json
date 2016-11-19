@@ -6,7 +6,12 @@
     "default_icon": "icon.png"
   },
   "background": {
-    "scripts": ["js/background.js"]
+    "scripts": [
+      "js/jquery-3.1.1.min.js",
+      "js/encoding.js",
+      "js/sql.js",
+      "js/background.js"
+    ]
   },
   "content_scripts": [
     {
@@ -35,7 +40,10 @@
     }
   },
   "web_accessible_resources": [
+    "database/*",
     "html/*",
     "template/*"
-  ]
+  ],
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
