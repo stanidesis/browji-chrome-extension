@@ -2,13 +2,18 @@
   "manifest_version": 2,
   "name": "Emoji Autocomplete",
   "version": "0.1",
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
   "browser_action": {
     "default_icon": "icon.png"
   },
   "background": {
     "scripts": [
       "js/jquery-3.1.1.min.js",
-      "js/encoding.js",
+      "js/q.js",
+      "js/LargeLocalStorage.min.js",
       "js/sql.js",
       "js/background.js"
     ]
