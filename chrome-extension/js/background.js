@@ -60,7 +60,7 @@ function queryEmoji(query, callback) {
     return;
   }
   var sqlStmt = db.prepare("SELECT emojicon FROM emojis WHERE keyword LIKE $query ORDER BY weight DESC LIMIT 10");
-  sqlStmt.getAsObject({$query: '%' + query + '%'});
+  sqlStmt.bind({$query: '%' + query + '%'});
   var result = [];
   while(sqlStmt.step()) {
     result.push(sqlStmt.getAsObject().emojicon);

@@ -8,6 +8,8 @@ var ESC = 27;
 var triggeredElement;
 // The cursor location at which we insert the content
 var triggeredSelectionEnd;
+// The popup within the DOM
+var $emojiPopup;
 
 // Listen to messages from the background
 chrome.runtime.onMessage.addListener(
@@ -42,7 +44,7 @@ function displayPopup() {
   $.get(chrome.extension.getURL('/html/popup.html'), function(data) {
     $($.parseHTML(data)).appendTo('body');
     // Adjust the absolute position of the popup
-    var $emojiPopup = $('#eac-popup');
+    $emojiPopup = $('#eac-popup');
     $emojiPopup.css('left', (cumulativeOffset.left + coordinates.left));
     $emojiPopup.css('top', cumulativeOffset.top + lineHeight);
 
@@ -62,12 +64,12 @@ function displayPopup() {
     $emojiPopup.find('form')[0].onsubmit = function(event) {
       event.preventDefault();
       // Check if any results are present
-      if ($('#eac-popup li').length == 0) {
+      if ($emojiPopup.find('li').length == 0) {
         // TODO: notify the user that they need to improve their search?
         return;
       }
       if ($('#eac-popup .eac-active').length == 0) {
-        $('#eac-popup li').first().addClass('eac-active');
+        $emojiPopup.find('li').first().addClass('eac-active');
       }
       insertSelection();
     }
@@ -79,7 +81,7 @@ function displayPopup() {
 
     // On Hover, remove .active class for list items
     $emojiPopup.on('mouseover', 'li', function() {
-      $('#eac-popup .eac-active').removeClass('eac-active');
+      $emojiPopup.find('.eac-active').removeClass('eac-active');
       $(this).addClass('eac-active');
     });
 
@@ -90,44 +92,21 @@ function displayPopup() {
     $emojiPopup.on('input', 'input', function() {
       var query = $(this).val().trim();
       if (query == '') {
-        // TODO: Remove results
+        populateWithResults([]);
         return;
       }
       chrome.runtime.sendMessage({message: 'perform_query', query: query},
         function(response) {
           console.log('Response:' + response.result);
+          populateWithResults(response.result);
         }
       );
-      // TODO: actually connect to search results
-      var result = $(this).val();
-
-      var $list = $emojiPopup.find('ul');
-      // No results scenario
-      if (result.length == 0) {
-        // Reveal the tip and hide the list
-        $emojiPopup.find('.eac-tip-container').show();
-        $list.hide();
-        return;
-      }
-      // Otherwise, fill it with data
-      $list.empty();
-      // Hide the tip
-      $emojiPopup.find('.eac-tip-container').hide();
-      $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
-        for (var i = 0; i < 15; i++) {
-          var replaced = data.replace('{{replace-me}}', result + ' ' + i);
-          $($.parseHTML(replaced)).appendTo($list);
-        }
-        if ($list.is(':hidden')) {
-          $list.show();
-        }
-      });
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
     $(document).on('click.eac', function(event) {
       if(!$(event.target).closest('#eac-popup').length) {
-        if($('#eac-popup').is(':visible')) {
+        if($emojiPopup.is(':visible')) {
           dismissPopup();
         }
       }
@@ -138,13 +117,13 @@ function displayPopup() {
       if (event.keyCode == ESC) {
         dismissPopup();
       } else if (event.keyCode == ENTER) {
-        if ($('#eac-popup .eac-active').length == 0) {
+        if ($emojiPopup.find('.eac-active').length == 0) {
           return;
         }
         event.preventDefault();
         insertSelection();
       } else if (event.keyCode == DOWN || event.keyCode == UP) {
-        var $resultList = $('#eac-popup li');
+        var $resultList = $emojiPopup.find('li');
         // with no results, just bail
         if ($resultList.length == 0) {
           // No list to scroll through
@@ -156,7 +135,7 @@ function displayPopup() {
         var goUp = event.keyCode == UP;
         // If the text input is selected
         if (document.activeElement.id === 'eac-search'
-          || $('#eac-popup .eac-active').length == 0) {
+          || $emojiPopup.find('.eac-active').length == 0) {
           document.activeElement.blur();
           // Remove any actively selected item
           $resultList.removeClass('eac-active');
@@ -169,7 +148,7 @@ function displayPopup() {
           }
         // We have an active selection already
         } else {
-          var $activeListItem = $('#eac-popup .eac-active');
+          var $activeListItem = $emojiPopup.find('.eac-active');
           // The newly selected element
           var $newActiveElement;
           // Remove the active class
@@ -207,8 +186,7 @@ function displayPopup() {
     chrome.runtime.sendMessage({message: 'get_window_size'},
       function(response) {
         // TODO: Maybe move this out to reuse it when the user resizes the window?
-        var $eacPopup = $('#eac-popup');
-        var rect = $eacPopup[0].getBoundingClientRect();
+        var rect = $emojiPopup[0].getBoundingClientRect();
         // Too far to the left
         if (rect.left <= 0) {
           $eacPopup.css('left', 10);
@@ -230,14 +208,43 @@ function displayPopup() {
   });
 }
 
+function populateWithResults(results) {
+  var $list = $emojiPopup.find('ul');
+  // No results scenario
+  if (results.length == 0) {
+    // Reveal the tip and hide the list
+    $emojiPopup.find('.eac-tip-container').show();
+    $list.hide();
+    return;
+  }
+  // Otherwise, fill it with data
+  $list.empty();
+  // Hide the tip
+  $emojiPopup.find('.eac-tip-container').hide();
+  $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
+    for (var i = 0; i < results.length; i++) {
+      var replaced = data.replace('{{replace-me}}', results[i]);
+      $($.parseHTML(replaced)).appendTo($list);
+    }
+    if ($list.is(':hidden')) {
+      $list.show();
+    }
+  });
+}
+
 function dismissPopup() {
   // Remove Listeners
   $(document).off('click.eac');
   $(document).off('keydown.eac');
-  $('#eac-popup').off();
+  if (!$emojiPopup) {
+    $emojiPopup = $('#eac-popup');
+    if (!$emojiPopup) return;
+  }
+  $emojiPopup.off();
   // Remove Interface Elements
-  $('#eac-popup').fadeOut('fast', function() {
+  $emojiPopup.fadeOut('fast', function() {
     $('#eac-container').remove();
+    $emojiPopup = null;
   });
 }
 
@@ -247,7 +254,7 @@ function insertSelection() {
   }
   var $triggeredElement = $(triggeredElement);
   var originalText = $triggeredElement.val();
-  var textToInsert = $('#eac-popup .eac-active').first().find('span').text().trim();
+  var textToInsert = $emojiPopup.find('.eac-active').first().find('span').text().trim();
   $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
     + textToInsert + originalText.substring(triggeredSelectionEnd));
   triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
