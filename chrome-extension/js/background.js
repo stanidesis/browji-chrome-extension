@@ -10,21 +10,7 @@ var db;
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
     if (db == null) {
-      if (storage != null) {
-        loadDbFromStorage(sendDisplayPopupAtCursorMessage);
-        return;
-      }
-      // Initialize storage
-      storage = new LargeLocalStorage({size: DESIRED_CAPACITY, name: 'myStorage'});
-      storage.initialized.then(function(storageResult) {
-        storage = storageResult;
-        var grantedCapacity = storageResult.getCapacity();
-        if (grantedCapacity != -1 && grantedCapacity != DESIRED_CAPACITY) {
-          // FUBAR?
-          console.log('uh oh: ' + grantedCapacity);
-        }
-        loadDbFromStorage(sendDisplayPopupAtCursorMessage);
-      });
+      initializeDb(sendDisplayPopupAtCursorMessage);
       return;
     }
     sendDisplayPopupAtCursorMessage();
@@ -38,8 +24,49 @@ chrome.runtime.onMessage.addListener(
         sendResponse({width: window.width, height: window.height});
       });
       return true;
+    } else if (request.message == 'perform_query') {
+      queryEmoji(request.query, function(queryResult) {
+        sendResponse({result: queryResult});
+      });
     }
 });
+
+function initializeDb(callback) {
+  if (storage != null) {
+    loadDbFromStorage(callback);
+    return;
+  }
+  // Initialize storage
+  storage = new LargeLocalStorage({size: DESIRED_CAPACITY, name: 'myStorage'});
+  storage.initialized.then(function(storageResult) {
+    storage = storageResult;
+    var grantedCapacity = storageResult.getCapacity();
+    if (grantedCapacity != -1 && grantedCapacity != DESIRED_CAPACITY) {
+      // FUBAR?
+      console.log('uh oh: ' + grantedCapacity);
+    }
+    loadDbFromStorage(callback);
+  });
+}
+
+function queryEmoji(query, callback) {
+  if (!callback) {
+    return;
+  }
+  if (db == null) {
+    initializeDb(function() {
+      queryEmoji(query, callback);
+    });
+    return;
+  }
+  var sqlStmt = db.prepare("SELECT emojicon FROM emojis WHERE keyword LIKE $query ORDER BY weight DESC LIMIT 10");
+  sqlStmt.getAsObject({$query: '%' + query + '%'});
+  var result = [];
+  while(sqlStmt.step()) {
+    result.push(sqlStmt.getAsObject().emojicon);
+  }
+  callback(result);
+}
 
 function sendDisplayPopupAtCursorMessage() {
   // Received the main keyboard command

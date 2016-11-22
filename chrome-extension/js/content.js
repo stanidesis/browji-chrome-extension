@@ -88,6 +88,16 @@ function displayPopup() {
 
     // Listen for input changes and perform the query
     $emojiPopup.on('input', 'input', function() {
+      var query = $(this).val().trim();
+      if (query == '') {
+        // TODO: Remove results
+        return;
+      }
+      chrome.runtime.sendMessage({message: 'perform_query', query: query},
+        function(response) {
+          console.log('Response:' + response.result);
+        }
+      );
       // TODO: actually connect to search results
       var result = $(this).val();
 
