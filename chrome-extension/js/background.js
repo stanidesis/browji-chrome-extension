@@ -19,12 +19,12 @@ chrome.commands.onCommand.addListener(function(command) {
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if (request.message == 'get_window_size') {
+    if (request.message == 'to_background:get_window_size') {
       chrome.windows.getCurrent(function(window) {
         sendResponse({width: window.width, height: window.height});
       });
       return true;
-    } else if (request.message == 'perform_query') {
+    } else if (request.message == 'to_background:perform_query') {
       queryEmoji(request.query, function(queryResult) {
         sendResponse({result: queryResult});
       });
