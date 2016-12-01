@@ -23,17 +23,13 @@
       "matches": [
         "<all_urls>"
       ],
-      "css": [
-        "css/material.min.css"
-      ],
       "js": [
         "js/jquery-3.1.1.min.js",
         "js/textarea-caret-position.js",
-        "js/material.min.js",
         "js/utils.js",
         "js/content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
   ],
   "commands": {
