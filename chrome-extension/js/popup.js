@@ -5,11 +5,9 @@ var DOWN = 40;
 var ESC = 27;
 
 var Popup = function () {
-  var _this = this;
   var $emojiPopup;
-
   // Initialize
-  _this.init = function() {
+  this.init = function() {
     // Ammend jQuery with a Scroll feature
     apppendToJquery();
     // Find EmojiPopup
@@ -23,19 +21,14 @@ var Popup = function () {
   // Private functions
 
   function onDomMessageReceived(event) {
-    console.log('Popup dom message received:' + event.data.message);
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
-      var cumulativeOffset = event.data.cumulativeOffset;
-      var coordinates = event.data.coordinates;
-      var lineHeight = event.data.lineHeight;
-      $emojiPopup.css('left', (cumulativeOffset.left + coordinates.left));
-      $emojiPopup.css('top', cumulativeOffset.top + lineHeight);
+      $emojiPopup.css('left', event.data.left);
+      $emojiPopup.css('top', event.data.top);
       displayPopup();
     }
   }
 
   function displayPopup() {
-    if (!$emojiPopup) return;
     // Fade that sucker in
     $emojiPopup.fadeIn();
     // Setup form intercept
@@ -46,7 +39,7 @@ var Popup = function () {
         // TODO: notify the user that they need to improve their search?
         return;
       }
-      if ($('#eac-popup .eac-active').length == 0) {
+      if ($emojiPopup.find('.eac-active').length == 0) {
         $emojiPopup.find('li').first().addClass('eac-active');
       }
       notifySelectionMade();
@@ -70,6 +63,7 @@ var Popup = function () {
     $emojiPopup.on('input', 'input', function() {
       var query = $(this).val().trim();
       if (query == '' || query.length < 2) {
+        // Fill with empty results
         populateWithResults([]);
         return;
       }
@@ -116,13 +110,17 @@ var Popup = function () {
           document.activeElement.blur();
           // Remove any actively selected item
           $resultList.removeClass('eac-active');
+          var $newActiveElement;
           if (goUp) {
             // Render the last result as active
-            $resultList.last().addClass('eac-active');
+            $newActiveElement = $resultList.last();
+            $newActiveElement.addClass('eac-active');
           } else {
             // Render the first result as active
-            $resultList.first().addClass('eac-active');
+            $newActiveElement = $resultList.first();
+            $newActiveElement.addClass('eac-active');
           }
+          $newActiveElement.parents('div').scrollTo($newActiveElement, 100);
         // We have an active selection already
         } else {
           var $activeListItem = $emojiPopup.find('.eac-active');

@@ -62,7 +62,7 @@ function queryEmoji(query, callback) {
   var sqlStmt = db.prepare("SELECT DISTINCT emojicon FROM emojis WHERE keyword LIKE $query ORDER BY weight DESC LIMIT 10");
   sqlStmt.bind({$query: '%' + query + '%'});
   var result = [];
-  while(sqlStmt.step()) {
+  while (sqlStmt.step()) {
     result.push(sqlStmt.getAsObject().emojicon);
   }
   callback(result);
