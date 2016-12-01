@@ -164,19 +164,19 @@ var Popup = function () {
         var rect = $emojiPopup[0].getBoundingClientRect();
         // Too far to the left
         if (rect.left <= 0) {
-          $eacPopup.css('left', 10);
+          $emojiPopup.css('left', 10);
         }
         // Too far up
         if (rect.top <= 0) {
-          $eacPopup.css('top', 10);
+          $emojiPopup.css('top', 10);
         }
         // Too far down
         if (rect.bottom > response.height && rect.height <= response.height) {
-          $eacPopup.css('top', response.height - rect.height - 10);
+          $emojiPopup.css('top', response.height - rect.height - 10);
         }
         // Too far right
         if (rect.right > response.width) {
-          $eacPopup.css('left', response.width - rect.width - 10);
+          $emojiPopup.css('left', response.width - rect.width - 10);
         }
       }
     );

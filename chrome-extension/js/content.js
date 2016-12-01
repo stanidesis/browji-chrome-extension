@@ -21,8 +21,8 @@ function onDomMessageReceived(event) {
 
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
-      top: cumulativeOffset.top + lineHeight,
-      left: cumulativeOffset.left + coordinates.left,
+      top: cumulativeOffset.top + lineHeight - $(window).scrollTop(),
+      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft()
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
     dismissPopup();
@@ -35,33 +35,43 @@ function onDomMessageReceived(event) {
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.message === 'display_popup_at_cursor') {
-      // This is where we need to present a little auto-complete search input
-      var activeElement = document.activeElement;
-      if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
-        // Active element is not an input area
-        return;
-      }
-      triggeredElement = activeElement;
-      triggeredSelectionEnd = activeElement.selectionEnd;
-      iframe = document.createElement('iframe');
-      iframe.src = chrome.extension.getURL("html/popup.html");
-      iframe.frameBorder = 0;
-      var $iframe = $(iframe);
-      $iframe.css('position', 'absolute');
-      $iframe.css('width', '100%');
-      $iframe.css('height', '100%');
-      $iframe.css('top', '0');
-      $iframe.css('left', '0');
-      $iframe.css('z-index', '10000000000');
-      $iframe.appendTo('body');
+      displayPopup();
     }
   }
 );
 
-function dismissPopup() {
+function displayPopup() {
+  if (iframe) {
+    dismissPopup(displayPopup);
+    return;
+  }
+  // This is where we need to present a little auto-complete search input
+  var activeElement = document.activeElement;
+  if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
+    // Active element is not an input area
+    return;
+  }
+  triggeredElement = activeElement;
+  triggeredSelectionEnd = activeElement.selectionEnd;
+  iframe = document.createElement('iframe');
+  iframe.src = chrome.extension.getURL("html/popup.html");
+  iframe.scrolling = 'no';
+  iframe.frameBorder = 0;
+  var $iframe = $(iframe);
+  $iframe.css('position', 'fixed');
+  $iframe.css('width', $('body').width());
+  $iframe.css('height', $('body').height());
+  $iframe.css('top', '0');
+  $iframe.css('left', '0');
+  $iframe.css('z-index', '10000000000');
+  $iframe.appendTo('body');
+}
+
+function dismissPopup(callback) {
   $(iframe).fadeOut('fast', function() {
     $(iframe).remove();
     iframe = null;
+    if (callback) callback();
   });
 }
 
