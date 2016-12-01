@@ -21,8 +21,8 @@ function onDomMessageReceived(event) {
 
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
-      top: cumulativeOffset.top + lineHeight,
-      left: cumulativeOffset.left + coordinates.left,
+      top: cumulativeOffset.top + lineHeight - $(window).scrollTop(),
+      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft(),
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
     dismissPopup();
@@ -45,13 +45,16 @@ chrome.runtime.onMessage.addListener(
       triggeredSelectionEnd = activeElement.selectionEnd;
       iframe = document.createElement('iframe');
       iframe.src = chrome.extension.getURL("html/popup.html");
+      iframe.scrolling = 'no';
       iframe.frameBorder = 0;
       var $iframe = $(iframe);
-      $iframe.css('position', 'absolute');
+      $iframe.css('position', 'fixed');
       $iframe.css('width', '100%');
       $iframe.css('height', '100%');
       $iframe.css('top', '0');
       $iframe.css('left', '0');
+      $iframe.css('right', '0');
+      $iframe.css('bottom', '0');
       $iframe.css('z-index', '10000000000');
       $iframe.appendTo('body');
     }
