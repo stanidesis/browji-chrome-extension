@@ -35,7 +35,8 @@
   "commands": {
     "emoji-auto-complete": {
       "suggested_key": {
-        "default": "Ctrl+Space"
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
       },
       "description": "Search for Emojis"
     }

@@ -1,182 +1,8724 @@
-😀,happy,0.5
-😀,teeth,0.5
-😀,face,0.5
-😀,grin,0.5
-😀,:D,0.5
-😀,:-D,0.5
-😀,:),0.5
-😀,:-),0.5
-😀,hehe,0.5
-😀,smile,0.5
-😁,happy,0.5
-😁,teeth,0.5
-😁,face,0.5
-😁,grin,0.5
-😁,x),0.5
-😁,closed,0.5
-😁,eyes,0.5
-😁,smile,0.5
-😂,face,0.5
-😂,crying,0.5
-😂,tears,0.5
-😂,joy,0.5
-😂,smile,0.5
-😂,happy,0.5
-😂,omg,0.5
-😂,lol,0.5
-😂,lmao,0.5
-😂,haha,0.5
-😂,omfg,0.5
-😂,rotflol,0.5
-😂,teeth,0.5
-😂,XD,0.5
-😂,laugh,0.5
-🤣,face,0.5
-🤣,XD,0.5
-🤣,rolling,0.5
-🤣,rotflol,0.5
-🤣,happy,0.5
-🤣,omg,0.5
-🤣,lol,0.5
-🤣,lmao,0.5
-🤣,haha,0.5
-🤣,omfg,0.5
-🤣,floor,0.5
-🤣,laugh,0.5
-😃,smile,0.5
-😃,:),0.5
-😃,:-),0.5
-😃,:-D,0.5
-😃,:D,0.5
-😃,happy,0.5
-😃,mouth,0.5
-😃,face,0.5
-😃,yay,0.5
-😃,woot,0.5
-😃,yeah,0.5
-😃,yah,0.5
-😄,face,0.5
-😄,smile,0.5
-😄,:D,0.5
-😄,:-),0.5
-😄,:),0.5
-😄,aww,0.5
-😄,blush,0.5
-😄,happy,0.5
-😄,yah,0.5
-😄,yeah,0.5
-😄,wink,0.5
-😄,eyes,0.5
-😄,closed,0.5
-😅,smile,0.5
-😅,nervous,0.5
-😅,sweat,0.5
-😅,haha,0.5
-😅,worried,0.5
-😅,closed,0.5
-😅,eyes,0.5
-😅,wink,0.5
-😅,whoops,0.5
-😅,happy,0.5
-😆,face,0.5
-😆,omg,0.5
-😆,XD,0.5
-😆,haha,0.5
-😆,laugh,0.5
-😆,closed,0.5
-😆,eyes,0.5
-😆,wink,0.5
-😆,lol,0.5
-😆,rotflol,0.5
-😆,rolling,0.5
-😉,face,0.5
-😉,wink,0.5
-😉,;-),0.5
-😉,;),0.5
-😉,yo,0.5
-😉,hey,0.5
-😊,face,0.5
-😊,happy,0.5
-😊,:-),0.5
-😊,:),0.5
-😊,blush,0.5
-😊,mmm,0.5
-😋,face,0.5
-😋,mmm,0.5
-😋,tongue,0.5
-😋,:P,0.5
-😋,:-P,0.5
-😎,shades,0.5
-😎,glasses,0.5
-😎,sunglasses,0.5
-😎,cool,0.5
-😎,B),0.5
-😎,B-),0.5
-😎,face,0.5
-😎,oakleys,0.5
-😍,face,0.5
-😍,love,0.5
-😍,in love,0.5
-😍,heart,0.5
-😍,eyes,0.5
-😍,:D,0.5
-😍,blush,0.5
-😘,face,0.5
-😘,wink,0.5
-😘,kiss,0.5
-😘,blow,0.5
-😘,:-*,0.5
-😘,:*,0.5
-😘,love,0.5
-😘,heart,0.5
-😗,face,0.5
-😗,love,0.5
-😗,kiss,0.5
-😗,:-*,0.5
-😗,:*,0.5
-😗,pucker,0.5
-😙,face,0.5
-😙,pucker,0.5
-😙,kiss,0.5
-😙,:-*,0.5
-😙,:*,0.5
-😙,X*,0.5
-😙,X-*,0.5
-😙,love,0.5
-😚,face,0.5
-😚,kiss,0.5
-😚,:-*,0.5
-😚,:*,0.5
-😚,X*,0.5
-😚,X-*,0.5
-😚,blush,0.5
-😚,love,0.5
-😚,pucker,0.5
-🙂,smile,0.5
-🙂,face,0.5
-🙂,slight,0.5
-🙂,:),0.5
-🙂,:-),0.5
-🙂,happy,0.5
-🙂,pleased,0.5
-🙂,yeah,0.5
+Emoji,Keyword,Weight
+‼,bangbang,0.5
+‼,exclamation,0.5
+‼,mark,0.5
+‼,punctuation,0.5
+‼,symbol,0.5
+‼,word,0.5
+⁉,interrobang,0.5
+⁉,exclamation,0.5
+⁉,mark,0.5
+⁉,punctuation,0.5
+⁉,question,0.5
+⁉,symbol,0.5
+⁉,word,0.5
+#️⃣,hash,0.5
+#️⃣,keycap,0.5
+#️⃣,pound,0.5
+#️⃣,symbol,0.5
+#️⃣,word,0.5
+〽,part_alternation_mark,0.5
+〽,mark,0.5
+〽,part,0.5
+〽,sign,0.5
+〽,symbol,0.5
+©,copyright,0.5
+©,symbol,0.5
+©,word,0.5
+®,registered,0.5
+®,symbol,0.5
+®,word,0.5
+↔,left_right_arrow,0.5
+↔,arrow,0.5
+↔,symbol,0.5
+↕,arrow_up_down,0.5
+↕,arrow,0.5
+↕,symbol,0.5
+↖,arrow_upper_left,0.5
+↖,arrow,0.5
+↖,direction,0.5
+↖,intercardinal,0.5
+↖,northwest,0.5
+↖,symbol,0.5
+↗,arrow_upper_right,0.5
+↗,arrow,0.5
+↗,direction,0.5
+↗,intercardinal,0.5
+↗,northeast,0.5
+↗,symbol,0.5
+↘,arrow_lower_right,0.5
+↘,arrow,0.5
+↘,direction,0.5
+↘,intercardinal,0.5
+↘,southeast,0.5
+↘,symbol,0.5
+↙,arrow_lower_left,0.5
+↙,arrow,0.5
+↙,direction,0.5
+↙,intercardinal,0.5
+↙,southwest,0.5
+↙,symbol,0.5
+↩,leftwards_arrow_with_hook,0.5
+↩,arrow,0.5
+↩,symbol,0.5
+↪,arrow_right_hook,0.5
+↪,arrow,0.5
+↪,symbol,0.5
+⌚,watch,0.5
+⌚,clock,0.5
+⌚,object,0.5
+⌚,time,0.5
+⌛,hourglass,0.5
+⌛,object,0.5
+⌛,sand,0.5
+⌛,time,0.5
+⌛,timer,0.5
+⌨,computer,0.5
+⌨,keyboard,0.5
+⌨,object,0.5
+⌨,sign,0.5
+⏩,fast_forward,0.5
+⏩,arrow,0.5
+⏩,double,0.5
+⏩,fast,0.5
+⏩,forward,0.5
+⏩,sound,0.5
+⏩,symbol,0.5
+⏪,rewind,0.5
+⏪,arrow,0.5
+⏪,double,0.5
+⏪,sound,0.5
+⏪,symbol,0.5
+⏫,arrow_double_up,0.5
+⏫,arrow,0.5
+⏫,double,0.5
+⏫,sound,0.5
+⏫,symbol,0.5
+⏬,arrow_double_down,0.5
+⏬,arrow,0.5
+⏬,double,0.5
+⏬,down,0.5
+⏬,sound,0.5
+⏬,symbol,0.5
+⏰,alarm_clock,0.5
+⏰,alarm,0.5
+⏰,clock,0.5
+⏰,object,0.5
+⏰,time,0.5
+⏱,clock,0.5
+⏱,object,0.5
+⏱,stopwatch,0.5
+⏱,time,0.5
+⏲,clock,0.5
+⏲,object,0.5
+⏲,time,0.5
+⏲,timer,0.5
+⏳,hourglass_flowing_sand,0.5
+⏳,hourglass,0.5
+⏳,object,0.5
+⏳,sand,0.5
+⏳,time,0.5
+⏳,timer,0.5
+⏹,sound,0.5
+⏹,square,0.5
+⏹,stop,0.5
+⏹,symbol,0.5
+▪,black_small_square,0.5
+▪,geometric,0.5
+▪,sign,0.5
+▪,square,0.5
+▪,symbol,0.5
+▫,white_small_square,0.5
+▫,geometric,0.5
+▫,sign,0.5
+▫,square,0.5
+▫,symbol,0.5
+▶,arrow_forward,0.5
+▶,arrow,0.5
+▶,play,0.5
+▶,right,0.5
+▶,sound,0.5
+▶,symbol,0.5
+▶,triangle,0.5
+◀,arrow_backward,0.5
+◀,arrow,0.5
+◀,left,0.5
+◀,reverse,0.5
+◀,sound,0.5
+◀,symbol,0.5
+◀,triangle,0.5
+◻,white_medium_square,0.5
+◻,geometric,0.5
+◻,sign,0.5
+◻,square,0.5
+◻,symbol,0.5
+◼,black_medium_square,0.5
+◼,geometric,0.5
+◼,sign,0.5
+◼,square,0.5
+◼,symbol,0.5
+◽,white_medium_small_square,0.5
+◽,geometric,0.5
+◽,sign,0.5
+◽,square,0.5
+◽,symbol,0.5
+◾,black_medium_small_square,0.5
+◾,geometric,0.5
+◾,sign,0.5
+◾,square,0.5
+◾,symbol,0.5
+☀,sunny,0.5
+☀,bright,0.5
+☀,nature,0.5
+☀,rays,0.5
+☀,space,0.5
+☀,sun,0.5
+☀,weather,0.5
+☁,cloud,0.5
+☁,nature,0.5
+☁,weather,0.5
+☂,clothing,0.5
+☂,nature,0.5
+☂,rain,0.5
+☂,umbrella,0.5
+☂,weather,0.5
+☂,clothing,0.5
+☂,nature,0.5
+☂,rain,0.5
+☂,umbrella,0.5
+☂,weather,0.5
+☃,cold,0.5
+☃,nature,0.5
+☃,snow,0.5
+☃,snowman,0.5
+☃,weather,0.5
+☄,comet,0.5
+☄,object,0.5
+☄,space,0.5
+☎,phone,0.5
+☎,telephone,0.5
+☎,object,0.5
+☎,office,0.5
+☎,sound,0.5
+☑,ballot_box_with_check,0.5
+☑,ballot,0.5
+☑,box,0.5
+☑,check,0.5
+☑,sign,0.5
+☑,symbol,0.5
+☔,umbrella,0.5
+☔,clothing,0.5
+☔,drop,0.5
+☔,nature,0.5
+☔,rain,0.5
+☔,weather,0.5
+☕,coffee,0.5
+☕,beverage,0.5
+☕,drink,0.5
+☕,hot,0.5
+☕,nature,0.5
+☕,object,0.5
+☕,steaming,0.5
+☕,tea,0.5
+☘,nature,0.5
+☘,plant,0.5
+☘,shamrock,0.5
+☝,point_up,0.5
+☝,body,0.5
+☝,finger,0.5
+☝,hand,0.5
+☝,index,0.5
+☝,person,0.5
+☝,point,0.5
+☝,up,0.5
+☠,body,0.5
+☠,crossbones,0.5
+☠,death,0.5
+☠,face,0.5
+☠,monster,0.5
+☠,person,0.5
+☠,skull,0.5
+☢,radioactive,0.5
+☢,sign,0.5
+☢,symbol,0.5
+☣,biohazard,0.5
+☣,sign,0.5
+☣,symbol,0.5
+☦,christian,0.5
+☦,cross,0.5
+☦,religion,0.5
+☦,symbol,0.5
+☪,islam,0.5
+☪,muslim,0.5
+☪,religion,0.5
+☪,symbol,0.5
+☮,peace,0.5
+☮,sign,0.5
+☮,symbol,0.5
+☯,religion,0.5
+☯,sign,0.5
+☯,symbol,0.5
+☯,tao,0.5
+☯,taoist,0.5
+☯,yang,0.5
+☯,yin,0.5
+☸,buddhist,0.5
+☸,dharma,0.5
+☸,religion,0.5
+☸,symbol,0.5
+☸,wheel,0.5
+☹,face,0.5
+☹,frown,0.5
+☹,person,0.5
+☺,relaxed,0.5
 ☺,face,0.5
-☺,slight,0.5
-☺,:),0.5
-☺,:-),0.5
-☺,happy,0.5
-🤗,face,0.5
-🤗,smile,0.5
-🤗,hug,0.5
-🤗,hands,0.5
-🤗,yay,0.5
-🤗,happy,0.5
-🤗,:),0.5
+☺,outlined,0.5
+☺,person,0.5
+☺,smile,0.5
+♈,aries,0.5
+♈,ram,0.5
+♈,symbol,0.5
+♈,time,0.5
+♈,zodiac,0.5
+♉,taurus,0.5
+♉,bull,0.5
+♉,ox,0.5
+♉,symbol,0.5
+♉,time,0.5
+♉,zodiac,0.5
+♊,gemini,0.5
+♊,symbol,0.5
+♊,time,0.5
+♊,twins,0.5
+♊,zodiac,0.5
+♋,cancer,0.5
+♋,crab,0.5
+♋,symbol,0.5
+♋,time,0.5
+♋,zodiac,0.5
+♌,leo,0.5
+♌,lion,0.5
+♌,symbol,0.5
+♌,time,0.5
+♌,zodiac,0.5
+♍,virgo,0.5
+♍,maiden,0.5
+♍,symbol,0.5
+♍,time,0.5
+♍,virgin,0.5
+♍,zodiac,0.5
+♎,libra,0.5
+♎,balance,0.5
+♎,justice,0.5
+♎,scales,0.5
+♎,symbol,0.5
+♎,time,0.5
+♎,zodiac,0.5
+♏,scorpius,0.5
+♏,scorpio,0.5
+♏,scorpion,0.5
+♏,symbol,0.5
+♏,time,0.5
+♏,zodiac,0.5
+♐,sagittarius,0.5
+♐,archer,0.5
+♐,symbol,0.5
+♐,time,0.5
+♐,zodiac,0.5
+♑,capricorn,0.5
+♑,goat,0.5
+♑,symbol,0.5
+♑,time,0.5
+♑,zodiac,0.5
+♒,aquarius,0.5
+♒,bearer,0.5
+♒,symbol,0.5
+♒,time,0.5
+♒,water,0.5
+♒,zodiac,0.5
+♓,pisces,0.5
+♓,fish,0.5
+♓,symbol,0.5
+♓,time,0.5
+♓,zodiac,0.5
+♠,spades,0.5
+♠,card,0.5
+♠,game,0.5
+♠,spade,0.5
+♠,suit,0.5
+♠,symbol,0.5
+♣,clubs,0.5
+♣,card,0.5
+♣,club,0.5
+♣,game,0.5
+♣,suit,0.5
+♣,symbol,0.5
+♥,hearts,0.5
+♥,card,0.5
+♥,emotion,0.5
+♥,game,0.5
+♥,heart,0.5
+♥,suit,0.5
+♥,symbol,0.5
+♦,diamonds,0.5
+♦,card,0.5
+♦,diamond,0.5
+♦,game,0.5
+♦,suit,0.5
+♦,symbol,0.5
+♨,hotsprings,0.5
+♨,hot,0.5
+♨,place,0.5
+♨,springs,0.5
+♨,steaming,0.5
+♻,recycle,0.5
+♻,sign,0.5
+♻,symbol,0.5
+♿,wheelchair,0.5
+♿,access,0.5
+♿,sign,0.5
+♿,symbol,0.5
+♿,travel,0.5
+⚒,hammer,0.5
+⚒,object,0.5
+⚒,pick,0.5
+⚒,tool,0.5
+⚓,anchor,0.5
+⚓,place,0.5
+⚓,ship,0.5
+⚓,tool,0.5
+⚓,travel,0.5
+⚔,crossed,0.5
+⚔,object,0.5
+⚔,swords,0.5
+⚔,weapon,0.5
+⚖,balance,0.5
+⚖,justice,0.5
+⚖,libra,0.5
+⚖,object,0.5
+⚖,scales,0.5
+⚖,tool,0.5
+⚖,weight,0.5
+⚖,zodiac,0.5
+⚗,alembic,0.5
+⚗,chemistry,0.5
+⚗,object,0.5
+⚗,tool,0.5
+⚙,gear,0.5
+⚙,object,0.5
+⚙,tool,0.5
+⚛,atheist,0.5
+⚛,atom,0.5
+⚛,symbol,0.5
+⚠,warning,0.5
+⚠,place,0.5
+⚠,symbol,0.5
+⚠,travel,0.5
+⚡,zap,0.5
+⚡,danger,0.5
+⚡,electric,0.5
+⚡,electricity,0.5
+⚡,lightning,0.5
+⚡,nature,0.5
+⚡,symbol,0.5
+⚡,voltage,0.5
+⚪,white_circle,0.5
+⚪,circle,0.5
+⚪,geometric,0.5
+⚪,sign,0.5
+⚪,symbol,0.5
+⚫,black_circle,0.5
+⚫,circle,0.5
+⚫,geometric,0.5
+⚫,sign,0.5
+⚫,symbol,0.5
+⚰,coffin,0.5
+⚰,death,0.5
+⚰,object,0.5
+⚱,death,0.5
+⚱,funeral,0.5
+⚱,object,0.5
+⚱,urn,0.5
+⚽,soccer,0.5
+⚽,ball,0.5
+⚽,object,0.5
+⚽,place,0.5
+⚽,sport,0.5
+⚾,baseball,0.5
+⚾,ball,0.5
+⚾,object,0.5
+⚾,place,0.5
+⚾,sport,0.5
+⛄,snowman,0.5
+⛄,cold,0.5
+⛄,nature,0.5
+⛄,snow,0.5
+⛄,weather,0.5
+⛅,partly_sunny,0.5
+⛅,cloud,0.5
+⛅,nature,0.5
+⛅,sun,0.5
+⛅,weather,0.5
+⛈,cloud,0.5
+⛈,nature,0.5
+⛈,rain,0.5
+⛈,thunder,0.5
+⛈,weather,0.5
+⛎,ophiuchus,0.5
+⛎,bearer,0.5
+⛎,serpent,0.5
+⛎,snake,0.5
+⛎,symbol,0.5
+⛎,zodiac,0.5
+⛏,mining,0.5
+⛏,object,0.5
+⛏,pick,0.5
+⛏,tool,0.5
+⛑,aid,0.5
+⛑,cross,0.5
+⛑,face,0.5
+⛑,hat,0.5
+⛑,helmet,0.5
+⛑,person,0.5
+⛓,chain,0.5
+⛓,object,0.5
+⛔,no_entry,0.5
+⛔,entry,0.5
+⛔,forbidden,0.5
+⛔,no,0.5
+⛔,not,0.5
+⛔,prohibited,0.5
+⛔,symbol,0.5
+⛔,traffic,0.5
+⛔,travel,0.5
+⛩,religion,0.5
+⛩,shinto,0.5
+⛩,shrine,0.5
+⛩,symbol,0.5
+⛪,church,0.5
+⛪,building,0.5
+⛪,christian,0.5
+⛪,cross,0.5
+⛪,place,0.5
+⛪,religion,0.5
+⛰,mountain,0.5
+⛰,place,0.5
+⛱,nature,0.5
+⛱,rain,0.5
+⛱,sun,0.5
+⛱,travel,0.5
+⛱,umbrella,0.5
+⛱,weather,0.5
+⛱,nature,0.5
+⛱,rain,0.5
+⛱,sun,0.5
+⛱,travel,0.5
+⛱,umbrella,0.5
+⛱,weather,0.5
+⛲,fountain,0.5
+⛲,object,0.5
+⛲,place,0.5
+⛳,golf,0.5
+⛳,flag,0.5
+⛳,hole,0.5
+⛳,object,0.5
+⛳,place,0.5
+⛳,sport,0.5
+⛳,travel,0.5
+⛴,boat,0.5
+⛴,ferry,0.5
+⛴,place,0.5
+⛴,travel,0.5
+⛵,boat,0.5
+⛵,sailboat,0.5
+⛵,place,0.5
+⛵,resort,0.5
+⛵,sea,0.5
+⛵,travel,0.5
+⛵,vehicle,0.5
+⛵,yacht,0.5
+⛷,person,0.5
+⛷,ski,0.5
+⛷,snow,0.5
+⛷,sport,0.5
+⛷,travel,0.5
+⛸,ice,0.5
+⛸,place,0.5
+⛸,skate,0.5
+⛸,sport,0.5
+⛸,travel,0.5
+⛹,ball,0.5
+⛹,person,0.5
+⛹,sport,0.5
+⛹,travel,0.5
+⛺,tent,0.5
+⛺,camping,0.5
+⛺,object,0.5
+⛺,place,0.5
+⛽,fuelpump,0.5
+⛽,fuel,0.5
+⛽,gas,0.5
+⛽,place,0.5
+⛽,pump,0.5
+⛽,station,0.5
+⛽,travel,0.5
+🇦🇨,flag,0.5
+🇦🇨,ascension,0.5
+🇦🇨,island,0.5
+🇦🇩,flag,0.5
+🇦🇩,andorra,0.5
+🇦🇪,flag,0.5
+🇦🇪,united,0.5
+🇦🇪,arab,0.5
+🇦🇪,emirates,0.5
+🇦🇫,flag,0.5
+🇦🇫,afghanistan,0.5
+🇦🇬,flag,0.5
+🇦🇬,antigua,0.5
+🇦🇬,barbuda,0.5
+🇦🇮,flag,0.5
+🇦🇮,anguilla,0.5
+🇦🇱,flag,0.5
+🇦🇱,albania,0.5
+🇦🇲,flag,0.5
+🇦🇲,armenia,0.5
+🇦🇴,flag,0.5
+🇦🇴,angola,0.5
+🇦🇶,flag,0.5
+🇦🇶,antarctica,0.5
+🇦🇷,flag,0.5
+🇦🇷,argentina,0.5
+🇦🇸,flag,0.5
+🇦🇸,american,0.5
+🇦🇸,samoa,0.5
+🇦🇹,flag,0.5
+🇦🇹,austria,0.5
+🇦🇺,flag,0.5
+🇦🇺,australia,0.5
+🇦🇼,flag,0.5
+🇦🇼,aruba,0.5
+🇦🇽,flag,0.5
+🇦🇽,åland,0.5
+🇦🇽,islands,0.5
+🇦🇿,flag,0.5
+🇦🇿,azerbaijan,0.5
+🇧🇦,flag,0.5
+🇧🇦,bosnia,0.5
+🇧🇦,herzegovina,0.5
+🇧🇧,flag,0.5
+🇧🇧,barbados,0.5
+🇧🇩,flag,0.5
+🇧🇩,bangladesh,0.5
+🇧🇪,flag,0.5
+🇧🇪,belgium,0.5
+🇧🇫,flag,0.5
+🇧🇫,burkina,0.5
+🇧🇫,faso,0.5
+🇧🇬,flag,0.5
+🇧🇬,bulgaria,0.5
+🇧🇭,flag,0.5
+🇧🇭,bahrain,0.5
+🇧🇮,flag,0.5
+🇧🇮,burundi,0.5
+🇧🇯,flag,0.5
+🇧🇯,benin,0.5
+🇧🇱,flag,0.5
+🇧🇱,st.,0.5
+🇧🇱,barthélemy,0.5
+🇧🇲,flag,0.5
+🇧🇲,bermuda,0.5
+🇧🇳,flag,0.5
+🇧🇳,brunei,0.5
+🇧🇴,flag,0.5
+🇧🇴,bolivia,0.5
+🇧🇶,flag,0.5
+🇧🇶,caribbean,0.5
+🇧🇶,netherlands,0.5
+🇧🇷,flag,0.5
+🇧🇷,brazil,0.5
+🇧🇸,flag,0.5
+🇧🇸,bahamas,0.5
+🇧🇹,flag,0.5
+🇧🇹,bhutan,0.5
+🇧🇻,flag,0.5
+🇧🇻,bouvet,0.5
+🇧🇻,island,0.5
+🇧🇼,flag,0.5
+🇧🇼,botswana,0.5
+🇧🇾,flag,0.5
+🇧🇾,belarus,0.5
+🇧🇿,flag,0.5
+🇧🇿,belize,0.5
+🇨🇦,flag,0.5
+🇨🇦,canada,0.5
+🇨🇨,flag,0.5
+🇨🇨,cocos,0.5
+🇨🇨,islands,0.5
+🇨🇩,flag,0.5
+🇨🇩,congo,0.5
+🇨🇩,kinshasa,0.5
+🇨🇫,flag,0.5
+🇨🇫,central,0.5
+🇨🇫,african,0.5
+🇨🇫,republic,0.5
+🇨🇬,flag,0.5
+🇨🇬,congo,0.5
+🇨🇬,brazzaville,0.5
+🇨🇭,flag,0.5
+🇨🇭,switzerland,0.5
+🇨🇮,flag,0.5
+🇨🇮,côte,0.5
+🇨🇮,d’ivoire,0.5
+🇨🇰,flag,0.5
+🇨🇰,cook,0.5
+🇨🇰,islands,0.5
+🇨🇱,flag,0.5
+🇨🇱,chile,0.5
+🇨🇲,flag,0.5
+🇨🇲,cameroon,0.5
+🇨🇳,cn,0.5
+🇨🇳,flag,0.5
+🇨🇳,china,0.5
+🇨🇴,flag,0.5
+🇨🇴,colombia,0.5
+🇨🇵,flag,0.5
+🇨🇵,clipperton,0.5
+🇨🇵,island,0.5
+🇨🇷,flag,0.5
+🇨🇷,costa,0.5
+🇨🇷,rica,0.5
+🇨🇺,flag,0.5
+🇨🇺,cuba,0.5
+🇨🇻,flag,0.5
+🇨🇻,cape,0.5
+🇨🇻,verde,0.5
+🇨🇼,flag,0.5
+🇨🇼,curaçao,0.5
+🇨🇽,flag,0.5
+🇨🇽,christmas,0.5
+🇨🇽,island,0.5
+🇨🇾,flag,0.5
+🇨🇾,cyprus,0.5
+🇨🇿,flag,0.5
+🇨🇿,czech,0.5
+🇨🇿,republic,0.5
+🇩🇪,de,0.5
+🇩🇪,flag,0.5
+🇩🇪,germany,0.5
+🇩🇬,flag,0.5
+🇩🇬,diego,0.5
+🇩🇬,garcia,0.5
+🇩🇯,flag,0.5
+🇩🇯,djibouti,0.5
+🇩🇰,flag,0.5
+🇩🇰,denmark,0.5
+🇩🇲,flag,0.5
+🇩🇲,dominica,0.5
+🇩🇴,flag,0.5
+🇩🇴,dominican,0.5
+🇩🇴,republic,0.5
+🇩🇿,flag,0.5
+🇩🇿,algeria,0.5
+🇪🇦,flag,0.5
+🇪🇦,ceuta,0.5
+🇪🇦,melilla,0.5
+🇪🇨,flag,0.5
+🇪🇨,ecuador,0.5
+🇪🇪,flag,0.5
+🇪🇪,estonia,0.5
+🇪🇬,flag,0.5
+🇪🇬,egypt,0.5
+🇪🇭,flag,0.5
+🇪🇭,western,0.5
+🇪🇭,sahara,0.5
+🇪🇷,flag,0.5
+🇪🇷,eritrea,0.5
+🇪🇸,es,0.5
+🇪🇸,flag,0.5
+🇪🇸,spain,0.5
+🇪🇹,flag,0.5
+🇪🇹,ethiopia,0.5
+🇪🇺,flag,0.5
+🇪🇺,european,0.5
+🇪🇺,union,0.5
+🇫🇮,flag,0.5
+🇫🇮,finland,0.5
+🇫🇯,flag,0.5
+🇫🇯,fiji,0.5
+🇫🇰,flag,0.5
+🇫🇰,falkland,0.5
+🇫🇰,islands,0.5
+🇫🇲,flag,0.5
+🇫🇲,micronesia,0.5
+🇫🇴,flag,0.5
+🇫🇴,faroe,0.5
+🇫🇴,islands,0.5
+🇫🇷,fr,0.5
+🇫🇷,flag,0.5
+🇫🇷,france,0.5
+🇬🇦,flag,0.5
+🇬🇦,gabon,0.5
+🇬🇧,gb,0.5
+🇬🇧,uk,0.5
+🇬🇧,flag,0.5
+🇬🇧,united,0.5
+🇬🇧,kingdom,0.5
+🇬🇩,flag,0.5
+🇬🇩,grenada,0.5
+🇬🇪,flag,0.5
+🇬🇪,georgia,0.5
+🇬🇫,flag,0.5
+🇬🇫,french,0.5
+🇬🇫,guiana,0.5
+🇬🇬,flag,0.5
+🇬🇬,guernsey,0.5
+🇬🇭,flag,0.5
+🇬🇭,ghana,0.5
+🇬🇮,flag,0.5
+🇬🇮,gibraltar,0.5
+🇬🇱,flag,0.5
+🇬🇱,greenland,0.5
+🇬🇲,flag,0.5
+🇬🇲,gambia,0.5
+🇬🇳,flag,0.5
+🇬🇳,guinea,0.5
+🇬🇵,flag,0.5
+🇬🇵,guadeloupe,0.5
+🇬🇶,flag,0.5
+🇬🇶,equatorial,0.5
+🇬🇶,guinea,0.5
+🇬🇷,flag,0.5
+🇬🇷,greece,0.5
+🇬🇸,flag,0.5
+🇬🇸,south,0.5
+🇬🇸,georgia,0.5
+🇬🇸,sandwich,0.5
+🇬🇸,islands,0.5
+🇬🇹,flag,0.5
+🇬🇹,guatemala,0.5
+🇬🇺,flag,0.5
+🇬🇺,guam,0.5
+🇬🇼,flag,0.5
+🇬🇼,guinea-bissau,0.5
+🇬🇾,flag,0.5
+🇬🇾,guyana,0.5
+🇭🇰,flag,0.5
+🇭🇰,hong,0.5
+🇭🇰,kong,0.5
+🇭🇲,flag,0.5
+🇭🇲,heard,0.5
+🇭🇲,mcdonald,0.5
+🇭🇲,islands,0.5
+🇭🇳,flag,0.5
+🇭🇳,honduras,0.5
+🇭🇷,flag,0.5
+🇭🇷,croatia,0.5
+🇭🇹,flag,0.5
+🇭🇹,haiti,0.5
+🇭🇺,flag,0.5
+🇭🇺,hungary,0.5
+🇮🇨,flag,0.5
+🇮🇨,canary,0.5
+🇮🇨,islands,0.5
+🇮🇩,flag,0.5
+🇮🇩,indonesia,0.5
+🇮🇪,flag,0.5
+🇮🇪,ireland,0.5
+🇮🇱,flag,0.5
+🇮🇱,israel,0.5
+🇮🇲,flag,0.5
+🇮🇲,isle,0.5
+🇮🇲,man,0.5
+🇮🇳,flag,0.5
+🇮🇳,india,0.5
+🇮🇴,flag,0.5
+🇮🇴,british,0.5
+🇮🇴,indian,0.5
+🇮🇴,ocean,0.5
+🇮🇴,territory,0.5
+🇮🇶,flag,0.5
+🇮🇶,iraq,0.5
+🇮🇷,flag,0.5
+🇮🇷,iran,0.5
+🇮🇸,flag,0.5
+🇮🇸,iceland,0.5
+🇮🇹,it,0.5
+🇮🇹,flag,0.5
+🇮🇹,italy,0.5
+🇯🇪,flag,0.5
+🇯🇪,jersey,0.5
+🇯🇲,flag,0.5
+🇯🇲,jamaica,0.5
+🇯🇴,flag,0.5
+🇯🇴,jordan,0.5
+🇯🇵,jp,0.5
+🇯🇵,flag,0.5
+🇯🇵,japan,0.5
+🇰🇪,flag,0.5
+🇰🇪,kenya,0.5
+🇰🇬,flag,0.5
+🇰🇬,kyrgyzstan,0.5
+🇰🇭,flag,0.5
+🇰🇭,cambodia,0.5
+🇰🇮,flag,0.5
+🇰🇮,kiribati,0.5
+🇰🇲,flag,0.5
+🇰🇲,comoros,0.5
+🇰🇳,flag,0.5
+🇰🇳,st.,0.5
+🇰🇳,kitts,0.5
+🇰🇳,nevis,0.5
+🇰🇵,flag,0.5
+🇰🇵,north,0.5
+🇰🇵,korea,0.5
+🇰🇷,kr,0.5
+🇰🇷,flag,0.5
+🇰🇷,south,0.5
+🇰🇷,korea,0.5
+🇰🇼,flag,0.5
+🇰🇼,kuwait,0.5
+🇰🇾,flag,0.5
+🇰🇾,cayman,0.5
+🇰🇾,islands,0.5
+🇰🇿,flag,0.5
+🇰🇿,kazakhstan,0.5
+🇱🇦,flag,0.5
+🇱🇦,laos,0.5
+🇱🇧,flag,0.5
+🇱🇧,lebanon,0.5
+🇱🇨,flag,0.5
+🇱🇨,st.,0.5
+🇱🇨,lucia,0.5
+🇱🇮,flag,0.5
+🇱🇮,liechtenstein,0.5
+🇱🇰,flag,0.5
+🇱🇰,sri,0.5
+🇱🇰,lanka,0.5
+🇱🇷,flag,0.5
+🇱🇷,liberia,0.5
+🇱🇸,flag,0.5
+🇱🇸,lesotho,0.5
+🇱🇹,flag,0.5
+🇱🇹,lithuania,0.5
+🇱🇺,flag,0.5
+🇱🇺,luxembourg,0.5
+🇱🇻,flag,0.5
+🇱🇻,latvia,0.5
+🇱🇾,flag,0.5
+🇱🇾,libya,0.5
+🇲🇦,flag,0.5
+🇲🇦,morocco,0.5
+🇲🇨,flag,0.5
+🇲🇨,monaco,0.5
+🇲🇩,flag,0.5
+🇲🇩,moldova,0.5
+🇲🇪,flag,0.5
+🇲🇪,montenegro,0.5
+🇲🇫,flag,0.5
+🇲🇫,st.,0.5
+🇲🇫,martin,0.5
+🇲🇬,flag,0.5
+🇲🇬,madagascar,0.5
+🇲🇭,flag,0.5
+🇲🇭,marshall,0.5
+🇲🇭,islands,0.5
+🇲🇰,flag,0.5
+🇲🇰,macedonia,0.5
+🇲🇱,flag,0.5
+🇲🇱,mali,0.5
+🇲🇲,flag,0.5
+🇲🇲,myanmar,0.5
+🇲🇳,flag,0.5
+🇲🇳,mongolia,0.5
+🇲🇴,flag,0.5
+🇲🇴,macau,0.5
+🇲🇵,flag,0.5
+🇲🇵,northern,0.5
+🇲🇵,mariana,0.5
+🇲🇵,islands,0.5
+🇲🇶,flag,0.5
+🇲🇶,martinique,0.5
+🇲🇷,flag,0.5
+🇲🇷,mauritania,0.5
+🇲🇸,flag,0.5
+🇲🇸,montserrat,0.5
+🇲🇹,flag,0.5
+🇲🇹,malta,0.5
+🇲🇺,flag,0.5
+🇲🇺,mauritius,0.5
+🇲🇻,flag,0.5
+🇲🇻,maldives,0.5
+🇲🇼,flag,0.5
+🇲🇼,malawi,0.5
+🇲🇽,flag,0.5
+🇲🇽,mexico,0.5
+🇲🇾,flag,0.5
+🇲🇾,malaysia,0.5
+🇲🇿,flag,0.5
+🇲🇿,mozambique,0.5
+🇳🇦,flag,0.5
+🇳🇦,namibia,0.5
+🇳🇨,flag,0.5
+🇳🇨,new,0.5
+🇳🇨,caledonia,0.5
+🇳🇪,flag,0.5
+🇳🇪,niger,0.5
+🇳🇫,flag,0.5
+🇳🇫,norfolk,0.5
+🇳🇫,island,0.5
+🇳🇬,flag,0.5
+🇳🇬,nigeria,0.5
+🇳🇮,flag,0.5
+🇳🇮,nicaragua,0.5
+🇳🇱,flag,0.5
+🇳🇱,netherlands,0.5
+🇳🇴,flag,0.5
+🇳🇴,norway,0.5
+🇳🇵,flag,0.5
+🇳🇵,nepal,0.5
+🇳🇷,flag,0.5
+🇳🇷,nauru,0.5
+🇳🇺,flag,0.5
+🇳🇺,niue,0.5
+🇳🇿,flag,0.5
+🇳🇿,new,0.5
+🇳🇿,zealand,0.5
+🇴🇲,flag,0.5
+🇴🇲,oman,0.5
+🇵🇦,flag,0.5
+🇵🇦,panama,0.5
+🇵🇪,flag,0.5
+🇵🇪,peru,0.5
+🇵🇫,flag,0.5
+🇵🇫,french,0.5
+🇵🇫,polynesia,0.5
+🇵🇬,flag,0.5
+🇵🇬,papua,0.5
+🇵🇬,new,0.5
+🇵🇬,guinea,0.5
+🇵🇭,flag,0.5
+🇵🇭,philippines,0.5
+🇵🇰,flag,0.5
+🇵🇰,pakistan,0.5
+🇵🇱,flag,0.5
+🇵🇱,poland,0.5
+🇵🇲,flag,0.5
+🇵🇲,st.,0.5
+🇵🇲,pierre,0.5
+🇵🇲,miquelon,0.5
+🇵🇳,flag,0.5
+🇵🇳,pitcairn,0.5
+🇵🇳,islands,0.5
+🇵🇷,flag,0.5
+🇵🇷,puerto,0.5
+🇵🇷,rico,0.5
+🇵🇸,flag,0.5
+🇵🇸,palestinian,0.5
+🇵🇸,territories,0.5
+🇵🇹,flag,0.5
+🇵🇹,portugal,0.5
+🇵🇼,flag,0.5
+🇵🇼,palau,0.5
+🇵🇾,flag,0.5
+🇵🇾,paraguay,0.5
+🇶🇦,flag,0.5
+🇶🇦,qatar,0.5
+🇷🇪,flag,0.5
+🇷🇪,réunion,0.5
+🇷🇴,flag,0.5
+🇷🇴,romania,0.5
+🇷🇸,flag,0.5
+🇷🇸,serbia,0.5
+🇷🇺,ru,0.5
+🇷🇺,flag,0.5
+🇷🇺,russia,0.5
+🇷🇼,flag,0.5
+🇷🇼,rwanda,0.5
+🇸🇦,flag,0.5
+🇸🇦,saudi,0.5
+🇸🇦,arabia,0.5
+🇸🇧,flag,0.5
+🇸🇧,solomon,0.5
+🇸🇧,islands,0.5
+🇸🇨,flag,0.5
+🇸🇨,seychelles,0.5
+🇸🇩,flag,0.5
+🇸🇩,sudan,0.5
+🇸🇪,flag,0.5
+🇸🇪,sweden,0.5
+🇸🇬,flag,0.5
+🇸🇬,singapore,0.5
+🇸🇭,flag,0.5
+🇸🇭,st.,0.5
+🇸🇭,helena,0.5
+🇸🇮,flag,0.5
+🇸🇮,slovenia,0.5
+🇸🇯,flag,0.5
+🇸🇯,svalbard,0.5
+🇸🇯,jan,0.5
+🇸🇯,mayen,0.5
+🇸🇰,flag,0.5
+🇸🇰,slovakia,0.5
+🇸🇱,flag,0.5
+🇸🇱,sierra,0.5
+🇸🇱,leone,0.5
+🇸🇲,flag,0.5
+🇸🇲,san,0.5
+🇸🇲,marino,0.5
+🇸🇳,flag,0.5
+🇸🇳,senegal,0.5
+🇸🇴,flag,0.5
+🇸🇴,somalia,0.5
+🇸🇷,flag,0.5
+🇸🇷,suriname,0.5
+🇸🇸,flag,0.5
+🇸🇸,south,0.5
+🇸🇸,sudan,0.5
+🇸🇹,flag,0.5
+🇸🇹,são,0.5
+🇸🇹,tomé,0.5
+🇸🇹,príncipe,0.5
+🇸🇻,flag,0.5
+🇸🇻,el,0.5
+🇸🇻,salvador,0.5
+🇸🇽,flag,0.5
+🇸🇽,sint,0.5
+🇸🇽,maarten,0.5
+🇸🇾,flag,0.5
+🇸🇾,syria,0.5
+🇸🇿,flag,0.5
+🇸🇿,swaziland,0.5
+🇹🇦,flag,0.5
+🇹🇦,tristan,0.5
+🇹🇦,da,0.5
+🇹🇦,cunha,0.5
+🇹🇨,flag,0.5
+🇹🇨,turks,0.5
+🇹🇨,caicos,0.5
+🇹🇨,islands,0.5
+🇹🇩,flag,0.5
+🇹🇩,chad,0.5
+🇹🇫,flag,0.5
+🇹🇫,french,0.5
+🇹🇫,southern,0.5
+🇹🇫,territories,0.5
+🇹🇬,flag,0.5
+🇹🇬,togo,0.5
+🇹🇭,flag,0.5
+🇹🇭,thailand,0.5
+🇹🇯,flag,0.5
+🇹🇯,tajikistan,0.5
+🇹🇰,flag,0.5
+🇹🇰,tokelau,0.5
+🇹🇱,flag,0.5
+🇹🇱,timor-leste,0.5
+🇹🇲,flag,0.5
+🇹🇲,turkmenistan,0.5
+🇹🇳,flag,0.5
+🇹🇳,tunisia,0.5
+🇹🇴,flag,0.5
+🇹🇴,tonga,0.5
+🇹🇷,flag,0.5
+🇹🇷,turkey,0.5
+🇹🇹,flag,0.5
+🇹🇹,trinidad,0.5
+🇹🇹,tobago,0.5
+🇹🇻,flag,0.5
+🇹🇻,tuvalu,0.5
+🇹🇼,flag,0.5
+🇹🇼,taiwan,0.5
+🇹🇿,flag,0.5
+🇹🇿,tanzania,0.5
+🇺🇦,flag,0.5
+🇺🇦,ukraine,0.5
+🇺🇬,flag,0.5
+🇺🇬,uganda,0.5
+🇺🇲,flag,0.5
+🇺🇲,u.s.,0.5
+🇺🇲,outlying,0.5
+🇺🇲,islands,0.5
+🇺🇳,flag,0.5
+🇺🇳,united,0.5
+🇺🇳,nations,0.5
+🇺🇸,us,0.5
+🇺🇸,flag,0.5
+🇺🇸,united,0.5
+🇺🇸,states,0.5
+🇺🇾,flag,0.5
+🇺🇾,uruguay,0.5
+🇺🇿,flag,0.5
+🇺🇿,uzbekistan,0.5
+🇻🇦,flag,0.5
+🇻🇦,vatican,0.5
+🇻🇦,city,0.5
+🇻🇨,flag,0.5
+🇻🇨,st.,0.5
+🇻🇨,vincent,0.5
+🇻🇨,grenadines,0.5
+🇻🇪,flag,0.5
+🇻🇪,venezuela,0.5
+🇻🇬,flag,0.5
+🇻🇬,british,0.5
+🇻🇬,virgin,0.5
+🇻🇬,islands,0.5
+🇻🇮,flag,0.5
+🇻🇮,u.s.,0.5
+🇻🇮,virgin,0.5
+🇻🇮,islands,0.5
+🇻🇳,flag,0.5
+🇻🇳,vietnam,0.5
+🇻🇺,flag,0.5
+🇻🇺,vanuatu,0.5
+🇼🇫,flag,0.5
+🇼🇫,wallis,0.5
+🇼🇫,futuna,0.5
+🇼🇸,flag,0.5
+🇼🇸,samoa,0.5
+🇽🇪,flag,0.5
+🇽🇪,england,0.5
+🇽🇰,flag,0.5
+🇽🇰,kosovo,0.5
+🇽🇸,flag,0.5
+🇽🇸,scotland,0.5
+🇽🇼,flag,0.5
+🇽🇼,wales,0.5
+🇾🇪,flag,0.5
+🇾🇪,yemen,0.5
+🇾🇹,flag,0.5
+🇾🇹,mayotte,0.5
+🇿🇦,flag,0.5
+🇿🇦,south,0.5
+🇿🇦,africa,0.5
+🇿🇲,flag,0.5
+🇿🇲,zambia,0.5
+🇿🇼,flag,0.5
+🇿🇼,zimbabwe,0.5
+✂,scissors,0.5
+✂,object,0.5
+✂,office,0.5
+✂,tool,0.5
+✅,white_check_mark,0.5
+✅,check,0.5
+✅,mark,0.5
+✅,sign,0.5
+✅,symbol,0.5
+✈,airplane,0.5
+✈,place,0.5
+✈,travel,0.5
+✈,vehicle,0.5
+✉,email,0.5
+✉,envelope,0.5
+✉,e-mail,0.5
+✉,object,0.5
+✉,office,0.5
+✊,fist,0.5
+✊,body,0.5
+✊,clenched,0.5
+✊,hand,0.5
+✊,person,0.5
+✊,punch,0.5
+✋,hand,0.5
+✋,raised_hand,0.5
+✋,body,0.5
+✋,person,0.5
+✌,v,0.5
+✌,body,0.5
+✌,hand,0.5
+✌,person,0.5
+✌,victory,0.5
+✍,body,0.5
+✍,education,0.5
+✍,hand,0.5
+✍,person,0.5
+✍,write,0.5
+✏,pencil2,0.5
+✏,object,0.5
+✏,office,0.5
+✏,pencil,0.5
+✒,black_nib,0.5
+✒,nib,0.5
+✒,object,0.5
+✒,office,0.5
+✒,pen,0.5
+✔,heavy_check_mark,0.5
+✔,check,0.5
+✔,mark,0.5
+✔,sign,0.5
+✔,symbol,0.5
+✖,heavy_multiplication_x,0.5
+✖,cancel,0.5
+✖,multiplication,0.5
+✖,multiply,0.5
+✖,sign,0.5
+✖,symbol,0.5
+✖,x,0.5
+✝,christian,0.5
+✝,cross,0.5
+✝,religion,0.5
+✝,symbol,0.5
+✡,david,0.5
+✡,jew,0.5
+✡,jewish,0.5
+✡,religion,0.5
+✡,star,0.5
+✡,symbol,0.5
+✨,sparkles,0.5
+✨,emotion,0.5
+✨,entertainment,0.5
+✨,object,0.5
+✨,sign,0.5
+✨,sparkle,0.5
+✨,star,0.5
+✳,eight_spoked_asterisk,0.5
+✳,asterisk,0.5
+✳,sign,0.5
+✳,symbol,0.5
+✴,eight_pointed_black_star,0.5
+✴,sign,0.5
+✴,star,0.5
+✴,symbol,0.5
+❄,snowflake,0.5
+❄,cold,0.5
+❄,nature,0.5
+❄,snow,0.5
+❄,weather,0.5
+❇,sparkle,0.5
+❇,sign,0.5
+❇,symbol,0.5
+❌,x,0.5
+❌,cancel,0.5
+❌,mark,0.5
+❌,multiplication,0.5
+❌,multiply,0.5
+❌,sign,0.5
+❌,symbol,0.5
+❎,negative_squared_cross_mark,0.5
+❎,mark,0.5
+❎,sign,0.5
+❎,square,0.5
+❎,symbol,0.5
+❓,question,0.5
+❓,mark,0.5
+❓,punctuation,0.5
+❓,symbol,0.5
+❓,word,0.5
+❔,grey_question,0.5
+❔,mark,0.5
+❔,outlined,0.5
+❔,punctuation,0.5
+❔,question,0.5
+❔,symbol,0.5
+❔,word,0.5
+❕,grey_exclamation,0.5
+❕,exclamation,0.5
+❕,mark,0.5
+❕,outlined,0.5
+❕,punctuation,0.5
+❕,symbol,0.5
+❕,word,0.5
+❗,exclamation,0.5
+❗,heavy_exclamation_mark,0.5
+❗,mark,0.5
+❗,punctuation,0.5
+❗,symbol,0.5
+❗,word,0.5
+❣,emotion,0.5
+❣,exclamation,0.5
+❣,heart,0.5
+❣,mark,0.5
+❣,punctuation,0.5
+❣,symbol,0.5
+❤,heart,0.5
+❤,emotion,0.5
+❤,person,0.5
+❤,red,0.5
+➕,heavy_plus_sign,0.5
+➕,math,0.5
+➕,plus,0.5
+➕,sign,0.5
+➕,symbol,0.5
+➖,heavy_minus_sign,0.5
+➖,math,0.5
+➖,minus,0.5
+➖,sign,0.5
+➖,symbol,0.5
+➗,heavy_division_sign,0.5
+➗,division,0.5
+➗,math,0.5
+➗,sign,0.5
+➗,symbol,0.5
+➡,arrow_right,0.5
+➡,arrow,0.5
+➡,cardinal,0.5
+➡,direction,0.5
+➡,east,0.5
+➡,symbol,0.5
+➰,curly_loop,0.5
+➰,curl,0.5
+➰,loop,0.5
+➰,sign,0.5
+➰,symbol,0.5
+➿,loop,0.5
+➿,curl,0.5
+➿,double,0.5
+➿,sign,0.5
+➿,symbol,0.5
+⤴,arrow_heading_up,0.5
+⤴,arrow,0.5
+⤴,symbol,0.5
+⤵,arrow_heading_down,0.5
+⤵,arrow,0.5
+⤵,down,0.5
+⤵,symbol,0.5
+⬅,arrow_left,0.5
+⬅,arrow,0.5
+⬅,cardinal,0.5
+⬅,direction,0.5
+⬅,symbol,0.5
+⬅,west,0.5
+⬆,arrow_up,0.5
+⬆,arrow,0.5
+⬆,cardinal,0.5
+⬆,direction,0.5
+⬆,north,0.5
+⬆,symbol,0.5
+⬇,arrow_down,0.5
+⬇,arrow,0.5
+⬇,cardinal,0.5
+⬇,direction,0.5
+⬇,down,0.5
+⬇,south,0.5
+⬇,symbol,0.5
+⬛,black_large_square,0.5
+⬛,geometric,0.5
+⬛,sign,0.5
+⬛,square,0.5
+⬛,symbol,0.5
+⬜,white_large_square,0.5
+⬜,geometric,0.5
+⬜,sign,0.5
+⬜,square,0.5
+⬜,symbol,0.5
+⭐,star,0.5
+⭐,nature,0.5
+⭐,place,0.5
+⭕,o,0.5
+⭕,circle,0.5
+⭕,symbol,0.5
+⭕,travel,0.5
+🀄,mahjong,0.5
+🀄,game,0.5
+🀄,object,0.5
+🀄,red,0.5
+🃏,black_joker,0.5
+🃏,card,0.5
+🃏,entertainment,0.5
+🃏,game,0.5
+🃏,joker,0.5
+🃏,object,0.5
+🃏,playing,0.5
+🌀,cyclone,0.5
+🌀,dizzy,0.5
+🌀,nature,0.5
+🌀,twister,0.5
+🌀,typhoon,0.5
+🌀,weather,0.5
+🌁,foggy,0.5
+🌁,fog,0.5
+🌁,nature,0.5
+🌁,place,0.5
+🌁,weather,0.5
+🌂,closed_umbrella,0.5
+🌂,clothing,0.5
+🌂,nature,0.5
+🌂,person,0.5
+🌂,rain,0.5
+🌂,umbrella,0.5
+🌂,weather,0.5
+🌃,night_with_stars,0.5
+🌃,nature,0.5
+🌃,night,0.5
+🌃,place,0.5
+🌃,star,0.5
+🌃,weather,0.5
+🌄,sunrise_over_mountains,0.5
+🌄,morning,0.5
+🌄,mountain,0.5
+🌄,nature,0.5
+🌄,place,0.5
+🌄,sun,0.5
+🌄,sunrise,0.5
+🌄,time,0.5
+🌄,weather,0.5
+🌅,sunrise,0.5
+🌅,morning,0.5
+🌅,nature,0.5
+🌅,place,0.5
+🌅,sun,0.5
+🌅,time,0.5
+🌅,weather,0.5
+🌆,city_sunset,0.5
+🌆,building,0.5
+🌆,city,0.5
+🌆,dusk,0.5
+🌆,evening,0.5
+🌆,landscape,0.5
+🌆,nature,0.5
+🌆,place,0.5
+🌆,sun,0.5
+🌆,sunset,0.5
+🌆,time,0.5
+🌆,weather,0.5
+🌇,city_sunrise,0.5
+🌇,building,0.5
+🌇,dusk,0.5
+🌇,nature,0.5
+🌇,place,0.5
+🌇,sun,0.5
+🌇,sunset,0.5
+🌇,time,0.5
+🌇,weather,0.5
+🌈,rainbow,0.5
+🌈,nature,0.5
+🌈,rain,0.5
+🌈,weather,0.5
+🌉,bridge_at_night,0.5
+🌉,bridge,0.5
+🌉,nature,0.5
+🌉,night,0.5
+🌉,place,0.5
+🌉,weather,0.5
+🌊,ocean,0.5
+🌊,nature,0.5
+🌊,place,0.5
+🌊,water,0.5
+🌊,wave,0.5
+🌊,weather,0.5
+🌋,volcano,0.5
+🌋,eruption,0.5
+🌋,mountain,0.5
+🌋,nature,0.5
+🌋,place,0.5
+🌋,weather,0.5
+🌌,milky_way,0.5
+🌌,milky way,0.5
+🌌,nature,0.5
+🌌,place,0.5
+🌌,space,0.5
+🌌,weather,0.5
+🌍,earth_africa,0.5
+🌍,africa,0.5
+🌍,earth,0.5
+🌍,europe,0.5
+🌍,globe,0.5
+🌍,nature,0.5
+🌍,place,0.5
+🌍,world,0.5
+🌎,earth_americas,0.5
+🌎,americas,0.5
+🌎,earth,0.5
+🌎,globe,0.5
+🌎,nature,0.5
+🌎,place,0.5
+🌎,world,0.5
+🌏,earth_asia,0.5
+🌏,asia,0.5
+🌏,australia,0.5
+🌏,earth,0.5
+🌏,globe,0.5
+🌏,nature,0.5
+🌏,place,0.5
+🌏,world,0.5
+🌐,globe_with_meridians,0.5
+🌐,earth,0.5
+🌐,globe,0.5
+🌐,meridians,0.5
+🌐,nature,0.5
+🌐,place,0.5
+🌐,world,0.5
+🌑,new_moon,0.5
+🌑,dark,0.5
+🌑,moon,0.5
+🌑,nature,0.5
+🌑,place,0.5
+🌑,space,0.5
+🌑,time,0.5
+🌑,weather,0.5
+🌒,waxing_crescent_moon,0.5
+🌒,crescent,0.5
+🌒,moon,0.5
+🌒,nature,0.5
+🌒,place,0.5
+🌒,space,0.5
+🌒,time,0.5
+🌒,waxing,0.5
+🌒,weather,0.5
+🌓,first_quarter_moon,0.5
+🌓,moon,0.5
+🌓,nature,0.5
+🌓,place,0.5
+🌓,quarter,0.5
+🌓,space,0.5
+🌓,time,0.5
+🌓,weather,0.5
+🌔,moon,0.5
+🌔,waxing_gibbous_moon,0.5
+🌔,gibbous,0.5
+🌔,nature,0.5
+🌔,place,0.5
+🌔,space,0.5
+🌔,time,0.5
+🌔,waxing,0.5
+🌔,weather,0.5
+🌕,full_moon,0.5
+🌕,full,0.5
+🌕,moon,0.5
+🌕,nature,0.5
+🌕,place,0.5
+🌕,space,0.5
+🌕,time,0.5
+🌕,weather,0.5
+🌖,waning_gibbous_moon,0.5
+🌖,gibbous,0.5
+🌖,moon,0.5
+🌖,nature,0.5
+🌖,place,0.5
+🌖,space,0.5
+🌖,time,0.5
+🌖,waning,0.5
+🌖,weather,0.5
+🌗,last_quarter_moon,0.5
+🌗,moon,0.5
+🌗,nature,0.5
+🌗,place,0.5
+🌗,quarter,0.5
+🌗,space,0.5
+🌗,time,0.5
+🌗,weather,0.5
+🌘,waning_crescent_moon,0.5
+🌘,crescent,0.5
+🌘,moon,0.5
+🌘,nature,0.5
+🌘,place,0.5
+🌘,space,0.5
+🌘,time,0.5
+🌘,waning,0.5
+🌘,weather,0.5
+🌙,crescent_moon,0.5
+🌙,crescent,0.5
+🌙,moon,0.5
+🌙,nature,0.5
+🌙,place,0.5
+🌙,space,0.5
+🌙,time,0.5
+🌙,weather,0.5
+🌚,new_moon_with_face,0.5
+🌚,face,0.5
+🌚,moon,0.5
+🌚,nature,0.5
+🌚,place,0.5
+🌚,space,0.5
+🌚,time,0.5
+🌚,weather,0.5
+🌛,first_quarter_moon_with_face,0.5
+🌛,face,0.5
+🌛,moon,0.5
+🌛,nature,0.5
+🌛,place,0.5
+🌛,quarter,0.5
+🌛,space,0.5
+🌛,weather,0.5
+🌜,last_quarter_moon_with_face,0.5
+🌜,face,0.5
+🌜,moon,0.5
+🌜,nature,0.5
+🌜,place,0.5
+🌜,quarter,0.5
+🌜,space,0.5
+🌜,weather,0.5
+🌝,full_moon_with_face,0.5
+🌝,bright,0.5
+🌝,face,0.5
+🌝,full,0.5
+🌝,moon,0.5
+🌝,nature,0.5
+🌝,place,0.5
+🌝,space,0.5
+🌝,weather,0.5
+🌞,sun_with_face,0.5
+🌞,bright,0.5
+🌞,face,0.5
+🌞,nature,0.5
+🌞,place,0.5
+🌞,space,0.5
+🌞,sun,0.5
+🌞,weather,0.5
+🌟,star2,0.5
+🌟,glittery,0.5
+🌟,glow,0.5
+🌟,object,0.5
+🌟,place,0.5
+🌟,shining,0.5
+🌟,sparkle,0.5
+🌟,star,0.5
+🌠,stars,0.5
+🌠,activity,0.5
+🌠,falling,0.5
+🌠,nature,0.5
+🌠,place,0.5
+🌠,shooting,0.5
+🌠,space,0.5
+🌠,star,0.5
+🌠,stars,0.5
+🌠,activity,0.5
+🌠,falling,0.5
+🌠,nature,0.5
+🌠,place,0.5
+🌠,shooting,0.5
+🌠,space,0.5
+🌠,star,0.5
+🌡,nature,0.5
+🌡,thermometer,0.5
+🌡,weather,0.5
+🌤,cloud,0.5
+🌤,nature,0.5
+🌤,sun,0.5
+🌤,weather,0.5
+🌥,cloud,0.5
+🌥,nature,0.5
+🌥,sun,0.5
+🌥,weather,0.5
+🌦,cloud,0.5
+🌦,nature,0.5
+🌦,rain,0.5
+🌦,sun,0.5
+🌦,weather,0.5
+🌧,cloud,0.5
+🌧,nature,0.5
+🌧,rain,0.5
+🌧,weather,0.5
+🌨,cloud,0.5
+🌨,cold,0.5
+🌨,nature,0.5
+🌨,snow,0.5
+🌨,weather,0.5
+🌩,cloud,0.5
+🌩,lightning,0.5
+🌩,nature,0.5
+🌩,weather,0.5
+🌪,cloud,0.5
+🌪,nature,0.5
+🌪,tornado,0.5
+🌪,weather,0.5
+🌪,whirlwind,0.5
+🌫,cloud,0.5
+🌫,fog,0.5
+🌫,nature,0.5
+🌫,weather,0.5
+🌬,blow,0.5
+🌬,cloud,0.5
+🌬,face,0.5
+🌬,nature,0.5
+🌬,weather,0.5
+🌬,wind,0.5
+🌭,food,0.5
+🌭,frankfurter,0.5
+🌭,hotdog,0.5
+🌭,hot dog,0.5
+🌭,nature,0.5
+🌭,sausage,0.5
+🌮,food,0.5
+🌮,mexican,0.5
+🌮,nature,0.5
+🌮,taco,0.5
+🌯,burrito,0.5
+🌯,food,0.5
+🌯,mexican,0.5
+🌯,nature,0.5
+🌰,chestnut,0.5
+🌰,nature,0.5
+🌰,plant,0.5
+🌰,chestnut,0.5
+🌰,nature,0.5
+🌰,plant,0.5
+🌱,seedling,0.5
+🌱,nature,0.5
+🌱,plant,0.5
+🌱,young,0.5
+🌲,evergreen_tree,0.5
+🌲,evergreen,0.5
+🌲,nature,0.5
+🌲,plant,0.5
+🌲,tree,0.5
+🌳,deciduous_tree,0.5
+🌳,deciduous,0.5
+🌳,nature,0.5
+🌳,plant,0.5
+🌳,shedding,0.5
+🌳,tree,0.5
+🌴,palm_tree,0.5
+🌴,nature,0.5
+🌴,palm,0.5
+🌴,plant,0.5
+🌴,tree,0.5
+🌵,cactus,0.5
+🌵,nature,0.5
+🌵,plant,0.5
+🌶,food,0.5
+🌶,hot,0.5
+🌶,nature,0.5
+🌶,pepper,0.5
+🌶,plant,0.5
+🌷,tulip,0.5
+🌷,flower,0.5
+🌷,nature,0.5
+🌷,plant,0.5
+🌸,cherry_blossom,0.5
+🌸,blossom,0.5
+🌸,cherry,0.5
+🌸,flower,0.5
+🌸,nature,0.5
+🌸,plant,0.5
+🌹,rose,0.5
+🌹,flower,0.5
+🌹,nature,0.5
+🌹,plant,0.5
+🌺,hibiscus,0.5
+🌺,flower,0.5
+🌺,nature,0.5
+🌺,plant,0.5
+🌻,sunflower,0.5
+🌻,flower,0.5
+🌻,nature,0.5
+🌻,plant,0.5
+🌻,sun,0.5
+🌼,blossom,0.5
+🌼,flower,0.5
+🌼,nature,0.5
+🌼,plant,0.5
+🌽,corn,0.5
+🌽,ear,0.5
+🌽,maize,0.5
+🌽,maze,0.5
+🌽,nature,0.5
+🌽,object,0.5
+🌽,plant,0.5
+🌾,ear_of_rice,0.5
+🌾,ear,0.5
+🌾,nature,0.5
+🌾,plant,0.5
+🌾,rice,0.5
+🌿,herb,0.5
+🌿,leaf,0.5
+🌿,nature,0.5
+🌿,plant,0.5
+🍀,four_leaf_clover,0.5
+🍀,4,0.5
+🍀,clover,0.5
+🍀,four,0.5
+🍀,leaf,0.5
+🍀,nature,0.5
+🍀,plant,0.5
+🍁,maple_leaf,0.5
+🍁,falling,0.5
+🍁,leaf,0.5
+🍁,maple,0.5
+🍁,nature,0.5
+🍁,plant,0.5
+🍂,fallen_leaf,0.5
+🍂,falling,0.5
+🍂,leaf,0.5
+🍂,nature,0.5
+🍂,plant,0.5
+🍃,leaves,0.5
+🍃,blow,0.5
+🍃,flutter,0.5
+🍃,leaf,0.5
+🍃,nature,0.5
+🍃,plant,0.5
+🍃,wind,0.5
+🍄,mushroom,0.5
+🍄,nature,0.5
+🍄,plant,0.5
+🍄,mushroom,0.5
+🍄,nature,0.5
+🍄,plant,0.5
+🍅,tomato,0.5
+🍅,food,0.5
+🍅,nature,0.5
+🍅,object,0.5
+🍅,plant,0.5
+🍅,vegetable,0.5
+🍆,eggplant,0.5
+🍆,aubergine,0.5
+🍆,food,0.5
+🍆,nature,0.5
+🍆,object,0.5
+🍆,plant,0.5
+🍆,vegetable,0.5
+🍇,grapes,0.5
+🍇,food,0.5
+🍇,fruit,0.5
+🍇,grape,0.5
+🍇,nature,0.5
+🍇,object,0.5
+🍇,plant,0.5
+🍈,melon,0.5
+🍈,food,0.5
+🍈,fruit,0.5
+🍈,nature,0.5
+🍈,object,0.5
+🍈,plant,0.5
+🍉,watermelon,0.5
+🍉,food,0.5
+🍉,fruit,0.5
+🍉,nature,0.5
+🍉,object,0.5
+🍉,plant,0.5
+🍊,tangerine,0.5
+🍊,food,0.5
+🍊,fruit,0.5
+🍊,nature,0.5
+🍊,object,0.5
+🍊,orange,0.5
+🍊,plant,0.5
+🍋,lemon,0.5
+🍋,citrus,0.5
+🍋,food,0.5
+🍋,fruit,0.5
+🍋,nature,0.5
+🍋,object,0.5
+🍋,plant,0.5
+🍌,banana,0.5
+🍌,food,0.5
+🍌,fruit,0.5
+🍌,nature,0.5
+🍌,object,0.5
+🍌,plant,0.5
+🍍,pineapple,0.5
+🍍,food,0.5
+🍍,fruit,0.5
+🍍,nature,0.5
+🍍,object,0.5
+🍍,plant,0.5
+🍎,apple,0.5
+🍎,food,0.5
+🍎,fruit,0.5
+🍎,nature,0.5
+🍎,object,0.5
+🍎,plant,0.5
+🍎,red,0.5
+🍏,green_apple,0.5
+🍏,apple,0.5
+🍏,food,0.5
+🍏,fruit,0.5
+🍏,green,0.5
+🍏,nature,0.5
+🍏,object,0.5
+🍏,plant,0.5
+🍐,pear,0.5
+🍐,food,0.5
+🍐,fruit,0.5
+🍐,nature,0.5
+🍐,object,0.5
+🍐,plant,0.5
+🍑,peach,0.5
+🍑,food,0.5
+🍑,fruit,0.5
+🍑,nature,0.5
+🍑,object,0.5
+🍑,plant,0.5
+🍒,cherries,0.5
+🍒,cherry,0.5
+🍒,food,0.5
+🍒,fruit,0.5
+🍒,nature,0.5
+🍒,object,0.5
+🍒,plant,0.5
+🍓,strawberry,0.5
+🍓,berry,0.5
+🍓,food,0.5
+🍓,fruit,0.5
+🍓,nature,0.5
+🍓,object,0.5
+🍓,plant,0.5
+🍔,hamburger,0.5
+🍔,burger,0.5
+🍔,food,0.5
+🍔,nature,0.5
+🍔,object,0.5
+🍔,restaurant,0.5
+🍕,pizza,0.5
+🍕,cheese,0.5
+🍕,food,0.5
+🍕,nature,0.5
+🍕,object,0.5
+🍕,restaurant,0.5
+🍕,slice,0.5
+🍖,meat_on_bone,0.5
+🍖,bone,0.5
+🍖,food,0.5
+🍖,meat,0.5
+🍖,nature,0.5
+🍖,object,0.5
+🍖,restaurant,0.5
+🍗,poultry_leg,0.5
+🍗,bone,0.5
+🍗,chicken,0.5
+🍗,food,0.5
+🍗,leg,0.5
+🍗,nature,0.5
+🍗,object,0.5
+🍗,poultry,0.5
+🍗,restaurant,0.5
+🍘,rice_cracker,0.5
+🍘,cracker,0.5
+🍘,food,0.5
+🍘,nature,0.5
+🍘,object,0.5
+🍘,restaurant,0.5
+🍘,rice,0.5
+🍙,rice_ball,0.5
+🍙,ball,0.5
+🍙,food,0.5
+🍙,japanese,0.5
+🍙,nature,0.5
+🍙,object,0.5
+🍙,restaurant,0.5
+🍙,rice,0.5
+🍚,rice,0.5
+🍚,cooked,0.5
+🍚,food,0.5
+🍚,nature,0.5
+🍚,object,0.5
+🍚,restaurant,0.5
+🍛,curry,0.5
+🍛,food,0.5
+🍛,nature,0.5
+🍛,object,0.5
+🍛,restaurant,0.5
+🍛,rice,0.5
+🍜,ramen,0.5
+🍜,bowl,0.5
+🍜,food,0.5
+🍜,nature,0.5
+🍜,noodle,0.5
+🍜,object,0.5
+🍜,restaurant,0.5
+🍜,steaming,0.5
+🍝,spaghetti,0.5
+🍝,food,0.5
+🍝,nature,0.5
+🍝,object,0.5
+🍝,pasta,0.5
+🍝,restaurant,0.5
+🍞,bread,0.5
+🍞,food,0.5
+🍞,loaf,0.5
+🍞,nature,0.5
+🍞,object,0.5
+🍞,restaurant,0.5
+🍟,fries,0.5
+🍟,food,0.5
+🍟,french,0.5
+🍟,nature,0.5
+🍟,object,0.5
+🍟,restaurant,0.5
+🍠,sweet_potato,0.5
+🍠,food,0.5
+🍠,nature,0.5
+🍠,object,0.5
+🍠,potato,0.5
+🍠,restaurant,0.5
+🍠,roasted,0.5
+🍠,sweet,0.5
+🍡,dango,0.5
+🍡,dessert,0.5
+🍡,food,0.5
+🍡,japanese,0.5
+🍡,nature,0.5
+🍡,object,0.5
+🍡,restaurant,0.5
+🍡,skewer,0.5
+🍡,stick,0.5
+🍡,sweet,0.5
+🍢,oden,0.5
+🍢,food,0.5
+🍢,kebab,0.5
+🍢,nature,0.5
+🍢,object,0.5
+🍢,restaurant,0.5
+🍢,seafood,0.5
+🍢,skewer,0.5
+🍢,stick,0.5
+🍣,sushi,0.5
+🍣,food,0.5
+🍣,nature,0.5
+🍣,object,0.5
+🍣,restaurant,0.5
+🍤,fried_shrimp,0.5
+🍤,food,0.5
+🍤,fried,0.5
+🍤,nature,0.5
+🍤,object,0.5
+🍤,prawn,0.5
+🍤,restaurant,0.5
+🍤,shrimp,0.5
+🍤,tempura,0.5
+🍥,fish_cake,0.5
+🍥,cake,0.5
+🍥,fish,0.5
+🍥,food,0.5
+🍥,nature,0.5
+🍥,object,0.5
+🍥,pastry,0.5
+🍥,restaurant,0.5
+🍥,swirl,0.5
+🍦,icecream,0.5
+🍦,cream,0.5
+🍦,dessert,0.5
+🍦,food,0.5
+🍦,ice,0.5
+🍦,nature,0.5
+🍦,object,0.5
+🍦,restaurant,0.5
+🍦,soft,0.5
+🍦,sweet,0.5
+🍧,shaved_ice,0.5
+🍧,dessert,0.5
+🍧,food,0.5
+🍧,ice,0.5
+🍧,nature,0.5
+🍧,object,0.5
+🍧,restaurant,0.5
+🍧,shaved,0.5
+🍧,sweet,0.5
+🍨,ice_cream,0.5
+🍨,cream,0.5
+🍨,dessert,0.5
+🍨,food,0.5
+🍨,ice,0.5
+🍨,nature,0.5
+🍨,object,0.5
+🍨,restaurant,0.5
+🍨,sweet,0.5
+🍩,doughnut,0.5
+🍩,dessert,0.5
+🍩,donut,0.5
+🍩,food,0.5
+🍩,nature,0.5
+🍩,object,0.5
+🍩,restaurant,0.5
+🍩,sweet,0.5
+🍪,cookie,0.5
+🍪,dessert,0.5
+🍪,food,0.5
+🍪,nature,0.5
+🍪,object,0.5
+🍪,restaurant,0.5
+🍪,sweet,0.5
+🍫,chocolate_bar,0.5
+🍫,bar,0.5
+🍫,chocolate,0.5
+🍫,dessert,0.5
+🍫,food,0.5
+🍫,nature,0.5
+🍫,object,0.5
+🍫,restaurant,0.5
+🍫,sweet,0.5
+🍬,candy,0.5
+🍬,dessert,0.5
+🍬,food,0.5
+🍬,nature,0.5
+🍬,object,0.5
+🍬,restaurant,0.5
+🍬,sweet,0.5
+🍭,lollipop,0.5
+🍭,candy,0.5
+🍭,dessert,0.5
+🍭,food,0.5
+🍭,nature,0.5
+🍭,object,0.5
+🍭,restaurant,0.5
+🍭,sweet,0.5
+🍮,custard,0.5
+🍮,dessert,0.5
+🍮,food,0.5
+🍮,nature,0.5
+🍮,object,0.5
+🍮,pudding,0.5
+🍮,restaurant,0.5
+🍮,sweet,0.5
+🍯,honey_pot,0.5
+🍯,food,0.5
+🍯,honey,0.5
+🍯,honeypot,0.5
+🍯,nature,0.5
+🍯,object,0.5
+🍯,pot,0.5
+🍯,restaurant,0.5
+🍯,sweet,0.5
+🍰,cake,0.5
+🍰,dessert,0.5
+🍰,food,0.5
+🍰,nature,0.5
+🍰,object,0.5
+🍰,pastry,0.5
+🍰,restaurant,0.5
+🍰,shortcake,0.5
+🍰,slice,0.5
+🍰,sweet,0.5
+🍱,bento,0.5
+🍱,box,0.5
+🍱,food,0.5
+🍱,nature,0.5
+🍱,object,0.5
+🍱,restaurant,0.5
+🍲,stew,0.5
+🍲,food,0.5
+🍲,nature,0.5
+🍲,object,0.5
+🍲,pot,0.5
+🍲,restaurant,0.5
+🍳,egg,0.5
+🍳,cooking,0.5
+🍳,food,0.5
+🍳,frying,0.5
+🍳,nature,0.5
+🍳,object,0.5
+🍳,pan,0.5
+🍳,restaurant,0.5
+🍴,fork_and_knife,0.5
+🍴,cooking,0.5
+🍴,food,0.5
+🍴,fork,0.5
+🍴,knife,0.5
+🍴,nature,0.5
+🍴,object,0.5
+🍴,restaurant,0.5
+🍵,tea,0.5
+🍵,beverage,0.5
+🍵,cup,0.5
+🍵,drink,0.5
+🍵,nature,0.5
+🍵,object,0.5
+🍵,teacup,0.5
+🍶,sake,0.5
+🍶,bar,0.5
+🍶,beverage,0.5
+🍶,bottle,0.5
+🍶,cup,0.5
+🍶,drink,0.5
+🍶,nature,0.5
+🍶,object,0.5
+🍶,restaurant,0.5
+🍷,wine_glass,0.5
+🍷,bar,0.5
+🍷,beverage,0.5
+🍷,drink,0.5
+🍷,glass,0.5
+🍷,nature,0.5
+🍷,object,0.5
+🍷,restaurant,0.5
+🍷,wine,0.5
+🍸,cocktail,0.5
+🍸,bar,0.5
+🍸,drink,0.5
+🍸,glass,0.5
+🍸,nature,0.5
+🍸,object,0.5
+🍸,restaurant,0.5
+🍹,tropical_drink,0.5
+🍹,bar,0.5
+🍹,drink,0.5
+🍹,nature,0.5
+🍹,object,0.5
+🍹,restaurant,0.5
+🍹,tropical,0.5
+🍺,beer,0.5
+🍺,bar,0.5
+🍺,drink,0.5
+🍺,mug,0.5
+🍺,nature,0.5
+🍺,object,0.5
+🍺,restaurant,0.5
+🍻,beers,0.5
+🍻,bar,0.5
+🍻,beer,0.5
+🍻,clink,0.5
+🍻,drink,0.5
+🍻,mug,0.5
+🍻,nature,0.5
+🍻,object,0.5
+🍻,restaurant,0.5
+🍼,baby_bottle,0.5
+🍼,baby,0.5
+🍼,bottle,0.5
+🍼,drink,0.5
+🍼,milk,0.5
+🍼,nature,0.5
+🍼,object,0.5
+🍽,cooking,0.5
+🍽,food,0.5
+🍽,fork,0.5
+🍽,knife,0.5
+🍽,object,0.5
+🍽,place,0.5
+🍽,plate,0.5
+🍽,restaurant,0.5
+🍾,bar,0.5
+🍾,bottle,0.5
+🍾,cork,0.5
+🍾,drink,0.5
+🍾,nature,0.5
+🍾,popping,0.5
+🍿,food,0.5
+🍿,nature,0.5
+🍿,popcorn,0.5
+🎀,ribbon,0.5
+🎀,celebration,0.5
+🎀,emotion,0.5
+🎀,object,0.5
+🎀,person,0.5
+🎁,gift,0.5
+🎁,box,0.5
+🎁,celebration,0.5
+🎁,entertainment,0.5
+🎁,object,0.5
+🎁,present,0.5
+🎁,wrapped,0.5
+🎂,birthday,0.5
+🎂,cake,0.5
+🎂,celebration,0.5
+🎂,dessert,0.5
+🎂,food,0.5
+🎂,object,0.5
+🎂,pastry,0.5
+🎂,sweet,0.5
+🎄,christmas_tree,0.5
+🎄,activity,0.5
+🎄,celebration,0.5
+🎄,christmas,0.5
+🎄,entertainment,0.5
+🎄,object,0.5
+🎄,tree,0.5
+🎅,santa,0.5
+🎅,activity,0.5
+🎅,celebration,0.5
+🎅,christmas,0.5
+🎅,fairy tale,0.5
+🎅,fantasy,0.5
+🎅,father,0.5
+🎅,person,0.5
+🎆,fireworks,0.5
+🎆,activity,0.5
+🎆,celebration,0.5
+🎆,entertainment,0.5
+🎆,object,0.5
+🎇,sparkler,0.5
+🎇,activity,0.5
+🎇,celebration,0.5
+🎇,entertainment,0.5
+🎇,fireworks,0.5
+🎇,object,0.5
+🎇,sparkle,0.5
+🎈,balloon,0.5
+🎈,activity,0.5
+🎈,celebration,0.5
+🎈,entertainment,0.5
+🎈,object,0.5
+🎉,tada,0.5
+🎉,activity,0.5
+🎉,celebration,0.5
+🎉,entertainment,0.5
+🎉,object,0.5
+🎉,party,0.5
+🎉,popper,0.5
+🎊,confetti_ball,0.5
+🎊,activity,0.5
+🎊,ball,0.5
+🎊,celebration,0.5
+🎊,confetti,0.5
+🎊,entertainment,0.5
+🎊,object,0.5
+🎋,tanabata_tree,0.5
+🎋,activity,0.5
+🎋,banner,0.5
+🎋,celebration,0.5
+🎋,entertainment,0.5
+🎋,japanese,0.5
+🎋,object,0.5
+🎋,tree,0.5
+🎌,crossed_flags,0.5
+🎌,activity,0.5
+🎌,celebration,0.5
+🎌,cross,0.5
+🎌,crossed,0.5
+🎌,flag,0.5
+🎌,japanese,0.5
+🎌,object,0.5
+🎌,crossed_flags,0.5
+🎌,activity,0.5
+🎌,celebration,0.5
+🎌,cross,0.5
+🎌,crossed,0.5
+🎌,flag,0.5
+🎌,japanese,0.5
+🎌,object,0.5
+🎌,crossed_flags,0.5
+🎌,activity,0.5
+🎌,celebration,0.5
+🎌,cross,0.5
+🎌,crossed,0.5
+🎌,flag,0.5
+🎌,japanese,0.5
+🎌,object,0.5
+🎌,flags,0.5
+🎍,bamboo,0.5
+🎍,activity,0.5
+🎍,celebration,0.5
+🎍,japanese,0.5
+🎍,object,0.5
+🎍,pine,0.5
+🎍,plant,0.5
+🎎,dolls,0.5
+🎎,activity,0.5
+🎎,celebration,0.5
+🎎,doll,0.5
+🎎,entertainment,0.5
+🎎,festival,0.5
+🎎,japanese,0.5
+🎎,object,0.5
+🎏,flags,0.5
+🎏,activity,0.5
+🎏,carp,0.5
+🎏,celebration,0.5
+🎏,entertainment,0.5
+🎏,flag,0.5
+🎏,object,0.5
+🎏,streamer,0.5
+🎐,wind_chime,0.5
+🎐,activity,0.5
+🎐,bell,0.5
+🎐,celebration,0.5
+🎐,chime,0.5
+🎐,entertainment,0.5
+🎐,object,0.5
+🎐,wind,0.5
+🎑,rice_scene,0.5
+🎑,activity,0.5
+🎑,celebration,0.5
+🎑,ceremony,0.5
+🎑,entertainment,0.5
+🎑,moon,0.5
+🎑,nature,0.5
+🎑,object,0.5
+🎒,school_satchel,0.5
+🎒,activity,0.5
+🎒,bag,0.5
+🎒,education,0.5
+🎒,object,0.5
+🎒,satchel,0.5
+🎒,school,0.5
+🎓,mortar_board,0.5
+🎓,activity,0.5
+🎓,cap,0.5
+🎓,celebration,0.5
+🎓,clothing,0.5
+🎓,education,0.5
+🎓,graduation,0.5
+🎓,hat,0.5
+🎓,object,0.5
+🎖,celebration,0.5
+🎖,medal,0.5
+🎖,military,0.5
+🎖,object,0.5
+🎗,celebration,0.5
+🎗,object,0.5
+🎗,reminder,0.5
+🎗,ribbon,0.5
+🎙,mic,0.5
+🎙,microphone,0.5
+🎙,music,0.5
+🎙,object,0.5
+🎙,sound,0.5
+🎙,studio,0.5
+🎚,level,0.5
+🎚,music,0.5
+🎚,object,0.5
+🎚,slider,0.5
+🎚,sound,0.5
+🎛,control,0.5
+🎛,knobs,0.5
+🎛,music,0.5
+🎛,object,0.5
+🎛,sound,0.5
+🎞,cinema,0.5
+🎞,entertainment,0.5
+🎞,film,0.5
+🎞,frames,0.5
+🎞,movie,0.5
+🎞,object,0.5
+🎟,admission,0.5
+🎟,entertainment,0.5
+🎟,object,0.5
+🎟,ticket,0.5
+🎠,carousel_horse,0.5
+🎠,activity,0.5
+🎠,carousel,0.5
+🎠,entertainment,0.5
+🎠,horse,0.5
+🎠,place,0.5
+🎡,ferris_wheel,0.5
+🎡,activity,0.5
+🎡,amusement park,0.5
+🎡,entertainment,0.5
+🎡,ferris,0.5
+🎡,place,0.5
+🎡,wheel,0.5
+🎢,roller_coaster,0.5
+🎢,activity,0.5
+🎢,amusement park,0.5
+🎢,coaster,0.5
+🎢,entertainment,0.5
+🎢,place,0.5
+🎢,roller,0.5
+🎣,fishing_pole_and_fish,0.5
+🎣,entertainment,0.5
+🎣,fish,0.5
+🎣,object,0.5
+🎣,place,0.5
+🎣,pole,0.5
+🎣,sport,0.5
+🎤,microphone,0.5
+🎤,activity,0.5
+🎤,entertainment,0.5
+🎤,karaoke,0.5
+🎤,mic,0.5
+🎤,object,0.5
+🎤,sound,0.5
+🎥,movie_camera,0.5
+🎥,activity,0.5
+🎥,camera,0.5
+🎥,cinema,0.5
+🎥,entertainment,0.5
+🎥,movie,0.5
+🎥,object,0.5
+🎦,cinema,0.5
+🎦,activity,0.5
+🎦,camera,0.5
+🎦,entertainment,0.5
+🎦,film,0.5
+🎦,movie,0.5
+🎦,object,0.5
+🎦,symbol,0.5
+🎧,headphones,0.5
+🎧,activity,0.5
+🎧,earbud,0.5
+🎧,entertainment,0.5
+🎧,headphone,0.5
+🎧,object,0.5
+🎧,sound,0.5
+🎨,art,0.5
+🎨,activity,0.5
+🎨,entertainment,0.5
+🎨,museum,0.5
+🎨,object,0.5
+🎨,painting,0.5
+🎨,palette,0.5
+🎩,tophat,0.5
+🎩,activity,0.5
+🎩,clothing,0.5
+🎩,entertainment,0.5
+🎩,hat,0.5
+🎩,object,0.5
+🎩,person,0.5
+🎩,top,0.5
+🎪,circus_tent,0.5
+🎪,activity,0.5
+🎪,circus,0.5
+🎪,entertainment,0.5
+🎪,place,0.5
+🎪,tent,0.5
+🎫,ticket,0.5
+🎫,activity,0.5
+🎫,admission,0.5
+🎫,entertainment,0.5
+🎫,object,0.5
+🎫,place,0.5
+🎬,clapper,0.5
+🎬,activity,0.5
+🎬,entertainment,0.5
+🎬,movie,0.5
+🎬,object,0.5
+🎭,performing_arts,0.5
+🎭,activity,0.5
+🎭,art,0.5
+🎭,entertainment,0.5
+🎭,mask,0.5
+🎭,object,0.5
+🎭,performing,0.5
+🎭,place,0.5
+🎭,theater,0.5
+🎭,theatre,0.5
+🎮,video_game,0.5
+🎮,controller,0.5
+🎮,entertainment,0.5
+🎮,game,0.5
+🎮,object,0.5
+🎮,video game,0.5
+🎯,dart,0.5
+🎯,activity,0.5
+🎯,bull,0.5
+🎯,bullseye,0.5
+🎯,entertainment,0.5
+🎯,eye,0.5
+🎯,game,0.5
+🎯,hit,0.5
+🎯,object,0.5
+🎯,target,0.5
+🎰,slot_machine,0.5
+🎰,activity,0.5
+🎰,game,0.5
+🎰,object,0.5
+🎰,place,0.5
+🎰,slot,0.5
+🎱,8ball,0.5
+🎱,8,0.5
+🎱,8 ball,0.5
+🎱,ball,0.5
+🎱,billiard,0.5
+🎱,eight,0.5
+🎱,game,0.5
+🎱,object,0.5
+🎱,place,0.5
+🎱,sport,0.5
+🎲,game_die,0.5
+🎲,dice,0.5
+🎲,die,0.5
+🎲,entertainment,0.5
+🎲,game,0.5
+🎲,object,0.5
+🎳,bowling,0.5
+🎳,ball,0.5
+🎳,game,0.5
+🎳,object,0.5
+🎳,place,0.5
+🎳,sport,0.5
+🎴,flower_playing_cards,0.5
+🎴,activity,0.5
+🎴,card,0.5
+🎴,entertainment,0.5
+🎴,flower,0.5
+🎴,game,0.5
+🎴,japanese,0.5
+🎴,object,0.5
+🎴,playing,0.5
+🎵,musical_note,0.5
+🎵,activity,0.5
+🎵,entertainment,0.5
+🎵,music,0.5
+🎵,note,0.5
+🎵,object,0.5
+🎵,sound,0.5
+🎶,notes,0.5
+🎶,activity,0.5
+🎶,entertainment,0.5
+🎶,music,0.5
+🎶,note,0.5
+🎶,object,0.5
+🎶,sound,0.5
+🎷,saxophone,0.5
+🎷,activity,0.5
+🎷,entertainment,0.5
+🎷,instrument,0.5
+🎷,music,0.5
+🎷,object,0.5
+🎷,sax,0.5
+🎷,sound,0.5
+🎸,guitar,0.5
+🎸,activity,0.5
+🎸,entertainment,0.5
+🎸,instrument,0.5
+🎸,music,0.5
+🎸,object,0.5
+🎸,sound,0.5
+🎹,musical_keyboard,0.5
+🎹,activity,0.5
+🎹,entertainment,0.5
+🎹,instrument,0.5
+🎹,keyboard,0.5
+🎹,music,0.5
+🎹,object,0.5
+🎹,piano,0.5
+🎹,sound,0.5
+🎺,trumpet,0.5
+🎺,activity,0.5
+🎺,entertainment,0.5
+🎺,instrument,0.5
+🎺,music,0.5
+🎺,object,0.5
+🎺,sound,0.5
+🎻,violin,0.5
+🎻,activity,0.5
+🎻,entertainment,0.5
+🎻,instrument,0.5
+🎻,music,0.5
+🎻,object,0.5
+🎻,sound,0.5
+🎼,musical_score,0.5
+🎼,activity,0.5
+🎼,entertainment,0.5
+🎼,music,0.5
+🎼,object,0.5
+🎼,score,0.5
+🎼,sound,0.5
+🎽,running_shirt_with_sash,0.5
+🎽,person,0.5
+🎽,place,0.5
+🎽,running,0.5
+🎽,sash,0.5
+🎽,shirt,0.5
+🎽,sport,0.5
+🎾,tennis,0.5
+🎾,ball,0.5
+🎾,object,0.5
+🎾,place,0.5
+🎾,racquet,0.5
+🎾,sport,0.5
+🎿,ski,0.5
+🎿,object,0.5
+🎿,snow,0.5
+🎿,sport,0.5
+🏀,basketball,0.5
+🏀,ball,0.5
+🏀,hoop,0.5
+🏀,object,0.5
+🏀,place,0.5
+🏀,sport,0.5
+🏁,checkered_flag,0.5
+🏁,checkered,0.5
+🏁,chequered,0.5
+🏁,flag,0.5
+🏁,object,0.5
+🏁,place,0.5
+🏁,racing,0.5
+🏁,sport,0.5
+🏁,checkered_flag,0.5
+🏁,checkered,0.5
+🏁,chequered,0.5
+🏁,flag,0.5
+🏁,object,0.5
+🏁,place,0.5
+🏁,racing,0.5
+🏁,sport,0.5
+🏁,checkered_flag,0.5
+🏁,checkered,0.5
+🏁,chequered,0.5
+🏁,flag,0.5
+🏁,object,0.5
+🏁,place,0.5
+🏁,racing,0.5
+🏁,sport,0.5
+🏂,snowboarder,0.5
+🏂,person,0.5
+🏂,ski,0.5
+🏂,snow,0.5
+🏂,snowboard,0.5
+🏂,sport,0.5
+🏃,runner,0.5
+🏃,running,0.5
+🏃,marathon,0.5
+🏃,person,0.5
+🏄,surfer,0.5
+🏄,person,0.5
+🏄,sport,0.5
+🏄,surfing,0.5
+🏅,medal,0.5
+🏅,object,0.5
+🏅,sport,0.5
+🏆,trophy,0.5
+🏆,object,0.5
+🏆,place,0.5
+🏆,prize,0.5
+🏆,sport,0.5
+🏇,horse_racing,0.5
+🏇,horse,0.5
+🏇,jockey,0.5
+🏇,person,0.5
+🏇,racehorse,0.5
+🏇,racing,0.5
+🏇,sport,0.5
+🏇,travel,0.5
+🏈,football,0.5
+🏈,american,0.5
+🏈,ball,0.5
+🏈,object,0.5
+🏈,place,0.5
+🏈,sport,0.5
+🏉,rugby_football,0.5
+🏉,ball,0.5
+🏉,football,0.5
+🏉,object,0.5
+🏉,place,0.5
+🏉,rugby,0.5
+🏉,sport,0.5
+🏊,swimmer,0.5
+🏊,person,0.5
+🏊,sport,0.5
+🏊,swim,0.5
+🏊,travel,0.5
+🏋,lifter,0.5
+🏋,person,0.5
+🏋,sport,0.5
+🏋,weight,0.5
+🏌,ball,0.5
+🏌,golf,0.5
+🏌,person,0.5
+🏌,sport,0.5
+🏍,motorcycle,0.5
+🏍,person,0.5
+🏍,racing,0.5
+🏍,sport,0.5
+🏍,travel,0.5
+🏎,car,0.5
+🏎,place,0.5
+🏎,racing,0.5
+🏎,sport,0.5
+🏎,travel,0.5
+🏏,ball,0.5
+🏏,bat,0.5
+🏏,cricket,0.5
+🏏,game,0.5
+🏏,object,0.5
+🏏,sport,0.5
+🏐,ball,0.5
+🏐,game,0.5
+🏐,object,0.5
+🏐,sport,0.5
+🏐,volleyball,0.5
+🏑,ball,0.5
+🏑,field,0.5
+🏑,game,0.5
+🏑,hockey,0.5
+🏑,object,0.5
+🏑,sport,0.5
+🏑,stick,0.5
+🏒,game,0.5
+🏒,hockey,0.5
+🏒,ice,0.5
+🏒,object,0.5
+🏒,puck,0.5
+🏒,sport,0.5
+🏒,stick,0.5
+🏓,ball,0.5
+🏓,bat,0.5
+🏓,game,0.5
+🏓,object,0.5
+🏓,paddle,0.5
+🏓,sport,0.5
+🏓,table tennis,0.5
+🏔,cold,0.5
+🏔,mountain,0.5
+🏔,nature,0.5
+🏔,place,0.5
+🏔,snow,0.5
+🏕,camping,0.5
+🏕,nature,0.5
+🏕,place,0.5
+🏖,beach,0.5
+🏖,nature,0.5
+🏖,place,0.5
+🏖,umbrella,0.5
+🏗,building,0.5
+🏗,construction,0.5
+🏗,place,0.5
+🏘,building,0.5
+🏘,house,0.5
+🏘,place,0.5
+🏙,building,0.5
+🏙,city,0.5
+🏙,place,0.5
+🏚,building,0.5
+🏚,derelict,0.5
+🏚,house,0.5
+🏚,place,0.5
+🏛,building,0.5
+🏛,classical,0.5
+🏛,place,0.5
+🏜,desert,0.5
+🏜,nature,0.5
+🏜,place,0.5
+🏝,desert,0.5
+🏝,island,0.5
+🏝,nature,0.5
+🏝,place,0.5
+🏞,national park,0.5
+🏞,nature,0.5
+🏞,park,0.5
+🏞,place,0.5
+🏟,place,0.5
+🏟,stadium,0.5
+🏠,house,0.5
+🏠,building,0.5
+🏠,home,0.5
+🏠,place,0.5
+🏡,house_with_garden,0.5
+🏡,building,0.5
+🏡,garden,0.5
+🏡,home,0.5
+🏡,house,0.5
+🏡,place,0.5
+🏢,office,0.5
+🏢,building,0.5
+🏢,place,0.5
+🏣,post_office,0.5
+🏣,building,0.5
+🏣,japanese,0.5
+🏣,office,0.5
+🏣,place,0.5
+🏣,post,0.5
+🏤,european_post_office,0.5
+🏤,building,0.5
+🏤,european,0.5
+🏤,office,0.5
+🏤,place,0.5
+🏤,post,0.5
+🏥,hospital,0.5
+🏥,building,0.5
+🏥,doctor,0.5
+🏥,medicine,0.5
+🏥,place,0.5
+🏦,bank,0.5
+🏦,building,0.5
+🏦,place,0.5
+🏧,atm,0.5
+🏧,automated,0.5
+🏧,bank,0.5
+🏧,place,0.5
+🏧,sign,0.5
+🏧,symbol,0.5
+🏧,teller,0.5
+🏨,hotel,0.5
+🏨,building,0.5
+🏨,place,0.5
+🏩,love_hotel,0.5
+🏩,building,0.5
+🏩,hotel,0.5
+🏩,love,0.5
+🏩,place,0.5
+🏪,convenience_store,0.5
+🏪,building,0.5
+🏪,convenience,0.5
+🏪,place,0.5
+🏪,store,0.5
+🏫,school,0.5
+🏫,building,0.5
+🏫,education,0.5
+🏫,place,0.5
+🏬,department_store,0.5
+🏬,building,0.5
+🏬,department,0.5
+🏬,place,0.5
+🏬,store,0.5
+🏭,factory,0.5
+🏭,building,0.5
+🏭,place,0.5
+🏮,izakaya_lantern,0.5
+🏮,lantern,0.5
+🏮,bar,0.5
+🏮,japanese,0.5
+🏮,light,0.5
+🏮,place,0.5
+🏮,red,0.5
+🏮,restaurant,0.5
+🏯,japanese_castle,0.5
+🏯,building,0.5
+🏯,castle,0.5
+🏯,japanese,0.5
+🏯,place,0.5
+🏰,european_castle,0.5
+🏰,building,0.5
+🏰,castle,0.5
+🏰,european,0.5
+🏰,place,0.5
+🏳,flag,0.5
+🏳,object,0.5
+🏳,waving,0.5
+🏳,flag,0.5
+🏳,object,0.5
+🏳,waving,0.5
+🏳,flag,0.5
+🏳,object,0.5
+🏳,waving,0.5
+🏳,white,0.5
+🏳️‍🌈,rainbow,0.5
+🏳️‍🌈,flag,0.5
+🏳️‍🌈,pride,0.5
+🏳️‍🌈,lgbt,0.5
+🏴,flag,0.5
+🏴,object,0.5
+🏴,waving,0.5
+🏴,black,0.5
+🏴‍☠️,pirate,0.5
+🏴‍☠️,flag,0.5
+🏵,nature,0.5
+🏵,plant,0.5
+🏵,rosette,0.5
+🏷,label,0.5
+🏷,object,0.5
+🏸,badminton,0.5
+🏸,birdie,0.5
+🏸,game,0.5
+🏸,object,0.5
+🏸,racquet,0.5
+🏸,shuttlecock,0.5
+🏸,sport,0.5
+🏹,archer,0.5
+🏹,arrow,0.5
+🏹,bow,0.5
+🏹,object,0.5
+🏹,sagittarius,0.5
+🏹,sport,0.5
+🏹,tool,0.5
+🏹,weapon,0.5
+🏹,zodiac,0.5
+🏺,amphora,0.5
+🏺,aquarius,0.5
+🏺,cooking,0.5
+🏺,drink,0.5
+🏺,jug,0.5
+🏺,nature,0.5
+🏺,tool,0.5
+🏺,weapon,0.5
+🏺,zodiac,0.5
+🐀,rat,0.5
+🐀,animal,0.5
+🐀,nature,0.5
+🐁,mouse2,0.5
+🐁,animal,0.5
+🐁,mouse,0.5
+🐁,nature,0.5
+🐂,ox,0.5
+🐂,animal,0.5
+🐂,bull,0.5
+🐂,nature,0.5
+🐂,taurus,0.5
+🐂,zodiac,0.5
+🐃,water_buffalo,0.5
+🐃,animal,0.5
+🐃,buffalo,0.5
+🐃,nature,0.5
+🐃,water,0.5
+🐄,cow2,0.5
+🐄,animal,0.5
+🐄,cow,0.5
+🐄,nature,0.5
+🐅,tiger2,0.5
+🐅,animal,0.5
+🐅,nature,0.5
+🐅,tiger,0.5
+🐆,leopard,0.5
+🐆,animal,0.5
+🐆,nature,0.5
+🐇,rabbit2,0.5
+🐇,animal,0.5
+🐇,bunny,0.5
+🐇,nature,0.5
+🐇,pet,0.5
+🐇,rabbit,0.5
+🐈,cat2,0.5
+🐈,animal,0.5
+🐈,cat,0.5
+🐈,nature,0.5
+🐈,pet,0.5
+🐉,dragon,0.5
+🐉,animal,0.5
+🐉,fairy tale,0.5
+🐉,nature,0.5
+🐊,crocodile,0.5
+🐊,animal,0.5
+🐊,nature,0.5
+🐋,whale2,0.5
+🐋,animal,0.5
+🐋,nature,0.5
+🐋,whale,0.5
+🐌,snail,0.5
+🐌,animal,0.5
+🐌,nature,0.5
+🐍,snake,0.5
+🐍,animal,0.5
+🐍,bearer,0.5
+🐍,nature,0.5
+🐍,ophiuchus,0.5
+🐍,serpent,0.5
+🐍,zodiac,0.5
+🐎,racehorse,0.5
+🐎,animal,0.5
+🐎,horse,0.5
+🐎,nature,0.5
+🐎,place,0.5
+🐎,racing,0.5
+🐏,ram,0.5
+🐏,animal,0.5
+🐏,aries,0.5
+🐏,nature,0.5
+🐏,sheep,0.5
+🐏,zodiac,0.5
+🐐,goat,0.5
+🐐,animal,0.5
+🐐,capricorn,0.5
+🐐,nature,0.5
+🐐,zodiac,0.5
+🐑,sheep,0.5
+🐑,animal,0.5
+🐑,ewe,0.5
+🐑,nature,0.5
+🐒,monkey,0.5
+🐒,animal,0.5
+🐒,nature,0.5
+🐓,rooster,0.5
+🐓,animal,0.5
+🐓,nature,0.5
+🐔,chicken,0.5
+🐔,animal,0.5
+🐔,nature,0.5
+🐕,dog2,0.5
+🐕,animal,0.5
+🐕,dog,0.5
+🐕,nature,0.5
+🐕,pet,0.5
+🐖,pig2,0.5
+🐖,animal,0.5
+🐖,nature,0.5
+🐖,pig,0.5
+🐖,sow,0.5
+🐗,boar,0.5
+🐗,animal,0.5
+🐗,nature,0.5
+🐗,pig,0.5
+🐘,elephant,0.5
+🐘,animal,0.5
+🐘,nature,0.5
+🐙,octopus,0.5
+🐙,animal,0.5
+🐙,nature,0.5
+🐚,shell,0.5
+🐚,animal,0.5
+🐚,nature,0.5
+🐚,spiral,0.5
+🐛,bug,0.5
+🐛,animal,0.5
+🐛,insect,0.5
+🐛,nature,0.5
+🐜,ant,0.5
+🐜,animal,0.5
+🐜,insect,0.5
+🐜,nature,0.5
+🐝,bee,0.5
+🐝,honeybee,0.5
+🐝,animal,0.5
+🐝,insect,0.5
+🐝,nature,0.5
+🐞,beetle,0.5
+🐞,animal,0.5
+🐞,insect,0.5
+🐞,lady beetle,0.5
+🐞,ladybird,0.5
+🐞,ladybug,0.5
+🐞,nature,0.5
+🐟,fish,0.5
+🐟,animal,0.5
+🐟,nature,0.5
+🐟,pisces,0.5
+🐟,zodiac,0.5
+🐠,tropical_fish,0.5
+🐠,animal,0.5
+🐠,fish,0.5
+🐠,nature,0.5
+🐠,tropical,0.5
+🐡,blowfish,0.5
+🐡,animal,0.5
+🐡,fish,0.5
+🐡,nature,0.5
+🐢,turtle,0.5
+🐢,animal,0.5
+🐢,nature,0.5
+🐣,hatching_chick,0.5
+🐣,animal,0.5
+🐣,baby,0.5
+🐣,chick,0.5
+🐣,hatching,0.5
+🐣,nature,0.5
+🐤,baby_chick,0.5
+🐤,animal,0.5
+🐤,baby,0.5
+🐤,chick,0.5
+🐤,nature,0.5
+🐥,hatched_chick,0.5
+🐥,animal,0.5
+🐥,baby,0.5
+🐥,chick,0.5
+🐥,nature,0.5
+🐦,bird,0.5
+🐦,animal,0.5
+🐦,nature,0.5
+🐧,penguin,0.5
+🐧,animal,0.5
+🐧,nature,0.5
+🐨,koala,0.5
+🐨,animal,0.5
+🐨,bear,0.5
+🐨,nature,0.5
+🐩,poodle,0.5
+🐩,animal,0.5
+🐩,dog,0.5
+🐩,nature,0.5
+🐪,dromedary_camel,0.5
+🐪,animal,0.5
+🐪,camel,0.5
+🐪,dromedary,0.5
+🐪,hump,0.5
+🐪,nature,0.5
+🐫,camel,0.5
+🐫,animal,0.5
+🐫,bactrian,0.5
+🐫,hump,0.5
+🐫,nature,0.5
+🐬,dolphin,0.5
+🐬,flipper,0.5
+🐬,animal,0.5
+🐬,nature,0.5
+🐭,mouse,0.5
+🐭,animal,0.5
+🐭,face,0.5
+🐭,nature,0.5
+🐮,cow,0.5
+🐮,animal,0.5
+🐮,face,0.5
+🐮,nature,0.5
+🐯,tiger,0.5
+🐯,animal,0.5
+🐯,face,0.5
+🐯,nature,0.5
+🐰,rabbit,0.5
+🐰,animal,0.5
+🐰,bunny,0.5
+🐰,face,0.5
+🐰,nature,0.5
+🐰,pet,0.5
+🐱,cat,0.5
+🐱,animal,0.5
+🐱,face,0.5
+🐱,nature,0.5
+🐱,pet,0.5
+🐲,dragon_face,0.5
+🐲,animal,0.5
+🐲,dragon,0.5
+🐲,face,0.5
+🐲,fairy tale,0.5
+🐲,nature,0.5
+🐳,whale,0.5
+🐳,animal,0.5
+🐳,face,0.5
+🐳,nature,0.5
+🐳,spouting,0.5
+🐴,horse,0.5
+🐴,animal,0.5
+🐴,face,0.5
+🐴,nature,0.5
+🐵,monkey_face,0.5
+🐵,animal,0.5
+🐵,face,0.5
+🐵,monkey,0.5
+🐵,nature,0.5
+🐶,dog,0.5
+🐶,animal,0.5
+🐶,face,0.5
+🐶,nature,0.5
+🐶,pet,0.5
+🐷,pig,0.5
+🐷,animal,0.5
+🐷,face,0.5
+🐷,nature,0.5
+🐸,frog,0.5
+🐸,animal,0.5
+🐸,face,0.5
+🐸,nature,0.5
+🐹,hamster,0.5
+🐹,animal,0.5
+🐹,face,0.5
+🐹,nature,0.5
+🐹,pet,0.5
+🐺,wolf,0.5
+🐺,animal,0.5
+🐺,face,0.5
+🐺,nature,0.5
+🐻,bear,0.5
+🐻,animal,0.5
+🐻,face,0.5
+🐻,nature,0.5
+🐼,panda_face,0.5
+🐼,animal,0.5
+🐼,face,0.5
+🐼,nature,0.5
+🐼,panda,0.5
+🐽,pig_nose,0.5
+🐽,animal,0.5
+🐽,face,0.5
+🐽,nature,0.5
+🐽,nose,0.5
+🐽,pig,0.5
+🐾,feet,0.5
+🐾,paw_prints,0.5
+🐾,animal,0.5
+🐾,nature,0.5
+🐾,paw,0.5
+🐾,print,0.5
+🐿,animal,0.5
+🐿,chipmunk,0.5
+🐿,nature,0.5
+👀,eyes,0.5
+👀,body,0.5
+👀,eye,0.5
+👀,face,0.5
+👀,person,0.5
+👁,body,0.5
+👁,eye,0.5
+👁,person,0.5
+👁‍🗨,eye,0.5
+👁‍🗨,in,0.5
+👁‍🗨,speech,0.5
+👁‍🗨,bubble,0.5
+👂,ear,0.5
+👂,body,0.5
+👂,person,0.5
+👃,nose,0.5
+👃,body,0.5
+👃,person,0.5
+👄,lips,0.5
+👄,body,0.5
+👄,mouth,0.5
+👄,person,0.5
+👅,tongue,0.5
+👅,body,0.5
+👅,person,0.5
+👆,point_up_2,0.5
+👆,backhand,0.5
+👆,body,0.5
+👆,finger,0.5
+👆,hand,0.5
+👆,index,0.5
+👆,person,0.5
+👆,point,0.5
+👆,up,0.5
+👇,point_down,0.5
+👇,backhand,0.5
+👇,body,0.5
+👇,down,0.5
+👇,finger,0.5
+👇,hand,0.5
+👇,index,0.5
+👇,person,0.5
+👇,point,0.5
+👈,point_left,0.5
+👈,backhand,0.5
+👈,body,0.5
+👈,finger,0.5
+👈,hand,0.5
+👈,index,0.5
+👈,person,0.5
+👈,point,0.5
+👉,point_right,0.5
+👉,backhand,0.5
+👉,body,0.5
+👉,finger,0.5
+👉,hand,0.5
+👉,index,0.5
+👉,person,0.5
+👉,point,0.5
+👊,facepunch,0.5
+👊,punch,0.5
+👊,body,0.5
+👊,clenched,0.5
+👊,fist,0.5
+👊,hand,0.5
+👊,person,0.5
+👋,wave,0.5
+👋,body,0.5
+👋,hand,0.5
+👋,person,0.5
+👋,waving,0.5
+👌,ok_hand,0.5
+👌,body,0.5
+👌,hand,0.5
+👌,ok,0.5
+👌,person,0.5
+👍,1,0.5
+👍,thumbsup,0.5
+👍,body,0.5
+👍,hand,0.5
+👍,person,0.5
+👍,thumb,0.5
+👍,thumbs up,0.5
+👍,up,0.5
+👎,-1,0.5
+👎,thumbsdown,0.5
+👎,body,0.5
+👎,down,0.5
+👎,hand,0.5
+👎,person,0.5
+👎,thumb,0.5
+👎,thumbs down,0.5
+👏,clap,0.5
+👏,body,0.5
+👏,hand,0.5
+👏,person,0.5
+👐,open_hands,0.5
+👐,body,0.5
+👐,hand,0.5
+👐,open,0.5
+👐,person,0.5
+👑,crown,0.5
+👑,clothing,0.5
+👑,king,0.5
+👑,object,0.5
+👑,person,0.5
+👑,queen,0.5
+👒,womans_hat,0.5
+👒,clothing,0.5
+👒,hat,0.5
+👒,object,0.5
+👒,person,0.5
+👒,woman,0.5
+👓,eyeglasses,0.5
+👓,clothing,0.5
+👓,eye,0.5
+👓,eyewear,0.5
+👓,glasses,0.5
+👓,object,0.5
+👓,person,0.5
+👔,necktie,0.5
+👔,clothing,0.5
+👔,object,0.5
+👔,person,0.5
+👕,shirt,0.5
+👕,tshirt,0.5
+👕,clothing,0.5
+👕,object,0.5
+👕,person,0.5
+👖,jeans,0.5
+👖,clothing,0.5
+👖,object,0.5
+👖,pants,0.5
+👖,person,0.5
+👖,trousers,0.5
+👗,dress,0.5
+👗,clothing,0.5
+👗,object,0.5
+👗,person,0.5
+👘,kimono,0.5
+👘,clothing,0.5
+👘,object,0.5
+👘,person,0.5
+👙,bikini,0.5
+👙,clothing,0.5
+👙,object,0.5
+👙,person,0.5
+👙,swim,0.5
+👚,womans_clothes,0.5
+👚,clothing,0.5
+👚,object,0.5
+👚,person,0.5
+👚,woman,0.5
+👛,purse,0.5
+👛,clothing,0.5
+👛,coin,0.5
+👛,object,0.5
+👛,person,0.5
+👜,handbag,0.5
+👜,bag,0.5
+👜,clothing,0.5
+👜,object,0.5
+👜,person,0.5
+👝,pouch,0.5
+👝,bag,0.5
+👝,clothing,0.5
+👝,object,0.5
+👝,person,0.5
+👞,mans_shoe,0.5
+👞,shoe,0.5
+👞,clothing,0.5
+👞,man,0.5
+👞,object,0.5
+👞,person,0.5
+👟,athletic_shoe,0.5
+👟,athletic,0.5
+👟,clothing,0.5
+👟,object,0.5
+👟,person,0.5
+👟,shoe,0.5
+👟,sneaker,0.5
+👠,high_heel,0.5
+👠,clothing,0.5
+👠,heel,0.5
+👠,object,0.5
+👠,person,0.5
+👠,shoe,0.5
+👠,woman,0.5
+👡,sandal,0.5
+👡,clothing,0.5
+👡,object,0.5
+👡,person,0.5
+👡,shoe,0.5
+👡,woman,0.5
+👢,boot,0.5
+👢,clothing,0.5
+👢,object,0.5
+👢,person,0.5
+👢,shoe,0.5
+👢,woman,0.5
+👣,footprints,0.5
+👣,body,0.5
+👣,clothing,0.5
+👣,footprint,0.5
+👣,person,0.5
+👣,print,0.5
+👤,bust_in_silhouette,0.5
+👤,bust,0.5
+👤,person,0.5
+👤,silhouette,0.5
+👥,busts_in_silhouette,0.5
+👥,bust,0.5
+👥,person,0.5
+👥,silhouette,0.5
+👦,boy,0.5
+👦,person,0.5
+👧,girl,0.5
+👧,maiden,0.5
+👧,person,0.5
+👧,virgin,0.5
+👧,virgo,0.5
+👧,zodiac,0.5
+👨,man,0.5
+👨,person,0.5
+👨‍❤️‍👨,couple,0.5
+👨‍❤️‍👨,with,0.5
+👨‍❤️‍👨,heart,0.5
+👨‍❤️‍👨,man,0.5
+👨‍❤️‍👨,men,0.5
+👨‍❤️‍💋‍👨,kiss,0.5
+👨‍❤️‍💋‍👨,man,0.5
+👨‍❤️‍💋‍👨,men,0.5
+👨‍👦,family,0.5
+👨‍👦,man,0.5
+👨‍👦,boy,0.5
+👨‍👦,son,0.5
+👨‍👦‍👦,family,0.5
+👨‍👦‍👦,man,0.5
+👨‍👦‍👦,boy,0.5
+👨‍👦‍👦,sons,0.5
+👨‍👧,family,0.5
+👨‍👧,man,0.5
+👨‍👧,girl,0.5
+👨‍👧‍👦,family,0.5
+👨‍👧‍👦,man,0.5
+👨‍👧‍👦,girl,0.5
+👨‍👧‍👦,boy,0.5
+👨‍👧‍👧,family,0.5
+👨‍👧‍👧,man,0.5
+👨‍👧‍👧,girl,0.5
+👨‍👧‍👧,daughters,0.5
+👨‍👨‍👦,family,0.5
+👨‍👨‍👦,man,0.5
+👨‍👨‍👦,husbands,0.5
+👨‍👨‍👦,men,0.5
+👨‍👨‍👦,boy,0.5
+👨‍👨‍👦‍👦,family,0.5
+👨‍👨‍👦‍👦,man,0.5
+👨‍👨‍👦‍👦,husbands,0.5
+👨‍👨‍👦‍👦,men,0.5
+👨‍👨‍👦‍👦,boys,0.5
+👨‍👨‍👦‍👦,sons,0.5
+👨‍👨‍👧,family,0.5
+👨‍👨‍👧,man,0.5
+👨‍👨‍👧,men,0.5
+👨‍👨‍👧,husbands,0.5
+👨‍👨‍👧,girl,0.5
+👨‍👨‍👧‍👦,family,0.5
+👨‍👨‍👧‍👦,man,0.5
+👨‍👨‍👧‍👦,men,0.5
+👨‍👨‍👧‍👦,husbands,0.5
+👨‍👨‍👧‍👦,girl,0.5
+👨‍👨‍👧‍👦,boy,0.5
+👨‍👨‍👧‍👧,family,0.5
+👨‍👨‍👧‍👧,man,0.5
+👨‍👨‍👧‍👧,men,0.5
+👨‍👨‍👧‍👧,husbands,0.5
+👨‍👨‍👧‍👧,girls,0.5
+👨‍👨‍👧‍👧,daughters,0.5
+👨‍👩‍👦,family,0.5
+👨‍👩‍👦,man,0.5
+👨‍👩‍👦,woman,0.5
+👨‍👩‍👦,boy,0.5
+👨‍👩‍👦‍👦,family,0.5
+👨‍👩‍👦‍👦,man,0.5
+👨‍👩‍👦‍👦,woman,0.5
+👨‍👩‍👦‍👦,boys,0.5
+👨‍👩‍👦‍👦,sons,0.5
+👨‍👩‍👧,family,0.5
+👨‍👩‍👧,man,0.5
+👨‍👩‍👧,woman,0.5
+👨‍👩‍👧,girl,0.5
+👨‍👩‍👧‍👦,family,0.5
+👨‍👩‍👧‍👦,man,0.5
+👨‍👩‍👧‍👦,woman,0.5
+👨‍👩‍👧‍👦,girl,0.5
+👨‍👩‍👧‍👦,boy,0.5
+👨‍👩‍👧‍👦,children,0.5
+👨‍👩‍👧‍👧,family,0.5
+👨‍👩‍👧‍👧,man,0.5
+👨‍👩‍👧‍👧,woman,0.5
+👨‍👩‍👧‍👧,girls,0.5
+👨‍👩‍👧‍👧,daughters,0.5
+👩,woman,0.5
+👩,person,0.5
+👩‍❤️‍👩,couple,0.5
+👩‍❤️‍👩,with,0.5
+👩‍❤️‍👩,heart,0.5
+👩‍❤️‍👩,woman,0.5
+👩‍❤️‍👩,women,0.5
+👩‍❤️‍💋‍👩,kiss,0.5
+👩‍❤️‍💋‍👩,woman,0.5
+👩‍❤️‍💋‍👩,women,0.5
+👩‍👦,family,0.5
+👩‍👦,woman,0.5
+👩‍👦,boy,0.5
+👩‍👦,son,0.5
+👩‍👦‍👦,family,0.5
+👩‍👦‍👦,woman,0.5
+👩‍👦‍👦,boy,0.5
+👩‍👦‍👦,sons,0.5
+👩‍👧,family,0.5
+👩‍👧,woman,0.5
+👩‍👧,girl,0.5
+👩‍👧,daugher,0.5
+👩‍👧‍👦,family,0.5
+👩‍👧‍👦,woman,0.5
+👩‍👧‍👦,girl,0.5
+👩‍👧‍👦,boy,0.5
+👩‍👧‍👧,family,0.5
+👩‍👧‍👧,woman,0.5
+👩‍👧‍👧,girl,0.5
+👩‍👧‍👧,daughters,0.5
+👩‍👩‍👦,family,0.5
+👩‍👩‍👦,woman,0.5
+👩‍👩‍👦,women,0.5
+👩‍👩‍👦,boy,0.5
+👩‍👩‍👦‍👦,family,0.5
+👩‍👩‍👦‍👦,woman,0.5
+👩‍👩‍👦‍👦,women,0.5
+👩‍👩‍👦‍👦,boy,0.5
+👩‍👩‍👦‍👦,boy,0.5
+👩‍👩‍👧,family,0.5
+👩‍👩‍👧,woman,0.5
+👩‍👩‍👧,women,0.5
+👩‍👩‍👧,girl,0.5
+👩‍👩‍👧‍👦,family,0.5
+👩‍👩‍👧‍👦,woman,0.5
+👩‍👩‍👧‍👦,women,0.5
+👩‍👩‍👧‍👦,girl,0.5
+👩‍👩‍👧‍👦,boy,0.5
+👩‍👩‍👧‍👧,family,0.5
+👩‍👩‍👧‍👧,woman,0.5
+👩‍👩‍👧‍👧,women,0.5
+👩‍👩‍👧‍👧,girl,0.5
+👩‍👩‍👧‍👧,daughters,0.5
+👪,family,0.5
+👪,child,0.5
+👪,father,0.5
+👪,mother,0.5
+👪,person,0.5
+👫,couple,0.5
+👫,hand,0.5
+👫,hold,0.5
+👫,man,0.5
+👫,person,0.5
+👫,woman,0.5
+👬,two_men_holding_hands,0.5
+👬,couple,0.5
+👬,gemini,0.5
+👬,hand,0.5
+👬,hold,0.5
+👬,man,0.5
+👬,person,0.5
+👬,twins,0.5
+👬,zodiac,0.5
+👭,two_women_holding_hands,0.5
+👭,couple,0.5
+👭,hand,0.5
+👭,hold,0.5
+👭,person,0.5
+👭,woman,0.5
+👮,cop,0.5
+👮,officer,0.5
+👮,person,0.5
+👮,police,0.5
+👯,dancers,0.5
+👯,bunny,0.5
+👯,dancer,0.5
+👯,ear,0.5
+👯,girl,0.5
+👯,person,0.5
+👯,woman,0.5
+👰,bride_with_veil,0.5
+👰,bride,0.5
+👰,person,0.5
+👰,veil,0.5
+👰,wedding,0.5
+👱,person_with_blond_hair,0.5
+👱,blond,0.5
+👱,person,0.5
+👲,man_with_gua_pi_mao,0.5
+👲,gua pi mao,0.5
+👲,hat,0.5
+👲,man,0.5
+👲,person,0.5
+👳,man_with_turban,0.5
+👳,man,0.5
+👳,person,0.5
+👳,turban,0.5
+👴,older_man,0.5
+👴,man,0.5
+👴,old,0.5
+👴,person,0.5
+👵,older_woman,0.5
+👵,old,0.5
+👵,person,0.5
+👵,woman,0.5
+👶,baby,0.5
+👶,person,0.5
+👷,construction_worker,0.5
+👷,construction,0.5
+👷,hat,0.5
+👷,person,0.5
+👷,worker,0.5
+👸,princess,0.5
+👸,fairy tale,0.5
+👸,fantasy,0.5
+👸,person,0.5
+👹,japanese_ogre,0.5
+👹,creature,0.5
+👹,face,0.5
+👹,fairy tale,0.5
+👹,fantasy,0.5
+👹,japanese,0.5
+👹,monster,0.5
+👹,ogre,0.5
+👹,person,0.5
+👺,japanese_goblin,0.5
+👺,creature,0.5
+👺,face,0.5
+👺,fairy tale,0.5
+👺,fantasy,0.5
+👺,goblin,0.5
+👺,japanese,0.5
+👺,monster,0.5
+👺,person,0.5
+👻,ghost,0.5
+👻,creature,0.5
+👻,face,0.5
+👻,fairy tale,0.5
+👻,fantasy,0.5
+👻,monster,0.5
+👻,person,0.5
+👼,angel,0.5
+👼,baby,0.5
+👼,face,0.5
+👼,fairy tale,0.5
+👼,fantasy,0.5
+👼,person,0.5
+👽,alien,0.5
+👽,creature,0.5
+👽,extraterrestrial,0.5
+👽,face,0.5
+👽,fairy tale,0.5
+👽,fantasy,0.5
+👽,monster,0.5
+👽,nature,0.5
+👽,person,0.5
+👽,space,0.5
+👽,ufo,0.5
+👾,space_invader,0.5
+👾,alien,0.5
+👾,creature,0.5
+👾,extraterrestrial,0.5
+👾,face,0.5
+👾,fairy tale,0.5
+👾,fantasy,0.5
+👾,monster,0.5
+👾,nature,0.5
+👾,person,0.5
+👾,space,0.5
+👾,ufo,0.5
+👿,imp,0.5
+👿,demon,0.5
+👿,devil,0.5
+👿,face,0.5
+👿,fairy tale,0.5
+👿,fantasy,0.5
+👿,person,0.5
+💀,skull,0.5
+💀,body,0.5
+💀,death,0.5
+💀,face,0.5
+💀,fairy tale,0.5
+💀,monster,0.5
+💀,person,0.5
+💁,information_desk_person,0.5
+💁,hand,0.5
+💁,help,0.5
+💁,information,0.5
+💁,person,0.5
+💁,sassy,0.5
+💂,guardsman,0.5
+💂,guard,0.5
+💂,person,0.5
+💃,dancer,0.5
+💃,person,0.5
+💄,lipstick,0.5
+💄,cosmetics,0.5
+💄,makeup,0.5
+💄,object,0.5
+💄,person,0.5
+💅,nail_care,0.5
+💅,body,0.5
+💅,care,0.5
+💅,cosmetics,0.5
+💅,manicure,0.5
+💅,nail,0.5
+💅,person,0.5
+💅,polish,0.5
+💆,massage,0.5
+💆,person,0.5
+💆,salon,0.5
+💇,haircut,0.5
+💇,barber,0.5
+💇,beauty,0.5
+💇,parlor,0.5
+💇,person,0.5
+💈,barber,0.5
+💈,haircut,0.5
+💈,place,0.5
+💈,pole,0.5
+💈,barber,0.5
+💈,haircut,0.5
+💈,place,0.5
+💈,pole,0.5
+💉,syringe,0.5
+💉,doctor,0.5
+💉,medicine,0.5
+💉,needle,0.5
+💉,object,0.5
+💉,shot,0.5
+💉,sick,0.5
+💉,tool,0.5
+💊,pill,0.5
+💊,doctor,0.5
+💊,medicine,0.5
+💊,object,0.5
+💊,sick,0.5
+💋,kiss,0.5
+💋,emotion,0.5
+💋,heart,0.5
+💋,lips,0.5
+💋,mark,0.5
+💋,person,0.5
+💋,romance,0.5
+💌,love_letter,0.5
+💌,emotion,0.5
+💌,heart,0.5
+💌,letter,0.5
+💌,love,0.5
+💌,mail,0.5
+💌,person,0.5
+💌,romance,0.5
+💍,ring,0.5
+💍,diamond,0.5
+💍,emotion,0.5
+💍,object,0.5
+💍,person,0.5
+💍,romance,0.5
+💎,gem,0.5
+💎,diamond,0.5
+💎,emotion,0.5
+💎,jewel,0.5
+💎,object,0.5
+💎,person,0.5
+💎,romance,0.5
+💏,couplekiss,0.5
+💏,couple,0.5
+💏,kiss,0.5
+💏,person,0.5
+💏,romance,0.5
+💐,bouquet,0.5
+💐,flower,0.5
+💐,nature,0.5
+💐,object,0.5
+💐,place,0.5
+💐,plant,0.5
+💐,romance,0.5
+💑,couple_with_heart,0.5
+💑,couple,0.5
+💑,heart,0.5
+💑,love,0.5
+💑,person,0.5
+💑,romance,0.5
+💒,wedding,0.5
+💒,activity,0.5
+💒,chapel,0.5
+💒,place,0.5
+💒,romance,0.5
+💓,heartbeat,0.5
+💓,beating,0.5
+💓,emotion,0.5
+💓,heart,0.5
+💓,person,0.5
+💓,pulsating,0.5
+💔,broken_heart,0.5
+💔,break,0.5
+💔,broken,0.5
+💔,emotion,0.5
+💔,heart,0.5
+💔,person,0.5
+💕,two_hearts,0.5
+💕,emotion,0.5
+💕,heart,0.5
+💕,love,0.5
+💕,person,0.5
+💖,sparkling_heart,0.5
+💖,emotion,0.5
+💖,excited,0.5
+💖,heart,0.5
+💖,person,0.5
+💖,sparkle,0.5
+💗,heartpulse,0.5
+💗,emotion,0.5
+💗,excited,0.5
+💗,growing,0.5
+💗,heart,0.5
+💗,nervous,0.5
+💗,person,0.5
+💘,cupid,0.5
+💘,arrow,0.5
+💘,emotion,0.5
+💘,heart,0.5
+💘,person,0.5
+💘,romance,0.5
+💙,blue_heart,0.5
+💙,blue,0.5
+💙,emotion,0.5
+💙,heart,0.5
+💙,person,0.5
+💚,green_heart,0.5
+💚,emotion,0.5
+💚,green,0.5
+💚,heart,0.5
+💚,person,0.5
+💛,yellow_heart,0.5
+💛,emotion,0.5
+💛,heart,0.5
+💛,person,0.5
+💛,yellow,0.5
+💜,purple_heart,0.5
+💜,emotion,0.5
+💜,heart,0.5
+💜,person,0.5
+💜,purple,0.5
+💝,gift_heart,0.5
+💝,emotion,0.5
+💝,heart,0.5
+💝,object,0.5
+💝,person,0.5
+💝,ribbon,0.5
+💝,valentine,0.5
+💞,revolving_hearts,0.5
+💞,emotion,0.5
+💞,heart,0.5
+💞,person,0.5
+💞,revolving,0.5
+💟,heart_decoration,0.5
+💟,emotion,0.5
+💟,heart,0.5
+💟,person,0.5
+💟,symbol,0.5
+💠,diamond_shape_with_a_dot_inside,0.5
+💠,comic,0.5
+💠,diamond,0.5
+💠,geometric,0.5
+💠,inside,0.5
+💠,sign,0.5
+💠,symbol,0.5
+💡,bulb,0.5
+💡,comic,0.5
+💡,electric,0.5
+💡,idea,0.5
+💡,light,0.5
+💡,object,0.5
+💢,anger,0.5
+💢,angry,0.5
+💢,comic,0.5
+💢,emotion,0.5
+💢,mad,0.5
+💢,person,0.5
+💢,symbol,0.5
+💣,bomb,0.5
+💣,comic,0.5
+💣,object,0.5
+💤,zzz,0.5
+💤,comic,0.5
+💤,emotion,0.5
+💤,person,0.5
+💤,sleep,0.5
+💤,symbol,0.5
+💤,word,0.5
+💥,boom,0.5
+💥,collision,0.5
+💥,comic,0.5
+💥,emotion,0.5
+💥,person,0.5
+💦,sweat_drops,0.5
+💦,comic,0.5
+💦,emotion,0.5
+💦,object,0.5
+💦,person,0.5
+💦,splashing,0.5
+💦,sweat,0.5
+💧,droplet,0.5
+💧,cold,0.5
+💧,comic,0.5
+💧,drop,0.5
+💧,emotion,0.5
+💧,nature,0.5
+💧,object,0.5
+💧,person,0.5
+💧,sweat,0.5
+💧,weather,0.5
+💨,dash,0.5
+💨,comic,0.5
+💨,emotion,0.5
+💨,object,0.5
+💨,person,0.5
+💨,running,0.5
+💩,hankey,0.5
+💩,poop,0.5
+💩,shit,0.5
+💩,comic,0.5
+💩,dung,0.5
+💩,face,0.5
+💩,monster,0.5
+💩,nature,0.5
+💩,object,0.5
+💩,poo,0.5
+💪,muscle,0.5
+💪,biceps,0.5
+💪,body,0.5
+💪,comic,0.5
+💪,flex,0.5
+💪,person,0.5
+💫,dizzy,0.5
+💫,comic,0.5
+💫,emotion,0.5
+💫,person,0.5
+💫,star,0.5
+💬,speech_balloon,0.5
+💬,balloon,0.5
+💬,bubble,0.5
+💬,comic,0.5
+💬,dialog,0.5
+💬,emotion,0.5
+💬,object,0.5
+💬,person,0.5
+💬,speech,0.5
+💭,thought_balloon,0.5
+💭,balloon,0.5
+💭,bubble,0.5
+💭,comic,0.5
+💭,emotion,0.5
+💭,object,0.5
+💭,person,0.5
+💭,thought,0.5
+💮,white_flower,0.5
+💮,flower,0.5
+💮,object,0.5
+💮,symbol,0.5
+💮,white_flower,0.5
+💮,flower,0.5
+💮,object,0.5
+💮,symbol,0.5
+💯,100,0.5
+💯,full,0.5
+💯,hundred,0.5
+💯,office,0.5
+💯,score,0.5
+💯,symbol,0.5
+💰,moneybag,0.5
+💰,bag,0.5
+💰,dollar,0.5
+💰,money,0.5
+💰,object,0.5
+💰,office,0.5
+💳,credit_card,0.5
+💳,bank,0.5
+💳,card,0.5
+💳,credit,0.5
+💳,money,0.5
+💳,object,0.5
+💳,office,0.5
+💴,yen,0.5
+💴,bank,0.5
+💴,banknote,0.5
+💴,bill,0.5
+💴,currency,0.5
+💴,money,0.5
+💴,note,0.5
+💴,object,0.5
+💴,office,0.5
+💴,yen,0.5
+💴,bank,0.5
+💴,banknote,0.5
+💴,bill,0.5
+💴,currency,0.5
+💴,money,0.5
+💴,note,0.5
+💴,object,0.5
+💴,office,0.5
+💵,dollar,0.5
+💵,bank,0.5
+💵,banknote,0.5
+💵,bill,0.5
+💵,currency,0.5
+💵,money,0.5
+💵,note,0.5
+💵,object,0.5
+💵,office,0.5
+💵,dollar,0.5
+💵,bank,0.5
+💵,banknote,0.5
+💵,bill,0.5
+💵,currency,0.5
+💵,money,0.5
+💵,note,0.5
+💵,object,0.5
+💵,office,0.5
+💶,euro,0.5
+💶,bank,0.5
+💶,banknote,0.5
+💶,bill,0.5
+💶,currency,0.5
+💶,money,0.5
+💶,note,0.5
+💶,object,0.5
+💶,office,0.5
+💶,euro,0.5
+💶,bank,0.5
+💶,banknote,0.5
+💶,bill,0.5
+💶,currency,0.5
+💶,money,0.5
+💶,note,0.5
+💶,object,0.5
+💶,office,0.5
+💷,pound,0.5
+💷,bank,0.5
+💷,banknote,0.5
+💷,bill,0.5
+💷,currency,0.5
+💷,money,0.5
+💷,note,0.5
+💷,object,0.5
+💷,office,0.5
+💷,pound,0.5
+💷,bank,0.5
+💷,banknote,0.5
+💷,bill,0.5
+💷,currency,0.5
+💷,money,0.5
+💷,note,0.5
+💷,object,0.5
+💷,office,0.5
+💸,money_with_wings,0.5
+💸,bank,0.5
+💸,banknote,0.5
+💸,bill,0.5
+💸,dollar,0.5
+💸,fly,0.5
+💸,money,0.5
+💸,note,0.5
+💸,object,0.5
+💸,office,0.5
+💸,wings,0.5
+💺,seat,0.5
+💺,chair,0.5
+💺,object,0.5
+💺,office,0.5
+💺,place,0.5
+💺,travel,0.5
+💻,computer,0.5
+💻,object,0.5
+💻,office,0.5
+💻,pc,0.5
+💻,personal,0.5
+💼,briefcase,0.5
+💼,object,0.5
+💼,office,0.5
+💼,person,0.5
+💽,minidisc,0.5
+💽,computer,0.5
+💽,disk,0.5
+💽,entertainment,0.5
+💽,minidisk,0.5
+💽,object,0.5
+💽,office,0.5
+💽,optical,0.5
+💾,floppy_disk,0.5
+💾,computer,0.5
+💾,disk,0.5
+💾,floppy,0.5
+💾,object,0.5
+💾,office,0.5
+💿,cd,0.5
+💿,blu-ray,0.5
+💿,computer,0.5
+💿,disk,0.5
+💿,dvd,0.5
+💿,object,0.5
+💿,office,0.5
+💿,optical,0.5
+📀,dvd,0.5
+📀,blu-ray,0.5
+📀,cd,0.5
+📀,computer,0.5
+📀,disk,0.5
+📀,entertainment,0.5
+📀,object,0.5
+📀,office,0.5
+📀,optical,0.5
+📁,file_folder,0.5
+📁,file,0.5
+📁,folder,0.5
+📁,object,0.5
+📁,office,0.5
+📂,open_file_folder,0.5
+📂,file,0.5
+📂,folder,0.5
+📂,object,0.5
+📂,office,0.5
+📂,open,0.5
+📃,page_with_curl,0.5
+📃,curl,0.5
+📃,document,0.5
+📃,object,0.5
+📃,office,0.5
+📃,page,0.5
+📄,page_facing_up,0.5
+📄,document,0.5
+📄,object,0.5
+📄,office,0.5
+📄,page,0.5
+📅,date,0.5
+📅,calendar,0.5
+📅,object,0.5
+📅,office,0.5
+📆,calendar,0.5
+📆,object,0.5
+📆,office,0.5
+📇,card_index,0.5
+📇,card,0.5
+📇,index,0.5
+📇,object,0.5
+📇,office,0.5
+📇,rolodex,0.5
+📈,chart_with_upwards_trend,0.5
+📈,chart,0.5
+📈,graph,0.5
+📈,growth,0.5
+📈,object,0.5
+📈,office,0.5
+📈,trend,0.5
+📈,upward,0.5
+📉,chart_with_downwards_trend,0.5
+📉,chart,0.5
+📉,down,0.5
+📉,graph,0.5
+📉,object,0.5
+📉,office,0.5
+📉,trend,0.5
+📊,bar_chart,0.5
+📊,bar,0.5
+📊,chart,0.5
+📊,graph,0.5
+📊,object,0.5
+📊,office,0.5
+📋,clipboard,0.5
+📋,object,0.5
+📋,office,0.5
+📌,pushpin,0.5
+📌,object,0.5
+📌,office,0.5
+📌,pin,0.5
+📍,round_pushpin,0.5
+📍,object,0.5
+📍,office,0.5
+📍,pin,0.5
+📍,place,0.5
+📍,pushpin,0.5
+📎,paperclip,0.5
+📎,object,0.5
+📎,office,0.5
+📏,straight_ruler,0.5
+📏,object,0.5
+📏,office,0.5
+📏,ruler,0.5
+📏,straight edge,0.5
+📐,triangular_ruler,0.5
+📐,object,0.5
+📐,office,0.5
+📐,ruler,0.5
+📐,set,0.5
+📐,triangle,0.5
+📑,bookmark_tabs,0.5
+📑,bookmark,0.5
+📑,mark,0.5
+📑,marker,0.5
+📑,object,0.5
+📑,office,0.5
+📑,tabs,0.5
+📓,notebook,0.5
+📓,object,0.5
+📓,office,0.5
+📔,notebook_with_decorative_cover,0.5
+📔,book,0.5
+📔,cover,0.5
+📔,decorated,0.5
+📔,education,0.5
+📔,notebook,0.5
+📔,object,0.5
+📔,office,0.5
+📕,closed_book,0.5
+📕,book,0.5
+📕,closed,0.5
+📕,education,0.5
+📕,object,0.5
+📕,office,0.5
+📖,book,0.5
+📖,open_book,0.5
+📖,education,0.5
+📖,object,0.5
+📖,office,0.5
+📖,open,0.5
+📗,green_book,0.5
+📗,book,0.5
+📗,education,0.5
+📗,green,0.5
+📗,object,0.5
+📗,office,0.5
+📘,blue_book,0.5
+📘,blue,0.5
+📘,book,0.5
+📘,education,0.5
+📘,object,0.5
+📘,office,0.5
+📙,orange_book,0.5
+📙,book,0.5
+📙,education,0.5
+📙,object,0.5
+📙,office,0.5
+📙,orange,0.5
+📚,books,0.5
+📚,book,0.5
+📚,education,0.5
+📚,object,0.5
+📚,office,0.5
+📛,name_badge,0.5
+📛,badge,0.5
+📛,name,0.5
+📛,object,0.5
+📛,office,0.5
+📜,scroll,0.5
+📜,object,0.5
+📜,office,0.5
+📜,paper,0.5
+📝,memo,0.5
+📝,pencil,0.5
+📝,communication,0.5
+📝,object,0.5
+📝,office,0.5
+📞,telephone_receiver,0.5
+📞,communication,0.5
+📞,object,0.5
+📞,phone,0.5
+📞,receiver,0.5
+📞,sound,0.5
+📞,telephone,0.5
+📟,pager,0.5
+📟,communication,0.5
+📟,object,0.5
+📟,office,0.5
+📠,fax,0.5
+📠,communication,0.5
+📠,object,0.5
+📠,office,0.5
+📡,satellite,0.5
+📡,antenna,0.5
+📡,communication,0.5
+📡,dish,0.5
+📡,object,0.5
+📡,office,0.5
+📢,loudspeaker,0.5
+📢,communication,0.5
+📢,loud,0.5
+📢,object,0.5
+📢,public address,0.5
+📢,sound,0.5
+📣,mega,0.5
+📣,cheering,0.5
+📣,communication,0.5
+📣,megaphone,0.5
+📣,object,0.5
+📣,sound,0.5
+📤,outbox_tray,0.5
+📤,box,0.5
+📤,communication,0.5
+📤,letter,0.5
+📤,mail,0.5
+📤,object,0.5
+📤,office,0.5
+📤,outbox,0.5
+📤,sent,0.5
+📤,tray,0.5
+📥,inbox_tray,0.5
+📥,box,0.5
+📥,communication,0.5
+📥,inbox,0.5
+📥,letter,0.5
+📥,mail,0.5
+📥,object,0.5
+📥,office,0.5
+📥,receive,0.5
+📥,tray,0.5
+📦,package,0.5
+📦,box,0.5
+📦,communication,0.5
+📦,object,0.5
+📦,office,0.5
+📦,parcel,0.5
+📧,e-mail,0.5
+📧,communication,0.5
+📧,email,0.5
+📧,letter,0.5
+📧,mail,0.5
+📧,object,0.5
+📧,office,0.5
+📨,incoming_envelope,0.5
+📨,communication,0.5
+📨,email,0.5
+📨,e-mail,0.5
+📨,envelope,0.5
+📨,incoming,0.5
+📨,letter,0.5
+📨,mail,0.5
+📨,object,0.5
+📨,office,0.5
+📨,receive,0.5
+📩,envelope_with_arrow,0.5
+📩,arrow,0.5
+📩,communication,0.5
+📩,down,0.5
+📩,email,0.5
+📩,e-mail,0.5
+📩,envelope,0.5
+📩,letter,0.5
+📩,mail,0.5
+📩,object,0.5
+📩,office,0.5
+📩,outgoing,0.5
+📩,sent,0.5
+📪,mailbox_closed,0.5
+📪,closed,0.5
+📪,communication,0.5
+📪,flag,0.5
+📪,lowered,0.5
+📪,mail,0.5
+📪,mailbox,0.5
+📪,object,0.5
+📪,office,0.5
+📪,postbox,0.5
+📫,mailbox,0.5
+📫,closed,0.5
+📫,communication,0.5
+📫,flag,0.5
+📫,mail,0.5
+📫,object,0.5
+📫,office,0.5
+📫,postbox,0.5
+📬,mailbox_with_mail,0.5
+📬,communication,0.5
+📬,flag,0.5
+📬,mail,0.5
+📬,mailbox,0.5
+📬,object,0.5
+📬,office,0.5
+📬,open,0.5
+📬,postbox,0.5
+📭,mailbox_with_no_mail,0.5
+📭,communication,0.5
+📭,flag,0.5
+📭,lowered,0.5
+📭,mail,0.5
+📭,mailbox,0.5
+📭,object,0.5
+📭,office,0.5
+📭,open,0.5
+📭,postbox,0.5
+📮,postbox,0.5
+📮,communication,0.5
+📮,mail,0.5
+📮,mailbox,0.5
+📮,object,0.5
+📮,office,0.5
+📯,postal_horn,0.5
+📯,communication,0.5
+📯,entertainment,0.5
+📯,horn,0.5
+📯,object,0.5
+📯,post,0.5
+📯,postal,0.5
+📯,sound,0.5
+📯,postal_horn,0.5
+📯,communication,0.5
+📯,entertainment,0.5
+📯,horn,0.5
+📯,object,0.5
+📯,post,0.5
+📯,postal,0.5
+📯,sound,0.5
+📰,newspaper,0.5
+📰,communication,0.5
+📰,news,0.5
+📰,object,0.5
+📰,paper,0.5
+📱,iphone,0.5
+📱,cell,0.5
+📱,communication,0.5
+📱,mobile,0.5
+📱,object,0.5
+📱,phone,0.5
+📱,telephone,0.5
+📲,calling,0.5
+📲,arrow,0.5
+📲,call,0.5
+📲,cell,0.5
+📲,communication,0.5
+📲,mobile,0.5
+📲,object,0.5
+📲,phone,0.5
+📲,receive,0.5
+📲,telephone,0.5
+📳,vibration_mode,0.5
+📳,cell,0.5
+📳,communication,0.5
+📳,mobile,0.5
+📳,mode,0.5
+📳,object,0.5
+📳,phone,0.5
+📳,symbol,0.5
+📳,telephone,0.5
+📳,vibration,0.5
+📴,mobile_phone_off,0.5
+📴,cell,0.5
+📴,communication,0.5
+📴,mobile,0.5
+📴,object,0.5
+📴,off,0.5
+📴,phone,0.5
+📴,symbol,0.5
+📴,telephone,0.5
+📶,signal_strength,0.5
+📶,antenna,0.5
+📶,bar,0.5
+📶,cell,0.5
+📶,communication,0.5
+📶,mobile,0.5
+📶,object,0.5
+📶,phone,0.5
+📶,signal,0.5
+📶,symbol,0.5
+📶,telephone,0.5
+📷,camera,0.5
+📷,entertainment,0.5
+📷,object,0.5
+📷,video,0.5
+📸,camera,0.5
+📸,flash,0.5
+📸,object,0.5
+📸,video,0.5
+📹,video_camera,0.5
+📹,camera,0.5
+📹,entertainment,0.5
+📹,object,0.5
+📹,video,0.5
+📺,tv,0.5
+📺,entertainment,0.5
+📺,object,0.5
+📺,television,0.5
+📺,video,0.5
+📻,radio,0.5
+📻,entertainment,0.5
+📻,object,0.5
+📻,video,0.5
+📼,vhs,0.5
+📼,entertainment,0.5
+📼,object,0.5
+📼,tape,0.5
+📼,video,0.5
+📼,videocassette,0.5
+📽,cinema,0.5
+📽,entertainment,0.5
+📽,film,0.5
+📽,movie,0.5
+📽,object,0.5
+📽,projector,0.5
+📽,video,0.5
+📿,beads,0.5
+📿,clothing,0.5
+📿,necklace,0.5
+📿,object,0.5
+📿,person,0.5
+📿,prayer,0.5
+📿,religion,0.5
+🔀,twisted_rightwards_arrows,0.5
+🔀,arrow,0.5
+🔀,crossed,0.5
+🔀,symbol,0.5
+🔁,repeat,0.5
+🔁,arrow,0.5
+🔁,clockwise,0.5
+🔁,symbol,0.5
+🔂,repeat_one,0.5
+🔂,arrow,0.5
+🔂,clockwise,0.5
+🔂,once,0.5
+🔂,symbol,0.5
+🔃,arrows_clockwise,0.5
+🔃,arrow,0.5
+🔃,clockwise,0.5
+🔃,reload,0.5
+🔃,symbol,0.5
+🔄,arrows_counterclockwise,0.5
+🔄,anticlockwise,0.5
+🔄,arrow,0.5
+🔄,counterclockwise,0.5
+🔄,symbol,0.5
+🔄,withershins,0.5
+🔅,low_brightness,0.5
+🔅,brightness,0.5
+🔅,dim,0.5
+🔅,low,0.5
+🔅,sign,0.5
+🔅,symbol,0.5
+🔆,high_brightness,0.5
+🔆,bright,0.5
+🔆,brightness,0.5
+🔆,sign,0.5
+🔆,symbol,0.5
+🔇,mute,0.5
+🔇,object,0.5
+🔇,quiet,0.5
+🔇,silent,0.5
+🔇,sound,0.5
+🔇,speaker,0.5
+🔇,volume,0.5
+🔈,speaker,0.5
+🔈,object,0.5
+🔈,sound,0.5
+🔈,volume,0.5
+🔉,sound,0.5
+🔉,low,0.5
+🔉,object,0.5
+🔉,speaker,0.5
+🔉,volume,0.5
+🔉,wave,0.5
+🔊,loud_sound,0.5
+🔊,3,0.5
+🔊,entertainment,0.5
+🔊,high,0.5
+🔊,loud,0.5
+🔊,object,0.5
+🔊,sound,0.5
+🔊,speaker,0.5
+🔊,three,0.5
+🔊,volume,0.5
+🔋,battery,0.5
+🔋,object,0.5
+🔌,electric_plug,0.5
+🔌,electric,0.5
+🔌,electricity,0.5
+🔌,object,0.5
+🔌,plug,0.5
+🔍,mag,0.5
+🔍,glass,0.5
+🔍,magnifying,0.5
+🔍,object,0.5
+🔍,search,0.5
+🔍,tool,0.5
+🔎,mag_right,0.5
+🔎,glass,0.5
+🔎,magnifying,0.5
+🔎,object,0.5
+🔎,search,0.5
+🔎,tool,0.5
+🔏,lock_with_ink_pen,0.5
+🔏,ink,0.5
+🔏,lock,0.5
+🔏,nib,0.5
+🔏,object,0.5
+🔏,pen,0.5
+🔏,privacy,0.5
+🔐,closed_lock_with_key,0.5
+🔐,closed,0.5
+🔐,key,0.5
+🔐,lock,0.5
+🔐,object,0.5
+🔐,secure,0.5
+🔑,key,0.5
+🔑,lock,0.5
+🔑,object,0.5
+🔑,password,0.5
+🔒,lock,0.5
+🔒,closed,0.5
+🔒,object,0.5
+🔓,unlock,0.5
+🔓,lock,0.5
+🔓,object,0.5
+🔓,open,0.5
+🔔,bell,0.5
+🔔,object,0.5
+🔔,sound,0.5
+🔕,no_bell,0.5
+🔕,bell,0.5
+🔕,forbidden,0.5
+🔕,mute,0.5
+🔕,no,0.5
+🔕,not,0.5
+🔕,object,0.5
+🔕,prohibited,0.5
+🔕,quiet,0.5
+🔕,silent,0.5
+🔕,sound,0.5
+🔖,bookmark,0.5
+🔖,mark,0.5
+🔖,object,0.5
+🔗,link,0.5
+🔗,object,0.5
+🔗,symbol,0.5
+🔙,back,0.5
+🔙,arrow,0.5
+🔙,symbol,0.5
+🔚,end,0.5
+🔚,arrow,0.5
+🔚,symbol,0.5
+🔛,on,0.5
+🔛,arrow,0.5
+🔛,mark,0.5
+🔛,symbol,0.5
+🔜,soon,0.5
+🔜,arrow,0.5
+🔜,symbol,0.5
+🔝,top,0.5
+🔝,arrow,0.5
+🔝,symbol,0.5
+🔝,up,0.5
+🔞,underage,0.5
+🔞,18,0.5
+🔞,age restriction,0.5
+🔞,eighteen,0.5
+🔞,forbidden,0.5
+🔞,no,0.5
+🔞,not,0.5
+🔞,prohibited,0.5
+🔞,symbol,0.5
+🔞,word,0.5
+🔟,keycap_ten,0.5
+🔟,10,0.5
+🔟,keycap,0.5
+🔟,symbol,0.5
+🔟,ten,0.5
+🔟,word,0.5
+🔠,capital_abcd,0.5
+🔠,input,0.5
+🔠,latin,0.5
+🔠,letters,0.5
+🔠,symbol,0.5
+🔠,uppercase,0.5
+🔠,word,0.5
+🔡,abcd,0.5
+🔡,input,0.5
+🔡,latin,0.5
+🔡,letters,0.5
+🔡,lowercase,0.5
+🔡,symbol,0.5
+🔡,word,0.5
+🔢,1234,0.5
+🔢,input,0.5
+🔢,numbers,0.5
+🔢,symbol,0.5
+🔢,word,0.5
+🔣,symbols,0.5
+🔣,input,0.5
+🔣,symbol,0.5
+🔣,word,0.5
+🔤,abc,0.5
+🔤,alphabet,0.5
+🔤,input,0.5
+🔤,latin,0.5
+🔤,letters,0.5
+🔤,symbol,0.5
+🔤,word,0.5
+🔥,fire,0.5
+🔥,flame,0.5
+🔥,object,0.5
+🔥,tool,0.5
+🔦,flashlight,0.5
+🔦,electric,0.5
+🔦,light,0.5
+🔦,object,0.5
+🔦,tool,0.5
+🔦,torch,0.5
+🔧,wrench,0.5
+🔧,object,0.5
+🔧,tool,0.5
+🔨,hammer,0.5
+🔨,object,0.5
+🔨,tool,0.5
+🔩,nut_and_bolt,0.5
+🔩,bolt,0.5
+🔩,nut,0.5
+🔩,object,0.5
+🔩,tool,0.5
+🔪,hocho,0.5
+🔪,knife,0.5
+🔪,cooking,0.5
+🔪,object,0.5
+🔪,tool,0.5
+🔪,weapon,0.5
+🔫,gun,0.5
+🔫,handgun,0.5
+🔫,object,0.5
+🔫,pistol,0.5
+🔫,revolver,0.5
+🔫,tool,0.5
+🔫,weapon,0.5
+🔬,microscope,0.5
+🔬,object,0.5
+🔬,tool,0.5
+🔭,telescope,0.5
+🔭,object,0.5
+🔭,tool,0.5
+🔮,crystal_ball,0.5
+🔮,ball,0.5
+🔮,crystal,0.5
+🔮,fairy tale,0.5
+🔮,fantasy,0.5
+🔮,fortune,0.5
+🔮,object,0.5
+🔮,tool,0.5
+🔯,six_pointed_star,0.5
+🔯,fortune,0.5
+🔯,object,0.5
+🔯,star,0.5
+🔯,symbol,0.5
+🔰,beginner,0.5
+🔰,chevron,0.5
+🔰,green,0.5
+🔰,japanese,0.5
+🔰,leaf,0.5
+🔰,object,0.5
+🔰,tool,0.5
+🔰,yellow,0.5
+🔱,trident,0.5
+🔱,anchor,0.5
+🔱,emblem,0.5
+🔱,object,0.5
+🔱,ship,0.5
+🔱,symbol,0.5
+🔱,tool,0.5
+🔲,black_square_button,0.5
+🔲,button,0.5
+🔲,geometric,0.5
+🔲,sign,0.5
+🔲,square,0.5
+🔲,symbol,0.5
+🔳,white_square_button,0.5
+🔳,button,0.5
+🔳,geometric,0.5
+🔳,outlined,0.5
+🔳,sign,0.5
+🔳,square,0.5
+🔳,symbol,0.5
+🔴,red_circle,0.5
+🔴,circle,0.5
+🔴,geometric,0.5
+🔴,red,0.5
+🔴,sign,0.5
+🔴,symbol,0.5
+🔵,large_blue_circle,0.5
+🔵,blue,0.5
+🔵,circle,0.5
+🔵,geometric,0.5
+🔵,sign,0.5
+🔵,symbol,0.5
+🔶,large_orange_diamond,0.5
+🔶,diamond,0.5
+🔶,geometric,0.5
+🔶,orange,0.5
+🔶,sign,0.5
+🔶,symbol,0.5
+🔷,large_blue_diamond,0.5
+🔷,blue,0.5
+🔷,diamond,0.5
+🔷,geometric,0.5
+🔷,sign,0.5
+🔷,symbol,0.5
+🔸,small_orange_diamond,0.5
+🔸,diamond,0.5
+🔸,geometric,0.5
+🔸,orange,0.5
+🔸,sign,0.5
+🔸,symbol,0.5
+🔹,small_blue_diamond,0.5
+🔹,blue,0.5
+🔹,diamond,0.5
+🔹,geometric,0.5
+🔹,sign,0.5
+🔹,symbol,0.5
+🔺,small_red_triangle,0.5
+🔺,geometric,0.5
+🔺,red,0.5
+🔺,sign,0.5
+🔺,symbol,0.5
+🔻,small_red_triangle_down,0.5
+🔻,down,0.5
+🔻,geometric,0.5
+🔻,red,0.5
+🔻,sign,0.5
+🔻,symbol,0.5
+🔼,arrow_up_small,0.5
+🔼,arrow,0.5
+🔼,button,0.5
+🔼,red,0.5
+🔼,symbol,0.5
+🔽,arrow_down_small,0.5
+🔽,arrow,0.5
+🔽,button,0.5
+🔽,down,0.5
+🔽,red,0.5
+🔽,symbol,0.5
+🕉,hindu,0.5
+🕉,om,0.5
+🕉,religion,0.5
+🕉,symbol,0.5
+🕊,animal,0.5
+🕊,bird,0.5
+🕊,dove,0.5
+🕊,fly,0.5
+🕊,nature,0.5
+🕊,peace,0.5
+🕋,islam,0.5
+🕋,kaaba,0.5
+🕋,muslim,0.5
+🕋,place,0.5
+🕋,religion,0.5
+🕌,islam,0.5
+🕌,mosque,0.5
+🕌,muslim,0.5
+🕌,place,0.5
+🕌,religion,0.5
+🕍,jew,0.5
+🕍,jewish,0.5
+🕍,place,0.5
+🕍,religion,0.5
+🕍,synagogue,0.5
+🕍,temple,0.5
+🕎,candelabrum,0.5
+🕎,candlestick,0.5
+🕎,menorah,0.5
+🕎,object,0.5
+🕎,place,0.5
+🕎,religion,0.5
+🕐,clock1,0.5
+🕐,1,0.5
+🕐,0,0.5
+🕐,clock,0.5
+🕐,o’clock,0.5
+🕐,one,0.5
+🕐,symbol,0.5
+🕐,time,0.5
+🕑,clock2,0.5
+🕑,2,0.5
+🕑,0,0.5
+🕑,clock,0.5
+🕑,o’clock,0.5
+🕑,symbol,0.5
+🕑,time,0.5
+🕑,two,0.5
+🕒,clock3,0.5
+🕒,3,0.5
+🕒,0,0.5
+🕒,clock,0.5
+🕒,o’clock,0.5
+🕒,symbol,0.5
+🕒,three,0.5
+🕒,time,0.5
+🕓,clock4,0.5
+🕓,4,0.5
+🕓,0,0.5
+🕓,clock,0.5
+🕓,four,0.5
+🕓,o’clock,0.5
+🕓,symbol,0.5
+🕓,time,0.5
+🕔,clock5,0.5
+🕔,5,0.5
+🕔,0,0.5
+🕔,clock,0.5
+🕔,five,0.5
+🕔,o’clock,0.5
+🕔,symbol,0.5
+🕔,time,0.5
+🕕,clock6,0.5
+🕕,6,0.5
+🕕,0,0.5
+🕕,clock,0.5
+🕕,o’clock,0.5
+🕕,six,0.5
+🕕,symbol,0.5
+🕕,time,0.5
+🕖,clock7,0.5
+🕖,7,0.5
+🕖,0,0.5
+🕖,clock,0.5
+🕖,o’clock,0.5
+🕖,seven,0.5
+🕖,symbol,0.5
+🕖,time,0.5
+🕗,clock8,0.5
+🕗,8,0.5
+🕗,0,0.5
+🕗,clock,0.5
+🕗,eight,0.5
+🕗,o’clock,0.5
+🕗,symbol,0.5
+🕗,time,0.5
+🕘,clock9,0.5
+🕘,9,0.5
+🕘,0,0.5
+🕘,clock,0.5
+🕘,nine,0.5
+🕘,o’clock,0.5
+🕘,symbol,0.5
+🕘,time,0.5
+🕙,clock10,0.5
+🕙,10,0.5
+🕙,0,0.5
+🕙,clock,0.5
+🕙,o’clock,0.5
+🕙,symbol,0.5
+🕙,ten,0.5
+🕙,time,0.5
+🕚,clock11,0.5
+🕚,11,0.5
+🕚,0,0.5
+🕚,clock,0.5
+🕚,eleven,0.5
+🕚,o’clock,0.5
+🕚,symbol,0.5
+🕚,time,0.5
+🕛,clock12,0.5
+🕛,12,0.5
+🕛,1,0.5
+🕛,clock,0.5
+🕛,o’clock,0.5
+🕛,symbol,0.5
+🕛,time,0.5
+🕛,twelve,0.5
+🕜,clock130,0.5
+🕜,1,0.5
+🕜,0,0.5
+🕜,30,0.5
+🕜,clock,0.5
+🕜,one,0.5
+🕜,symbol,0.5
+🕜,thirty,0.5
+🕜,time,0.5
+🕝,clock230,0.5
+🕝,2,0.5
+🕝,0,0.5
+🕝,30,0.5
+🕝,clock,0.5
+🕝,symbol,0.5
+🕝,thirty,0.5
+🕝,time,0.5
+🕝,two,0.5
+🕞,clock330,0.5
+🕞,3,0.5
+🕞,30,0.5
+🕞,0,0.5
+🕞,clock,0.5
+🕞,symbol,0.5
+🕞,thirty,0.5
+🕞,three,0.5
+🕞,time,0.5
+🕟,clock430,0.5
+🕟,30,0.5
+🕟,4,0.5
+🕟,0,0.5
+🕟,clock,0.5
+🕟,four,0.5
+🕟,symbol,0.5
+🕟,thirty,0.5
+🕟,time,0.5
+🕠,clock530,0.5
+🕠,30,0.5
+🕠,5,0.5
+🕠,0,0.5
+🕠,clock,0.5
+🕠,five,0.5
+🕠,symbol,0.5
+🕠,thirty,0.5
+🕠,time,0.5
+🕡,clock630,0.5
+🕡,30,0.5
+🕡,6,0.5
+🕡,0,0.5
+🕡,clock,0.5
+🕡,six,0.5
+🕡,symbol,0.5
+🕡,thirty,0.5
+🕡,time,0.5
+🕢,clock730,0.5
+🕢,30,0.5
+🕢,7,0.5
+🕢,0,0.5
+🕢,clock,0.5
+🕢,seven,0.5
+🕢,symbol,0.5
+🕢,thirty,0.5
+🕢,time,0.5
+🕣,clock830,0.5
+🕣,30,0.5
+🕣,8,0.5
+🕣,0,0.5
+🕣,clock,0.5
+🕣,eight,0.5
+🕣,symbol,0.5
+🕣,thirty,0.5
+🕣,time,0.5
+🕤,clock930,0.5
+🕤,30,0.5
+🕤,9,0.5
+🕤,0,0.5
+🕤,clock,0.5
+🕤,nine,0.5
+🕤,symbol,0.5
+🕤,thirty,0.5
+🕤,time,0.5
+🕥,clock1030,0.5
+🕥,10,0.5
+🕥,0,0.5
+🕥,30,0.5
+🕥,clock,0.5
+🕥,symbol,0.5
+🕥,ten,0.5
+🕥,thirty,0.5
+🕥,time,0.5
+🕦,clock1130,0.5
+🕦,11,0.5
+🕦,0,0.5
+🕦,30,0.5
+🕦,clock,0.5
+🕦,eleven,0.5
+🕦,symbol,0.5
+🕦,thirty,0.5
+🕦,time,0.5
+🕧,clock1230,0.5
+🕧,12,0.5
+🕧,1,0.5
+🕧,30,0.5
+🕧,clock,0.5
+🕧,symbol,0.5
+🕧,thirty,0.5
+🕧,time,0.5
+🕧,twelve,0.5
+🕯,candle,0.5
+🕯,light,0.5
+🕯,object,0.5
+🕰,clock,0.5
+🕰,object,0.5
+🕳,hole,0.5
+🕳,symbol,0.5
+🕴,business,0.5
+🕴,man,0.5
+🕴,person,0.5
+🕴,suit,0.5
+🕴,business,0.5
+🕴,man,0.5
+🕴,person,0.5
+🕴,suit,0.5
+🕵,detective,0.5
+🕵,person,0.5
+🕵,sleuth,0.5
+🕵,spy,0.5
+🕶,dark,0.5
+🕶,eye,0.5
+🕶,eyewear,0.5
+🕶,glasses,0.5
+🕶,object,0.5
+🕶,sunglasses,0.5
+🕷,animal,0.5
+🕷,insect,0.5
+🕷,object,0.5
+🕷,spider,0.5
+🕸,animal,0.5
+🕸,object,0.5
+🕸,spider,0.5
+🕸,web,0.5
+🕹,entertainment,0.5
+🕹,game,0.5
+🕹,joystick,0.5
+🕹,object,0.5
+🕹,video game,0.5
+🖇,communication,0.5
+🖇,link,0.5
+🖇,object,0.5
+🖇,office,0.5
+🖇,paperclip,0.5
+🖊,ballpoint,0.5
+🖊,communication,0.5
+🖊,object,0.5
+🖊,office,0.5
+🖊,pen,0.5
+🖋,communication,0.5
+🖋,fountain,0.5
+🖋,object,0.5
+🖋,office,0.5
+🖋,pen,0.5
+🖌,communication,0.5
+🖌,object,0.5
+🖌,office,0.5
+🖌,paintbrush,0.5
+🖌,painting,0.5
+🖍,communication,0.5
+🖍,crayon,0.5
+🖍,object,0.5
+🖍,office,0.5
+🖐,body,0.5
+🖐,finger,0.5
+🖐,hand,0.5
+🖐,person,0.5
+🖐,splayed,0.5
+🖕,body,0.5
+🖕,finger,0.5
+🖕,fuck,0.5
+🖕,hand,0.5
+🖕,middle finger,0.5
+🖕,person,0.5
+🖖,body,0.5
+🖖,finger,0.5
+🖖,hand,0.5
+🖖,person,0.5
+🖖,spock,0.5
+🖖,vulcan,0.5
+🖥,computer,0.5
+🖥,desktop,0.5
+🖥,object,0.5
+🖥,office,0.5
+🖨,computer,0.5
+🖨,object,0.5
+🖨,office,0.5
+🖨,printer,0.5
+🖱,3,0.5
+🖱,button,0.5
+🖱,computer,0.5
+🖱,mouse,0.5
+🖱,object,0.5
+🖱,office,0.5
+🖱,three,0.5
+🖲,computer,0.5
+🖲,object,0.5
+🖲,office,0.5
+🖲,trackball,0.5
+🖼,art,0.5
+🖼,frame,0.5
+🖼,museum,0.5
+🖼,object,0.5
+🖼,office,0.5
+🖼,painting,0.5
+🖼,picture,0.5
+🗂,card,0.5
+🗂,dividers,0.5
+🗂,index,0.5
+🗂,object,0.5
+🗂,office,0.5
+🗃,box,0.5
+🗃,card,0.5
+🗃,file,0.5
+🗃,object,0.5
+🗃,office,0.5
+🗄,cabinet,0.5
+🗄,file,0.5
+🗄,object,0.5
+🗄,office,0.5
+🗑,object,0.5
+🗑,office,0.5
+🗑,wastebasket,0.5
+🗒,note,0.5
+🗒,object,0.5
+🗒,office,0.5
+🗒,pad,0.5
+🗒,spiral,0.5
+🗓,calendar,0.5
+🗓,object,0.5
+🗓,office,0.5
+🗓,pad,0.5
+🗓,spiral,0.5
+🗜,compression,0.5
+🗜,object,0.5
+🗜,tool,0.5
+🗜,vice,0.5
+🗝,clue,0.5
+🗝,key,0.5
+🗝,lock,0.5
+🗝,object,0.5
+🗝,old,0.5
+🗞,news,0.5
+🗞,newspaper,0.5
+🗞,object,0.5
+🗞,paper,0.5
+🗞,rolled,0.5
+🗡,dagger,0.5
+🗡,knife,0.5
+🗡,object,0.5
+🗡,weapon,0.5
+🗣,face,0.5
+🗣,head,0.5
+🗣,person,0.5
+🗣,silhouette,0.5
+🗣,speak,0.5
+🗣,speaking,0.5
+🗯,angry,0.5
+🗯,balloon,0.5
+🗯,bubble,0.5
+🗯,emotion,0.5
+🗯,mad,0.5
+🗯,symbol,0.5
+🗳,ballot,0.5
+🗳,box,0.5
+🗳,object,0.5
+🗺,map,0.5
+🗺,place,0.5
+🗺,world,0.5
+🗻,mount_fuji,0.5
+🗻,fuji,0.5
+🗻,mountain,0.5
+🗻,nature,0.5
+🗻,place,0.5
+🗼,tokyo_tower,0.5
+🗼,place,0.5
+🗼,tokyo,0.5
+🗼,tower,0.5
+🗽,statue_of_liberty,0.5
+🗽,liberty,0.5
+🗽,place,0.5
+🗽,statue,0.5
+🗾,japan,0.5
+🗾,map,0.5
+🗾,place,0.5
+🗿,moyai,0.5
+🗿,face,0.5
+🗿,place,0.5
+🗿,statue,0.5
+🗿,travel,0.5
+🗿,moyai,0.5
+🗿,face,0.5
+🗿,place,0.5
+🗿,statue,0.5
+🗿,travel,0.5
+🤐,face,0.5
+🤐,mouth,0.5
+🤐,person,0.5
+🤐,zipper,0.5
+🤐,:X,0.5
+🤐,:-X,0.5
+🤑,face,0.5
+🤑,money,0.5
+🤑,mouth,0.5
+🤑,person,0.5
+🤒,face,0.5
+🤒,ill,0.5
+🤒,person,0.5
+🤒,sick,0.5
+🤒,thermometer,0.5
+🤓,face,0.5
+🤓,geek,0.5
+🤓,nerd,0.5
+🤓,person,0.5
+🤓,8D,0.5
+🤓,8-D,0.5
 🤔,face,0.5
-🤔,think,0.5
-🤔,hmm,0.5
-🤔,what,0.5
-🤔,lost,0.5
-🤔,??,0.5
+🤔,person,0.5
+🤔,thinking,0.5
 🤔,:?,0.5
 🤔,:-?,0.5
+🤕,bandage,0.5
+🤕,face,0.5
+🤕,hurt,0.5
+🤕,injury,0.5
+🤕,person,0.5
+🤖,face,0.5
+🤖,monster,0.5
+🤖,person,0.5
+🤖,robot,0.5
+🤗,face,0.5
+🤗,hug,0.5
+🤗,hugging,0.5
+🤗,person,0.5
+🤘,body,0.5
+🤘,finger,0.5
+🤘,hand,0.5
+🤘,horns,0.5
+🤘,person,0.5
+🤘,rock-on,0.5
+🦀,animal,0.5
+🦀,cancer,0.5
+🦀,crab,0.5
+🦀,nature,0.5
+🦀,zodiac,0.5
+🦁,animal,0.5
+🦁,face,0.5
+🦁,leo,0.5
+🦁,lion,0.5
+🦁,nature,0.5
+🦁,zodiac,0.5
+🦂,animal,0.5
+🦂,nature,0.5
+🦂,scorpio,0.5
+🦂,scorpion,0.5
+🦂,scorpius,0.5
+🦂,zodiac,0.5
+🦃,animal,0.5
+🦃,nature,0.5
+🦃,turkey,0.5
+🦄,animal,0.5
+🦄,face,0.5
+🦄,nature,0.5
+🦄,unicorn,0.5
+🧀,cheese,0.5
+🧀,food,0.5
+🧀,nature,0.5
+😀,grinning,0.5
+😀,face,0.5
+😀,grin,0.5
+😀,person,0.5
+😀,:D,0.5
+😀,:-D,0.5
+😁,grin,0.5
+😁,eye,0.5
+😁,face,0.5
+😁,person,0.5
+😁,smile,0.5
+😁,:D,0.5
+😁,:-D,0.5
+😁,XD,0.5
+😂,joy,0.5
+😂,face,0.5
+😂,laugh,0.5
+😂,person,0.5
+😂,tear,0.5
+😂,XD,0.5
+😃,smiley,0.5
+😃,face,0.5
+😃,mouth,0.5
+😃,open,0.5
+😃,person,0.5
+😃,smile,0.5
+😃,:D,0.5
+😄,smile,0.5
+😄,eye,0.5
+😄,face,0.5
+😄,mouth,0.5
+😄,open,0.5
+😄,person,0.5
+😄,:D,0.5
+😅,sweat_smile,0.5
+😅,cold,0.5
+😅,face,0.5
+😅,open,0.5
+😅,person,0.5
+😅,smile,0.5
+😅,sweat,0.5
+😆,laughing,0.5
+😆,satisfied,0.5
+😆,face,0.5
+😆,laugh,0.5
+😆,mouth,0.5
+😆,open,0.5
+😆,person,0.5
+😆,smile,0.5
+😆,XD,0.5
+😇,innocent,0.5
+😇,angel,0.5
+😇,face,0.5
+😇,fairy tale,0.5
+😇,fantasy,0.5
+😇,halo,0.5
+😇,person,0.5
+😇,smile,0.5
+😈,smiling_imp,0.5
+😈,face,0.5
+😈,fairy tale,0.5
+😈,fantasy,0.5
+😈,horns,0.5
+😈,person,0.5
+😈,smile,0.5
+😈,>:),0.5
+😉,wink,0.5
+😉,face,0.5
+😉,person,0.5
+😉,;),0.5
+😉,;-),0.5
+😊,blush,0.5
+😊,eye,0.5
+😊,face,0.5
+😊,person,0.5
+😊,smile,0.5
+😋,yum,0.5
+😋,delicious,0.5
+😋,face,0.5
+😋,food,0.5
+😋,person,0.5
+😋,savouring,0.5
+😋,smile,0.5
+😋,um,0.5
+😋,:P,0.5
+😋,:-P,0.5
+😌,relieved,0.5
+😌,face,0.5
+😌,person,0.5
+😍,heart_eyes,0.5
+😍,eye,0.5
+😍,face,0.5
+😍,heart,0.5
+😍,love,0.5
+😍,person,0.5
+😍,smile,0.5
+😎,sunglasses,0.5
+😎,bright,0.5
+😎,cool,0.5
+😎,eye,0.5
+😎,eyewear,0.5
+😎,face,0.5
+😎,glasses,0.5
+😎,person,0.5
+😎,smile,0.5
+😎,sun,0.5
+😎,weather,0.5
+😎,8),0.5
+😎,8-),0.5
+😎,B),0.5
+😎,B-),0.5
+😏,smirk,0.5
+😏,face,0.5
+😏,person,0.5
+😐,neutral_face,0.5
+😐,deadpan,0.5
+😐,face,0.5
+😐,neutral,0.5
+😐,person,0.5
+😐,:|,0.5
+😐,:-|,0.5
+😑,expressionless,0.5
+😑,face,0.5
+😑,inexpressive,0.5
+😑,person,0.5
+😑,unexpressive,0.5
+😒,unamused,0.5
+😒,face,0.5
+😒,person,0.5
+😒,unhappy,0.5
+😒,>:/,0.5
+😒,>:-/,0.5
+😓,sweat,0.5
+😓,cold,0.5
+😓,face,0.5
+😓,person,0.5
+😔,pensive,0.5
+😔,dejected,0.5
+😔,face,0.5
+😔,person,0.5
+😕,confused,0.5
+😕,face,0.5
+😕,person,0.5
+😕,:/,0.5
+😕,:-/,0.5
+😖,confounded,0.5
+😖,face,0.5
+😖,person,0.5
+😖,DX,0.5
+😗,kissing,0.5
+😗,face,0.5
+😗,kiss,0.5
+😗,person,0.5
+😗,:*,0.5
+😗,:-*,0.5
+😘,kissing_heart,0.5
+😘,face,0.5
+😘,heart,0.5
+😘,kiss,0.5
+😘,person,0.5
+😘,:*,0.5
+😘,:-*,0.5
+😙,kissing_smiling_eyes,0.5
+😙,eye,0.5
+😙,face,0.5
+😙,kiss,0.5
+😙,person,0.5
+😙,smile,0.5
+😙,:*,0.5
+😙,:-*,0.5
+😚,kissing_closed_eyes,0.5
+😚,closed,0.5
+😚,eye,0.5
+😚,face,0.5
+😚,kiss,0.5
+😚,person,0.5
+😚,:*,0.5
+😚,:-*,0.5
+😛,stuck_out_tongue,0.5
+😛,face,0.5
+😛,person,0.5
+😛,tongue,0.5
+😛,:P,0.5
+😛,:-P,0.5
+😜,stuck_out_tongue_winking_eye,0.5
+😜,eye,0.5
+😜,face,0.5
+😜,joke,0.5
+😜,person,0.5
+😜,tongue,0.5
+😜,wink,0.5
+😜,XP,0.5
+😜,X-P,0.5
+😜,;P,0.5
+😜,;-P,0.5
+😝,stuck_out_tongue_closed_eyes,0.5
+😝,eye,0.5
+😝,face,0.5
+😝,horrible,0.5
+😝,person,0.5
+😝,taste,0.5
+😝,tongue,0.5
+😝,XP,0.5
+😝,X-P,0.5
+😞,disappointed,0.5
+😞,face,0.5
+😞,person,0.5
+😞,:(,0.5
+😞,:-(,0.5
+😟,worried,0.5
+😟,face,0.5
+😟,person,0.5
+😠,angry,0.5
+😠,face,0.5
+😠,mad,0.5
+😠,person,0.5
+😠,>:(,0.5
+😠,>:-(,0.5
+😡,rage,0.5
+😡,angry,0.5
+😡,face,0.5
+😡,mad,0.5
+😡,person,0.5
+😡,pouting,0.5
+😡,red,0.5
+😡,X(,0.5
+😡,X-(,0.5
+😢,cry,0.5
+😢,face,0.5
+😢,person,0.5
+😢,sad,0.5
+😢,tear,0.5
+😢,:'(,0.5
+😢,:'-(,0.5
+😣,persevere,0.5
+😣,face,0.5
+😣,person,0.5
+😣,DX,0.5
+😣,)X,0.5
+😤,triumph,0.5
+😤,face,0.5
+😤,person,0.5
+😤,won,0.5
+😥,disappointed_relieved,0.5
+😥,disappointed,0.5
+😥,face,0.5
+😥,person,0.5
+😥,relieved,0.5
+😥,whew,0.5
+😥,D:,0.5
+😥,D-:,0.5
+😦,frowning,0.5
+😦,face,0.5
+😦,frown,0.5
+😦,mouth,0.5
+😦,open,0.5
+😦,person,0.5
+😦,D:,0.5
+😦,D-:,0.5
+😧,anguished,0.5
+😧,face,0.5
+😧,person,0.5
+😧,D:,0.5
+😧,D-:,0.5
+😨,fearful,0.5
+😨,face,0.5
+😨,fear,0.5
+😨,person,0.5
+😨,scared,0.5
+😨,D:,0.5
+😨,D-:,0.5
+😨,D8,0.5
+😨,D-8,0.5
+😩,weary,0.5
+😩,face,0.5
+😩,person,0.5
+😩,tired,0.5
+😪,sleepy,0.5
+😪,face,0.5
+😪,person,0.5
+😪,sleep,0.5
+😫,tired_face,0.5
+😫,face,0.5
+😫,person,0.5
+😫,tired,0.5
+😫,DX,0.5
+😫,D-X,0.5
+😬,grimacing,0.5
+😬,face,0.5
+😬,grimace,0.5
+😬,person,0.5
+😬,D:,0.5
+😬,D-:,0.5
+😭,sob,0.5
+😭,cry,0.5
+😭,face,0.5
+😭,person,0.5
+😭,sad,0.5
+😭,tear,0.5
+😭,D'X,0.5
+😭,D':,0.5
+😮,open_mouth,0.5
+😮,face,0.5
+😮,mouth,0.5
+😮,open,0.5
+😮,person,0.5
+😮,sympathy,0.5
+😮,:O,0.5
+😮,:-O,0.5
+😯,hushed,0.5
+😯,face,0.5
+😯,person,0.5
+😯,stunned,0.5
+😯,surprised,0.5
+😯,:O,0.5
+😯,:-O,0.5
+😰,cold_sweat,0.5
+😰,blue,0.5
+😰,cold,0.5
+😰,face,0.5
+😰,mouth,0.5
+😰,open,0.5
+😰,person,0.5
+😰,rushed,0.5
+😰,sweat,0.5
+😱,scream,0.5
+😱,face,0.5
+😱,fear,0.5
+😱,fearful,0.5
+😱,munch,0.5
+😱,person,0.5
+😱,scared,0.5
+😱,|0o0|,0.5
+😲,astonished,0.5
+😲,face,0.5
+😲,person,0.5
+😲,shocked,0.5
+😲,totally,0.5
+😲,:O,0.5
+😲,:-O,0.5
+😳,flushed,0.5
+😳,dazed,0.5
+😳,face,0.5
+😳,person,0.5
+😴,sleeping,0.5
+😴,face,0.5
+😴,person,0.5
+😴,sleep,0.5
+😴,zzz,0.5
+😵,dizzy_face,0.5
+😵,dizzy,0.5
+😵,face,0.5
+😵,person,0.5
+😶,no_mouth,0.5
+😶,face,0.5
+😶,mouth,0.5
+😶,person,0.5
+😶,quiet,0.5
+😶,silent,0.5
+😷,mask,0.5
+😷,cold,0.5
+😷,doctor,0.5
+😷,face,0.5
+😷,medicine,0.5
+😷,person,0.5
+😷,sick,0.5
+😸,smile_cat,0.5
+😸,animal,0.5
+😸,cat,0.5
+😸,eye,0.5
+😸,face,0.5
+😸,grin,0.5
+😸,nature,0.5
+😸,smile,0.5
+😸,X3,0.5
+😹,joy_cat,0.5
+😹,animal,0.5
+😹,cat,0.5
+😹,face,0.5
+😹,joy,0.5
+😹,nature,0.5
+😹,tear,0.5
+😹,X3,0.5
+😺,smiley_cat,0.5
+😺,animal,0.5
+😺,cat,0.5
+😺,face,0.5
+😺,mouth,0.5
+😺,nature,0.5
+😺,open,0.5
+😺,smile,0.5
+😺,:3,0.5
+😻,heart_eyes_cat,0.5
+😻,animal,0.5
+😻,cat,0.5
+😻,eye,0.5
+😻,face,0.5
+😻,heart,0.5
+😻,love,0.5
+😻,nature,0.5
+😻,smile,0.5
+😻,:3,0.5
+😼,smirk_cat,0.5
+😼,animal,0.5
+😼,cat,0.5
+😼,face,0.5
+😼,ironic,0.5
+😼,nature,0.5
+😼,smile,0.5
+😼,wry,0.5
+😼,>:3,0.5
+😽,kissing_cat,0.5
+😽,animal,0.5
+😽,cat,0.5
+😽,eye,0.5
+😽,face,0.5
+😽,kiss,0.5
+😽,nature,0.5
+😽,:3,0.5
+😾,pouting_cat,0.5
+😾,animal,0.5
+😾,cat,0.5
+😾,face,0.5
+😾,nature,0.5
+😾,pouting,0.5
+😾,:3,0.5
+😿,crying_cat_face,0.5
+😿,animal,0.5
+😿,cat,0.5
+😿,cry,0.5
+😿,face,0.5
+😿,nature,0.5
+😿,sad,0.5
+😿,tear,0.5
+😿,:'3,0.5
+🙀,scream_cat,0.5
+🙀,animal,0.5
+🙀,cat,0.5
+🙀,face,0.5
+🙀,nature,0.5
+🙀,oh,0.5
+🙀,surprised,0.5
+🙀,weary,0.5
+🙀,:3,0.5
+🙁,face,0.5
+🙁,frown,0.5
+🙁,person,0.5
+🙁,:(,0.5
+🙁,:-(,0.5
+🙂,face,0.5
+🙂,person,0.5
+🙂,smile,0.5
+🙂,:),0.5
+🙂,:-),0.5
+🙃,face,0.5
+🙃,person,0.5
+🙃,upside-down,0.5
+🙄,eyes,0.5
+🙄,face,0.5
+🙄,person,0.5
+🙄,rolling,0.5
+🙄,:/,0.5
+🙄,:-/,0.5
+🙅,no_good,0.5
+🙅,forbidden,0.5
+🙅,gesture,0.5
+🙅,hand,0.5
+🙅,no,0.5
+🙅,not,0.5
+🙅,person,0.5
+🙅,prohibited,0.5
+🙆,ok_woman,0.5
+🙆,gesture,0.5
+🙆,hand,0.5
+🙆,ok,0.5
+🙆,person,0.5
+🙇,bow,0.5
+🙇,apology,0.5
+🙇,gesture,0.5
+🙇,person,0.5
+🙇,sorry,0.5
+🙈,see_no_evil,0.5
+🙈,animal,0.5
+🙈,evil,0.5
+🙈,face,0.5
+🙈,forbidden,0.5
+🙈,gesture,0.5
+🙈,monkey,0.5
+🙈,nature,0.5
+🙈,no,0.5
+🙈,not,0.5
+🙈,prohibited,0.5
+🙈,see,0.5
+🙉,hear_no_evil,0.5
+🙉,animal,0.5
+🙉,evil,0.5
+🙉,face,0.5
+🙉,forbidden,0.5
+🙉,gesture,0.5
+🙉,hear,0.5
+🙉,monkey,0.5
+🙉,nature,0.5
+🙉,no,0.5
+🙉,not,0.5
+🙉,prohibited,0.5
+🙊,speak_no_evil,0.5
+🙊,animal,0.5
+🙊,evil,0.5
+🙊,face,0.5
+🙊,forbidden,0.5
+🙊,gesture,0.5
+🙊,monkey,0.5
+🙊,nature,0.5
+🙊,no,0.5
+🙊,not,0.5
+🙊,prohibited,0.5
+🙊,speak,0.5
+🙋,raising_hand,0.5
+🙋,gesture,0.5
+🙋,hand,0.5
+🙋,happy,0.5
+🙋,person,0.5
+🙋,raised,0.5
+🙌,raised_hands,0.5
+🙌,body,0.5
+🙌,celebration,0.5
+🙌,gesture,0.5
+🙌,hand,0.5
+🙌,hooray,0.5
+🙌,person,0.5
+🙌,raised,0.5
+🙍,person_frowning,0.5
+🙍,frown,0.5
+🙍,gesture,0.5
+🙍,person,0.5
+🙎,person_with_pouting_face,0.5
+🙎,gesture,0.5
+🙎,person,0.5
+🙎,pouting,0.5
+🙏,pray,0.5
+🙏,ask,0.5
+🙏,body,0.5
+🙏,bow,0.5
+🙏,folded,0.5
+🙏,gesture,0.5
+🙏,hand,0.5
+🙏,person,0.5
+🙏,please,0.5
+🙏,thanks,0.5
+🚀,rocket,0.5
+🚀,place,0.5
+🚀,space,0.5
+🚀,travel,0.5
+🚀,vehicle,0.5
+🚁,helicopter,0.5
+🚁,place,0.5
+🚁,travel,0.5
+🚁,vehicle,0.5
+🚂,steam_locomotive,0.5
+🚂,engine,0.5
+🚂,locomotive,0.5
+🚂,place,0.5
+🚂,railway,0.5
+🚂,steam,0.5
+🚂,train,0.5
+🚂,travel,0.5
+🚂,vehicle,0.5
+🚃,railway_car,0.5
+🚃,car,0.5
+🚃,electric,0.5
+🚃,place,0.5
+🚃,railway,0.5
+🚃,train,0.5
+🚃,tram,0.5
+🚃,travel,0.5
+🚃,trolleybus,0.5
+🚃,vehicle,0.5
+🚄,bullettrain_side,0.5
+🚄,place,0.5
+🚄,railway,0.5
+🚄,shinkansen,0.5
+🚄,speed,0.5
+🚄,train,0.5
+🚄,travel,0.5
+🚄,vehicle,0.5
+🚅,bullettrain_front,0.5
+🚅,bullet,0.5
+🚅,place,0.5
+🚅,railway,0.5
+🚅,shinkansen,0.5
+🚅,speed,0.5
+🚅,train,0.5
+🚅,travel,0.5
+🚅,vehicle,0.5
+🚆,train2,0.5
+🚆,place,0.5
+🚆,railway,0.5
+🚆,train,0.5
+🚆,travel,0.5
+🚆,vehicle,0.5
+🚇,metro,0.5
+🚇,place,0.5
+🚇,subway,0.5
+🚇,travel,0.5
+🚇,vehicle,0.5
+🚈,light_rail,0.5
+🚈,place,0.5
+🚈,railway,0.5
+🚈,travel,0.5
+🚈,vehicle,0.5
+🚉,station,0.5
+🚉,place,0.5
+🚉,railway,0.5
+🚉,train,0.5
+🚉,travel,0.5
+🚉,vehicle,0.5
+🚊,tram,0.5
+🚊,place,0.5
+🚊,travel,0.5
+🚊,trolleybus,0.5
+🚊,vehicle,0.5
+🚋,train,0.5
+🚋,car,0.5
+🚋,place,0.5
+🚋,tram,0.5
+🚋,travel,0.5
+🚋,trolleybus,0.5
+🚋,vehicle,0.5
+🚌,bus,0.5
+🚌,place,0.5
+🚌,travel,0.5
+🚌,vehicle,0.5
+🚍,oncoming_bus,0.5
+🚍,bus,0.5
+🚍,oncoming,0.5
+🚍,place,0.5
+🚍,travel,0.5
+🚍,vehicle,0.5
+🚎,trolleybus,0.5
+🚎,bus,0.5
+🚎,place,0.5
+🚎,tram,0.5
+🚎,travel,0.5
+🚎,trolley,0.5
+🚎,vehicle,0.5
+🚏,busstop,0.5
+🚏,bus,0.5
+🚏,place,0.5
+🚏,stop,0.5
+🚏,travel,0.5
+🚐,minibus,0.5
+🚐,bus,0.5
+🚐,place,0.5
+🚐,travel,0.5
+🚐,vehicle,0.5
+🚑,ambulance,0.5
+🚑,place,0.5
+🚑,travel,0.5
+🚑,vehicle,0.5
+🚒,fire_engine,0.5
+🚒,engine,0.5
+🚒,fire,0.5
+🚒,place,0.5
+🚒,travel,0.5
+🚒,truck,0.5
+🚒,vehicle,0.5
+🚓,police_car,0.5
+🚓,car,0.5
+🚓,patrol,0.5
+🚓,place,0.5
+🚓,police,0.5
+🚓,travel,0.5
+🚓,vehicle,0.5
+🚔,oncoming_police_car,0.5
+🚔,car,0.5
+🚔,oncoming,0.5
+🚔,place,0.5
+🚔,police,0.5
+🚔,travel,0.5
+🚔,vehicle,0.5
+🚕,taxi,0.5
+🚕,place,0.5
+🚕,travel,0.5
+🚕,vehicle,0.5
+🚖,oncoming_taxi,0.5
+🚖,oncoming,0.5
+🚖,place,0.5
+🚖,taxi,0.5
+🚖,travel,0.5
+🚖,vehicle,0.5
+🚗,car,0.5
+🚗,red_car,0.5
+🚗,automobile,0.5
+🚗,place,0.5
+🚗,travel,0.5
+🚗,vehicle,0.5
+🚘,oncoming_automobile,0.5
+🚘,automobile,0.5
+🚘,car,0.5
+🚘,oncoming,0.5
+🚘,place,0.5
+🚘,travel,0.5
+🚘,vehicle,0.5
+🚚,truck,0.5
+🚚,delivery,0.5
+🚚,place,0.5
+🚚,travel,0.5
+🚚,vehicle,0.5
+🚛,articulated_lorry,0.5
+🚛,lorry,0.5
+🚛,place,0.5
+🚛,semi,0.5
+🚛,travel,0.5
+🚛,truck,0.5
+🚛,vehicle,0.5
+🚜,tractor,0.5
+🚜,place,0.5
+🚜,travel,0.5
+🚜,vehicle,0.5
+🚝,monorail,0.5
+🚝,place,0.5
+🚝,travel,0.5
+🚝,vehicle,0.5
+🚞,mountain_railway,0.5
+🚞,car,0.5
+🚞,mountain,0.5
+🚞,place,0.5
+🚞,railway,0.5
+🚞,travel,0.5
+🚞,vehicle,0.5
+🚟,suspension_railway,0.5
+🚟,place,0.5
+🚟,railway,0.5
+🚟,suspension,0.5
+🚟,travel,0.5
+🚟,vehicle,0.5
+🚠,mountain_cableway,0.5
+🚠,cable,0.5
+🚠,gondola,0.5
+🚠,mountain,0.5
+🚠,place,0.5
+🚠,travel,0.5
+🚠,vehicle,0.5
+🚡,aerial_tramway,0.5
+🚡,aerial,0.5
+🚡,cable,0.5
+🚡,car,0.5
+🚡,gondola,0.5
+🚡,place,0.5
+🚡,ropeway,0.5
+🚡,tramway,0.5
+🚡,travel,0.5
+🚡,vehicle,0.5
+🚢,ship,0.5
+🚢,place,0.5
+🚢,travel,0.5
+🚢,vehicle,0.5
+🚣,rowboat,0.5
+🚣,boat,0.5
+🚣,place,0.5
+🚣,travel,0.5
+🚣,vehicle,0.5
+🚣,rowboat,0.5
+🚣,boat,0.5
+🚣,place,0.5
+🚣,travel,0.5
+🚣,vehicle,0.5
+🚤,speedboat,0.5
+🚤,boat,0.5
+🚤,place,0.5
+🚤,travel,0.5
+🚤,vehicle,0.5
+🚥,traffic_light,0.5
+🚥,light,0.5
+🚥,place,0.5
+🚥,signal,0.5
+🚥,traffic,0.5
+🚥,travel,0.5
+🚦,vertical_traffic_light,0.5
+🚦,light,0.5
+🚦,place,0.5
+🚦,signal,0.5
+🚦,traffic,0.5
+🚦,travel,0.5
+🚧,construction,0.5
+🚧,barrier,0.5
+🚧,place,0.5
+🚧,travel,0.5
+🚨,rotating_light,0.5
+🚨,beacon,0.5
+🚨,car,0.5
+🚨,light,0.5
+🚨,place,0.5
+🚨,police,0.5
+🚨,revolving,0.5
+🚨,travel,0.5
+🚨,vehicle,0.5
+🚩,triangular_flag_on_post,0.5
+🚩,flag,0.5
+🚩,object,0.5
+🚩,place,0.5
+🚩,post,0.5
+🚩,travel,0.5
+🚩,triangular_flag_on_post,0.5
+🚩,flag,0.5
+🚩,object,0.5
+🚩,place,0.5
+🚩,post,0.5
+🚩,travel,0.5
+🚩,triangular_flag_on_post,0.5
+🚩,flag,0.5
+🚩,object,0.5
+🚩,place,0.5
+🚩,post,0.5
+🚩,travel,0.5
+🚩,triangular,0.5
+🚪,door,0.5
+🚪,object,0.5
+🚪,travel,0.5
+🚫,no_entry_sign,0.5
+🚫,entry,0.5
+🚫,forbidden,0.5
+🚫,no,0.5
+🚫,not,0.5
+🚫,prohibited,0.5
+🚫,symbol,0.5
+🚫,travel,0.5
+🚬,smoking,0.5
+🚬,activity,0.5
+🚬,object,0.5
+🚭,no_smoking,0.5
+🚭,forbidden,0.5
+🚭,no,0.5
+🚭,not,0.5
+🚭,prohibited,0.5
+🚭,sign,0.5
+🚭,smoking,0.5
+🚭,symbol,0.5
+🚭,travel,0.5
+🚮,put_litter_in_its_place,0.5
+🚮,litter,0.5
+🚮,litterbox,0.5
+🚮,place,0.5
+🚮,symbol,0.5
+🚮,travel,0.5
+🚯,do_not_litter,0.5
+🚯,forbidden,0.5
+🚯,litter,0.5
+🚯,no,0.5
+🚯,not,0.5
+🚯,prohibited,0.5
+🚯,sign,0.5
+🚯,symbol,0.5
+🚯,travel,0.5
+🚰,potable_water,0.5
+🚰,drink,0.5
+🚰,potable,0.5
+🚰,sign,0.5
+🚰,symbol,0.5
+🚰,travel,0.5
+🚰,water,0.5
+🚰,potable_water,0.5
+🚰,drink,0.5
+🚰,potable,0.5
+🚰,sign,0.5
+🚰,symbol,0.5
+🚰,travel,0.5
+🚰,water,0.5
+🚱,non-potable_water,0.5
+🚱,drink,0.5
+🚱,forbidden,0.5
+🚱,no,0.5
+🚱,not,0.5
+🚱,potable,0.5
+🚱,prohibited,0.5
+🚱,sign,0.5
+🚱,symbol,0.5
+🚱,travel,0.5
+🚱,water,0.5
+🚲,bike,0.5
+🚲,bicycle,0.5
+🚲,place,0.5
+🚲,sport,0.5
+🚲,travel,0.5
+🚲,vehicle,0.5
+🚳,no_bicycles,0.5
+🚳,bicycle,0.5
+🚳,bike,0.5
+🚳,forbidden,0.5
+🚳,no,0.5
+🚳,not,0.5
+🚳,place,0.5
+🚳,prohibited,0.5
+🚳,sign,0.5
+🚳,sport,0.5
+🚳,symbol,0.5
+🚳,travel,0.5
+🚳,vehicle,0.5
+🚴,bicyclist,0.5
+🚴,bicycle,0.5
+🚴,bike,0.5
+🚴,cyclist,0.5
+🚴,person,0.5
+🚴,place,0.5
+🚴,sport,0.5
+🚴,travel,0.5
+🚵,mountain_bicyclist,0.5
+🚵,bicycle,0.5
+🚵,bicyclist,0.5
+🚵,bike,0.5
+🚵,cyclist,0.5
+🚵,mountain,0.5
+🚵,person,0.5
+🚵,place,0.5
+🚵,sport,0.5
+🚵,travel,0.5
+🚶,walking,0.5
+🚶,hike,0.5
+🚶,pedestrian,0.5
+🚶,person,0.5
+🚶,walk,0.5
+🚷,no_pedestrians,0.5
+🚷,forbidden,0.5
+🚷,no,0.5
+🚷,not,0.5
+🚷,pedestrian,0.5
+🚷,place,0.5
+🚷,prohibited,0.5
+🚷,sign,0.5
+🚷,symbol,0.5
+🚷,travel,0.5
+🚸,children_crossing,0.5
+🚸,child,0.5
+🚸,crossing,0.5
+🚸,pedestrian,0.5
+🚸,place,0.5
+🚸,sign,0.5
+🚸,symbol,0.5
+🚸,traffic,0.5
+🚸,travel,0.5
+🚹,mens,0.5
+🚹,lavatory,0.5
+🚹,man,0.5
+🚹,restroom,0.5
+🚹,sign,0.5
+🚹,symbol,0.5
+🚹,travel,0.5
+🚹,wc,0.5
+🚺,womens,0.5
+🚺,lavatory,0.5
+🚺,restroom,0.5
+🚺,sign,0.5
+🚺,symbol,0.5
+🚺,travel,0.5
+🚺,wc,0.5
+🚺,woman,0.5
+🚻,restroom,0.5
+🚻,lavatory,0.5
+🚻,sign,0.5
+🚻,symbol,0.5
+🚻,travel,0.5
+🚻,wc,0.5
+🚼,baby_symbol,0.5
+🚼,baby,0.5
+🚼,changing,0.5
+🚼,sign,0.5
+🚼,symbol,0.5
+🚼,travel,0.5
+🚽,toilet,0.5
+🚽,object,0.5
+🚽,place,0.5
+🚽,travel,0.5
+🚾,wc,0.5
+🚾,closet,0.5
+🚾,lavatory,0.5
+🚾,place,0.5
+🚾,restroom,0.5
+🚾,sign,0.5
+🚾,symbol,0.5
+🚾,travel,0.5
+🚾,water,0.5
+🚿,shower,0.5
+🚿,object,0.5
+🚿,place,0.5
+🚿,travel,0.5
+🚿,water,0.5
+🛀,bath,0.5
+🛀,bathtub,0.5
+🛀,object,0.5
+🛀,place,0.5
+🛀,travel,0.5
+🛁,bathtub,0.5
+🛁,bath,0.5
+🛁,object,0.5
+🛁,place,0.5
+🛁,travel,0.5
+🛂,passport_control,0.5
+🛂,control,0.5
+🛂,passport,0.5
+🛂,place,0.5
+🛂,sign,0.5
+🛂,symbol,0.5
+🛂,travel,0.5
+🛃,customs,0.5
+🛃,place,0.5
+🛃,sign,0.5
+🛃,symbol,0.5
+🛃,travel,0.5
+🛄,baggage_claim,0.5
+🛄,baggage,0.5
+🛄,claim,0.5
+🛄,place,0.5
+🛄,sign,0.5
+🛄,symbol,0.5
+🛄,travel,0.5
+🛅,left_luggage,0.5
+🛅,baggage,0.5
+🛅,left luggage,0.5
+🛅,locker,0.5
+🛅,luggage,0.5
+🛅,place,0.5
+🛅,sign,0.5
+🛅,symbol,0.5
+🛅,travel,0.5
+🛋,couch,0.5
+🛋,hotel,0.5
+🛋,lamp,0.5
+🛋,object,0.5
+🛌,hotel,0.5
+🛌,object,0.5
+🛌,sleep,0.5
+🛍,bag,0.5
+🛍,hotel,0.5
+🛍,object,0.5
+🛍,shopping,0.5
+🛎,bell,0.5
+🛎,bellhop,0.5
+🛎,hotel,0.5
+🛎,object,0.5
+🛏,bed,0.5
+🛏,hotel,0.5
+🛏,object,0.5
+🛏,sleep,0.5
+🛐,place,0.5
+🛐,religion,0.5
+🛐,worship,0.5
+🛠,hammer,0.5
+🛠,object,0.5
+🛠,tool,0.5
+🛠,wrench,0.5
+🛡,object,0.5
+🛡,shield,0.5
+🛡,weapon,0.5
+🛢,drum,0.5
+🛢,object,0.5
+🛢,oil,0.5
+🛤,place,0.5
+🛤,railway,0.5
+🛤,train,0.5
+🛤,travel,0.5
+🛥,boat,0.5
+🛥,motorboat,0.5
+🛥,place,0.5
+🛥,travel,0.5
+🛥,vehicle,0.5
+🛩,airplane,0.5
+🛩,place,0.5
+🛩,travel,0.5
+🛩,vehicle,0.5
+🛫,airplane,0.5
+🛫,check-in,0.5
+🛫,departure,0.5
+🛫,departures,0.5
+🛫,place,0.5
+🛫,travel,0.5
+🛫,vehicle,0.5
+🛬,airplane,0.5
+🛬,arrivals,0.5
+🛬,arriving,0.5
+🛬,landing,0.5
+🛬,place,0.5
+🛬,travel,0.5
+🛬,vehicle,0.5
+🛰,place,0.5
+🛰,satellite,0.5
+🛰,space,0.5
+🛰,vehicle,0.5
+🛳,passenger,0.5
+🛳,place,0.5
+🛳,ship,0.5
+🛳,travel,0.5
+🛳,vehicle,0.5
+0️⃣,zero,0.5
+0️⃣,0,0.5
+0️⃣,keycap,0.5
+0️⃣,symbol,0.5
+0️⃣,word,0.5
+1️⃣,one,0.5
+1️⃣,1,0.5
+1️⃣,keycap,0.5
+1️⃣,symbol,0.5
+1️⃣,word,0.5
+2️⃣,two,0.5
+2️⃣,2,0.5
+2️⃣,keycap,0.5
+2️⃣,symbol,0.5
+2️⃣,word,0.5
+3️⃣,three,0.5
+3️⃣,3,0.5
+3️⃣,keycap,0.5
+3️⃣,symbol,0.5
+3️⃣,word,0.5
+4️⃣,four,0.5
+4️⃣,4,0.5
+4️⃣,keycap,0.5
+4️⃣,symbol,0.5
+4️⃣,word,0.5
+5️⃣,five,0.5
+5️⃣,5,0.5
+5️⃣,keycap,0.5
+5️⃣,symbol,0.5
+5️⃣,word,0.5
+6️⃣,six,0.5
+6️⃣,6,0.5
+6️⃣,keycap,0.5
+6️⃣,symbol,0.5
+6️⃣,word,0.5
+7️⃣,seven,0.5
+7️⃣,7,0.5
+7️⃣,keycap,0.5
+7️⃣,symbol,0.5
+7️⃣,word,0.5
+8️⃣,eight,0.5
+8️⃣,8,0.5
+8️⃣,keycap,0.5
+8️⃣,symbol,0.5
+8️⃣,word,0.5
+9️⃣,nine,0.5
+9️⃣,9,0.5
+9️⃣,keycap,0.5
+9️⃣,symbol,0.5
+9️⃣,word,0.5
+🅰,a,0.5
+🅰,blood,0.5
+🅰,symbol,0.5
+🅰,word,0.5
+🆎,ab,0.5
+🆎,blood,0.5
+🆎,symbol,0.5
+🆎,word,0.5
+🅱,b,0.5
+🅱,blood,0.5
+🅱,symbol,0.5
+🅱,word,0.5
+🆑,cl,0.5
+🆑,symbol,0.5
+🆑,word,0.5
+🆒,cool,0.5
+🆒,symbol,0.5
+🆒,word,0.5
+🆓,free,0.5
+🆓,symbol,0.5
+🆓,word,0.5
+ℹ,information_source,0.5
+ℹ,i,0.5
+ℹ,information,0.5
+ℹ,symbol,0.5
+ℹ,word,0.5
+🆔,id,0.5
+🆔,identity,0.5
+🆔,symbol,0.5
+🆔,word,0.5
+Ⓜ,m,0.5
+Ⓜ,circle,0.5
+Ⓜ,place,0.5
+Ⓜ,symbol,0.5
+Ⓜ,word,0.5
+🆕,new,0.5
+🆕,symbol,0.5
+🆕,word,0.5
+🆖,ng,0.5
+🆖,symbol,0.5
+🆖,word,0.5
+🅾,o2,0.5
+🅾,blood,0.5
+🅾,o,0.5
+🅾,symbol,0.5
+🅾,word,0.5
+🆗,ok,0.5
+🆗,symbol,0.5
+🆗,word,0.5
+🅿,parking,0.5
+🅿,place,0.5
+🅿,sign,0.5
+🅿,symbol,0.5
+🅿,word,0.5
+🆘,sos,0.5
+🆘,help,0.5
+🆘,symbol,0.5
+🆘,word,0.5
+™,tm,0.5
+™,mark,0.5
+™,symbol,0.5
+™,trademark,0.5
+™,word,0.5
+🆙,up,0.5
+🆙,mark,0.5
+🆙,symbol,0.5
+🆙,word,0.5
+🆚,vs,0.5
+🆚,symbol,0.5
+🆚,versus,0.5
+🆚,word,0.5
+🈁,koko,0.5
+🈁,japanese,0.5
+🈁,symbol,0.5
+🈁,word,0.5
+🈂,sa,0.5
+🈂,japanese,0.5
+🈂,symbol,0.5
+🈂,word,0.5
+🈹,u5272,0.5
+🈹,japanese,0.5
+🈹,symbol,0.5
+🈹,word,0.5
+🉑,accept,0.5
+🉑,chinese,0.5
+🉑,symbol,0.5
+🉑,word,0.5
+🈴,u5408,0.5
+🈴,chinese,0.5
+🈴,symbol,0.5
+🈴,word,0.5
+🈺,u55b6,0.5
+🈺,chinese,0.5
+🈺,symbol,0.5
+🈺,word,0.5
+🉐,ideograph_advantage,0.5
+🉐,japanese,0.5
+🉐,symbol,0.5
+🉐,word,0.5
+🈯,u6307,0.5
+🈯,japanese,0.5
+🈯,symbol,0.5
+🈯,word,0.5
+🈷,u6708,0.5
+🈷,japanese,0.5
+🈷,symbol,0.5
+🈷,word,0.5
+🈶,u6709,0.5
+🈶,japanese,0.5
+🈶,symbol,0.5
+🈶,word,0.5
+🈵,u6e80,0.5
+🈵,chinese,0.5
+🈵,symbol,0.5
+🈵,word,0.5
+🈚,u7121,0.5
+🈚,japanese,0.5
+🈚,symbol,0.5
+🈚,word,0.5
+🈸,u7533,0.5
+🈸,chinese,0.5
+🈸,symbol,0.5
+🈸,word,0.5
+㊗,congratulations,0.5
+㊗,chinese,0.5
+㊗,congratulation,0.5
+㊗,ideograph,0.5
+㊗,symbol,0.5
+㊗,word,0.5
+🈲,u7981,0.5
+🈲,japanese,0.5
+🈲,symbol,0.5
+🈲,word,0.5
+㊙,secret,0.5
+㊙,chinese,0.5
+㊙,ideograph,0.5
+㊙,symbol,0.5
+㊙,word,0.5
+🈳,u7a7a,0.5
+🈳,chinese,0.5
+🈳,symbol,0.5
+🈳,word,0.5
+🕺,man,0.5
+🕺,dancing,0.5
+🖤,black,0.5
+🖤,heart,0.5
+🛑,stop,0.5
+🛑,octagonal,0.5
+🛑,sign,0.5
+🛴,razor,0.5
+🛴,scooter,0.5
+🛵,motor,0.5
+🛵,scooter,0.5
+🤚,raised,0.5
+🤚,back,0.5
+🤚,hand,0.5
+🤛,left-facing,0.5
+🤛,fist,0.5
+🤜,right-facing,0.5
+🤜,fist,0.5
+🤝,handshake,0.5
+🤞,hand,0.5
+🤞,with,0.5
+🤞,index,0.5
+🤞,middle,0.5
+🤞,fingers,0.5
+🤞,crossed,0.5
+🤠,face,0.5
+🤠,cowboy,0.5
+🤠,hat,0.5
+🤡,clown,0.5
+🤡,face,0.5
+🤢,nauseated,0.5
+🤢,face,0.5
+🤣,rolling,0.5
+🤣,on,0.5
+🤣,the,0.5
+🤣,floor,0.5
+🤣,laughing,0.5
+🤣,rotflol,0.5
+🤤,drooling,0.5
+🤤,face,0.5
+🤥,lying,0.5
+🤥,pinocchio,0.5
+🤥,face,0.5
+🤧,sneezing,0.5
+🤧,face,0.5
+🤰,pregnant,0.5
+🤰,woman,0.5
+🤳,selfie,0.5
+🤳,photo,0.5
+🤳,cell,0.5
+🤳,arm,0.5
+🤳,snap,0.5
+🤴,royalty,0.5
+🤴,prince,0.5
+🤶,grandma,0.5
+🤶,mother,0.5
+🤶,christmas,0.5
+🤸,person,0.5
+🤸,cartwheel,0.5
+🤹,juggling,0.5
+🤼,wrestlers,0.5
+🤽,swimming,0.5
+🤽,water,0.5
+🤽,polo,0.5
+🤾,handball,0.5
+🥀,plant,0.5
+🥀,wilted,0.5
+🥀,dead,0.5
+🥀,flower,0.5
+🥁,drum,0.5
+🥁,sticks,0.5
+🥂,drinks,0.5
+🥂,clinking,0.5
+🥂,glasses,0.5
+🥃,liquor,0.5
+🥃,rocks,0.5
+🥃,tumbler,0.5
+🥃,glass,0.5
+🥄,spoon,0.5
+🥇,gold,0.5
+🥇,first,0.5
+🥇,place,0.5
+🥇,medal,0.5
+🥈,silver,0.5
+🥈,second,0.5
+🥈,place,0.5
+🥈,medal,0.5
+🥉,bronze,0.5
+🥉,third,0.5
+🥉,place,0.5
+🥉,medal,0.5
+🥊,boxing,0.5
+🥊,glove,0.5
+🥋,martial,0.5
+🥋,arts,0.5
+🥋,uniform,0.5
+🥐,pastry,0.5
+🥐,croissant,0.5
+🥑,avocado,0.5
+🥑,guac,0.5
+🥒,pickle,0.5
+🥒,cucumber,0.5
+🥔,brown,0.5
+🥔,potato,0.5
+🥕,carrot,0.5
+🥖,baguette,0.5
+🥖,bread,0.5
+🥗,green,0.5
+🥗,salad,0.5
+🥛,glass,0.5
+🥛,milk,0.5
+🥜,peanuts,0.5
+🥝,kiwifruit,0.5
+🥞,stack,0.5
+🥞,pancakes,0.5
+🦅,merica,0.5
+🦅,eagle,0.5
+🦆,quack,0.5
+🦆,duck,0.5
+🦇,vampire,0.5
+🦇,bat,0.5
+🦉,hoot,0.5
+🦉,owl,0.5
+🦊,fox,0.5
+🦊,face,0.5
+🦋,monarch,0.5
+🦋,butterfly,0.5
+🦍,ape,0.5
+🦍,gorilla,0.5
+🦎,amphibian,0.5
+🦎,lizard,0.5
+🦏,rhinoceros,0.5
+🦐,shrimp,0.5
+🦐,crawdad,0.5
+🦑,octopus,0.5
+🦑,squid,0.5
+"--,--`--,{@",cute,0.5
+"--,--`--,{@",final rose,0.5
+"--,--`--,{@",flower,0.5
+"--,--`--,{@",love,0.5
+"--,--`--,{@",object,0.5
+"--,--`--,{@",rose,0.5
+"--,--`--,{@",the bachelor,0.5
+｡◕ ‿ ◕｡,aura,0.5
+｡◕ ‿ ◕｡,cute,0.5
+｡◕ ‿ ◕｡,dimples,0.5
+｡◕ ‿ ◕｡,happy,0.5
+｡◕ ‿ ◕｡,smiling,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),cute,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),gasp,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),love,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),marriage,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),proposal,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),ring,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),shocked,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),surprise,0.5
+(   ° ᴗ°)~ð  (/❛o❛\),wedding,0.5
+(  ⚆ _ ⚆ ),looking sideways,0.5
+(  ⚆ _ ⚆ ),meh,0.5
+(  ⚆ _ ⚆ ),stare,0.5
+(  ⚆ _ ⚆ ),what the,0.5
+(  ⚆ _ ⚆ ),wtf,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],black friday,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],deals,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],money,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],shopping,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],shut up,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],take money,0.5
+（　ﾟ Дﾟ)ノ[ ($) ],thanksgiving,0.5
+( ‾ʖ̫‾),calm,0.5
+( ‾ʖ̫‾),carry on,0.5
+( ‾ʖ̫‾),hippy,0.5
+( ‾ʖ̫‾),keep calm,0.5
+( ‾ʖ̫‾),meh,0.5
+( ‾ʖ̫‾),peace,0.5
+( ‾ʖ̫‾),peaceful,0.5
+( ‾ʖ̫‾),stoic,0.5
+(　-_･)σ - - - - - - - - ･,awp,0.5
+(　-_･)σ - - - - - - - - ･,black ops,0.5
+(　-_･)σ - - - - - - - - ･,call duty,0.5
+(　-_･)σ - - - - - - - - ･,gaming,0.5
+(　-_･)σ - - - - - - - - ･,gun,0.5
+(　-_･)σ - - - - - - - - ･,guns,0.5
+(　-_･)σ - - - - - - - - ･,halo,0.5
+(　-_･)σ - - - - - - - - ･,pew pew,0.5
+(　-_･)σ - - - - - - - - ･,pew pew,0.5
+(　-_･)σ - - - - - - - - ･,shooting,0.5
+(　-_･)σ - - - - - - - - ･,sniper,0.5
+（ -.-）ノ-=≡≡卍,ninja star,0.5
+（ -.-）ノ-=≡≡卍,ninjas,0.5
+（ -.-）ノ-=≡≡卍,rage,0.5
+（ -.-）ノ-=≡≡卍,shadows,0.5
+（ -.-）ノ-=≡≡卍,shuriken,0.5
+（ -.-）ノ-=≡≡卍,stealth,0.5
+（ -.-）ノ-=≡≡卍,violence,0.5
+（ -.-）ノ-=≡≡卍,weapons,0.5
+( ・∀・)っ♨,3.14,0.5
+( ・∀・)っ♨,cute,0.5
+( ・∀・)っ♨,food,0.5
+( ・∀・)っ♨,foodie,0.5
+( ・∀・)っ♨,friendship,0.5
+( ・∀・)っ♨,nom,0.5
+( ・∀・)っ♨,offering,0.5
+( ・∀・)っ♨,pi,0.5
+( ・∀・)っ♨,pi day,0.5
+( ・∀・)っ♨,pie,0.5
+( ・∀・)っ♨,yummy,0.5
+( ・∀・)っ旦,cake,0.5
+( ・∀・)っ旦,cute,0.5
+( ・∀・)っ旦,foodie,0.5
+( ・∀・)っ旦,friendship,0.5
+( ・∀・)っ旦,nom,0.5
+( ・∀・)っ旦,offering,0.5
+( ・∀・)っ旦,yummy,0.5
+( ́・ω・`),animal,0.5
+( ́・ω・`),blank,0.5
+( ́・ω・`),cute,0.5
+( ́・ω・`),foodie,0.5
+( ́・ω・`),pig,0.5
+( ́・ω・`),piggy,0.5
+( ́・ω・`),stare,0.5
+( ︶︿︶)_╭∩╮,eff you,0.5
+( ︶︿︶)_╭∩╮,meh,0.5
+( ︶︿︶)_╭∩╮,middle finger,0.5
+( ︶︿︶)_╭∩╮,passive-aggressive,0.5
+( ︶︿︶)_╭∩╮,rage,0.5
+( ︶︿︶)_╭∩╮,team edward,0.5
+( • ∀•)–Ψ,code,0.5
+( • ∀•)–Ψ,fork,0.5
+( • ∀•)–Ψ,forking,0.5
+( • ∀•)–Ψ,hacker news,0.5
+( • ∀•)–Ψ,pycon,0.5
+( • ∀•)–Ψ,repo,0.5
+( • ∀•)–Ψ,repository,0.5
+( • ∀•)–Ψ,sexism,0.5
+( • ∀•)–Ψ,startups,0.5
+( • ∀•)–Ψ,utensils,0.5
+( • ∀•)–Ψ,witch hunt,0.5
+( •_•)σ,actions,0.5
+( •_•)σ,facebook,0.5
+( •_•)σ,hey,0.5
+( •_•)σ,poke,0.5
+( •_•)σ,poke,0.5
+( •_•)σ,poking,0.5
+( •_•)σ,you,0.5
+( •ॢ◡-ॢ)-♡,cute,0.5
+( •ॢ◡-ॢ)-♡,happy,0.5
+( •ॢ◡-ॢ)-♡,heart,0.5
+( •ॢ◡-ॢ)-♡,love,0.5
+( •ॢ◡-ॢ)-♡,love wink,0.5
+( •ॢ◡-ॢ)-♡,loving,0.5
+( •ॢ◡-ॢ)-♡,valentine,0.5
+( •ॢ◡-ॢ)-♡,valentine's day,0.5
+( •ॢ◡-ॢ)-♡,wink,0.5
+( ＾◡＾)っ✂╰⋃╯,circumcision,0.5
+( ＾◡＾)っ✂╰⋃╯,eunuch,0.5
+( ＾◡＾)っ✂╰⋃╯,lorena bobbit,0.5
+( ＾◡＾)っ✂╰⋃╯,ouch,0.5
+( ＾◡＾)っ✂╰⋃╯,penis,0.5
+( ＾◡＾)っ✂╰⋃╯,penis-less,0.5
+( ＾◡＾)っ✂╰⋃╯,rage,0.5
+( ＾◡＾)っ✂╰⋃╯,sadface,0.5
+( ° ͜ʖ °),creep,0.5
+( ° ͜ʖ °),creeper,0.5
+( ° ͜ʖ °),creeping,0.5
+( ° ͜ʖ °),ew,0.5
+( ° ͜ʖ °),fear,0.5
+( ° ͜ʖ °),go away,0.5
+( ° ͜ʖ °),scared,0.5
+( ° ͜ʖ °),stalker,0.5
+( ° ͜ʖ °),stalking,0.5
+(　ﾟ∀ﾟ)っ由,birthday,0.5
+(　ﾟ∀ﾟ)っ由,christmas,0.5
+(　ﾟ∀ﾟ)っ由,festive,0.5
+(　ﾟ∀ﾟ)っ由,gift,0.5
+(　ﾟ∀ﾟ)っ由,gift giving,0.5
+(　ﾟ∀ﾟ)っ由,happy birthday,0.5
+(　ﾟ∀ﾟ)っ由,holidays,0.5
+(　ﾟ∀ﾟ)っ由,present,0.5
+(　ﾟ∀ﾟ)っ由,presents,0.5
+( ⧉ ⦣ ⧉ ),confused,0.5
+( ⧉ ⦣ ⧉ ),frazzled,0.5
+( ⧉ ⦣ ⧉ ),meh,0.5
+( ⧉ ⦣ ⧉ ),perplexed,0.5
+( ⧉ ⦣ ⧉ ),too hard,0.5
+( Ո‿Ո),anime eyes,0.5
+( Ո‿Ո),cute,0.5
+( Ո‿Ո),happy,0.5
+( Ո‿Ո),just happy,0.5
+( Ո‿Ո),smile,0.5
+( Ո‿Ո),smiling,0.5
+( ಠ_ಠ)–Ψ,code,0.5
+( ಠ_ಠ)–Ψ,fork,0.5
+( ಠ_ಠ)–Ψ,forking,0.5
+( ಠ_ಠ)–Ψ,hacker news,0.5
+( ಠ_ಠ)–Ψ,pycon,0.5
+( ಠ_ಠ)–Ψ,repo,0.5
+( ಠ_ಠ)–Ψ,repository,0.5
+( ಠ_ಠ)–Ψ,sexism,0.5
+( ಠ_ಠ)–Ψ,startups,0.5
+( ಠ_ಠ)–Ψ,utensils,0.5
+( ಠ_ಠ)–Ψ,witch hunt,0.5
+(- o - ) zzZ ☽,meh,0.5
+(- o - ) zzZ ☽,night,0.5
+(- o - ) zzZ ☽,nite,0.5
+(- o - ) zzZ ☽,nitey nite,0.5
+(- o - ) zzZ ☽,sleep,0.5
+(- o - ) zzZ ☽,tired,0.5
+(- o - ) zzZ ☽,waxing crescent,0.5
+(- o - ) zzZ ☽,zzz,0.5
+"(-, - )…zzzZZZ",meh,0.5
+"(-, - )…zzzZZZ",quiet time,0.5
+"(-, - )…zzzZZZ",sleepy,0.5
+"(-, - )…zzzZZZ",zzz,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),badass,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),meditation,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),meh,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),ninja,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),patience,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),peaceful,0.5
+(-.-(-.(-(-.(-.-).-)-).-)-.-),zen,0.5
+(-(-(- -)-)-),asian,0.5
+(-(-(- -)-)-),gang,0.5
+(-(-(- -)-)-),linsanity,0.5
+(-(-(- -)-)-),ninjas,0.5
+(-(-(- -)-)-),racist,0.5
+(-(-(- -)-)-),run away,0.5
+(-(-(- -)-)-),zen,0.5
+(－‸ლ),face palm,0.5
+(－‸ლ),faces,0.5
+(－‸ლ),meh,0.5
+(－‸ლ),meme,0.5
+(－‸ლ),sadface,0.5
+(・3・),animal,0.5
+(・3・),duck,0.5
+(・3・),duck lips,0.5
+(・3・),stare,0.5
+(・ε・),animal,0.5
+(・ε・),duck,0.5
+(・ε・),duck lips,0.5
+(・ε・),stare,0.5
+(・ω・),animal,0.5
+(・ω・),blank,0.5
+(・ω・),cute,0.5
+(・ω・),stare,0.5
+(・ω・),stoic,0.5
+（･ิω･ิ）,beards,0.5
+（･ิω･ิ）,facial hair,0.5
+（･ิω･ิ）,inquisitive,0.5
+（･ิω･ิ）,mustache,0.5
+（･ิω･ิ）,question,0.5
+（･ิω･ิ）,request,0.5
+（･ิω･ิ）,stash,0.5
+(;-_-),disinterested,0.5
+(;-_-),expressionless,0.5
+(;-_-),meh,0.5
+(;-_-),sullen,0.5
+(;-_-),sweating,0.5
+(;-_-),sweating bullets,0.5
+(;´༎ຶД༎ຶ`),ed sheeran,0.5
+(;´༎ຶД༎ຶ`),growing up,0.5
+(;´༎ຶД༎ຶ`),love,0.5
+(;´༎ຶД༎ຶ`),sadface,0.5
+(;´༎ຶД༎ຶ`),t-swizzy,0.5
+(;´༎ຶД༎ຶ`),taylor swift,0.5
+(;´༎ຶД༎ຶ`),young love,0.5
+(;´༎ຶД༎ຶ`),youth,0.5
+(;´༎ຶД༎ຶ`),youtube comments,0.5
+(:3 っ)っ,animals,0.5
+(:3 っ)っ,manatee,0.5
+(:3 っ)っ,seal,0.5
+(:3 っ)っ,walrus,0.5
+(:3 っ)っ,zoidberg,0.5
+(:3｣∠)_,animals,0.5
+(:3｣∠)_,cute,0.5
+(:3｣∠)_,laying down,0.5
+(:3｣∠)_,poses,0.5
+(:3｣∠)_,seductive,0.5
+(:3｣∠)_,seductive walrus,0.5
+(:3｣∠)_,walrus,0.5
+(._.),character,0.5
+(._.),head,0.5
+(._.),meh,0.5
+(._.),munchkin,0.5
+(._.),type,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),chamillionaire,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),hip hop,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),music,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),rap,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),ridin dirty,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),rolling,0.5
+(._.) ( l: ) ( .-. ) ( :l ) (._.),swangin,0.5
+(._.) ~ ︵ ┻━┻,darth vader,0.5
+(._.) ~ ︵ ┻━┻,flipping tables,0.5
+(._.) ~ ︵ ┻━┻,jedi,0.5
+(._.) ~ ︵ ┻━┻,luke,0.5
+(._.) ~ ︵ ┻━┻,mind tricks,0.5
+(._.) ~ ︵ ┻━┻,rage,0.5
+(._.) ~ ︵ ┻━┻,star wards,0.5
+(._.) ~ ︵ ┻━┻,table flipping,0.5
+(._.) ~ ︵ ┻━┻,telepathy,0.5
+(｡-_-｡ )人( ｡-_-｡),holding hands,0.5
+(｡-_-｡ )人( ｡-_-｡),love,0.5
+(｡-_-｡ )人( ｡-_-｡),meh,0.5
+(｡-_-｡ )人( ｡-_-｡),together,0.5
+(｡･ω･｡)ﾉ♡,animal,0.5
+(｡･ω･｡)ﾉ♡,don't discriminate,0.5
+(｡･ω･｡)ﾉ♡,fat,0.5
+(｡･ω･｡)ﾉ♡,love,0.5
+(｡･ω･｡)ﾉ♡,need love,0.5
+(｡･ω･｡)ﾉ♡,pig,0.5
+(｡´ ‿｀♡),blush,0.5
+(｡´ ‿｀♡),blushing hearts,0.5
+(｡´ ‿｀♡),cute,0.5
+(｡´ ‿｀♡),gleaming,0.5
+(｡´ ‿｀♡),happy,0.5
+(｡´ ‿｀♡),heart,0.5
+(｡´ ‿｀♡),love,0.5
+(｡´ ‿｀♡),smiling,0.5
+(｡◕‿◕｡),cute,0.5
+(｡◕‿◕｡),dimples,0.5
+(｡◕‿◕｡),hello,0.5
+(｡◕‿◕｡),hi,0.5
+(｡◕‿◕｡),smile,0.5
+(｡◕‿◕｡),why hello,0.5
+（。々°）,derp,0.5
+（。々°）,derp herp,0.5
+（。々°）,durrr,0.5
+（。々°）,face,0.5
+（。々°）,herp,0.5
+（。々°）,herp derp,0.5
+（。々°）,meme,0.5
+('∀'●)♡,cute,0.5
+('∀'●)♡,dimpled love,0.5
+('∀'●)♡,dimples,0.5
+('∀'●)♡,happy,0.5
+('∀'●)♡,love,0.5
+('∀'●)♡,smiling,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),current events,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),doorstop,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),england,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),front door,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),kate middleton,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),media,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),news,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),prince,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),royal baby,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),royalty,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),waiting,0.5
+⁽⁽ :-)[▓▓] ლ(ö◡ö ლ),watch,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,actors,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,cute,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,derp,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,herp,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,megan fox,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,movie stars,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,prguitarman,0.5
+₍₍ ᕕ(´◓⌓◔)ᕗ⁾⁾,sadface,0.5
+(*・_・)ノ⌒*`*`*,bomb,0.5
+(*・_・)ノ⌒*`*`*,cute,0.5
+(*・_・)ノ⌒*`*`*,fabulous,0.5
+(*・_・)ノ⌒*`*`*,glitter,0.5
+(*・_・)ノ⌒*`*`*,glitter bomb,0.5
+(*・_・)ノ⌒*`*`*,protest,0.5
+(*・_・)ノ⌒*`*`*,sparkly,0.5
+（*´▽｀*）,blushing,0.5
+（*´▽｀*）,ecstatic,0.5
+（*´▽｀*）,happy,0.5
+（*´▽｀*）,love,0.5
+（*＾＾）/~~~~◎,duncan,0.5
+（*＾＾）/~~~~◎,pro,0.5
+（*＾＾）/~~~~◎,sports,0.5
+（*＾＾）/~~~~◎,yo-yo,0.5
+(*☌ᴗ☌)｡,america,0.5
+(*☌ᴗ☌)｡,beauty queen,0.5
+(*☌ᴗ☌)｡,cute,0.5
+(*☌ᴗ☌)｡,face,0.5
+(*☌ᴗ☌)｡,pageant,0.5
+(*☌ᴗ☌)｡,reality tv,0.5
+(*☌ᴗ☌)｡,television,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),ariana grande,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),cool,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),cute,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),dope,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),eyebrows,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),fleek,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),kim kardashian,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),on fleek,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),peaches monroe,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),sick,0.5
+(⁎⚈᷀᷁ᴗ⚈᷀᷁⁎),swag,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),hercules,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),mythology,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),pvp,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),rage,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),rawr,0.5
+(/ .□.)\ ︵╰(゜Д゜)╯︵ /(.□. \),table flipping,0.5
+(///.-),dismissive,0.5
+(///.-),emo,0.5
+(///.-),emotional,0.5
+(///.-),like whatever,0.5
+(///.-),meh,0.5
+(///.-),sadface,0.5
+(///.-),who cares?,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,flipping tables,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,magic,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,mobilimensa,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,shazam,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,table flipping,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,telepathy,0.5
+(/¯◡ ‿ ◡)/¯ ~ ┻━┻,zap,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),cool,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),csi,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),dogs,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),glasses,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),meme,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),memes,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),shades,0.5
+(•_•) ( •_•)>⌐■-■ (⌐■_■),sunglasses,0.5
+(•̯͡.•̯͡)‎​,eyebrows,0.5
+(•̯͡.•̯͡)‎​,furry,0.5
+(•̯͡.•̯͡)‎​,furry eyebrows,0.5
+(•̯͡.•̯͡)‎​,meh,0.5
+(•̯͡.•̯͡)‎​,naruto,0.5
+(•̯͡.•̯͡)‎​,rock lee,0.5
+(•̯͡.•̯͡)‎​,stare,0.5
+(•ᴥ• )́`́'́`́'́⻍,animals,0.5
+(•ᴥ• )́`́'́`́'́⻍,cute,0.5
+(•ᴥ• )́`́'́`́'́⻍,porcupine,0.5
+(•ᴥ• )́`́'́`́'́⻍,sloths,0.5
+（〃・・〃）,blank,0.5
+（〃・・〃）,confused,0.5
+（〃・・〃）,emo,0.5
+（〃・・〃）,love,0.5
+（〃・・〃）,meh,0.5
+（〃・・〃）,stare,0.5
+(‿ꜟ‿),ass,0.5
+(‿ꜟ‿),behind,0.5
+(‿ꜟ‿),body part,0.5
+(‿ꜟ‿),booty,0.5
+(‿ꜟ‿),butt,0.5
+(‿ꜟ‿),buttocks,0.5
+(‿ꜟ‿),dat ass,0.5
+(‿ꜟ‿),fitness,0.5
+(‿ꜟ‿),lululemon,0.5
+(‿ꜟ‿),rump,0.5
+(‿ꜟ‿),rumpshaker,0.5
+(‿ꜟ‿),twerk,0.5
+(‿ꜟ‿),yoga,0.5
+(‿ꜟ‿),yoga booty,0.5
+(‿ˠ‿),ass,0.5
+(‿ˠ‿),behind,0.5
+(‿ˠ‿),body part,0.5
+(‿ˠ‿),booty,0.5
+(‿ˠ‿),bubble,0.5
+(‿ˠ‿),bubble butt,0.5
+(‿ˠ‿),butt,0.5
+(‿ˠ‿),buttocks,0.5
+(‿ˠ‿),dat ass,0.5
+(‿ˠ‿),diplo,0.5
+(‿ˠ‿),rump,0.5
+(‿ˠ‿),turn around,0.5
+(‿ˠ‿),twerk,0.5
+(｀◔ ω ◔´),animal,0.5
+(｀◔ ω ◔´),cute,0.5
+(｀◔ ω ◔´),dreamer,0.5
+(｀◔ ω ◔´),flight,0.5
+(｀◔ ω ◔´),hopeful,0.5
+(｀◔ ω ◔´),looking up,0.5
+(｀◔ ω ◔´),pig,0.5
+(´ ▽｀).。ｏ♥♡,heart,0.5
+(´ ▽｀).。ｏ♥♡,love,0.5
+(´ ▽｀).。ｏ♥♡,pooping,0.5
+(´ ▽｀).。ｏ♥♡,pooping hearts,0.5
+(´ ▽｀).。ｏ♥♡,so excited,0.5
+（´＿ゝ｀）,brick,0.5
+（´＿ゝ｀）,disinterested,0.5
+（´＿ゝ｀）,meh,0.5
+（´＿ゝ｀）,stodgy,0.5
+(´∀｀)♡,cute,0.5
+(´∀｀)♡,fleeting love,0.5
+(´∀｀)♡,happy,0.5
+(´∀｀)♡,love,0.5
+(´∀｀)♡,smiling,0.5
+(´ε｀ )♡,kiss,0.5
+(´ε｀ )♡,love,0.5
+(´ε｀ )♡,muah,0.5
+(´ε｀ )♡,smooch,0.5
+(´ε｀ )♡,smooches,0.5
+（^人^）,bazongas,0.5
+（^人^）,body part,0.5
+（^人^）,breasts,0.5
+（^人^）,kate upton,0.5
+（^人^）,smiling,0.5
+（^人^）,smiling breasts,0.5
+（^人^）,stare,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,babies,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,baby,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,cute,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,eyes,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,faces,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,meme,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,paws,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,peek,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,peek-a-boo,0.5
+⁽͑ʺˀ˙̭ˁʺ⁾̉,peekaboo,0.5
+(ˆڡˆ)v,foodie,0.5
+(ˆڡˆ)v,gobble,0.5
+(ˆڡˆ)v,happy,0.5
+(ˆڡˆ)v,nom,0.5
+(ˆڡˆ)v,tasty,0.5
+(ˆڡˆ)v,yum,0.5
+(°◡°♡).:｡,animal,0.5
+(°◡°♡).:｡,cute,0.5
+(°◡°♡).:｡,love,0.5
+(°◡°♡).:｡,love slug,0.5
+(°◡°♡).:｡,smiling,0.5
+（°々。）,derp,0.5
+（°々。）,derp herp,0.5
+（°々。）,durrr,0.5
+（°々。）,face,0.5
+（°々。）,herp,0.5
+（°々。）,herp derp,0.5
+（°々。）,meme,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),cry,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),crying,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),happiness,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),happy,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),smiling,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),tears,0.5
+(°̥̥̥̥̥̥̥̥ᴗ°̥̥̥̥̥̥̥̥ ),yay,0.5
+(°ロ°)☝,pointing,0.5
+(°ロ°)☝,up,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,assault weapons,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,awp,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,current events,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,gun violence,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,guns,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,violence,0.5
+(҂ `з´ ).︻╦̵̵̿╤── ƪ(⁰o⁰;)ʃ,weapons,0.5
+(+[__]∙:∙),bffs,0.5
+(+[__]∙:∙),gaming,0.5
+(+[__]∙:∙),level 60,0.5
+(+[__]∙:∙),playstation,0.5
+(+[__]∙:∙),psp,0.5
+(+[__]∙:∙),sony,0.5
+(+[__]∙:∙),video games,0.5
+(=^ェ^=),animal,0.5
+(=^ェ^=),cat,0.5
+(=^ェ^=),cute,0.5
+(=^ェ^=),happy,0.5
+(=^ェ^=),happy cat,0.5
+(=^ェ^=),smiling,0.5
+(=O*_*)=O Q(*_*Q),boxing,0.5
+(=O*_*)=O Q(*_*Q),knockout,0.5
+(=O*_*)=O Q(*_*Q),mma,0.5
+(=O*_*)=O Q(*_*Q),rage,0.5
+(=O*_*)=O Q(*_*Q),sports,0.5
+(>'.')>=O____l_*__O=<('.'<),badminton,0.5
+(>'.')>=O____l_*__O=<('.'<),playing tennis,0.5
+(>'.')>=O____l_*__O=<('.'<),racquetball,0.5
+(>'.')>=O____l_*__O=<('.'<),sports,0.5
+(>'.')>=O____l_*__O=<('.'<),tennis,0.5
+(~^.^)~,dance,0.5
+(~^.^)~,macarena,0.5
+(~^.^)~,the macarena,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,careers,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,characters,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,gandalf,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,harry potter,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,lotr,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,magic,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,people,0.5
+(∩｀-´)⊃━☆ﾟ.*･｡ﾟ,wizard,0.5
+(⊃◜⌓◝⊂),anime,0.5
+(⊃◜⌓◝⊂),characters,0.5
+(⊃◜⌓◝⊂),cute,0.5
+(⊃◜⌓◝⊂),depressed,0.5
+(⊃◜⌓◝⊂),gudetama,0.5
+(⊃◜⌓◝⊂),japan,0.5
+(⊃◜⌓◝⊂),japanese,0.5
+(⊃◜⌓◝⊂),kawaii,0.5
+(⊃◜⌓◝⊂),manga,0.5
+(⊃◜⌓◝⊂),sadface,0.5
+(⊃◜⌓◝⊂),sanrio,0.5
+(⊃◜⌓◝⊂),spunk,0.5
+(⊙＿⊙'),glare,0.5
+(⊙＿⊙'),meh,0.5
+(⊙＿⊙'),really?,0.5
+(⊙＿⊙'),stare,0.5
+(⊙＿⊙'),sweating,0.5
+(⊙＿⊙'),wtf,0.5
+(⊙＿⊙'),yo,0.5
+(⊙ω⊙),animal,0.5
+(⊙ω⊙),cute,0.5
+(⊙ω⊙),kristen bell,0.5
+(⊙ω⊙),meltdown,0.5
+(⊙ω⊙),omg sloth,0.5
+(⊙ω⊙),party sloth,0.5
+(⊙ω⊙),sloth,0.5
+(⊙ω⊙),slowpoke,0.5
+(⊙ω⊙),so excited,0.5
+(⌐■_■),at night,0.5
+(⌐■_■),aviators,0.5
+(⌐■_■),cool,0.5
+(⌐■_■),matrix,0.5
+(⌐■_■),meh,0.5
+(⌐■_■),neo,0.5
+(⌐■_■),ray-bans,0.5
+(⌐■_■),shades,0.5
+(⌐■_■),stunna,0.5
+(⌐■_■),stunna shades,0.5
+(⌐■_■),sunglasses,0.5
+(╯'□')╯︵ ┻━┻,crying,0.5
+(╯'□')╯︵ ┻━┻,emo,0.5
+(╯'□')╯︵ ┻━┻,emotional,0.5
+(╯'□')╯︵ ┻━┻,meh,0.5
+(╯'□')╯︵ ┻━┻,rage,0.5
+(╯'□')╯︵ ┻━┻,table flipping,0.5
+(╯^□^)╯︵ ❄☃❄,christmas,0.5
+(╯^□^)╯︵ ❄☃❄,flipping,0.5
+(╯^□^)╯︵ ❄☃❄,holiday,0.5
+(╯^□^)╯︵ ❄☃❄,snow,0.5
+(╯^□^)╯︵ ❄☃❄,snowflake,0.5
+(╯^□^)╯︵ ❄☃❄,snowman,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,flipping,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,holiday,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,internets win,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,pipa,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,rage,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,sopa,0.5
+(╯°□°)╯︵ ∀ԀIԀ ∀ԀOS,sopa anger,0.5
+(╯°□°)╯︵ ┻━┻,arms up,0.5
+(╯°□°)╯︵ ┻━┻,flipping tables,0.5
+(╯°□°)╯︵ ┻━┻,omgwtf,0.5
+(╯°□°)╯︵ ┻━┻,rage,0.5
+(╯°□°)╯︵ ┻━┻,table,0.5
+(╯°□°)╯︵ ┻━┻,table flipping,0.5
+(╯°□°)╯︵ ┻━┻,umadbro,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),noob flipper,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),pvp,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),rage,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),table,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),table flipping,0.5
+(╯°□°)╯︵ ┻━┻ ︵ ╯(°□° ╯),versus mode,0.5
+‎(╯°□°)╯︵ ɐpuɐd,android,0.5
+‎(╯°□°)╯︵ ɐpuɐd,flipping tables,0.5
+‎(╯°□°)╯︵ ɐpuɐd,omg books,0.5
+‎(╯°□°)╯︵ ɐpuɐd,panda laser,0.5
+‎(╯°□°)╯︵ ɐpuɐd,startups,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,api,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,brogramming,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,error 191,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,facebook,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,flipping facebook,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,flipping tables,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,open graph,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,rage,0.5
+(╯°□°)╯︵ ʞooqǝɔɐɟ,startups,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,apple,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,design,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,flat design,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,ios 7,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,jony ive,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,skeuomorphism,0.5
+(╯°□°)╯︵ ɯsıɥdɹoɯouǝʞs,startups,0.5
+(╯▅╰),french,0.5
+(╯▅╰),le sigh,0.5
+(╯▅╰),meh,0.5
+(╯▅╰),really?,0.5
+(╯▅╰),sigh,0.5
+(╯▅╰),tired,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,faces,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,glasses,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,meh,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,shades,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,shady,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,stunners,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,sunglasses,0.5
+(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄,suspicious,0.5
+（●´∀｀）ノ♡,love,0.5
+（●´∀｀）ノ♡,spreading,0.5
+(●´⌓`●),fatigue,0.5
+(●´⌓`●),meh,0.5
+(●´⌓`●),sadface,0.5
+(●´⌓`●),tired,0.5
+(●´⌓`●),yawning,0.5
+(●°u°●)​ 」,cute,0.5
+(●°u°●)​ 」,happy,0.5
+(●°u°●)​ 」,lol,0.5
+(●°u°●)​ 」,meme,0.5
+(●°u°●)​ 」,o hai,0.5
+(●°u°●)​ 」,smiling,0.5
+(●°u°●)​ 」,waving,0.5
+(◐‿◑),crazy,0.5
+(◐‿◑),cross-eyed,0.5
+(◐‿◑),face,0.5
+(◐‿◑),happy,0.5
+(◐‿◑),loony,0.5
+(◐‿◑),loony face,0.5
+(◐‿◑),lunar,0.5
+(◐‿◑),moon phases,0.5
+(◔_◔),disbelief,0.5
+(◔_◔),disinterested,0.5
+(◔_◔),eyes,0.5
+(◔_◔),face,0.5
+(◔_◔),pssh,0.5
+(◔_◔),rolling eyes,0.5
+(◔_◔),whatevers,0.5
+(◕(' 人 ') ◕),animal,0.5
+(◕(' 人 ') ◕),cuddly,0.5
+(◕(' 人 ') ◕),don't club,0.5
+(◕(' 人 ') ◕),kiss,0.5
+(◕(' 人 ') ◕),manatee,0.5
+(◕(' 人 ') ◕),manatee,0.5
+(◕(' 人 ') ◕),playboy,0.5
+(◕(' 人 ') ◕),womanizer,0.5
+(◞‸◟；),accepting,0.5
+(◞‸◟；),depressing,0.5
+(◞‸◟；),hopeless,0.5
+(◞‸◟；),meh,0.5
+(◞‸◟；),mournful,0.5
+(◞‸◟；),sad,0.5
+(◞‸◟；),sadface,0.5
+(◞‸◟；),sigh,0.5
+(◞‸◟；),why,0.5
+(◡ ‿ ◡ ✿),cute,0.5
+(◡ ‿ ◡ ✿),drowsy,0.5
+(◡ ‿ ◡ ✿),flower,0.5
+(◡ ‿ ◡ ✿),girl,0.5
+(◡ ‿ ◡ ✿),napping,0.5
+(◡ ‿ ◡ ✿),sleepy,0.5
+(☝ ՞ਊ ՞)☝,appreciation,0.5
+(☝ ՞ਊ ՞)☝,celebration,0.5
+(☝ ՞ਊ ՞)☝,devotion,0.5
+(☝ ՞ਊ ՞)☝,god,0.5
+(☝ ՞ਊ ՞)☝,hallelujah,0.5
+(☝ ՞ਊ ՞)☝,religion,0.5
+(☝ ՞ਊ ՞)☝,yay,0.5
+(☞ﾟ∀ﾟ)☞,crazy,0.5
+(☞ﾟ∀ﾟ)☞,lollers,0.5
+(☞ﾟ∀ﾟ)☞,pointing,0.5
+(☞ﾟ∀ﾟ)☞,you,0.5
+(☞ﾟ∀ﾟ)☞,you crazy,0.5
+(✿◕‿◕✿),blushing,0.5
+(✿◕‿◕✿),cute,0.5
+(✿◕‿◕✿),dimples,0.5
+(✿◕‿◕✿),flower,0.5
+(✿◕‿◕✿),flower girl,0.5
+(✿◕‿◕✿),girl,0.5
+(✿◕‿◕✿),smiling,0.5
+(〠_〠),biggy,0.5
+(〠_〠),hypnosis,0.5
+(〠_〠),hypnotize,0.5
+(〠_〠),meh,0.5
+(〠_〠),notorious b.i.g.,0.5
+(〠_〠),stare,0.5
+(ヽ `д´)┌┛★)`з゜),face kick,0.5
+(ヽ `д´)┌┛★)`з゜),face kick,0.5
+(ヽ `д´)┌┛★)`з゜),jump kick,0.5
+(ヽ `д´)┌┛★)`з゜),karate,0.5
+(ヽ `д´)┌┛★)`з゜),kicking faces,0.5
+(ヽ `д´)┌┛★)`з゜),kung fu,0.5
+(ヽ `д´)┌┛★)`з゜),rage,0.5
+(ヽ `д´)┌┛★)`з゜),violence,0.5
+(๑′ᴗ‵๑),adorable,0.5
+(๑′ᴗ‵๑),adorable caterpillar,0.5
+(๑′ᴗ‵๑),animal,0.5
+(๑′ᴗ‵๑),bug,0.5
+(๑′ᴗ‵๑),caterpillar,0.5
+(๑′ᴗ‵๑),cute,0.5
+(๑╹ڡ╹)╭ ～ ♡,cute,0.5
+(๑╹ڡ╹)╭ ～ ♡,hearts,0.5
+(๑╹ڡ╹)╭ ～ ♡,love,0.5
+(๑╹ڡ╹)╭ ～ ♡,pew,0.5
+(๑╹ڡ╹)╭ ～ ♡,pew pew,0.5
+(๑╹ڡ╹)╭ ～ ♡,valentine,0.5
+(๑╹ڡ╹)╭ ～ ♡,valentine's day,0.5
+(๑╹ڡ╹)╭ ～ ♡,zapping,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,attack,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,ddos,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,dos,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,keyboard,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,rage,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,servers,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,startups,0.5
+(۶ૈ ᵒ̌ Дᵒ̌)۶ૈ=͟͟͞͞ ⌨,victim,0.5
+(ó ì_í)=óò=(ì_í ò),bro,0.5
+(ó ì_í)=óò=(ì_í ò),bro fist,0.5
+(ó ì_í)=óò=(ì_í ò),fighting,0.5
+(ó ì_í)=óò=(ì_í ò),fist pound,0.5
+(ó ì_í)=óò=(ì_í ò),rage,0.5
+(Ó_#)ò=(°□°ò),black eye,0.5
+(Ó_#)ò=(°□°ò),knockout,0.5
+(Ó_#)ò=(°□°ò),rage,0.5
+(Ó_#)ò=(°□°ò),tyson,0.5
+(Ó_#)ò=(°□°ò),violence,0.5
+(o⌒．⌒o),blush,0.5
+(o⌒．⌒o),cute,0.5
+(o⌒．⌒o),dopey,0.5
+(o⌒．⌒o),dopey blush,0.5
+(o⌒．⌒o),sweet,0.5
+(ÒДÓױ),angry,0.5
+(ÒДÓױ),argh,0.5
+(ÒДÓױ),man,0.5
+(ÒДÓױ),old,0.5
+(ÒДÓױ),rage,0.5
+(Ò囗Óױ),angry,0.5
+(Ò囗Óױ),argh,0.5
+(Ò囗Óױ),man,0.5
+(Ò囗Óױ),old,0.5
+(Ò囗Óױ),rage,0.5
+(ɔ˘з˘)ɔ,<3,0.5
+(ɔ˘з˘)ɔ,heart,0.5
+(ɔ˘з˘)ɔ,kiss,0.5
+(ɔ˘з˘)ɔ,kisses,0.5
+(ɔ˘з˘)ɔ,love,0.5
+(ɔ˘з˘)ɔ,smooches,0.5
+(ʃ˘̩̩ε˘̩ƪ),boo hoo,0.5
+(ʃ˘̩̩ε˘̩ƪ),crying,0.5
+(ʃ˘̩̩ε˘̩ƪ),sadface,0.5
+"(V) (°,,,,°) (V)",animal,0.5
+"(V) (°,,,,°) (V)",futurama,0.5
+"(V) (°,,,,°) (V)",tv,0.5
+"(V) (°,,,,°) (V)",zoidberg,0.5
+(ʘ෴̴͜ʘ),beard,0.5
+(ʘ෴̴͜ʘ),handlebars,0.5
+(ʘ෴̴͜ʘ),hello,0.5
+(ʘ෴̴͜ʘ),hipster,0.5
+(ʘ෴̴͜ʘ),mustache,0.5
+(ʘ෴̴͜ʘ),people,0.5
+(ʘ෴̴͜ʘ),skinny jeans,0.5
+(ʘ෴̴͜ʘ),trends,0.5
+(ʘᗩʘ'),@ap,0.5
+(ʘᗩʘ'),fail,0.5
+(ʘᗩʘ'),hack,0.5
+(ʘᗩʘ'),hacked,0.5
+(ʘᗩʘ'),not me,0.5
+(ʘᗩʘ'),phishing,0.5
+(ʘᗩʘ'),social media,0.5
+(ʘᗩʘ'),startups,0.5
+(ʘᗩʘ'),twitter,0.5
+(σ・・)σ,blank,0.5
+(σ・・)σ,mad props,0.5
+(σ・・)σ,meh,0.5
+(σ・・)σ,pointing,0.5
+(σ・・)σ,two fingers,0.5
+(ლ `Д ́)ლ,larry hughes,0.5
+(ლ `Д ́)ლ,nba,0.5
+(ლ `Д ́)ლ,rage,0.5
+(ლ `Д ́)ლ,screaming,0.5
+(ლ `Д ́)ლ,sports,0.5
+(ლ `Д ́)ლ,the heckler,0.5
+(ლ `Д ́)ლ,yelling,0.5
+(ღ˘⌣˘ღ),cute,0.5
+(ღ˘⌣˘ღ),gimme,0.5
+(ღ˘⌣˘ღ),hug,0.5
+(ღ˘⌣˘ღ),love,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,adorable,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,animal,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,animals,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,cat,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,chubby,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,chubby cat,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,cute,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,fat,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,fat cat,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,kitten,0.5
+(ृʾ́꒳ʿ̀ ृ　)ु,overweight,0.5
+(งツ)ว,cache,0.5
+(งツ)ว,cute,0.5
+(งツ)ว,dance,0.5
+(งツ)ว,discoveryutil,0.5
+(งツ)ว,dns,0.5
+(งツ)ว,dscacheutil,0.5
+(งツ)ว,flush,0.5
+(งツ)ว,macos,0.5
+(งツ)ว,mdnsresponder,0.5
+(งツ)ว,osx,0.5
+(งツ)ว,shake,0.5
+(งツ)ว,shimmy,0.5
+(งツ)ว,startups,0.5
+(งツ)ว,toilet,0.5
+(ᗒᗩᗕ)՞,headache,0.5
+(ᗒᗩᗕ)՞,huge headache,0.5
+(ᗒᗩᗕ)՞,ill,0.5
+(ᗒᗩᗕ)՞,meh,0.5
+(ᗒᗩᗕ)՞,migraine,0.5
+(ᗒᗩᗕ)՞,rage,0.5
+(ㆆ▃ㆆ),gasp,0.5
+(ㆆ▃ㆆ),got,0.5
+(ㆆ▃ㆆ),media,0.5
+(ㆆ▃ㆆ),omg,0.5
+(ㆆ▃ㆆ),omgwtf,0.5
+(ㆆ▃ㆆ),omgwtfbbq,0.5
+(ㆆ▃ㆆ),red wedding,0.5
+(ㆆ▃ㆆ),shock,0.5
+(ㆆ▃ㆆ),television,0.5
+(ㆆ▃ㆆ),tv,0.5
+(ㆆ▃ㆆ),wtf,0.5
+(っ ºДº)っ ︵ ⌨,bash,0.5
+(っ ºДº)っ ︵ ⌨,code,0.5
+(っ ºДº)っ ︵ ⌨,cve-2014-6271,0.5
+(っ ºДº)っ ︵ ⌨,opsec,0.5
+(っ ºДº)っ ︵ ⌨,rage,0.5
+(っ ºДº)っ ︵ ⌨,security,0.5
+(っ ºДº)っ ︵ ⌨,shellshock,0.5
+(っ ºДº)っ ︵ ⌨,startups,0.5
+(っ ºДº)っ ︵ ⌨,tech,0.5
+(っ ºДº)っ ︵ ⌨,vulnerability,0.5
+(っ- ‸ - ς),be nice,0.5
+(っ- ‸ - ς),delicious,0.5
+(っ- ‸ - ς),fat,0.5
+(っ- ‸ - ς),foodie,0.5
+(っ- ‸ - ς),judging,0.5
+(っ- ‸ - ς),meh,0.5
+(っ- ‸ - ς),overweight,0.5
+(っ- ‸ - ς),sadface,0.5
+(っ- ‸ - ς),weight,0.5
+(っ- ‸ -)っ ♥ Boston,boston,0.5
+(っ- ‸ -)っ ♥ Boston,boston marathon,0.5
+(っ- ‸ -)っ ♥ Boston,current events,0.5
+(っ- ‸ -)っ ♥ Boston,hugs,0.5
+(っ- ‸ -)っ ♥ Boston,prayers,0.5
+(っ- ‸ -)っ ♥ Boston,sadface,0.5
+(っ- ‸ -)っ ♥ Boston,tragedy,0.5
+(っ- ‸ -)っ ♥ Boston,united,0.5
+(づ｡◕‿‿◕｡)づ,arms up,0.5
+(づ｡◕‿‿◕｡)づ,chu,0.5
+(づ｡◕‿‿◕｡)づ,chustream,0.5
+(づ｡◕‿‿◕｡)づ,cute,0.5
+(づ｡◕‿‿◕｡)づ,fatty,0.5
+(づ｡◕‿‿◕｡)づ,marshmallow,0.5
+(づ｡◕‿‿◕｡)づ,raising roof,0.5
+(っ˘̩╭╮˘̩)っ,rejected,0.5
+(っ˘̩╭╮˘̩)っ,sadface,0.5
+(っ˘̩╭╮˘̩)っ,social media,0.5
+(っ˘̩╭╮˘̩)っ,stolen,0.5
+(っ˘̩╭╮˘̩)っ,username,0.5
+(っ˘̩╭╮˘̩)っ,username taken,0.5
+(っ˘ڡ˘ς),delicious,0.5
+(っ˘ڡ˘ς),delightful,0.5
+(っ˘ڡ˘ς),dericious,0.5
+(っ˘ڡ˘ς),foodie,0.5
+(っ˘ڡ˘ς),nom,0.5
+(っ˘ڡ˘ς),tasty,0.5
+(っ˘ڡ˘ς),yummy,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",drunk,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",flipping skirts,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",girls,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",perverts,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",rage,0.5
+"(ノ ゜∀゜)ノ\(""❛□❛)",skirts,0.5
+(ノ・∀・)ノ,arms up,0.5
+(ノ・∀・)ノ,cute,0.5
+(ノ・∀・)ノ,facing right,0.5
+(ノ・∀・)ノ,happy,0.5
+(ノ・∀・)ノ,tiny eyes,0.5
+(ノ`Д ́)ノ,arms up,0.5
+(ノ`Д ́)ノ,rage,0.5
+(ノ`Д ́)ノ,screamo,0.5
+(ノ`Д ́)ノ,umadbro,0.5
+(ﾉ^_^)ﾉ,cute,0.5
+(ﾉ^_^)ﾉ,facing right,0.5
+(ﾉ^_^)ﾉ,hands up,0.5
+(ﾉ^_^)ﾉ,happy,0.5
+(ﾉ^_^)ﾉ,squinty eyes,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),bear muffs,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),cute,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),megumixbear,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),pvp,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),smiling,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),squinty eyes,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),starcraft 2,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),table flipping,0.5
+(ノ^_^)ノ┻━┻ ┬─┬ ノ( ^_^ノ),video games,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,cards,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,cheeto fingers,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,flipping tables,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,freakout,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,lol,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,meme,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,nerds,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,rage,0.5
+(ﾉಥДಥ)ﾉ︵┻━┻･/,table flipping,0.5
+[^._.^]ﾉ彡,animal,0.5
+[^._.^]ﾉ彡,cute,0.5
+[^._.^]ﾉ彡,happy,0.5
+[^._.^]ﾉ彡,kitty,0.5
+[^._.^]ﾉ彡,meme,0.5
+[^._.^]ﾉ彡,nyan,0.5
+[^._.^]ﾉ彡,nyan cat,0.5
+[^._.^]ﾉ彡,nyan kitty,0.5
+[^._.^]ﾉ彡,rainbows,0.5
+[^._.^]ﾉ彡,wagging tail,0.5
+[+..••],8-bit,0.5
+[+..••],controller,0.5
+[+..••],famicon,0.5
+[+..••],gaming,0.5
+[+..••],mario,0.5
+[+..••],nes,0.5
+[+..••],nintendo,0.5
+[+..••],nintendo controller,0.5
+[+..••],retro,0.5
+[+..••],video games,0.5
+[¬º-°]¬,coffee,0.5
+[¬º-°]¬,halloween,0.5
+[¬º-°]¬,holiday,0.5
+[¬º-°]¬,meh,0.5
+[¬º-°]¬,wtf,0.5
+[¬º-°]¬,zombie,0.5
+[¬º-°]¬,zombie approaching,0.5
+[¬º-°]¬,zombie runner,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,ded gaem,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,diretide,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,dota,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,dota2,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,games,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,gaming,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,give diretide,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,halloween,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,hats,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,valve,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,video games,0.5
+༼ つ ◕_◕ ༽つ GIVE DIRETIDE,volvo,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,alive gaem,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,diretide,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,dota,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,dota2,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,games,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,gaming,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,got diretide,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,halloween,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,hats,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,hugs,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,valve,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,video games,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,volvo,0.5
+༼ つ ◕◡◕ ༽つ GOT DIRETIDE,volvo reband,0.5
+༼•͟ ͜ •༽,crap,0.5
+༼•͟ ͜ •༽,feelings,0.5
+༼•͟ ͜ •༽,le sigh,0.5
+༼•͟ ͜ •༽,meh,0.5
+༼•͟ ͜ •༽,poo,0.5
+༼•͟ ͜ •༽,sigh,0.5
+,,
+︻デ═一,awp,0.5
+︻デ═一,counter-strike,0.5
+︻デ═一,gun,0.5
+︻デ═一,headshot,0.5
+︻デ═一,object,0.5
+︻デ═一,op,0.5
+︻デ═一,sniper,0.5
+*(۞_۞)*,biggy smalls,0.5
+*(۞_۞)*,glares,0.5
+*(۞_۞)*,hypnotist,0.5
+*(۞_۞)*,hypnotize,0.5
+*(۞_۞)*,mesmerized,0.5
+*(۞_۞)*,stare,0.5
+*⁂((✪⥎✪))⁂*,addicted,0.5
+*⁂((✪⥎✪))⁂*,cute,0.5
+*⁂((✪⥎✪))⁂*,delighted,0.5
+*⁂((✪⥎✪))⁂*,infatuated,0.5
+*⁂((✪⥎✪))⁂*,love,0.5
+*⁂((✪⥎✪))⁂*,smitten,0.5
+*⁂((✪⥎✪))⁂*,starstruck,0.5
+*⁂((✪⥎✪))⁂*,wee,0.5
+*⁂((✪⥎✪))⁂*,wow,0.5
+/)*(\,bro fist,0.5
+/)*(\,brohoof,0.5
+/)*(\,brony,0.5
+/)*(\,cute,0.5
+/)*(\,fist bump,0.5
+\( •_•)_†,buffy,0.5
+\( •_•)_†,character,0.5
+\( •_•)_†,cross,0.5
+\( •_•)_†,joss whedon,0.5
+\( •_•)_†,movies,0.5
+\( •_•)_†,supernatural,0.5
+\( •_•)_†,television,0.5
+\( •_•)_†,tv,0.5
+\( •_•)_†,vampire,0.5
+\( •_•)_†,vampire slayer,0.5
+\( ﾟヮﾟ)/,celebration,0.5
+\( ﾟヮﾟ)/,hurray,0.5
+\( ﾟヮﾟ)/,huzzah,0.5
+\( ﾟヮﾟ)/,huzzah!,0.5
+\( ﾟヮﾟ)/,yay,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,cute,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,heart,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,holiday,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,huzzah,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,huzzah love,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,love,0.5
+\(-ㅂ-)/ ♥ ♥ ♥,valentine's day,0.5
+＼(^o)(^0^)(o^)／,caroling,0.5
+＼(^o)(^0^)(o^)／,cheer,0.5
+＼(^o)(^0^)(o^)／,christmas,0.5
+＼(^o)(^0^)(o^)／,christmas caroling,0.5
+＼(^o)(^0^)(o^)／,holidays,0.5
+＼(^o)(^0^)(o^)／,singing,0.5
+＼(＾O＾)／,arms up,0.5
+＼(＾O＾)／,happy,0.5
+＼(＾O＾)／,screaming,0.5
+＼(＾O＾)／,squinty eyes,0.5
+＼(＾O＾)／,yelling,0.5
+\|°▿▿▿▿°|/,anime,0.5
+\|°▿▿▿▿°|/,character,0.5
+\|°▿▿▿▿°|/,cute,0.5
+\|°▿▿▿▿°|/,domo,0.5
+\|°▿▿▿▿°|/,domo-kun,0.5
+\|°▿▿▿▿°|/,domokun,0.5
+\|°▿▿▿▿°|/,happy,0.5
+\|°▿▿▿▿°|/,japanese,0.5
+\|°▿▿▿▿°|/,manga,0.5
+\|°▿▿▿▿°|/,nom,0.5
+\|°▿▿▿▿°|/,sawtooth,0.5
+\|°▿▿▿▿°|/,yay,0.5
+\|°▿▿▿▿°|/,どーもくん,0.5
+\m/...(>.<)…\m/,hell yeah,0.5
+\m/...(>.<)…\m/,music,0.5
+\m/...(>.<)…\m/,party,0.5
+\m/...(>.<)…\m/,rage,0.5
+\m/...(>.<)…\m/,rock,0.5
+\m/...(>.<)…\m/,rock out,0.5
+•(ㅅ)•,bear,0.5
+•(ㅅ)•,bears,0.5
+•(ㅅ)•,cartoon,0.5
+•(ㅅ)•,cute,0.5
+•(ㅅ)•,japanese,0.5
+•(ㅅ)•,relax,0.5
+•(ㅅ)•,rilakkuma,0.5
+•(ㅅ)•,rilakkuma,0.5
+•(ㅅ)•,san-x,0.5
+๏◡๏,droopy,0.5
+๏◡๏,droopy eyes,0.5
+๏◡๏,eyes,0.5
+๏◡๏,smiling,0.5
+๏◡๏,sullen,0.5
+¯\_(⌣̯̀⌣́)_/¯,expletive,0.5
+¯\_(⌣̯̀⌣́)_/¯,meh,0.5
+¯\_(⌣̯̀⌣́)_/¯,shrug,0.5
+¯\_(⌣̯̀⌣́)_/¯,who cares,0.5
+¯\_(シ)_/¯,gaming,0.5
+¯\_(シ)_/¯,meh,0.5
+¯\_(シ)_/¯,shrug,0.5
+¯\_(シ)_/¯,shrug alternate,0.5
+¯\_(シ)_/¯,starcraft,0.5
+¯\_(シ)_/¯,sup son,0.5
+¯\_(ツ)_/¯,gaming,0.5
+¯\_(ツ)_/¯,meh,0.5
+¯\_(ツ)_/¯,shrug,0.5
+¯\_(ツ)_/¯,slayers.dragon,0.5
+¯\_(ツ)_/¯,starcraft,0.5
+¯\_(ツ)_/¯,sup son,0.5
+¯\_◉‿◉_/¯,dunno,0.5
+¯\_◉‿◉_/¯,happy,0.5
+¯\_◉‿◉_/¯,shrug,0.5
+¯\_ಠ_ಠ_/¯,disapproval,0.5
+¯\_ಠ_ಠ_/¯,disapproving shrug,0.5
+¯\_ಠ_ಠ_/¯,huh,0.5
+¯\_ಠ_ಠ_/¯,meh,0.5
+¯\_ಠ_ಠ_/¯,shrug,0.5
+¯\_ಠ_ಠ_/¯,stare,0.5
+¯\(º_o)/¯,dunno,0.5
+¯\(º_o)/¯,lol,0.5
+¯\(º_o)/¯,meh,0.5
+¯\(º_o)/¯,shrug,0.5
+˙ ͜ʟ˙,google,0.5
+˙ ͜ʟ˙,nsa,0.5
+˙ ͜ʟ˙,nsa smiley,0.5
+˙ ͜ʟ˙,smiley,0.5
+˙ ͜ʟ˙,snowden,0.5
+˙ ͜ʟ˙,startups,0.5
+˙ ͜ʟ˙,yahoo,0.5
+˓(ᑊᘩᑊ⁎),got,0.5
+˓(ᑊᘩᑊ⁎),hbo,0.5
+˓(ᑊᘩᑊ⁎),media,0.5
+˓(ᑊᘩᑊ⁎),meh,0.5
+˓(ᑊᘩᑊ⁎),sadface,0.5
+˓(ᑊᘩᑊ⁎),shows,0.5
+˓(ᑊᘩᑊ⁎),spoilers,0.5
+˓(ᑊᘩᑊ⁎),stahp,0.5
+˓(ᑊᘩᑊ⁎),television,0.5
+˓(ᑊᘩᑊ⁎),tv,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,flipping,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,holiday,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,internets win,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,pipa,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,rage,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,sopa,0.5
+∀ԀOS ∀ԀIԀ ︵╰(°□°)╯︵ ∀ԀIԀ ∀ԀOS,sopa outrage,0.5
+<(-'.'-)>,animal,0.5
+<(-'.'-)>,cute,0.5
+<(-'.'-)>,kirby,0.5
+<(-'.'-)>,kirby,0.5
+<(-'.'-)>,nintendo,0.5
+<(-'.'-)>,nom,0.5
+<(-'.'-)>,video games,0.5
+<º))))><,animal,0.5
+<º))))><,dead fish,0.5
+<º))))><,dinner,0.5
+<º))))><,fish,0.5
+<º))))><,sea creature,0.5
+<コ:彡,animal,0.5
+<コ:彡,cute,0.5
+<コ:彡,food,0.5
+<コ:彡,ika,0.5
+<コ:彡,nom,0.5
+<コ:彡,squid,0.5
+<コ:彡,squid,0.5
+<コ:彡,yummy,0.5
+=＾● ⋏ ●＾=,animal,0.5
+=＾● ⋏ ●＾=,animals,0.5
+=＾● ⋏ ●＾=,cat,0.5
+=＾● ⋏ ●＾=,kitten,0.5
+=＾● ⋏ ●＾=,kitty,0.5
+=＾● ⋏ ●＾=,meow,0.5
+¬_¬,dismissive,0.5
+¬_¬,just sayin',0.5
+¬_¬,looking sideways,0.5
+¬_¬,meh,0.5
+¬_¬,real talk,0.5
+¬_¬,snookie,0.5
+¬_¬,the truth,0.5
+￢o(￣-￣ﾒ),angry,0.5
+￢o(￣-￣ﾒ),gun,0.5
+￢o(￣-￣ﾒ),pointing,0.5
+￢o(￣-￣ﾒ),rage,0.5
+￢o(￣-￣ﾒ),robbery,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,boombox,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,dubstep,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,item,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,music,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,object,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,sound,0.5
+|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|,untz,0.5
+|ʘ‿ʘ)╯,glasses,0.5
+|ʘ‿ʘ)╯,hello,0.5
+|ʘ‿ʘ)╯,hello neighbor,0.5
+|ʘ‿ʘ)╯,neighbor,0.5
+|ʘ‿ʘ)╯,smiling,0.5
+|ʘ‿ʘ)╯,waving,0.5
+"~=[,,_,,]:3",animal,0.5
+"~=[,,_,,]:3",cat,0.5
+"~=[,,_,,]:3",cute,0.5
+"~=[,,_,,]:3",flying,0.5
+"~=[,,_,,]:3",meme,0.5
+"~=[,,_,,]:3",nyan,0.5
+"~=[,,_,,]:3",nyan cat,0.5
+"~=[,,_,,]:3",omg,0.5
+"~=[,,_,,]:3",prguitarman,0.5
+"~=[,,_,,]:3",rainbows,0.5
+⊂(´･◡･⊂ )∘˚˳°,boo,0.5
+⊂(´･◡･⊂ )∘˚˳°,ghost,0.5
+⊂(´･◡･⊂ )∘˚˳°,halloween,0.5
+⊂(´･◡･⊂ )∘˚˳°,happy ghost,0.5
+⊂(´･◡･⊂ )∘˚˳°,haunting,0.5
+⊂(´･◡･⊂ )∘˚˳°,holidays,0.5
+⊂(´･◡･⊂ )∘˚˳°,scary,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,character,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,comic,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,comics,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,fictional,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,iron man,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,marvel,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,movies,0.5
+─=≡Σ(([ ⊐•̀⌂•́]⊐,superhero,0.5
+┌( ಠ_ಠ)┘,arms,0.5
+┌( ಠ_ಠ)┘,dances,0.5
+┌( ಠ_ಠ)┘,forced,0.5
+┌( ಠ_ಠ)┘,glare,0.5
+┌( ಠ_ಠ)┘,harlem shake,0.5
+┌( ಠ_ಠ)┘,looks,0.5
+┌( ಠ_ಠ)┘,meh,0.5
+┌( ಠ_ಠ)┘,stare,0.5
+┌∩┐(◣_◢)┌∩┐,eff you,0.5
+┌∩┐(◣_◢)┌∩┐,gg n00b,0.5
+┌∩┐(◣_◢)┌∩┐,meh,0.5
+┌∩┐(◣_◢)┌∩┐,middle finger,0.5
+┌∩┐(◣_◢)┌∩┐,rage,0.5
+┐( ˘_˘)┌,law,0.5
+┐( ˘_˘)┌,lawyers,0.5
+┐( ˘_˘)┌,legal,0.5
+┐( ˘_˘)┌,meh,0.5
+┐( ˘_˘)┌,problems,0.5
+┐( ˘_˘)┌,shrug,0.5
+┐( ˘_˘)┌,solutions,0.5
+┐( ˘_˘)┌,solved,0.5
+┐('～`；)┌,fear,0.5
+┐('～`；)┌,meh,0.5
+┐('～`；)┌,pretending,0.5
+┐('～`；)┌,sadface,0.5
+┐('～`；)┌,scaredface,0.5
+┐('～`；)┌,shrug,0.5
+┐('～`；)┌,sweating,0.5
+┐(´-｀)┌,hands up,0.5
+┐(´-｀)┌,meh,0.5
+┐(´-｀)┌,shrug,0.5
+┐(´-｀)┌,who cares,0.5
+┐(￣ー￣)┌,99 problems,0.5
+┐(￣ー￣)┌,kid cudi,0.5
+┐(￣ー￣)┌,loner,0.5
+┐(￣ー￣)┌,meh,0.5
+┐(￣ー￣)┌,nobody,0.5
+┐(￣ー￣)┌,who cares?,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,breakin',0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,dance,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,electric boogaloo,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,party,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,robot,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,robot party,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,robots,0.5
+└[∵┌]└[ ∵ ]┘[┐∵]┘,yay,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,dalek,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,destroyer,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,flipping tables,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,rage,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,robot,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,table flipping,0.5
+┗[© ♒ ©]┛ ︵ ┻━┻,terminator,0.5
+┗┃・ ■ ・┃┛,arms up,0.5
+┗┃・ ■ ・┃┛,character,0.5
+┗┃・ ■ ・┃┛,domo arigato,0.5
+┗┃・ ■ ・┃┛,mr. roboto,0.5
+┗┃・ ■ ・┃┛,robot,0.5
+┗┃・ ■ ・┃┛,secret,0.5
+┬┴┬┴┤(･_├┬┴┬┴,alley-way snooper,0.5
+┬┴┬┴┤(･_├┬┴┬┴,alleys,0.5
+┬┴┬┴┤(･_├┬┴┬┴,behind walls,0.5
+┬┴┬┴┤(･_├┬┴┬┴,city,0.5
+┬┴┬┴┤(･_├┬┴┬┴,creepy,0.5
+┬┴┬┴┤(･_├┬┴┬┴,ninja,0.5
+┬┴┬┴┤(･_├┬┴┬┴,sneaky,0.5
+┬┴┬┴┤(･_├┬┴┬┴,snoop,0.5
+┬┴┬┴┤(･_├┬┴┬┴,snooper,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,animals,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,hiding,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,lurker,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,lurking,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,mascot,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,meme,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,ninja,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,pedobear,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,wall,0.5
+┬┴┬┴┤ʕ•ᴥ├┬┴┬┴,watching,0.5
+┻━┻ ︵ ლ(⌒-⌒ლ),cute,0.5
+┻━┻ ︵ ლ(⌒-⌒ლ),happy,0.5
+┻━┻ ︵ ლ(⌒-⌒ლ),so happy,0.5
+┻━┻ ︵ ლ(⌒-⌒ლ),table flipping,0.5
+┻━┻ ︵ ლ(⌒-⌒ლ),yay,0.5
+╭(◔ ◡ ◔)/,fun,0.5
+╭(◔ ◡ ◔)/,get lit,0.5
+╭(◔ ◡ ◔)/,lit,0.5
+╭(◔ ◡ ◔)/,party,0.5
+╭(◔ ◡ ◔)/,rage,0.5
+╭(◔ ◡ ◔)/,rager,0.5
+╭(◔ ◡ ◔)/,turnt,0.5
+╮ (. ❛ ᴗ ❛.) ╭,cute,0.5
+╮ (. ❛ ᴗ ❛.) ╭,happytime,0.5
+╮ (. ❛ ᴗ ❛.) ╭,kawaii,0.5
+╮ (. ❛ ᴗ ❛.) ╭,kawaii shrug,0.5
+╮ (. ❛ ᴗ ❛.) ╭,meh,0.5
+╮ (. ❛ ᴗ ❛.) ╭,shrug,0.5
+╮ (. ❛ ᴗ ❛.) ╭,stay free,0.5
+╮ (. ❛ ᴗ ❛.) ╭,whatever,0.5
+╮ (. ❛ ᴗ ❛.) ╭,who cares,0.5
+╰( ^ ㅂ ^)╯,holidays,0.5
+╰( ^ ㅂ ^)╯,nye,0.5
+╰⋃╯(ԾДԾ)७,anthony weiner,0.5
+╰⋃╯(ԾДԾ)७,carlos danger,0.5
+╰⋃╯(ԾДԾ)७,current events,0.5
+╰⋃╯(ԾДԾ)७,news,0.5
+╰⋃╯(ԾДԾ)७,penis pics,0.5
+╰⋃╯(ԾДԾ)७,scandals,0.5
+╰⋃╯(ԾДԾ)७,sexting,0.5
+▘▂▝,8-bit,0.5
+▘▂▝,8-bit face,0.5
+▘▂▝,face,0.5
+▘▂▝,gaming,0.5
+▘▂▝,meh,0.5
+▘▂▝,pixel,0.5
+▘▂▝,pixels,0.5
+▘▂▝,retro,0.5
+▘▂▝,video games,0.5
+△,bey,0.5
+△,beyonce,0.5
+△,blue ivy,0.5
+△,cult,0.5
+△,enlightened ones,0.5
+△,hip hop,0.5
+△,illuminati,0.5
+△,jay-z,0.5
+△,lady gaga,0.5
+△,rap,0.5
+△,secret society,0.5
+△,the illuminati,0.5
+◉‿◉,cute,0.5
+◉‿◉,druggie,0.5
+◉‿◉,drugs,0.5
+◉‿◉,happy,0.5
+◉‿◉,high,0.5
+◉‿◉,omg,0.5
+◉‿◉,puppy!,0.5
+◉‿◉,smiling,0.5
+◉‿◉,wide eyed,0.5
+◎ヽ(^･ω･^=)~,animal,0.5
+◎ヽ(^･ω･^=)~,bowling,0.5
+◎ヽ(^･ω･^=)~,bowling cat,0.5
+◎ヽ(^･ω･^=)~,cat,0.5
+◎ヽ(^･ω･^=)~,recreational,0.5
+◎ヽ(^･ω･^=)~,spare,0.5
+◎ヽ(^･ω･^=)~,sports,0.5
+●～*,bomb,0.5
+●～*,boom,0.5
+●～*,kaboom,0.5
+●～*,object,0.5
+●～*,rage,0.5
+●～*,violence,0.5
+◔̯︵◔,coachella,0.5
+◔̯︵◔,instagram,0.5
+◔̯︵◔,meh,0.5
+◔̯︵◔,music,0.5
+◔̯︵◔,sadface,0.5
+◦°˚\(*❛‿❛)/˚°◦,cute,0.5
+◦°˚\(*❛‿❛)/˚°◦,equinox,0.5
+◦°˚\(*❛‿❛)/˚°◦,first day,0.5
+◦°˚\(*❛‿❛)/˚°◦,happy,0.5
+◦°˚\(*❛‿❛)/˚°◦,seasons,0.5
+◦°˚\(*❛‿❛)/˚°◦,spring,0.5
+◦°˚\(*❛‿❛)/˚°◦,yay,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,cute,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,decoration,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,glitter,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,shiny,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,sparkle,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,sparkles,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,star,0.5
+☆.。.:*・°☆.。.:*・°☆.。.:*・°☆.。.:*・°☆,stars,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,apple,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,cute,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,fanboyism,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,iphone,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,love,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,new,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,romanchuk,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,startups,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,technology,0.5
+☆*✲ﾟ*｡(((´♡‿♡`+)))｡*ﾟ✲*☆,want,0.5
+♒((⇀‸↼))♒,concentrating,0.5
+♒((⇀‸↼))♒,focus,0.5
+♒((⇀‸↼))♒,meh,0.5
+♒((⇀‸↼))♒,smartypants,0.5
+♒((⇀‸↼))♒,startups,0.5
+♒((⇀‸↼))♒,thinking,0.5
+♒((⇀‸↼))♒,thinking hard,0.5
+♡＾▽＾♡,cheeky,0.5
+♡＾▽＾♡,ecstatic,0.5
+♡＾▽＾♡,heart,0.5
+♡＾▽＾♡,love,0.5
+♡＾▽＾♡,lovely cheeks,0.5
+♥‿♥,cute,0.5
+♥‿♥,heart,0.5
+♥‿♥,love,0.5
+♥‿♥,smiling,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,cake,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,cute,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,happy birthday,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,holiday,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,music,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,singing,0.5
+♪ (｡´＿●`)ﾉ┌iiii┐ヾ(´○＿`*) ♪,song,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,beyonce,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,celebrity,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,current events,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,destiny's child,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,diva,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,halftime show,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,halo,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,illuminati,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,jay-z,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,performance,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,queen b,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,singer,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,sports,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,super bowl,0.5
+♪~♪ ヽ໒(⌒o⌒)७ﾉ ♪~♪,woah,0.5
+♪┏(・o･)┛♪┗ ( ･o･) ┓♪,dance party,0.5
+♪┏(・o･)┛♪┗ ( ･o･) ┓♪,miley cyrus,0.5
+♪┏(・o･)┛♪┗ ( ･o･) ┓♪,music,0.5
+♪┏(・o･)┛♪┗ ( ･o･) ┓♪,pvp,0.5
+✌(-‿-)✌,asian,0.5
+✌(-‿-)✌,asian pose,0.5
+✌(-‿-)✌,happy,0.5
+✌(-‿-)✌,peace,0.5
+✌(-‿-)✌,peace sign,0.5
+✌(-‿-)✌,pose,0.5
+✌(-‿-)✌,poses,0.5
+✌(-‿-)✌,selfie,0.5
+✌(-‿-)✌,selfies,0.5
+✌(◕‿-)✌,basketball,0.5
+✌(◕‿-)✌,happy,0.5
+✌(◕‿-)✌,joy,0.5
+✌(◕‿-)✌,march madness,0.5
+✌(◕‿-)✌,ncaa,0.5
+✌(◕‿-)✌,sports,0.5
+✌(◕‿-)✌,winner,0.5
+⫷ °⧭° ⫸,bozo,0.5
+⫷ °⧭° ⫸,clown,0.5
+⫷ °⧭° ⫸,clown,0.5
+⫷ °⧭° ⫸,creepy,0.5
+⫷ °⧭° ⫸,happy,0.5
+⫷ °⧭° ⫸,it,0.5
+⫷ °⧭° ⫸,nightmares,0.5
+⫷ °⧭° ⫸,pennywise,0.5
+⫷ °⧭° ⫸,stare,0.5
+⫷ °⧭° ⫸,terrifying,0.5
+ヾ(＠⌒ー⌒＠)ノ,cute,0.5
+ヾ(＠⌒ー⌒＠)ノ,eating,0.5
+ヾ(＠⌒ー⌒＠)ノ,food,0.5
+ヾ(＠⌒ー⌒＠)ノ,itadakimasu,0.5
+ヾ(＠⌒ー⌒＠)ノ,japanese,0.5
+ヾ(＠⌒ー⌒＠)ノ,let's eat,0.5
+ヾ(＠⌒ー⌒＠)ノ,nom,0.5
+ヾ(＠⌒ー⌒＠)ノ,om nom,0.5
+ヾ(＠⌒ー⌒＠)ノ,yay,0.5
+ヾ(＠⌒ー⌒＠)ノ,yummy,0.5
+ヽ(^o^)ρ┳┻┳°σ(^o^)/,arms up,0.5
+ヽ(^o^)ρ┳┻┳°σ(^o^)/,cute,0.5
+ヽ(^o^)ρ┳┻┳°σ(^o^)/,ping pong,0.5
+ヽ(^o^)ρ┳┻┳°σ(^o^)/,sports,0.5
+ヽ(^o^)ρ┳┻┳°σ(^o^)/,table tennis,0.5
+ヾ(⌐■_■)ノ♪,cool,0.5
+ヾ(⌐■_■)ノ♪,cute,0.5
+ヾ(⌐■_■)ノ♪,gangnam,0.5
+ヾ(⌐■_■)ノ♪,gangnam style,0.5
+ヾ(⌐■_■)ノ♪,hyuna,0.5
+ヾ(⌐■_■)ノ♪,korean,0.5
+ヾ(⌐■_■)ノ♪,kpop,0.5
+ヾ(⌐■_■)ノ♪,meme,0.5
+ヾ(⌐■_■)ノ♪,oppa,0.5
+ヾ(⌐■_■)ノ♪,psy,0.5
+ヾ(⌐■_■)ノ♪,swag,0.5
+ヾ(⌐■_■)ノ♪,swagger,0.5
+ヾ(⌐■_■)ノ♪,강남스타일,0.5
+ヾ(❛ε❛“)ʃ,aziz ansari,0.5
+ヾ(❛ε❛“)ʃ,clothes,0.5
+ヾ(❛ε❛“)ʃ,donna,0.5
+ヾ(❛ε❛“)ʃ,fragrances,0.5
+ヾ(❛ε❛“)ʃ,holidays,0.5
+ヾ(❛ε❛“)ʃ,massages,0.5
+ヾ(❛ε❛“)ʃ,mimosas,0.5
+ヾ(❛ε❛“)ʃ,television,0.5
+ヾ(❛ε❛“)ʃ,three words,0.5
+ヾ(❛ε❛“)ʃ,tom haverford,0.5
+ヾ(❛ε❛“)ʃ,tv,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,dongers,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,gaming,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,lol,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,nerf plz,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,riot,0.5
+ヽ༼ຈل͜ຈ༽ﾉ,twitch,0.5
+ヽ｀、ヽ｀ヽ(*￣o￣*)♩♫♪ヽ｀、ヽ｀,gene kelly,0.5
+ヽ｀、ヽ｀ヽ(*￣o￣*)♩♫♪ヽ｀、ヽ｀,happy,0.5
+ヽ｀、ヽ｀ヽ(*￣o￣*)♩♫♪ヽ｀、ヽ｀,rain,0.5
+ヽ｀、ヽ｀ヽ(*￣o￣*)♩♫♪ヽ｀、ヽ｀,singing,0.5
+໒(⁄›˅̭‹∖)७,babies,0.5
+໒(⁄›˅̭‹∖)७,current events,0.5
+໒(⁄›˅̭‹∖)७,england,0.5
+໒(⁄›˅̭‹∖)७,heir,0.5
+໒(⁄›˅̭‹∖)७,kate middleton,0.5
+໒(⁄›˅̭‹∖)७,labor,0.5
+໒(⁄›˅̭‹∖)७,labour,0.5
+໒(⁄›˅̭‹∖)७,news,0.5
+໒(⁄›˅̭‹∖)७,pregnancy,0.5
+໒(⁄›˅̭‹∖)७,royal baby,0.5
+٩(͡๏̯͡๏)۶,eyebrow raised,0.5
+٩(͡๏̯͡๏)۶,eyebrows,0.5
+٩(͡๏̯͡๏)۶,meh,0.5
+٩(͡๏̯͡๏)۶,raised,0.5
+٩(͡๏̯͡๏)۶,surprised,0.5
+٩(͡๏̯͡๏)۶,wide-eyed,0.5
+٩(͡๏̯͡๏)۶,wtf,0.5
+٩(̾●̮̮̃̾•̃̾)۶,angry,0.5
+٩(̾●̮̮̃̾•̃̾)۶,arms up,0.5
+٩(̾●̮̮̃̾•̃̾)۶,bug-eyed,0.5
+٩(̾●̮̮̃̾•̃̾)۶,mad,0.5
+٩(̾●̮̮̃̾•̃̾)۶,rage,0.5
+٩(̾●̮̮̃̾•̃̾)۶,steaming hot,0.5
+٩(̾●̮̮̃̾•̃̾)۶,steaming mad,0.5
+٩(̾●̮̮̃̾•̃̾)۶,umadbro,0.5
+d-_-b,darth beyer,0.5
+d-_-b,happy,0.5
+d-_-b,headcase,0.5
+d-_-b,headphones,0.5
+d-_-b,serenity,0.5
+d-_-b,so good,0.5
+d-_-b,stax,0.5
+d-_-b,untz,0.5
+d(-_^),thumbs up,0.5
+d(-_^),winking,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,bro,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,frat,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,good job,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,kudos,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,props,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,thumb,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,thumbs up,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,yay,0.5
+d(ﾟーﾟd(ﾟーﾟd(ﾟーﾟ)bﾟーﾟ)bﾟーﾟ)b,yes!,0.5
+Diablo 3﻿ ︵ /(.□. \）,battle.net,0.5
+Diablo 3﻿ ︵ /(.□. \）,d3,0.5
+Diablo 3﻿ ︵ /(.□. \）,diablo 3,0.5
+Diablo 3﻿ ︵ /(.□. \）,doom,0.5
+Diablo 3﻿ ︵ /(.□. \）,error 37,0.5
+Diablo 3﻿ ︵ /(.□. \）,fail,0.5
+Diablo 3﻿ ︵ /(.□. \）,rage,0.5
+Diablo 3﻿ ︵ /(.□. \）,timeout,0.5
+Diablo 3﻿ ︵ /(.□. \）,video games,0.5
+dL-_-b,gaming,0.5
+dL-_-b,headphones,0.5
+dL-_-b,mic,0.5
+dL-_-b,niner niner,0.5
+dL-_-b,video games,0.5
+no_O,confused no,0.5
+no_O,confusion,0.5
+no_O,meh,0.5
+no_O,msjudyly,0.5
+no_O,no,0.5
+no_O,um okay...,0.5
+no_O,who what?,0.5
+no_O,wtf,0.5
+ｏ(￣ρ￣)ｏ,bankruptcy,0.5
+ｏ(￣ρ￣)ｏ,cravings,0.5
+ｏ(￣ρ￣)ｏ,drool,0.5
+ｏ(￣ρ￣)ｏ,drooling,0.5
+ｏ(￣ρ￣)ｏ,foodie,0.5
+ｏ(￣ρ￣)ｏ,hostess,0.5
+ｏ(￣ρ￣)ｏ,munchies,0.5
+ｏ(￣ρ￣)ｏ,pothead,0.5
+ｏ(￣ρ￣)ｏ,twinkie,0.5
+ｏ(￣ρ￣)ｏ,twinkies,0.5
+ｏ(￣ρ￣)ｏ,want,0.5
+ｏ(￣ρ￣)ｏ,want nao,0.5
+ｏ(￣ρ￣)ｏ,yum,0.5
+O(∩_∩)O,animal,0.5
+O(∩_∩)O,cute,0.5
+O(∩_∩)O,ears,0.5
+O(∩_∩)O,face,0.5
+O(∩_∩)O,happy,0.5
+O(∩_∩)O,monkey,0.5
+ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫,beyonce,0.5
+ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫,dance,0.5
+ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫,dances,0.5
+ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫,hands up,0.5
+ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫ƪ(•̃͡ε•̃͡)∫,single ladies,0.5
+ᶘ ᵒᴥᵒᶅ,animal,0.5
+ᶘ ᵒᴥᵒᶅ,baby,0.5
+ᶘ ᵒᴥᵒᶅ,baby seal,0.5
+ᶘ ᵒᴥᵒᶅ,cute,0.5
+ᶘ ᵒᴥᵒᶅ,seal,0.5
+ᶘ ᵒᴥᵒᶅ,waddling,0.5
+t(-.-t),aylene dance,0.5
+t(-.-t),eff you,0.5
+t(-.-t),i'm done,0.5
+t(-.-t),meh,0.5
+t(-.-t),middle finger,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,basketball,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,duke,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,march madness,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,ncaa,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,rage,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,sports,0.5
+ʇǝʞɔɐɹq ︵ヽ(`Д´)ﾉ︵ ǝʞup,table flipping,0.5
+ʕ　·ᴥ·ʔ　ʕ·ᴥ·　ʔ,animal,0.5
+ʕ　·ᴥ·ʔ　ʕ·ᴥ·　ʔ,animals,0.5
+ʕ　·ᴥ·ʔ　ʕ·ᴥ·　ʔ,bear,0.5
+ʕ　·ᴥ·ʔ　ʕ·ᴥ·　ʔ,bears,0.5
+ʕ　·ᴥ·ʔ　ʕ·ᴥ·　ʔ,cute,0.5
+ʕ •́؈•̀),animals,0.5
+ʕ •́؈•̀),bears,0.5
+ʕ •́؈•̀),characters,0.5
+ʕ •́؈•̀),cute,0.5
+ʕ •́؈•̀),disney,0.5
+ʕ •́؈•̀),movies,0.5
+ʕ •́؈•̀),pooh,0.5
+ʕ •́؈•̀),tv,0.5
+ʕ •ᴥ•ʔ,animal,0.5
+ʕ •ᴥ•ʔ,be cautious,0.5
+ʕ •ᴥ•ʔ,bear,0.5
+ʕ •ᴥ•ʔ,cute,0.5
+ʕ •ᴥ•ʔ,koala,0.5
+ʕ •ᴥ•ʔ,koala bear,0.5
+ʕ •ᴥ•ʔ,smiling,0.5
+ʕ⁎̯͡⁎ʔ༄,animal,0.5
+ʕ⁎̯͡⁎ʔ༄,cute,0.5
+ʕ⁎̯͡⁎ʔ༄,flying,0.5
+ʕ⁎̯͡⁎ʔ༄,lush,0.5
+ʕ⁎̯͡⁎ʔ༄,magic,0.5
+ʕ⁎̯͡⁎ʔ༄,magic squirrel,0.5
+ʕ⁎̯͡⁎ʔ༄,squirrel,0.5
+ʕ⁎̯͡⁎ʔ༄,starry-eyed,0.5
+ʕ⁎̯͡⁎ʔ༄,tail,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,animal,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,bear,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,bear party,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,cute,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,fun,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,party,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,picnic,0.5
+ʕ•̫͡•ʕ*̫͡*ʕ•͓͡•ʔ-̫͡-ʕ•̫͡•ʔ*̫͡*ʔ,teddy bears,0.5
+ʘ‿ʘ,cute,0.5
+ʘ‿ʘ,happy,0.5
+ʘ‿ʘ,happy happy,0.5
+ʘ‿ʘ,smiling,0.5
+ʘ‿ʘ,wide eyed,0.5
+ϵ( 'Θ' )϶,animal,0.5
+ϵ( 'Θ' )϶,bloop,0.5
+ϵ( 'Θ' )϶,fish,0.5
+ϵ( 'Θ' )϶,fishy,0.5
+ϵ( 'Θ' )϶,stare,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,fart,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,farting,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,meh,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,oj-syndrome,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,sweating,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,whistling,0.5
+ε=ε=ε=ε=ε=ε=┌(;￣◇￣)┘,who farted?,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,escape,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,fart,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,great escape,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,running,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,shady,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,shifty,0.5
+ε=ε=ε=ε=ε=ε=┌(￣ー￣)┘,who farted?,0.5
+ლ(´◉❥◉｀ლ),cute,0.5
+ლ(´◉❥◉｀ლ),girl,0.5
+ლ(´◉❥◉｀ლ),holidays,0.5
+ლ(´◉❥◉｀ლ),kiss,0.5
+ლ(´◉❥◉｀ლ),love,0.5
+ლ(´◉❥◉｀ლ),muah,0.5
+ლ(´◉❥◉｀ლ),nye,0.5
+ლ(´ڡ`ლ),cute,0.5
+ლ(´ڡ`ლ),feed me,0.5
+ლ(´ڡ`ლ),foodie,0.5
+ლ(´ڡ`ლ),nom,0.5
+ლ(´ڡ`ლ),waiter!,0.5
+ლ(╹◡╹ლ),big hands,0.5
+ლ(╹◡╹ლ),cute,0.5
+ლ(╹◡╹ლ),facing left,0.5
+ლ(╹◡╹ლ),hands up,0.5
+ლ(╹◡╹ლ),happy,0.5
+ლ(╹◡╹ლ),smiling,0.5
+ლ(o◡oლ),big hands,0.5
+ლ(o◡oლ),cute,0.5
+ლ(o◡oლ),facing left,0.5
+ლ(o◡oლ),hands up,0.5
+ლ(o◡oლ),happy,0.5
+ლ(o◡oლ),smiling,0.5
+ლ(o◡oლ),wide-eyed,0.5
+ლ(ಠ益ಠლ),dota 2,0.5
+ლ(ಠ益ಠლ),gaming,0.5
+ლ(ಠ益ಠლ),hon,0.5
+ლ(ಠ益ಠლ),lol,0.5
+ლ(ಠ益ಠლ),rage,0.5
+ლ(ಠ益ಠლ),troll,0.5
+ლ(ಠ益ಠლ),twitch,0.5
+ლ(ಠ益ಠლ),umadbro,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,cat justice,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,internet,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,internets,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,love,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,net neutrality,0.5
+ଘ(੭*ˊᵕˋ)੭* ̀ˋ ɪɴᴛᴇʀɴᴇᴛs,rage,0.5
+ಠ_ಠ,disapproval,0.5
+ಠ_ಠ,look,0.5
+ಠ_ಠ,meh,0.5
+ಠ_ಠ,really?,0.5
+ಠ_ಠ,sadface,0.5
+ಠ_ಠ,stare,0.5
+ಠ_ಠ,wtf,0.5
+ಠ_ರೃ,1%,0.5
+ಠ_ರೃ,blank,0.5
+ಠ_ರೃ,disapproval,0.5
+ಠ_ರೃ,look,0.5
+ಠ_ರೃ,meh,0.5
+ಠ_ರೃ,monocle,0.5
+ಠ_ರೃ,snooty,0.5
+ಠ_ರೃ,stare,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,@jeanho,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,accessories,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,cute,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,defense,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,earrings,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,higher education,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,literature,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,mfa,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,school,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,thesis,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,writing,0.5
+ೖ(⑅σ̑ᴗσ̑)ೖ,yay,0.5
+ೖ(σ̑˽σ̑)ೖ,cute,0.5
+ೖ(σ̑˽σ̑)ೖ,cutie,0.5
+ೖ(σ̑˽σ̑)ೖ,dating,0.5
+ೖ(σ̑˽σ̑)ೖ,fate,0.5
+ೖ(σ̑˽σ̑)ೖ,girl,0.5
+ೖ(σ̑˽σ̑)ೖ,girls,0.5
+ೖ(σ̑˽σ̑)ೖ,glance,0.5
+ೖ(σ̑˽σ̑)ೖ,lady,0.5
+ೖ(σ̑˽σ̑)ೖ,love,0.5
+ೖ(σ̑˽σ̑)ೖ,missed connection,0.5
+ೖ(σ̑˽σ̑)ೖ,moments,0.5
+ೖ(σ̑˽σ̑)ೖ,serendipity,0.5
+ೖ(σ̑˽σ̑)ೖ,stare,0.5
+ೖ(σ̑˽σ̑)ೖ,that cutie,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,animals,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,bear,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,bears,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,dancing,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,glow sticks,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,party,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,polar bear,0.5
+ก็็็็็็็็็็็็็ʕ•͡ᴥ•ʔ ก้้้้้้้้้้้,rave,0.5
+ᕕ( ᐛ )ᕗ,happy,0.5
+ᕕ( ᐛ )ᕗ,holiday,0.5
+ᕕ( ᐛ )ᕗ,new year,0.5
+ᕕ( ᐛ )ᕗ,party,0.5
+ᕕ( ᐛ )ᕗ,woo,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,biceps,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,boss,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,bro,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,cute,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,dwight,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,gun show,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,hey girl,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,meme,0.5
+ᕙ( ͡° ͜ʖ ͡°)ᕗ,muscles,0.5
+ᕙ(⇀‸↼‶)ᕗ,dbz,0.5
+ᕙ(⇀‸↼‶)ᕗ,dreams,0.5
+ᕙ(⇀‸↼‶)ᕗ,gohan,0.5
+ᕙ(⇀‸↼‶)ᕗ,goku,0.5
+ᕙ(⇀‸↼‶)ᕗ,rage,0.5
+ᕙ(⇀‸↼‶)ᕗ,super power,0.5
+ᕙ(⇀‸↼‶)ᕗ,super saiyan,0.5
+ᕙ(⇀‸↼‶)ᕗ,vegeta,0.5
+ᗜੂͦ﹏ᗜੂͦ,basketball,0.5
+ᗜੂͦ﹏ᗜੂͦ,fail,0.5
+ᗜੂͦ﹏ᗜੂͦ,grief,0.5
+ᗜੂͦ﹏ᗜੂͦ,loser,0.5
+ᗜੂͦ﹏ᗜੂͦ,march madness,0.5
+ᗜੂͦ﹏ᗜੂͦ,ncaa,0.5
+ᗜੂͦ﹏ᗜੂͦ,sports,0.5
+웃❤유,couples,0.5
+웃❤유,cuddling,0.5
+웃❤유,cute,0.5
+웃❤유,love,0.5
+웃❤유,lust,0.5
+웃❤유,simple,0.5
+し(*・∀・)／♡＼(・∀・*) ///,cute,0.5
+し(*・∀・)／♡＼(・∀・*) ///,heart,0.5
+し(*・∀・)／♡＼(・∀・*) ///,high five,0.5
+し(*・∀・)／♡＼(・∀・*) ///,love,0.5
+し(*・∀・)／♡＼(・∀・*) ///,yay,0.5
+〆(・∀・＠),cute,0.5
+〆(・∀・＠),meh,0.5
+〆(・∀・＠),memo,0.5
+〆(・∀・＠),note,0.5
+〆(・∀・＠),video,0.5
+〆(・∀・＠),writing,0.5
+ノ(ジ)ー',love,0.5
+ノ(ジ)ー',stop,0.5
+ノ(ジ)ー',the supremes,0.5
+ヘ( ^o^)ノ＼(^_^ ),brogramming,0.5
+ヘ( ^o^)ノ＼(^_^ ),gimme five,0.5
+ヘ( ^o^)ノ＼(^_^ ),github,0.5
+ヘ( ^o^)ノ＼(^_^ ),high five,0.5
+ヘ( ^o^)ノ＼(^_^ ),hoodie on,0.5
+ヘ(^_^ヘ),arms up,0.5
+ヘ(^_^ヘ),holla,0.5
+ヘ(^_^ヘ),holler,0.5
+ヘ(^_^ヘ),holler!,0.5
+ヘ(^_^ヘ),wave,0.5
+ヘ(^_^ヘ),yay,0.5
+ヘ(◕。◕ヘ),2spooky4me,0.5
+ヘ(◕。◕ヘ),boo,0.5
+ヘ(◕。◕ヘ),dota,0.5
+ヘ(◕。◕ヘ),ghost,0.5
+ヘ(◕。◕ヘ),halloween,0.5
+ヘ(◕。◕ヘ),holidays,0.5
+ヘ(◕。◕ヘ),scary,0.5
+ヘ(◕。◕ヘ),skeletons,0.5
+ヘ(◕。◕ヘ),spooky,0.5
+人◕ ‿‿ ◕人,animal,0.5
+人◕ ‿‿ ◕人,cute,0.5
+人◕ ‿‿ ◕人,idle,0.5
+人◕ ‿‿ ◕人,smiling,0.5
+人◕ ‿‿ ◕人,whale,0.5
+人◕ ‿‿ ◕人,whale face,0.5
+人人人ヾ( ;×o×)〃 人人人,can't swim,0.5
+人人人ヾ( ;×o×)〃 人人人,drowning,0.5
+人人人ヾ( ;×o×)〃 人人人,flapping arms,0.5
+人人人ヾ( ;×o×)〃 人人人,ocean,0.5
+人人人ヾ( ;×o×)〃 人人人,omg,0.5
+人人人ヾ( ;×o×)〃 人人人,sadface,0.5
+人人人ヾ( ;×o×)〃 人人人,sea,0.5
+人人人ヾ( ;×o×)〃 人人人,treading water,0.5
+人人人ヾ( ;×o×)〃 人人人,water,0.5
+凸(¬､¬),eff you,0.5
+凸(¬､¬),meh,0.5
+凸(¬､¬),middle finger,0.5
+凸(¬､¬),passive,0.5
+凸(¬､¬),passive-aggressive,0.5
