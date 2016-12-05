@@ -2,8 +2,13 @@
 var iframe;
 // Trigger Input or Textarea
 var triggeredElement;
+// The cursor location at which we replace the content
+var triggeredSelectionStart;
 // The cursor location at which we insert the content
 var triggeredSelectionEnd;
+// Original query, null if not present
+var originalQuery;
+
 // listen to the iframes/webpages message
 window.addEventListener("message", onDomMessageReceived, false);
 
@@ -25,7 +30,7 @@ function onDomMessageReceived(event) {
       left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft()
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
-    dismissPopup();
+    focusOriginalTrigger();
   } else if (event.data.message === 'to_content:selection_made') {
     insertSelection(event.data.selection);
   }
@@ -52,7 +57,17 @@ function displayPopup() {
     return;
   }
   triggeredElement = activeElement;
+  triggeredSelectionStart = activeElement.selectionStart;
   triggeredSelectionEnd = activeElement.selectionEnd;
+  // Check if the user highlighted text within the input area
+  if (triggeredSelectionEnd > triggeredSelectionStart) {
+    originalQuery = triggeredElement.value
+      .substring(triggeredSelectionStart, triggeredSelectionEnd);
+  } else if (triggeredSelectionEnd > 0) {
+    originalQuery = triggeredElement.value
+      .substring(0, triggeredSelectionEnd + 1).trim().split(' ').pop();
+  }
+  console.log('Query: ' + originalQuery);
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
   iframe.scrolling = 'no';
