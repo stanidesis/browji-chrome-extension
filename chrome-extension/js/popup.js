@@ -24,11 +24,11 @@ var Popup = function () {
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
       $emojiPopup.css('left', event.data.left);
       $emojiPopup.css('top', event.data.top);
-      displayPopup();
+      displayPopup(event.data.query);
     }
   }
 
-  function displayPopup() {
+  function displayPopup(withQuery) {
     // Fade that sucker in
     $emojiPopup.fadeIn();
     // Setup form intercept
@@ -56,6 +56,21 @@ var Popup = function () {
       $(this).addClass('eac-active');
     });
 
+    var oneTime = true;
+    $emojiPopup.on('focus', 'input', function() {
+      // Check for a baked-in query
+      if (withQuery && oneTime) {
+        oneTime = false;
+        $(this).val(withQuery);
+        // TODO: this is super ugly
+        $(this).parent().addClass("is-dirty");
+        chrome.runtime.sendMessage({message: 'to_background:perform_query', query: withQuery},
+          function(response) {
+            populateWithResults(response.result);
+          }
+        );
+      }
+    })
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
 

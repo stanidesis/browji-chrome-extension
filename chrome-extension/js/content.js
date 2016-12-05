@@ -27,7 +27,8 @@ function onDomMessageReceived(event) {
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
       top: cumulativeOffset.top + lineHeight - $(window).scrollTop(),
-      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft()
+      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft(),
+      query: originalQuery
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger();
@@ -39,7 +40,7 @@ function onDomMessageReceived(event) {
 // Listen to messages from the background
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if (request.message === 'display_popup_at_cursor') {
+    if (request.message === 'to_content:display_popup_at_cursor') {
       displayPopup();
     }
   }
@@ -63,11 +64,34 @@ function displayPopup() {
   if (triggeredSelectionEnd > triggeredSelectionStart) {
     originalQuery = triggeredElement.value
       .substring(triggeredSelectionStart, triggeredSelectionEnd);
-  } else if (triggeredSelectionEnd > 0) {
+  } else {
+    // Find the first whitespace before the selection
+    var startOfQuery = triggeredSelectionEnd - 1;
+    for (; startOfQuery >= 0; startOfQuery--) {
+      if (isWhiteSpace(triggeredElement.value.charAt(startOfQuery))) {
+        break;
+      }
+    }
+    startOfQuery++;
+    // Find the end of the selection
+    var endOfQuery = triggeredSelectionEnd;
+    for (; endOfQuery < triggeredElement.value.length; endOfQuery++) {
+      if (isWhiteSpace(triggeredElement.value.charAt(endOfQuery))) {
+        break;
+      }
+    }
     originalQuery = triggeredElement.value
-      .substring(0, triggeredSelectionEnd + 1).trim().split(' ').pop();
+      .substring(startOfQuery, endOfQuery);
+    if (originalQuery && originalQuery.trim().length != 0) {
+      triggeredSelectionStart = startOfQuery;
+      triggeredSelectionEnd = endOfQuery;
+      console.log("Start: " + startOfQuery + ", End: " + endOfQuery);
+      console.log('Query: ' + originalQuery);
+    } else {
+      originalQuery = null;
+      console.log("No original query found");
+    }
   }
-  console.log('Query: ' + originalQuery);
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
   iframe.scrolling = 'no';
@@ -96,10 +120,18 @@ function insertSelection(textToInsert) {
   }
   var $triggeredElement = $(triggeredElement);
   var originalText = $triggeredElement.val();
-  $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
-    + textToInsert + originalText.substring(triggeredSelectionEnd));
-  triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
-    triggeredSelectionEnd + textToInsert.length);
+  if (triggeredSelectionEnd > triggeredSelectionStart) {
+    var newVal = originalText.substring(0, triggeredSelectionStart)
+      + textToInsert + originalText.substring(triggeredSelectionEnd);
+    $triggeredElement.val(newVal);
+    triggeredElement.setSelectionRange(triggeredSelectionStart + textToInsert.length,
+      triggeredSelectionStart + textToInsert.length);
+  } else {
+    $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
+      + textToInsert + originalText.substring(triggeredSelectionEnd));
+    triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
+      triggeredSelectionEnd + textToInsert.length);
+  }
   focusOriginalTrigger();
 }
 
@@ -107,7 +139,9 @@ function focusOriginalTrigger() {
   if (triggeredElement) {
     triggeredElement.focus();
     triggeredElement = null;
+    triggeredSelectionStart = null;
     triggeredSelectionEnd = null;
+    originalQuery = null;
   }
   dismissPopup();
 }
