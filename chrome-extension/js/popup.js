@@ -62,13 +62,10 @@ var Popup = function () {
       if (withQuery && oneTime) {
         oneTime = false;
         $(this).val(withQuery);
-        // TODO: this is super ugly
+        // This is super ugly and necessary because setting
+        // the value programmatically doesn't dirty the field
         $(this).parent().addClass("is-dirty");
-        chrome.runtime.sendMessage({message: 'to_background:perform_query', query: withQuery},
-          function(response) {
-            populateWithResults(response.result);
-          }
-        );
+        performQuery(withQuery);
       }
     })
     // Focus the input element
@@ -82,11 +79,7 @@ var Popup = function () {
         populateWithResults([]);
         return;
       }
-      chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
-        function(response) {
-          populateWithResults(response.result);
-        }
-      );
+      performQuery(query)
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
@@ -219,6 +212,14 @@ var Popup = function () {
         $list.show();
       }
     });
+  }
+
+  function performQuery(query) {
+    chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
+      function(response) {
+        populateWithResults(response.result);
+      }
+    );
   }
 
   function dismissPopup() {

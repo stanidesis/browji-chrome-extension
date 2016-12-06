@@ -85,11 +85,8 @@ function displayPopup() {
     if (originalQuery && originalQuery.trim().length != 0) {
       triggeredSelectionStart = startOfQuery;
       triggeredSelectionEnd = endOfQuery;
-      console.log("Start: " + startOfQuery + ", End: " + endOfQuery);
-      console.log('Query: ' + originalQuery);
     } else {
       originalQuery = null;
-      console.log("No original query found");
     }
   }
   iframe = document.createElement('iframe');
