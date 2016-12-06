@@ -59,8 +59,14 @@ function queryEmoji(query, callback) {
     });
     return;
   }
-  var sqlStmt = db.prepare("SELECT DISTINCT emojicon FROM emojis WHERE keyword LIKE $query ORDER BY weight DESC LIMIT 10");
-  sqlStmt.bind({$query: '%' + query + '%'});
+  var sqlQuery = "SELECT emojicon, COUNT(*) as frequency FROM emojis WHERE ";
+  for (var term of query.trim().split(' ')) {
+    sqlQuery += `keyword LIKE "%${term}%" OR `;
+  }
+  sqlQuery = sqlQuery.substring(0, sqlQuery.length - 3);
+  sqlQuery += `GROUP BY emojicon ORDER BY COUNT(*) DESC LIMIT 12`;
+  var sqlStmt = db.prepare(sqlQuery);
+  sqlStmt.bind();
   var result = [];
   while (sqlStmt.step()) {
     result.push(sqlStmt.getAsObject().emojicon);
