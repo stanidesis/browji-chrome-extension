@@ -117,18 +117,11 @@ function insertSelection(textToInsert) {
   }
   var $triggeredElement = $(triggeredElement);
   var originalText = $triggeredElement.val();
-  if (triggeredSelectionEnd > triggeredSelectionStart) {
-    var newVal = originalText.substring(0, triggeredSelectionStart)
-      + textToInsert + originalText.substring(triggeredSelectionEnd);
-    $triggeredElement.val(newVal);
-    triggeredElement.setSelectionRange(triggeredSelectionStart + textToInsert.length,
-      triggeredSelectionStart + textToInsert.length);
-  } else {
-    $triggeredElement.val(originalText.substring(0, triggeredSelectionEnd)
-      + textToInsert + originalText.substring(triggeredSelectionEnd));
-    triggeredElement.setSelectionRange(triggeredSelectionEnd + textToInsert.length,
-      triggeredSelectionEnd + textToInsert.length);
-  }
+  var newVal = originalText.substring(0, triggeredSelectionStart)
+    + textToInsert + originalText.substring(triggeredSelectionEnd);
+  $triggeredElement.val(newVal);
+  triggeredElement.setSelectionRange(triggeredSelectionStart + textToInsert.length,
+    triggeredSelectionStart + textToInsert.length);
   focusOriginalTrigger();
 }
 
