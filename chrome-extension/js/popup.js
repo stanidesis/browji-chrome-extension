@@ -24,11 +24,11 @@ var Popup = function () {
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
       $emojiPopup.css('left', event.data.left);
       $emojiPopup.css('top', event.data.top);
-      displayPopup();
+      displayPopup(event.data.query);
     }
   }
 
-  function displayPopup() {
+  function displayPopup(withQuery) {
     // Fade that sucker in
     $emojiPopup.fadeIn();
     // Setup form intercept
@@ -56,6 +56,18 @@ var Popup = function () {
       $(this).addClass('eac-active');
     });
 
+    var oneTime = true;
+    $emojiPopup.on('focus', 'input', function() {
+      // Check for a baked-in query
+      if (withQuery && oneTime) {
+        oneTime = false;
+        $(this).val(withQuery);
+        // This is super ugly and necessary because setting
+        // the value programmatically doesn't dirty the field
+        $(this).parent().addClass("is-dirty");
+        performQuery(withQuery);
+      }
+    })
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
 
@@ -67,11 +79,7 @@ var Popup = function () {
         populateWithResults([]);
         return;
       }
-      chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
-        function(response) {
-          populateWithResults(response.result);
-        }
-      );
+      performQuery(query)
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
@@ -204,6 +212,14 @@ var Popup = function () {
         $list.show();
       }
     });
+  }
+
+  function performQuery(query) {
+    chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
+      function(response) {
+        populateWithResults(response.result);
+      }
+    );
   }
 
   function dismissPopup() {

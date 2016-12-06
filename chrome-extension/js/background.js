@@ -71,7 +71,7 @@ function queryEmoji(query, callback) {
 function sendDisplayPopupAtCursorMessage() {
   // Received the main keyboard command
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, {'message': 'display_popup_at_cursor'});
+    chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup_at_cursor'});
   });
 }
 
