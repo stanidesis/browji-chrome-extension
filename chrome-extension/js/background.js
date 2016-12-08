@@ -61,7 +61,7 @@ function queryEmoji(query, callback) {
   }
   var sqlQuery = "SELECT emojicon, COUNT(*) as frequency FROM emojis WHERE ";
   for (var term of query.trim().split(' ')) {
-    sqlQuery += `keyword LIKE "%${term}%" OR `;
+    sqlQuery += `keyword LIKE "${term}%" OR `;
   }
   sqlQuery = sqlQuery.substring(0, sqlQuery.length - 3);
   sqlQuery += `GROUP BY emojicon ORDER BY COUNT(*) DESC LIMIT 12`;
