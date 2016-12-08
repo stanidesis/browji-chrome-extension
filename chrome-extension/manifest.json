@@ -25,7 +25,7 @@
       ],
       "js": [
         "js/jquery-3.1.1.min.js",
-        "js/textarea-caret-position.js",
+        "js/jquery.caret.min.js",
         "js/utils.js",
         "js/content.js"
       ],

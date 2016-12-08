@@ -17,17 +17,12 @@ function onDomMessageReceived(event) {
     // Send width/height data to popup so it may reveal itself
 
     // Get the position of the cursor and input box
-    var coordinates = getCaretCoordinates(triggeredElement, triggeredSelectionEnd);
-    var cumulativeOffset = getCumulativeOffset(triggeredElement);
-    // Calculate the height offset to place the box immediately below/right
-    // of the cursor (for now -- might need a smarter calculation in the future?)
-    var fontSize = $(triggeredElement).css('font-size');
-    var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 2.0);
+    var cumulativeOffset = $(triggeredElement).caret('offset');
 
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
-      top: cumulativeOffset.top + lineHeight - $(window).scrollTop(),
-      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft(),
+      top: cumulativeOffset.top + cumulativeOffset.height - $(window).scrollTop(),
+      left: cumulativeOffset.left - $(window).scrollLeft(),
       query: originalQuery
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
