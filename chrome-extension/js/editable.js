@@ -4,16 +4,12 @@ function getEditable() {
     return new InputTextAreaEditable(activeElement);
   } else if (typeof(activeElement.contentEditable) != 'undefined' && activeElement.contentEditable == 'true') {
     // Determine whether we're editing a root div or a child node
-    var elementAtSelector = findElementAtSelector();
-    if (!elementAtSelector) {
+    var textNode = findTextNodeAtSelector();
+    if (!textNode) {
       return null;
     }
-    if (elementAtSelector == activeElement) {
-      // They're editing within the main div (most likely)
-      return new ContentEditable(activeElement);
-    } else {
-      return new ChildEditable(elementAtSelector);
-    }
+    return new NodeEditable(textNode.textNode,
+      textNode.startOfRange, textNode.endOfRange);
   }
 }
 
@@ -28,11 +24,6 @@ class Editable {
     this.selectionEnd = null;
     this.originalQuery = null;
   }
-
-  /**
-   * Return the value in the Editable
-   */
-  getText() {}
 
   /**
    * Given an emoji string, return the new value
@@ -90,6 +81,11 @@ class Editable {
   }
 
   /**
+  * Return the value in the Editable
+  */
+  getText() {}
+
+  /**
    * Replace the original query within the editable with the provided
    * emoji string.
    */
@@ -134,26 +130,15 @@ class InputTextAreaEditable extends Editable {
   }
 }
 
-/**
- * In apps like Google's Inbox, the first line of the email is a text
- * node within the ContentEditable div itself, the subsequent lines
- * are paragraphs within this div.
- *
- * Why, I don't know.
- *
- * But this handles cases where the user is editing directly within one large div.
- */
-class ContentEditable extends Editable {
-  constructor(element) {
-    if (typeof element.tagName == 'undefined') {
-      super(element.parentElement);
-    } else {
-      super(element);
-    }
-    var anchorOffset = window.getSelection().anchorOffset;
-    var extentOffset = window.getSelection().extentOffset;
-    this.selectionStart = Math.min(anchorOffset, extentOffset);
-    this.selectionEnd = Math.max(anchorOffset, extentOffset);
+class NodeEditable extends Editable {
+  constructor(element, startOfRange, endOfRange) {
+    super(element);
+    this.selectionStart = Math.min(startOfRange, endOfRange);
+    this.selectionEnd = Math.max(startOfRange, endOfRange);
+  }
+
+  getOffset() {
+    return this.$element.closest('[contenteditable]').caret('offset');
   }
 
   getText() {
@@ -161,34 +146,17 @@ class ContentEditable extends Editable {
   }
 
   focus() {
-    this.$element[0].focus();
+    this.$element.closest('[contenteditable]').focus();
   }
 
   insertSelection(emoji) {
-    this.$element.text(this.getNewText(emoji));
+    this.$element[0].data = (this.getNewText(emoji));
     var selection = window.getSelection();
     selection.removeAllRanges();
     var newRange = document.createRange();
-    newRange.setStart(this.$element[0].firstChild, this.selectionStart + emoji.length);
-    newRange.setEnd(this.$element[0].firstChild, this.selectionStart + emoji.length);
+    newRange.setStart(this.$element[0], this.selectionStart + emoji.length);
+    newRange.setEnd(this.$element[0], this.selectionStart + emoji.length);
     selection.addRange(newRange);
   }
-}
 
-/**
- * This covers the case of span, h, a, p, and divs that lie within a
- * div which is `[contenteditable]`.
- */
-class ChildEditable extends ContentEditable {
-  constructor(element) {
-    super(element);
-  }
-
-  getOffset() {
-    return this.$element.closest('[contenteditable]').caret('offset');
-  }
-
-  focus() {
-    this.$element.closest('[contenteditable]')[0].focus();
-  }
 }

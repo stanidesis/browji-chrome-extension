@@ -7,10 +7,39 @@ function isWhiteSpace(char) {
 }
 
 /*
+ * "Borrowed" from http://stackoverflow.com/a/4917050/372884
+ */
+function isWhitespaceNode(node) {
+    return node.nodeType == 3 && /^\s*$/.test(node.data);
+}
+
+/*
+ * "Borrowed" from http://stackoverflow.com/a/4399718/372884
+ */
+function getTextNodesIn(node, includeWhitespaceNodes) {
+  var textNodes = [], nonWhitespaceMatcher = /\S/;
+
+  function getTextNodes(node) {4
+    if (node.nodeType == 3) {
+      if (includeWhitespaceNodes || nonWhitespaceMatcher.test(node.nodeValue)) {
+        textNodes.push(node);
+      }
+    } else {
+      for (var i = 0, len = node.childNodes.length; i < len; ++i) {
+        getTextNodes(node.childNodes[i]);
+      }
+    }
+  }
+
+  getTextNodes(node);
+  return textNodes;
+}
+
+/*
  * "Modified" from http://stackoverflow.com/a/14698158/372884
  */
-function findElementAtSelector() {
-  var sel, containerNode;
+function findTextNodeAtSelector() {
+  var sel, foundNode, startOfRange, endOfRange;
   if (window.getSelection) {
     sel = window.getSelection();
     if (sel.rangeCount > 0) {
@@ -19,18 +48,37 @@ function findElementAtSelector() {
         // Multi-element selection
         return null;
       }
-      containerNode = range.commonAncestorContainer;
-      console.log(containerNode);
+
+      var containerNode = range.commonAncestorContainer;
+      startOfRange = range.startOffset;
+      endOfRange = range.endOffset;
+      if (containerNode.nodeType != 3) {
+        var allTextNodes = getTextNodesIn(containerNode, true);
+        console.log('All text nodes:');
+        console.log(allTextNodes);
+        if (allTextNodes.length == 0) {
+          console.log('Creating a new node');
+          foundNode = document.createTextNode('');
+          containerNode.appendChild(foundNode);
+        } else {
+          foundNode = allTextNodes[-1];
+        }
+      } else {
+        foundNode = containerNode;
+      }
+      console.log(foundNode);
+      console.log(startOfRange);
+      console.log(endOfRange);
     }
-  } else if ((sel = document.selection) && sel.type != "Control" ) {
-    containerNode = sel.createRange().parentElement();
-    console.log(containerNode);
   }
-  return containerNode;
+  return {
+    textNode: foundNode,
+    startOfRange: startOfRange,
+    endOfRange: endOfRange
+  }
 }
 
 // Export it
 window.isWhiteSpace = isWhiteSpace;
-window.findElementAtSelector = findElementAtSelector;
-
+window.findTextNodeAtSelector = findTextNodeAtSelector;
 }());
