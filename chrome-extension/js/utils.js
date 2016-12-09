@@ -3,7 +3,7 @@
  * "Borrowed" from http://stackoverflow.com/a/1496885/372884
  */
 function isWhiteSpace(char) {
-  return ' \t\n\r\v'.indexOf(char) != -1;
+  return ' \xa0\t\n\r\v'.indexOf(char) > -1;
 }
 
 /*
@@ -19,37 +19,18 @@ function findElementAtSelector() {
         // Multi-element selection
         return null;
       }
-      containerNode = sel.getRangeAt(0).commonAncestorContainer;
+      containerNode = range.commonAncestorContainer;
+      console.log(containerNode);
     }
   } else if ((sel = document.selection) && sel.type != "Control" ) {
     containerNode = sel.createRange().parentElement();
+    console.log(containerNode);
   }
   return containerNode;
-}
-
-function getValue($el) {
-  if (isInputOrTextArea($el)) {
-    return $el.val();
-  }
-  return $el.text();
-}
-
-function setValue($el, value) {
-  if (isInputOrTextArea($el)) {
-    $el.val(value);
-    return;
-  }
-  $el.text(value);
-}
-
-function isInputOrTextArea($el) {
-  return $el[0].tagName == 'INPUT' || $el[0].tagName == 'TEXTAREA';
 }
 
 // Export it
 window.isWhiteSpace = isWhiteSpace;
 window.findElementAtSelector = findElementAtSelector;
-window.getValue = getValue;
-window.setValue = setValue;
-window.isInputOrTextArea = isInputOrTextArea;
+
 }());
