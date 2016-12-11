@@ -7,13 +7,6 @@ function isWhiteSpace(char) {
 }
 
 /*
- * "Borrowed" from http://stackoverflow.com/a/4917050/372884
- */
-function isWhitespaceNode(node) {
-    return node.nodeType == 3 && /^\s*$/.test(node.data);
-}
-
-/*
  * "Borrowed" from http://stackoverflow.com/a/4399718/372884
  */
 function getTextNodesIn(node, includeWhitespaceNodes) {
