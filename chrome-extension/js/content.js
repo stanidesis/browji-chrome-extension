@@ -47,8 +47,7 @@ function displayPopup() {
     console.log('EAC: Please highlight a single line :D');
     return;
   }
-  triggeredEditable.dumpToConsole();
-
+  
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
   iframe.scrolling = 'no';
