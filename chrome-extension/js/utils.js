@@ -54,21 +54,15 @@ function findTextNodeAtSelector() {
       endOfRange = range.endOffset;
       if (containerNode.nodeType != 3) {
         var allTextNodes = getTextNodesIn(containerNode, true);
-        console.log('All text nodes:');
-        console.log(allTextNodes);
         if (allTextNodes.length == 0) {
-          console.log('Creating a new node');
           foundNode = document.createTextNode('');
           containerNode.appendChild(foundNode);
         } else {
-          foundNode = allTextNodes[-1];
+          foundNode = allTextNodes[allTextNodes.length - 1];
         }
       } else {
         foundNode = containerNode;
       }
-      console.log(foundNode);
-      console.log(startOfRange);
-      console.log(endOfRange);
     }
   }
   return {

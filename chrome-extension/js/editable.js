@@ -46,9 +46,7 @@ class Editable {
       // Find the first whitespace before the selection
       var startOfQuery = this.selectionEnd - 1;
       for (; startOfQuery >= 0; startOfQuery--) {
-        console.log('Is \'' + text.charAt(startOfQuery) + '\' whitespace?');
         if (isWhiteSpace(text.charAt(startOfQuery))) {
-          console.log('Stopping start loop');
           break;
         }
       }
@@ -56,9 +54,7 @@ class Editable {
       // Find the end of the selection
       var endOfQuery = this.selectionEnd;
       for (; endOfQuery < text.length; endOfQuery++) {
-        console.log('Is \'' + text.charAt(endOfQuery) + '\' whitespace?');
         if (isWhiteSpace(text.charAt(endOfQuery))) {
-          console.log('Stopping end loop');
           break;
         }
       }
