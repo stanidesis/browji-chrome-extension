@@ -1,13 +1,7 @@
 // iframe
 var iframe;
 // Trigger Input or Textarea
-var triggeredElement;
-// The cursor location at which we replace the content
-var triggeredSelectionStart;
-// The cursor location at which we insert the content
-var triggeredSelectionEnd;
-// Original query, null if not present
-var originalQuery;
+var triggeredEditable;
 
 // listen to the iframes/webpages message
 window.addEventListener("message", onDomMessageReceived, false);
@@ -17,18 +11,13 @@ function onDomMessageReceived(event) {
     // Send width/height data to popup so it may reveal itself
 
     // Get the position of the cursor and input box
-    var coordinates = getCaretCoordinates(triggeredElement, triggeredSelectionEnd);
-    var cumulativeOffset = getCumulativeOffset(triggeredElement);
-    // Calculate the height offset to place the box immediately below/right
-    // of the cursor (for now -- might need a smarter calculation in the future?)
-    var fontSize = $(triggeredElement).css('font-size');
-    var lineHeight = Math.floor(parseInt(fontSize.replace('px','')) * 2.0);
+    var cumulativeOffset = triggeredEditable.getOffset();
 
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
-      top: cumulativeOffset.top + lineHeight - $(window).scrollTop(),
-      left: cumulativeOffset.left + coordinates.left - $(window).scrollLeft(),
-      query: originalQuery
+      top: cumulativeOffset.top + cumulativeOffset.height - $(window).scrollTop(),
+      left: cumulativeOffset.left - $(window).scrollLeft(),
+      query: triggeredEditable.getQuery()
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger();
@@ -52,43 +41,13 @@ function displayPopup() {
     return;
   }
   // This is where we need to present a little auto-complete search input
-  var activeElement = document.activeElement;
-  if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
-    // Active element is not an input area
+  triggeredEditable = getEditable();
+  if (!triggeredEditable) {
+    // TODO: popup instead? Or disregard and apply to the end element only
+    console.log('EAC: Please highlight a single line :D');
     return;
   }
-  triggeredElement = activeElement;
-  triggeredSelectionStart = activeElement.selectionStart;
-  triggeredSelectionEnd = activeElement.selectionEnd;
-  // Check if the user highlighted text within the input area
-  if (triggeredSelectionEnd > triggeredSelectionStart) {
-    originalQuery = triggeredElement.value
-      .substring(triggeredSelectionStart, triggeredSelectionEnd);
-  } else {
-    // Find the first whitespace before the selection
-    var startOfQuery = triggeredSelectionEnd - 1;
-    for (; startOfQuery >= 0; startOfQuery--) {
-      if (isWhiteSpace(triggeredElement.value.charAt(startOfQuery))) {
-        break;
-      }
-    }
-    startOfQuery++;
-    // Find the end of the selection
-    var endOfQuery = triggeredSelectionEnd;
-    for (; endOfQuery < triggeredElement.value.length; endOfQuery++) {
-      if (isWhiteSpace(triggeredElement.value.charAt(endOfQuery))) {
-        break;
-      }
-    }
-    originalQuery = triggeredElement.value
-      .substring(startOfQuery, endOfQuery);
-    if (originalQuery && originalQuery.trim().length != 0) {
-      triggeredSelectionStart = startOfQuery;
-      triggeredSelectionEnd = endOfQuery;
-    } else {
-      originalQuery = null;
-    }
-  }
+  
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
   iframe.scrolling = 'no';
@@ -112,26 +71,17 @@ function dismissPopup(callback) {
 }
 
 function insertSelection(textToInsert) {
-  if (!triggeredElement) {
+  if (!triggeredEditable) {
     return;
   }
-  var $triggeredElement = $(triggeredElement);
-  var originalText = $triggeredElement.val();
-  var newVal = originalText.substring(0, triggeredSelectionStart)
-    + textToInsert + originalText.substring(triggeredSelectionEnd);
-  $triggeredElement.val(newVal);
-  triggeredElement.setSelectionRange(triggeredSelectionStart + textToInsert.length,
-    triggeredSelectionStart + textToInsert.length);
+  triggeredEditable.insertSelection(textToInsert);
   focusOriginalTrigger();
 }
 
 function focusOriginalTrigger() {
-  if (triggeredElement) {
-    triggeredElement.focus();
-    triggeredElement = null;
-    triggeredSelectionStart = null;
-    triggeredSelectionEnd = null;
-    originalQuery = null;
+  if (triggeredEditable) {
+    triggeredEditable.focus();
+    triggeredEditable = null;
   }
   dismissPopup();
 }

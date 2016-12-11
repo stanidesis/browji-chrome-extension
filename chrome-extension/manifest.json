@@ -25,8 +25,9 @@
       ],
       "js": [
         "js/jquery-3.1.1.min.js",
-        "js/textarea-caret-position.js",
+        "js/jquery.caret.min.js",
         "js/utils.js",
+        "js/editable.js",
         "js/content.js"
       ],
       "run_at": "document_start"

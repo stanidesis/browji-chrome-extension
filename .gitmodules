@@ -7,3 +7,6 @@
 [submodule "dependencies/q"]
 	path = dependencies/q
 	url = git@github.com:kriskowal/q.git
+[submodule "dependencies/Caret.js"]
+	path = dependencies/Caret.js
+	url = git@github.com:ichord/Caret.js.git
