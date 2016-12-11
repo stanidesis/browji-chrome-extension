@@ -3,7 +3,9 @@
  * "Borrowed" from http://stackoverflow.com/a/1496885/372884
  */
 function isWhiteSpace(char) {
-  return ' \xa0\t\n\r\v'.indexOf(char) > -1;
+  return ' \t\n\r\v'.indexOf(char) > -1
+   || char == String.fromCharCode(160)
+   || char == String.fromCharCode(32);
 }
 
 /*

@@ -22,7 +22,11 @@ function onDomMessageReceived(event) {
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger();
   } else if (event.data.message === 'to_content:selection_made') {
-    insertSelection(event.data.selection);
+    if (event.data.tabbed) {
+      insertSelection(event.data.selection);
+    } else {
+      replaceWithSelection(event.data.selection);
+    }
   }
 }
 
@@ -47,7 +51,7 @@ function displayPopup() {
     console.log('EAC: Please highlight a single line :D');
     return;
   }
-  
+
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
   iframe.scrolling = 'no';
@@ -75,6 +79,14 @@ function insertSelection(textToInsert) {
     return;
   }
   triggeredEditable.insertSelection(textToInsert);
+  focusOriginalTrigger();
+}
+
+function replaceWithSelection(textToSwap) {
+  if (!triggeredEditable) {
+    return;
+  }
+  triggeredEditable.replaceWithSelection(textToSwap);
   focusOriginalTrigger();
 }
 
