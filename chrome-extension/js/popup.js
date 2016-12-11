@@ -1,4 +1,5 @@
 // Keycodes
+var TAB = 9;
 var ENTER = 13;
 var UP = 38;
 var DOWN = 40;
@@ -42,12 +43,12 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         $emojiPopup.find('li').first().addClass('eac-active');
       }
-      notifySelectionMade();
+      notifySelectionMade(false);
     }
 
     // On click, submit selection
     $emojiPopup.on('click', 'li', function() {
-      notifySelectionMade();
+      notifySelectionMade(false);
     });
 
     // On Hover, remove .active class for list items
@@ -95,12 +96,12 @@ var Popup = function () {
     $(document).on('keydown.eac', function(event) {
       if (event.keyCode == ESC) {
         dismissPopup();
-      } else if (event.keyCode == ENTER) {
+      } else if (event.keyCode == ENTER || event.keyCode == TAB) {
         if ($emojiPopup.find('.eac-active').length == 0) {
           return;
         }
         event.preventDefault();
-        notifySelectionMade();
+        notifySelectionMade(event.keyCode == TAB);
       } else if (event.keyCode == DOWN || event.keyCode == UP) {
         var $resultList = $emojiPopup.find('li');
         // with no results, just bail
@@ -226,9 +227,9 @@ var Popup = function () {
     window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
   }
 
-  function notifySelectionMade() {
+  function notifySelectionMade(tabbed) {
     var textToInsert = $emojiPopup.find('.eac-active').first().find('span').text().trim();
-    window.parent.postMessage({message: 'to_content:selection_made', selection: textToInsert}, '*');
+    window.parent.postMessage({message: 'to_content:selection_made', selection: textToInsert, tabbed: tabbed}, '*');
   }
 
   function apppendToJquery() {

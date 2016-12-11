@@ -22,26 +22,31 @@ class Editable {
     this.$element = $(element);
     this.selectionStart = null;
     this.selectionEnd = null;
-    this.originalQuery = null;
+    this.queryStart = null;
+    this.queryEnd = null;
+    this.query = null;
   }
 
   /**
-   * Given an emoji string, return the new value
-   * of the editable.
+   * Given an emoji string, return the new taxt value after
+   * swapping the query with the emoji
    */
-  getNewText(emoji) {
+  swapQuery(emoji) {
     var originalText = this.getText();
-    return originalText.substring(0, this.selectionStart)
-      + emoji + originalText.substring(this.selectionEnd);
+    return originalText.substring(0, this.queryStart)
+      + emoji + originalText.substring(this.queryEnd);
   }
 
   /**
    * Get the query, if any, from the element
    */
   getQuery() {
+    if (this.query) {
+      return this.query;
+    }
     var text = this.getText();
     if (this.selectionStart < this.selectionEnd) {
-      this.originalQuery = text.substring(this.selectionStart, this.selectionEnd);
+      return text.substring(this.selectionStart, this.selectionEnd);
     } else {
       // Find the first whitespace before the selection
       var startOfQuery = this.selectionEnd - 1;
@@ -58,15 +63,14 @@ class Editable {
           break;
         }
       }
-      this.originalQuery = text.substring(startOfQuery, endOfQuery);
-      if (this.originalQuery && this.originalQuery.trim().length != 0) {
-        this.selectionStart = startOfQuery;
-        this.selectionEnd = endOfQuery;
-      } else {
-        this.originalQuery = null;
+      var query = text.substring(startOfQuery, endOfQuery);
+      if (query && query.trim().length != 0) {
+        this.queryStart = startOfQuery;
+        this.queryEnd = endOfQuery;
+        return query;
       }
     }
-    return this.originalQuery;
+    return null;
   }
 
   /**
@@ -85,6 +89,11 @@ class Editable {
    * Replace the original query within the editable with the provided
    * emoji string.
    */
+  replaceWithSelection(emoji) {}
+
+  /**
+   * Append the selection to the end of the original selection.
+   */
   insertSelection(emoji) {}
 
   /**
@@ -97,6 +106,7 @@ class Editable {
     console.log(this.$element[0]);
     console.log('Value: ' + this.getText());
     console.log('Start(' + this.selectionStart + '), End(' + this.selectionEnd + ')');
+    console.log('Query Start(' + this.queryStart + '), End(' + this.queryEnd + ')');
     console.log('Query: ' + this.getQuery());
   }
 }
@@ -109,6 +119,9 @@ class InputTextAreaEditable extends Editable {
     super(element);
     this.selectionStart = element.selectionStart;
     this.selectionEnd = element.selectionEnd;
+    this.queryStart = element.selectionStart;
+    this.queryEnd = element.selectionEnd;
+    this.query = this.getQuery();
   }
 
   getText() {
@@ -120,9 +133,19 @@ class InputTextAreaEditable extends Editable {
   }
 
   insertSelection(emoji) {
-    this.$element.val(this.getNewText(emoji));
-    this.$element[0].setSelectionRange(this.selectionStart + emoji.length,
-      this.selectionStart + emoji.length);
+    this.$element.val(
+      this.getText().substring(0, this.selectionEnd) +
+      emoji +
+      this.getText().substring(this.selectionEnd, this.getText().length)
+    );
+    this.$element[0].setSelectionRange(this.selectionEnd + emoji.length,
+      this.selectionEnd + emoji.length);
+  }
+
+  replaceWithSelection(emoji) {
+    this.$element.val(this.swapQuery(emoji));
+    this.$element[0].setSelectionRange(this.queryStart + emoji.length,
+      this.queryStart + emoji.length);
   }
 }
 
@@ -131,6 +154,9 @@ class NodeEditable extends Editable {
     super(element);
     this.selectionStart = Math.min(startOfRange, endOfRange);
     this.selectionEnd = Math.max(startOfRange, endOfRange);
+    this.queryStart = this.selectionStart;
+    this.queryEnd = this.selectionEnd;
+    this.query = this.getQuery();
   }
 
   getOffset() {
@@ -146,12 +172,24 @@ class NodeEditable extends Editable {
   }
 
   insertSelection(emoji) {
-    this.$element[0].data = (this.getNewText(emoji));
+    this.$element[0].data = this.getText().substring(0, this.selectionEnd) +
+      emoji + this.getText().substring(this.selectionEnd, this.getText().length);
+    this.setNewRange(this.selectionEnd + emoji.length,
+      this.selectionEnd + emoji.length)
+  }
+
+  replaceWithSelection(emoji) {
+    this.$element[0].data = this.swapQuery(emoji);
+    this.setNewRange(this.queryStart + emoji.length,
+      this.queryStart + emoji.length)
+  }
+
+  setNewRange(start, end) {
     var selection = window.getSelection();
     selection.removeAllRanges();
     var newRange = document.createRange();
-    newRange.setStart(this.$element[0], this.selectionStart + emoji.length);
-    newRange.setEnd(this.$element[0], this.selectionStart + emoji.length);
+    newRange.setStart(this.$element[0], start);
+    newRange.setEnd(this.$element[0], end);
     selection.addRange(newRange);
   }
 
