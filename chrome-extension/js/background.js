@@ -92,11 +92,12 @@ function updateWeights(query, selection) {
       incrementedRow = sqlStmt.getAsObject();
     }
     if (incrementedRow) {
-      // Create a new row
+      // Update existing row
       var increments = incrementedRow.increments + 1;
       var weight = 0.5 + calculateWeightOffset(increments);
       db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${selection}' AND keyword = '${term}'`);
     } else {
+      // Create a new row with increments at 1
       db.run(`INSERT INTO emojis VALUES ('${selection}', '${term}', '${0.5 + calculateWeightOffset(1)}', '1')`);
     }
     // Decrement all other matches
