@@ -22,6 +22,8 @@ function onDomMessageReceived(event) {
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger();
   } else if (event.data.message === 'to_content:selection_made') {
+    chrome.runtime.sendMessage({message: 'to_background:update_weights',
+      query: event.data.query, selection: event.data.selection});
     if (event.data.tabbed) {
       insertSelection(event.data.selection);
     } else {
