@@ -229,7 +229,10 @@ var Popup = function () {
 
   function notifySelectionMade(tabbed) {
     var textToInsert = $emojiPopup.find('.eac-active').first().find('span').text().trim();
-    window.parent.postMessage({message: 'to_content:selection_made', selection: textToInsert, tabbed: tabbed}, '*');
+    window.parent.postMessage({message: 'to_content:selection_made',
+      selection: textToInsert,
+      tabbed: tabbed,
+      query: $emojiPopup.find('input').val().trim()}, '*');
   }
 
   function apppendToJquery() {

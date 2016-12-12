@@ -28,6 +28,8 @@ chrome.runtime.onMessage.addListener(
       queryEmoji(request.query, function(queryResult) {
         sendResponse({result: queryResult});
       });
+    } else if (request.message == 'to_background:update_weights') {
+      updateWeights(request.query, request.selection);
     }
 });
 
@@ -64,7 +66,7 @@ function queryEmoji(query, callback) {
     sqlQuery += `keyword LIKE "${term}%" OR `;
   }
   sqlQuery = sqlQuery.substring(0, sqlQuery.length - 3);
-  sqlQuery += `GROUP BY emojicon ORDER BY COUNT(*) DESC LIMIT 12`;
+  sqlQuery += `GROUP BY emojicon ORDER BY WEIGHT DESC, COUNT(*) DESC LIMIT 20`;
   var sqlStmt = db.prepare(sqlQuery);
   sqlStmt.bind();
   var result = [];
@@ -72,6 +74,52 @@ function queryEmoji(query, callback) {
     result.push(sqlStmt.getAsObject().emojicon);
   }
   callback(result);
+}
+
+function updateWeights(query, selection) {
+  if (db == null) {
+    initializeDb(function() {
+      updateWeights(query, selection);
+    });
+    return;
+  }
+  for (var term of query.trim().split(' ')) {
+    var incrementedRow = null;
+    var sqlQuery = `SELECT * FROM emojis WHERE emojicon = '${selection}' AND keyword = '${term}' LIMIT 1`;
+    var sqlStmt = db.prepare(sqlQuery);
+    sqlStmt.bind();
+    while (sqlStmt.step()) {
+      incrementedRow = sqlStmt.getAsObject();
+    }
+    if (incrementedRow) {
+      // Update existing row
+      var increments = incrementedRow.increments + 1;
+      var weight = 0.5 + calculateWeightOffset(increments);
+      db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${selection}' AND keyword = '${term}'`);
+    } else {
+      // Create a new row with increments at 1
+      db.run(`INSERT INTO emojis VALUES ('${selection}', '${term}', '${0.5 + calculateWeightOffset(1)}', '1')`);
+    }
+    // Decrement all other matches
+    sqlQuery = `SELECT * FROM emojis WHERE emojicon != '${selection}' AND keyword = '${term}'`;
+    sqlStmt = db.prepare(sqlQuery);
+    sqlStmt.bind();
+    while (sqlStmt.step()) {
+      var row = sqlStmt.getAsObject();
+      var increments = row.increments - 1;
+      var weight = 0.5 + calculateWeightOffset(increments);
+      db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${row.emojicon}' AND keyword = '${row.keyword}'`);
+    }
+  }
+}
+
+function calculateWeightOffset(incrememtCount) {
+  var absInc = Math.abs(incrememtCount);
+  var inc = 0;
+  while (absInc > 0) {
+    inc += Math.pow(2, -(absInc-- + 1));
+  }
+  return incrememtCount > 0 ? inc : -1 * inc;
 }
 
 function sendDisplayPopupAtCursorMessage() {
