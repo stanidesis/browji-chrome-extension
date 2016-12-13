@@ -29,6 +29,16 @@ var Popup = function () {
     }
   }
 
+  function setActiveResultItem($li) {
+    var active = $emojiPopup.find('.eac-active');
+    active.find('.eac-key-hint').css('opacity', 0);
+    active.removeClass('eac-active');
+    if ($li) {
+      $li.addClass('eac-active');
+      $li.find('.eac-key-hint').css('opacity', 1);
+    }
+  }
+
   function displayPopup(withQuery) {
     // Fade that sucker in
     $emojiPopup.fadeIn();
@@ -41,7 +51,7 @@ var Popup = function () {
         return;
       }
       if ($emojiPopup.find('.eac-active').length == 0) {
-        $emojiPopup.find('li').first().addClass('eac-active');
+        setActiveResultItem($emojiPopup.find('li').first());
       }
       notifySelectionMade(false);
     }
@@ -53,8 +63,7 @@ var Popup = function () {
 
     // On Hover, remove .active class for list items
     $emojiPopup.on('mouseover', 'li', function() {
-      $emojiPopup.find('.eac-active').removeClass('eac-active');
-      $(this).addClass('eac-active');
+      setActiveResultItem($(this));
     });
 
     var oneTime = true;
@@ -117,33 +126,21 @@ var Popup = function () {
         if (document.activeElement.id === 'eac-search'
           || $emojiPopup.find('.eac-active').length == 0) {
           document.activeElement.blur();
-          // Remove any actively selected item
-          $resultList.removeClass('eac-active');
-          var $newActiveElement;
-          if (goUp) {
-            // Render the last result as active
-            $newActiveElement = $resultList.last();
-            $newActiveElement.addClass('eac-active');
-          } else {
-            // Render the first result as active
-            $newActiveElement = $resultList.first();
-            $newActiveElement.addClass('eac-active');
-          }
+          var $newActiveElement = goUp? $resultList.last() : $resultList.first();
+          setActiveResultItem($newActiveElement)
           $newActiveElement.parents('div').scrollTo($newActiveElement, 100);
         // We have an active selection already
         } else {
           var $activeListItem = $emojiPopup.find('.eac-active');
           // The newly selected element
           var $newActiveElement;
-          // Remove the active class
-          $activeListItem.removeClass('eac-active');
+          // Deactivate item
+          setActiveResultItem();
           var index = $resultList.index($activeListItem);
           var length = $resultList.length;
           if (goUp) {
             if (index > 0) {
               $newActiveElement = $activeListItem.prev();
-              // Add it to the next item
-              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
@@ -151,8 +148,6 @@ var Popup = function () {
           } else {
             if (index < length - 1) {
               $newActiveElement = $activeListItem.next();
-              // Add it to the next item
-              $newActiveElement.addClass('eac-active');
             } else {
               // Focus the search
               $('#eac-search')[0].focus();
@@ -160,6 +155,7 @@ var Popup = function () {
           }
           // Scroll to the newly selected item
           if ($newActiveElement) {
+            setActiveResultItem($newActiveElement);
             $activeListItem.parents('div').scrollTo($newActiveElement, 100);
           }
         }
@@ -228,7 +224,7 @@ var Popup = function () {
   }
 
   function notifySelectionMade(tabbed) {
-    var textToInsert = $emojiPopup.find('.eac-active').first().find('span').text().trim();
+    var textToInsert = $emojiPopup.find('.eac-active').first().find('span').first().text().trim();
     window.parent.postMessage({message: 'to_content:selection_made',
       selection: textToInsert,
       tabbed: tabbed,

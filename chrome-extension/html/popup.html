@@ -28,6 +28,7 @@
     .eac-popup .mdl-list__item:hover,
     .eac-popup .eac-active {
       background: #dadada;
+      cursor: pointer;
     }
     .eac-tip-container {
       position: absolute;
@@ -47,6 +48,13 @@
       overflow-y: auto;
       overflow-x: hidden;
     }
+    .eac-key-hint {
+      text-align: right;
+      font-size: 12px;
+      -webkit-transition: opacity .2s; /* Safari */
+      transition: opacity .2s;
+      transition-timing-function: ease-in-out;
+    }
     #search_icon {
       display: inline-block;
     }
@@ -59,7 +67,7 @@
     <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
       <div class="mdl-layout mdl-js-layout">
         <div class="eac-tip-container">
-          <span class="eac-tip">No results? Try 'cool'... 😎</span>
+          <span class="eac-tip">No luck? Try 'cool'... 😎</span>
         </div>
         <div>
           <form action="#" autocomplete="off">
