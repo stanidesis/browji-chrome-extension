@@ -12,10 +12,13 @@
       background: #fafafa;
       overflow: hidden;
     }
+    .eac-popup form {
+      display: inline-block;
+    }
     .eac-popup .mdl-textfield {
-      width: calc(320px - (16px * 2));
       margin-left: 16px;
       margin-right: 16px;
+      width: 240px;
     }
     .eac-popup .mdl-list__item {
       -webkit-transition: background .2s; /* Safari */
@@ -44,6 +47,9 @@
       overflow-y: auto;
       overflow-x: hidden;
     }
+    #search_icon {
+      display: inline-block;
+    }
     </style>
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="../js/material.min.js"></script>
@@ -53,15 +59,16 @@
     <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
       <div class="mdl-layout mdl-js-layout">
         <div class="eac-tip-container">
-          <span class="eac-tip">No results? Search for emojis and emoticons</span>
+          <span class="eac-tip">No results? Try 'cool'... 😎</span>
         </div>
         <div>
           <form action="#" autocomplete="off">
             <div class="mdl-textfield mdl-js-textfield">
               <input class="mdl-textfield__input" type="text" id="eac-search" autocomplete="off">
-              <label class="mdl-textfield__label" for="eac-search">'happy,' 'sad,' 'sunglasses,' you get it</label>
+              <label class="mdl-textfield__label" for="eac-search">Search emojis</label>
             </div>
           </form>
+          <img src="../images/ic_search_black_24px.svg" alt="Search Icon" id="search_icon">
         </div>
         <div class="eac-results">
           <ul class="mdl-list" style="display: none">
