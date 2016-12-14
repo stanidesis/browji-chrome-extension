@@ -60,11 +60,11 @@ function displayPopup() {
   iframe.frameBorder = 0;
   var $iframe = $(iframe);
   $iframe.css('position', 'fixed');
-  $iframe.css('width', $('body').width());
-  $iframe.css('height', $('body').height());
+  $iframe.css('width', $('html').width());
+  $iframe.css('height', window.innerHeight);
   $iframe.css('top', '0');
   $iframe.css('left', '0');
-  $iframe.css('z-index', '10000000000');
+  $iframe.css('z-index', '2147483648');
   $iframe.appendTo('body');
 }
 
