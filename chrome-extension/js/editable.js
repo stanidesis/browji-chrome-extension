@@ -1,11 +1,14 @@
 function getEditable() {
   var activeElement = document.activeElement;
+  if (!activeElement) {
+    return null;
+  }
   if (activeElement.tagName == 'INPUT' || activeElement.tagName == 'TEXTAREA') {
     return new InputTextAreaEditable(activeElement);
-  } else if (typeof(activeElement.contentEditable) != 'undefined' && activeElement.contentEditable == 'true') {
+  } else if (typeof(activeElement.contentEditable) != 'undefined') {
     // Determine whether we're editing a root div or a child node
     var textNode = findTextNodeAtSelector();
-    if (!textNode) {
+    if (!textNode || !textNode.textNode) {
       return null;
     }
     return new NodeEditable(textNode.textNode,
