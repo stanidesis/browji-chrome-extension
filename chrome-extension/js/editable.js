@@ -1,15 +1,23 @@
 function getEditable() {
+  if (!document || !document.activeElement) {
+    return null;
+  }
   var activeElement = document.activeElement;
   if (activeElement.tagName == 'INPUT' || activeElement.tagName == 'TEXTAREA') {
-    return new InputTextAreaEditable(activeElement);
-  } else if (typeof(activeElement.contentEditable) != 'undefined' && activeElement.contentEditable == 'true') {
-    // Determine whether we're editing a root div or a child node
-    var textNode = findTextNodeAtSelector();
-    if (!textNode) {
+    if (activeElement.type === 'email') {
+      // Selection start/end are unavailable for email input
       return null;
     }
-    return new NodeEditable(textNode.textNode,
-      textNode.startOfRange, textNode.endOfRange);
+    return new InputTextAreaEditable(activeElement);
+  } else {
+    // Determine whether we're editing a root div or a child node
+    var node = findTextNodeAtSelector();
+    if (typeof node === 'undefined' || typeof node.textNode === 'undefined'
+      || $(node.textNode).closest('[contenteditable]').length == 0) {
+      return null;
+    }
+    return new NodeEditable(node.textNode,
+      node.startOfRange, node.endOfRange);
   }
 }
 
