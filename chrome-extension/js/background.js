@@ -4,6 +4,8 @@ var DB_DOC_KEY = "emoji-database";
 var DB_DOC_ATTACHMENT = "sqlite-file";
 var storage;
 
+// True if the popup was revealed
+
 // Master DB File
 var db;
 
@@ -30,6 +32,7 @@ chrome.runtime.onMessage.addListener(
       });
     } else if (request.message == 'to_background:update_weights') {
       updateWeights(request.query, request.selection);
+    } else if (request.message == 'to_background:popup_revealed_at_cursor') {
     }
 });
 
@@ -127,6 +130,11 @@ function sendDisplayPopupAtCursorMessage() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup_at_cursor'});
   });
+  window.setTimeout(function() {
+      // TODO: Fallback to an actual copy/paste mode
+      console.log('Fallback to Copy/Paste!');
+    }
+  }, 500);
 }
 
 function populateAndSaveDefaultDb(callback) {

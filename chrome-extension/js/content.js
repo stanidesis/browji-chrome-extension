@@ -49,8 +49,6 @@ function displayPopup() {
   // This is where we need to present a little auto-complete search input
   triggeredEditable = getEditable();
   if (!triggeredEditable) {
-    // TODO: popup instead? Or disregard and apply to the end element only
-    console.log('EAC: Please highlight a single line :D');
     return;
   }
 
@@ -66,6 +64,9 @@ function displayPopup() {
   $iframe.css('left', '0');
   $iframe.css('z-index', '2147483648');
   $iframe.appendTo('body');
+  chrome.runtime.sendMessage({
+    message: 'to_background:popup_revealed_at_cursor'
+  });
 }
 
 function dismissPopup(callback) {
