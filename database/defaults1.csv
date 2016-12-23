@@ -249,7 +249,6 @@ Emoji,Keyword,Weight
 ☝🏿,skin,0.5
 ☝🏿,tone,0.5
 ☝🏿,up,0.5
-☠,and,0.5
 ☠,crossbones,0.5
 ☠,death,0.5
 ☠,face,0.5
@@ -263,7 +262,6 @@ Emoji,Keyword,Weight
 ☦,cross,0.5
 ☦,orthodox,0.5
 ☦,religion,0.5
-☪,and,0.5
 ☪,crescent,0.5
 ☪,islam,0.5
 ☪,muslim,0.5
@@ -358,7 +356,6 @@ Emoji,Keyword,Weight
 ♿,access,0.5
 ♿,symbol,0.5
 ♿,wheelchair,0.5
-⚒,and,0.5
 ⚒,hammer,0.5
 ⚒,pick,0.5
 ⚒,tool,0.5
@@ -424,7 +421,6 @@ Emoji,Keyword,Weight
 ⛅,behind,0.5
 ⛅,cloud,0.5
 ⛅,sun,0.5
-⛈,and,0.5
 ⛈,cloud,0.5
 ⛈,lightning,0.5
 ⛈,rain,0.5
@@ -470,7 +466,6 @@ Emoji,Keyword,Weight
 ⛳,flag,0.5
 ⛳,golf,0.5
 ⛳,hole,0.5
-⛳,in,0.5
 ⛴,boat,0.5
 ⛴,ferry,0.5
 ⛴,passenger,0.5
@@ -1536,7 +1531,6 @@ Emoji,Keyword,Weight
 🌅,morning,0.5
 🌅,sun,0.5
 🌅,sunrise,0.5
-🌆,at,0.5
 🌆,city,0.5
 🌆,cityscape,0.5
 🌆,dusk,0.5
@@ -1549,7 +1543,6 @@ Emoji,Keyword,Weight
 🌇,sunset,0.5
 🌈,rain,0.5
 🌈,rainbow,0.5
-🌉,at,0.5
 🌉,bridge,0.5
 🌉,night,0.5
 🌊,ocean,0.5
@@ -1723,7 +1716,6 @@ Emoji,Keyword,Weight
 🍃,blow,0.5
 🍃,flutter,0.5
 🍃,fluttering,0.5
-🍃,in,0.5
 🍃,leaf,0.5
 🍃,wind,0.5
 🍄,mushroom,0.5
@@ -1874,7 +1866,6 @@ Emoji,Keyword,Weight
 🍳,egg,0.5
 🍳,frying,0.5
 🍳,pan,0.5
-🍴,and,0.5
 🍴,cooking,0.5
 🍴,fork,0.5
 🍴,knife,0.5
@@ -1918,7 +1909,6 @@ Emoji,Keyword,Weight
 🍼,bottle,0.5
 🍼,drink,0.5
 🍼,milk,0.5
-🍽,and,0.5
 🍽,cooking,0.5
 🍽,fork,0.5
 🍽,knife,0.5
@@ -1946,7 +1936,6 @@ Emoji,Keyword,Weight
 🎃,halloween,0.5
 🎃,jack,0.5
 🎃,lantern,0.5
-🎃,o,0.5
 🎄,celebration,0.5
 🎄,christmas,0.5
 🎄,tree,0.5
@@ -2964,7 +2953,6 @@ Emoji,Keyword,Weight
 🏸,game,0.5
 🏸,racquet,0.5
 🏸,shuttlecock,0.5
-🏹,and,0.5
 🏹,archer,0.5
 🏹,archery,0.5
 🏹,arrow,0.5
@@ -3163,7 +3151,6 @@ Emoji,Keyword,Weight
 👁,eye,0.5
 👁️‍🗨️,bubble,0.5
 👁️‍🗨️,eye,0.5
-👁️‍🗨️,in,0.5
 👁️‍🗨️,speech,0.5
 👁️‍🗨️,witness,0.5
 👂,body,0.5
@@ -3751,7 +3738,6 @@ Emoji,Keyword,Weight
 👑,queen,0.5
 👒,clothing,0.5
 👒,hat,0.5
-👒,s,0.5
 👒,woman,0.5
 👓,clothing,0.5
 👓,eye,0.5
@@ -3777,7 +3763,6 @@ Emoji,Keyword,Weight
 👙,swim,0.5
 👚,clothes,0.5
 👚,clothing,0.5
-👚,s,0.5
 👚,woman,0.5
 👛,clothing,0.5
 👛,coin,0.5
@@ -3792,7 +3777,6 @@ Emoji,Keyword,Weight
 👝,pouch,0.5
 👞,clothing,0.5
 👞,man,0.5
-👞,s,0.5
 👞,shoe,0.5
 👟,athletic,0.5
 👟,clothing,0.5
@@ -3806,13 +3790,11 @@ Emoji,Keyword,Weight
 👠,shoe,0.5
 👠,woman,0.5
 👡,clothing,0.5
-👡,s,0.5
 👡,sandal,0.5
 👡,shoe,0.5
 👡,woman,0.5
 👢,boot,0.5
 👢,clothing,0.5
-👢,s,0.5
 👢,shoe,0.5
 👢,woman,0.5
 👣,clothing,0.5
@@ -3820,11 +3802,9 @@ Emoji,Keyword,Weight
 👣,footprints,0.5
 👣,print,0.5
 👤,bust,0.5
-👤,in,0.5
 👤,silhouette,0.5
 👥,bust,0.5
 👥,busts,0.5
-👥,in,0.5
 👥,silhouette,0.5
 👦,boy,0.5
 👦,young,0.5
@@ -5475,7 +5455,6 @@ Emoji,Keyword,Weight
 👩‍🚒,firetruck,0.5
 👩‍🚒,woman,0.5
 👪,family,0.5
-👫,and,0.5
 👫,couple,0.5
 👫,hand,0.5
 👫,hands,0.5
@@ -6909,7 +6888,6 @@ Emoji,Keyword,Weight
 💞,revolving,0.5
 💟,decoration,0.5
 💟,heart,0.5
-💠,a,0.5
 💠,comic,0.5
 💠,diamond,0.5
 💠,dot,0.5
@@ -7490,7 +7468,6 @@ Emoji,Keyword,Weight
 🔧,wrench,0.5
 🔨,hammer,0.5
 🔨,tool,0.5
-🔩,and,0.5
 🔩,bolt,0.5
 🔩,nut,0.5
 🔩,tool,0.5
@@ -7761,12 +7738,10 @@ Emoji,Keyword,Weight
 🕰,mantelpiece,0.5
 🕳,hole,0.5
 🕴,business,0.5
-🕴,in,0.5
 🕴,levitating,0.5
 🕴,man,0.5
 🕴,suit,0.5
 🕴🏻,business,0.5
-🕴🏻,in,0.5
 🕴🏻,levitating,0.5
 🕴🏻,light,0.5
 🕴🏻,man,0.5
@@ -7774,7 +7749,6 @@ Emoji,Keyword,Weight
 🕴🏻,suit,0.5
 🕴🏻,tone,0.5
 🕴🏼,business,0.5
-🕴🏼,in,0.5
 🕴🏼,levitating,0.5
 🕴🏼,light,0.5
 🕴🏼,man,0.5
@@ -7783,7 +7757,6 @@ Emoji,Keyword,Weight
 🕴🏼,suit,0.5
 🕴🏼,tone,0.5
 🕴🏽,business,0.5
-🕴🏽,in,0.5
 🕴🏽,levitating,0.5
 🕴🏽,man,0.5
 🕴🏽,medium,0.5
@@ -7792,7 +7765,6 @@ Emoji,Keyword,Weight
 🕴🏽,tone,0.5
 🕴🏾,business,0.5
 🕴🏾,dark,0.5
-🕴🏾,in,0.5
 🕴🏾,levitating,0.5
 🕴🏾,man,0.5
 🕴🏾,medium,0.5
@@ -7801,7 +7773,6 @@ Emoji,Keyword,Weight
 🕴🏾,tone,0.5
 🕴🏿,business,0.5
 🕴🏿,dark,0.5
-🕴🏿,in,0.5
 🕴🏿,levitating,0.5
 🕴🏿,man,0.5
 🕴🏿,skin,0.5
@@ -8239,7 +8210,6 @@ Emoji,Keyword,Weight
 😃,open,0.5
 😃,smile,0.5
 😃,smiling,0.5
-😄,eye,0.5
 😄,eyes,0.5
 😄,face,0.5
 😄,mouth,0.5
@@ -8339,7 +8309,6 @@ Emoji,Keyword,Weight
 😗,face,0.5
 😗,kiss,0.5
 😗,kissing,0.5
-😘,a,0.5
 😘,blowing,0.5
 😘,face,0.5
 😘,kiss,0.5
@@ -8403,7 +8372,6 @@ Emoji,Keyword,Weight
 😤,nose,0.5
 😤,steam,0.5
 😤,triumph,0.5
-😥,but,0.5
 😥,disappointed,0.5
 😥,face,0.5
 😥,relieved,0.5
@@ -8455,7 +8423,6 @@ Emoji,Keyword,Weight
 😱,face,0.5
 😱,fear,0.5
 😱,fearful,0.5
-😱,in,0.5
 😱,munch,0.5
 😱,scared,0.5
 😱,scream,0.5
@@ -9803,7 +9770,6 @@ Emoji,Keyword,Weight
 🚭,prohibited,0.5
 🚭,smoking,0.5
 🚮,bin,0.5
-🚮,in,0.5
 🚮,litter,0.5
 🚮,sign,0.5
 🚯,forbidden,0.5
@@ -10330,18 +10296,15 @@ Emoji,Keyword,Weight
 🛅,left,0.5
 🛅,locker,0.5
 🛅,luggage,0.5
-🛋,and,0.5
 🛋,couch,0.5
 🛋,hotel,0.5
 🛋,lamp,0.5
 🛌,bed,0.5
 🛌,hotel,0.5
-🛌,in,0.5
 🛌,person,0.5
 🛌,sleep,0.5
 🛌🏻,bed,0.5
 🛌🏻,hotel,0.5
-🛌🏻,in,0.5
 🛌🏻,light,0.5
 🛌🏻,person,0.5
 🛌🏻,skin,0.5
@@ -10349,7 +10312,6 @@ Emoji,Keyword,Weight
 🛌🏻,tone,0.5
 🛌🏼,bed,0.5
 🛌🏼,hotel,0.5
-🛌🏼,in,0.5
 🛌🏼,light,0.5
 🛌🏼,medium,0.5
 🛌🏼,person,0.5
@@ -10358,7 +10320,6 @@ Emoji,Keyword,Weight
 🛌🏼,tone,0.5
 🛌🏽,bed,0.5
 🛌🏽,hotel,0.5
-🛌🏽,in,0.5
 🛌🏽,medium,0.5
 🛌🏽,person,0.5
 🛌🏽,skin,0.5
@@ -10367,7 +10328,6 @@ Emoji,Keyword,Weight
 🛌🏾,bed,0.5
 🛌🏾,dark,0.5
 🛌🏾,hotel,0.5
-🛌🏾,in,0.5
 🛌🏾,medium,0.5
 🛌🏾,person,0.5
 🛌🏾,skin,0.5
@@ -10376,7 +10336,6 @@ Emoji,Keyword,Weight
 🛌🏿,bed,0.5
 🛌🏿,dark,0.5
 🛌🏿,hotel,0.5
-🛌🏿,in,0.5
 🛌🏿,person,0.5
 🛌🏿,skin,0.5
 🛌🏿,sleep,0.5
@@ -10391,10 +10350,8 @@ Emoji,Keyword,Weight
 🛏,bed,0.5
 🛏,hotel,0.5
 🛏,sleep,0.5
-🛐,of,0.5
 🛐,place,0.5
 🛐,religion,0.5
-🛠,and,0.5
 🛠,hammer,0.5
 🛠,spanner,0.5
 🛠,tool,0.5
@@ -10420,7 +10377,6 @@ Emoji,Keyword,Weight
 🛫,check,0.5
 🛫,departure,0.5
 🛫,departures,0.5
-🛫,in,0.5
 🛬,aeroplane,0.5
 🛬,airplane,0.5
 🛬,arrival,0.5
@@ -10859,9 +10815,7 @@ Emoji,Keyword,Weight
 🤣,floor,0.5
 🤣,laugh,0.5
 🤣,laughing,0.5
-🤣,on,0.5
 🤣,rolling,0.5
-🤣,the,0.5
 🤤,drooling,0.5
 🤤,face,0.5
 🤥,face,0.5
@@ -11107,18 +11061,15 @@ Emoji,Keyword,Weight
 🤴🏿,skin,0.5
 🤴🏿,tone,0.5
 🤵,groom,0.5
-🤵,in,0.5
 🤵,man,0.5
 🤵,tuxedo,0.5
 🤵🏻,groom,0.5
-🤵🏻,in,0.5
 🤵🏻,light,0.5
 🤵🏻,man,0.5
 🤵🏻,skin,0.5
 🤵🏻,tone,0.5
 🤵🏻,tuxedo,0.5
 🤵🏼,groom,0.5
-🤵🏼,in,0.5
 🤵🏼,light,0.5
 🤵🏼,man,0.5
 🤵🏼,medium,0.5
@@ -11126,7 +11077,6 @@ Emoji,Keyword,Weight
 🤵🏼,tone,0.5
 🤵🏼,tuxedo,0.5
 🤵🏽,groom,0.5
-🤵🏽,in,0.5
 🤵🏽,man,0.5
 🤵🏽,medium,0.5
 🤵🏽,skin,0.5
@@ -11134,7 +11084,6 @@ Emoji,Keyword,Weight
 🤵🏽,tuxedo,0.5
 🤵🏾,dark,0.5
 🤵🏾,groom,0.5
-🤵🏾,in,0.5
 🤵🏾,man,0.5
 🤵🏾,medium,0.5
 🤵🏾,skin,0.5
@@ -11142,7 +11091,6 @@ Emoji,Keyword,Weight
 🤵🏾,tuxedo,0.5
 🤵🏿,dark,0.5
 🤵🏿,groom,0.5
-🤵🏿,in,0.5
 🤵🏿,man,0.5
 🤵🏿,skin,0.5
 🤵🏿,tone,0.5
