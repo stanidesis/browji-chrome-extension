@@ -81,22 +81,21 @@ function insertSelection(textToInsert) {
   if (!triggeredEditable) {
     return;
   }
-  triggeredEditable.insertSelection(textToInsert);
   focusOriginalTrigger();
+  triggeredEditable.insertSelection(textToInsert);
 }
 
 function replaceWithSelection(textToSwap) {
   if (!triggeredEditable) {
     return;
   }
-  triggeredEditable.replaceWithSelection(textToSwap);
   focusOriginalTrigger();
+  triggeredEditable.replaceWithSelection(textToSwap);
 }
 
 function focusOriginalTrigger() {
   if (triggeredEditable) {
     triggeredEditable.focus();
-    triggeredEditable = null;
   }
   dismissPopup();
 }
