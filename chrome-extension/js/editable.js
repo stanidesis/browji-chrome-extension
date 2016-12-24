@@ -180,16 +180,20 @@ class NodeEditable extends Editable {
   }
 
   insertSelection(emoji) {
+    // Active selection
     this.$element[0].data = this.getText().substring(0, this.selectionEnd) +
-      emoji + this.getText().substring(this.selectionEnd, this.getText().length);
-    this.setNewRange(this.selectionEnd + emoji.length,
-      this.selectionEnd + emoji.length)
+    emoji + this.getText().substring(this.selectionEnd, this.getText().length);
+    this.setNewRange(this.selectionEnd + emoji.length, this.selectionEnd + emoji.length);
   }
 
   replaceWithSelection(emoji) {
+    // The case where they hit `return` but have no query, insert instead
+    if (this.queryStart == this.queryEnd) {
+      this.insertSelection(emoji);
+      return;
+    }
     this.$element[0].data = this.swapQuery(emoji);
-    this.setNewRange(this.queryStart + emoji.length,
-      this.queryStart + emoji.length)
+    this.setNewRange(this.queryStart + emoji.length, this.queryStart + emoji.length);
   }
 
   setNewRange(start, end) {
