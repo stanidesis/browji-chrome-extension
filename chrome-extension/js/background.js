@@ -2,6 +2,7 @@
 var DESIRED_CAPACITY = 10 * 1024;
 var DB_DOC_KEY = "emoji-database";
 var DB_DOC_ATTACHMENT = "sqlite-file";
+var LATEST_DB_VERSION = 1;
 var storage;
 
 // True if the popup was revealed
@@ -78,6 +79,7 @@ function queryEmoji(query, callback) {
   while (sqlStmt.step()) {
     result.push(sqlStmt.getAsObject().emojicon);
   }
+  sqlStmt.free();
   callback(result);
 }
 
@@ -105,6 +107,7 @@ function updateWeights(query, selection) {
       // Create a new row with increments at 1
       db.run(`INSERT INTO emojis VALUES ('${selection}', '${term}', '${0.5 + calculateWeightOffset(1)}', '1')`);
     }
+    sqlStmt.free();
     // Decrement all other matches
     sqlQuery = `SELECT * FROM emojis WHERE emojicon != '${selection}' AND keyword = '${term}'`;
     sqlStmt = db.prepare(sqlQuery);
@@ -115,6 +118,7 @@ function updateWeights(query, selection) {
       var weight = 0.5 + calculateWeightOffset(increments);
       db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${row.emojicon}' AND keyword = '${row.keyword}'`);
     }
+    sqlStmt.free();
   }
 }
 
@@ -141,14 +145,13 @@ function sendDisplayPopupAtCursorMessage() {
   }, 500);
 }
 
-function populateAndSaveDefaultDb(callback) {
+function loadDefaultDbFromStorage(callback) {
   // Open the default Db
   var xhr = new XMLHttpRequest();
   xhr.open('GET','/database/defaults.sqlite', true);
   xhr.responseType = 'arraybuffer';
   xhr.onload = function(e) {
-    db = new SQL.Database(new Uint8Array(this.response));
-    saveDbToStorage(callback);
+    callback(new SQL.Database(new Uint8Array(this.response)));
   };
   xhr.send();
 }
@@ -159,16 +162,77 @@ function loadDbFromStorage(callback) {
     fileReader.onloadend = function() {
       var Uints = new Uint8Array(fileReader.result);
       db = new SQL.Database(Uints);
-      if (callback) callback();
+      // Perform an upgrade if necessary
+      if (LATEST_DB_VERSION > getActiveDbVersion()) {
+        upgradeDb(callback);
+      } else if (callback) callback();
     }
     fileReader.readAsArrayBuffer(dbStorageFile);
   }).catch(function(error) {
     // File not found
     if (error.code === 8) {
-      populateAndSaveDefaultDb(callback);
+      loadDefaultDbFromStorage(function(defaultDb) {
+        db = defaultDb;
+        saveDbToStorage(callback);
+      });
       return;
     }
     console.error(error);
+  });
+}
+
+/**
+ * Recover the current DB's version
+ */
+function getActiveDbVersion() {
+  var stmt = db.prepare('PRAGMA user_version');
+  stmt.bind();
+  stmt.step();
+  var result = stmt.get()[0];
+  stmt.free();
+  return result;
+}
+
+/**
+ * Set the Db version
+ */
+function setDbVersion(version) {
+  db.run(`PRAGMA user_version=${version}`);
+}
+
+/**
+ * Run through the upgrade process
+ */
+function upgradeDb(callback) {
+  var activeVersion = getActiveDbVersion();
+  switch(activeVersion) {
+    case 0:
+      // Do nothing for now
+  }
+  if (activeVersion < LATEST_DB_VERSION) {
+    importLatestDefinitions(activeVersion, function () {
+      setDbVersion(LATEST_DB_VERSION);
+      saveDbToStorage(callback);
+    });
+    return;
+  }
+  if (callback) callback();
+}
+
+/**
+ * This function adds definitions from the default database
+ * that do not yet exist in the client's database.
+ */
+function importLatestDefinitions(activeVersion, callback) {
+  loadDefaultDbFromStorage(function(defaultDb) {
+    var stmt = defaultDb.prepare(`SELECT * FROM emojis WHERE version > ${activeVersion}`);
+    stmt.bind();
+    while(stmt.step()) {
+      var row = stmt.get();
+      console.log(row);
+    }
+    stmt.free();
+    saveDbToStorage(callback);
   });
 }
 
