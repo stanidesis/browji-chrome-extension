@@ -163,7 +163,7 @@ function loadDbFromStorage(callback) {
       var Uints = new Uint8Array(fileReader.result);
       db = new SQL.Database(Uints);
       // Perform an upgrade if necessary
-      if (LATEST_DB_VERSION > getActiveDbVersion()) {
+      if (LATEST_DB_VERSION > getDbVersion()) {
         upgradeDb(callback);
       } else if (callback) callback();
     }
@@ -184,7 +184,7 @@ function loadDbFromStorage(callback) {
 /**
  * Recover the current DB's version
  */
-function getActiveDbVersion() {
+function getDbVersion() {
   var stmt = db.prepare('PRAGMA user_version');
   stmt.bind();
   stmt.step();
@@ -204,9 +204,9 @@ function setDbVersion(version) {
  * Run through the upgrade process
  */
 function upgradeDb(callback) {
-  var activeVersion = getActiveDbVersion();
+  var activeVersion = getDbVersion();
   switch(activeVersion) {
-    case 0:
+    default:
       // Do nothing for now
   }
   if (activeVersion < LATEST_DB_VERSION) {
@@ -229,10 +229,11 @@ function importLatestDefinitions(activeVersion, callback) {
     stmt.bind();
     while(stmt.step()) {
       var row = stmt.get();
-      console.log(row);
+      // Insert the row
+      db.run(`INSERT INTO emojis VALUES('${row.emojicon}','${row.keyword}','${row.weight}','${row.increments}','${row.version}')`);
     }
     stmt.free();
-    saveDbToStorage(callback);
+    if (callback) callback();
   });
 }
 
