@@ -67,17 +67,24 @@ function queryEmoji(query, callback) {
     });
     return;
   }
-  var sqlQuery = "SELECT emojicon, COUNT(*) as frequency FROM emojis WHERE ";
+  var exactMatchQuery = '';
+  var partialMatchQuery = '';
   for (var term of query.trim().split(' ')) {
-    sqlQuery += `keyword LIKE "${term}%" OR `;
+    exactMatchQuery += `keyword='${term}' OR `;
+    partialMatchQuery += `keyword LIKE '%${term}%' OR `;
   }
-  sqlQuery = sqlQuery.substring(0, sqlQuery.length - 3);
-  sqlQuery += `GROUP BY emojicon ORDER BY WEIGHT DESC, COUNT(*) DESC LIMIT 20`;
+  exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 3);
+  partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 3);
+  var sqlQuery = `SELECT emojicon, weight, SUM(CASE WHEN ${exactMatchQuery} THEN 1 ELSE 0 END) AS exactMatches,
+  SUM(CASE WHEN ${partialMatchQuery} THEN 1 ELSE 0 END) AS partialMatches FROM emojis GROUP BY emojicon
+  ORDER BY exactMatches DESC, partialMatches DESC, weight DESC LIMIT 20`;
   var sqlStmt = db.prepare(sqlQuery);
-  sqlStmt.bind();
   var result = [];
   while (sqlStmt.step()) {
-    result.push(sqlStmt.getAsObject().emojicon);
+    var rowResult = sqlStmt.getAsObject();
+    if (rowResult.exactMatches > 0 || rowResult.partialMatches > 0) {
+      result.push(sqlStmt.getAsObject().emojicon);
+    }
   }
   sqlStmt.free();
   callback(result);
