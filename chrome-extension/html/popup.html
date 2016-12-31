@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/material.min.css">
+    <link id="eac-link-style" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style id="eac-style">
+    .eac-popup {
+      display: none;
+      width: 320px;
+      height: 220px;
+      position: absolute;
+      background: #fafafa;
+      overflow: hidden;
+    }
+    .eac-popup form {
+      display: inline-block;
+    }
+    .eac-popup .mdl-textfield {
+      margin-left: 16px;
+      margin-right: 16px;
+      width: 240px;
+    }
+    .eac-popup .mdl-list__item {
+      -webkit-transition: background .2s; /* Safari */
+      transition: background .2s;
+      transition-timing-function: ease-in-out;
+    }
+    .eac-popup .mdl-list__item:hover,
+    .eac-popup .eac-active {
+      background: #dadada;
+      cursor: pointer;
+    }
+    .eac-tip-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2147483648;
+    }
+    .eac-tip {
+      color: rgba(0,0,0,.27);
+      margin: 0 auto;
+    }
+    .eac-feedback {
+      display: flex;
+      padding: 10px 0;
+      background-color: #ff4081;
+    }
+    .eac-feedback small {
+      margin: 0 auto;
+    }
+    .eac-feedback small, .eac-feedback a {
+      color: rgba(255,255,255,.87);
+    }
+    .eac-results {
+      position: relative;
+      height: 172px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .eac-key-hint {
+      text-align: right;
+      font-size: 12px;
+      -webkit-transition: opacity .2s; /* Safari */
+      transition: opacity .2s;
+      transition-timing-function: ease-in-out;
+    }
+    #search_icon {
+      display: inline-block;
+    }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/material.min.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+  </head>
+  <body>
+    <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
+      <div class="mdl-layout mdl-js-layout">
+        <div>
+          <form action="#" autocomplete="off">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="eac-search" autocomplete="off">
+              <label class="mdl-textfield__label" for="eac-search">Search emojis</label>
+            </div>
+          </form>
+          <img src="../images/ic_search_black_24px.svg" alt="Search Icon" id="search_icon">
+        </div>
+        <div class="eac-results">
+          <ul class="mdl-list" style="display: none">
+            <!-- Empty by default -->
+            <li></li>
+          </ul>
+          <div class="eac-tip-container">
+            <span></span>
+            <span class="eac-tip" style="font-size:16px">No results? Try 'cool'... 😎</span>
+            <span></span>
+            <div class="eac-feedback">
+              <small class="mdl-typography--font-medium">Feeling 😍, 👿, ☝🤓?
+                <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeBQC5_THlW3793mahfuEJA0TOKbxfnbyX5gPb_FEcqeTMjNQ/viewform">Submit feedback</a>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
