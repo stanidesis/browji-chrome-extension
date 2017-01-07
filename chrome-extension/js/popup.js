@@ -5,6 +5,13 @@ var UP = 38;
 var DOWN = 40;
 var ESC = 27;
 
+// The latest query performed
+var latestQuery;
+
+// Setup before functions
+var typingTimer; // Timer identifier
+var doneTypingInterval = 300;  // Time in ms, .5 seconds for example
+
 var Popup = function () {
   var $emojiPopup;
   // Initialize
@@ -78,18 +85,20 @@ var Popup = function () {
         performQuery(withQuery);
       }
     })
-    // Focus the input element
-    $emojiPopup.find('input')[0].focus();
 
-    // Listen for input changes and perform the query
-    $emojiPopup.on('input', 'input', function() {
-      var query = $(this).val().trim();
-      if (query == '') {
-        // Fill with empty results
-        populateWithResults([]);
-        return;
-      }
-      performQuery(query)
+    // Prepare input
+    var $input = $emojiPopup.find('input');
+    // Focus the input element
+    $input[0].focus();
+    //on keyup, start the countdown
+    $input.on('keyup', function () {
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(function () {performQuery($input.val())}, doneTypingInterval);
+    });
+
+    //on keydown, clear the countdown
+    $input.on('keydown', function () {
+      clearTimeout(typingTimer);
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
@@ -212,8 +221,16 @@ var Popup = function () {
   }
 
   function performQuery(query) {
+    query = query.trim();
+    if (query === '') {
+      populateWithResults([]);
+      return;
+    } else if (query == latestQuery) {
+      return;
+    }
     chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
       function(response) {
+        latestQuery = query;
         populateWithResults(response.result);
       }
     );
