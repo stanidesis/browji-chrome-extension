@@ -84,12 +84,12 @@ var Popup = function () {
     // Listen for input changes and perform the query
     $emojiPopup.on('input', 'input', function() {
       var query = $(this).val().trim();
-      if (query == '' || query.length < 2) {
+      if (query == '') {
         // Fill with empty results
         populateWithResults([]);
         return;
       }
-      performQuery(query)
+      performQuery(query);
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)

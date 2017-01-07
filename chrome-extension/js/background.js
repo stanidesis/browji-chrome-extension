@@ -1,5 +1,5 @@
 // 10 Mb should be more than enough
-var DESIRED_CAPACITY = 10 * 1024;
+var DESIRED_CAPACITY = 20 * 1024;
 var DB_DOC_KEY = "emoji-database";
 var DB_DOC_ATTACHMENT = "sqlite-file";
 var LATEST_DB_VERSION = 1;
@@ -7,19 +7,26 @@ var storage;
 
 // True if the popup was revealed
 var popupRevealedAtCursor = false;
-
 // Master DB File
 var db;
 
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
     if (db == null) {
-      initializeDb(sendDisplayPopupAtCursorMessage);
+      initializeDb(function() {
+        sendDisplayPopupAtCursorMessage();
+      });
       return;
     }
     sendDisplayPopupAtCursorMessage();
   }
 });
+
+chrome.alarms.onAlarm.addListener(function(alarm) {
+  if (alarm.name === 'alarm:fallback_to_copy_paste' && !popupRevealedAtCursor) {
+    console.log('Fallback to Copy/Paste!');
+  }
+})
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -61,42 +68,30 @@ function queryEmoji(query, callback) {
   if (!callback) {
     return;
   }
-  if (db == null) {
-    initializeDb(function() {
-      queryEmoji(query, callback);
-    });
-    return;
-  }
   var exactMatchQuery = '';
   var partialMatchQuery = '';
   for (var term of query.trim().split(' ')) {
     exactMatchQuery += `keyword='${term}' OR `;
-    partialMatchQuery += `keyword LIKE '%${term}%' OR `;
+    partialMatchQuery += `keyword LIKE '${term}%' OR `;
   }
   exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 3);
   partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 3);
-  var sqlQuery = `SELECT emojicon, weight, SUM(CASE WHEN ${exactMatchQuery} THEN 1 ELSE 0 END) AS exactMatches,
-  SUM(CASE WHEN ${partialMatchQuery} THEN 1 ELSE 0 END) AS partialMatches FROM emojis GROUP BY emojicon
-  ORDER BY exactMatches DESC, partialMatches DESC, weight DESC LIMIT 20`;
+  var sqlQuery = `SELECT emojicon, weight, SUM(CASE WHEN ${exactMatchQuery} THEN 1 ELSE 0 END) AS exactMatches
+  FROM emojis WHERE ${partialMatchQuery} GROUP BY emojicon
+  ORDER BY exactMatches DESC, weight DESC LIMIT 20`;
   var sqlStmt = db.prepare(sqlQuery);
   var result = [];
   while (sqlStmt.step()) {
     var rowResult = sqlStmt.getAsObject();
-    if (rowResult.exactMatches > 0 || rowResult.partialMatches > 0) {
+    // if (rowResult.exactMatches > 0 || rowResult.partialMatches > 0) {
       result.push(sqlStmt.getAsObject().emojicon);
-    }
+    // }
   }
   sqlStmt.free();
   callback(result);
 }
 
 function updateWeights(query, selection) {
-  if (db == null) {
-    initializeDb(function() {
-      updateWeights(query, selection);
-    });
-    return;
-  }
   for (var term of query.trim().split(' ')) {
     var incrementedRow = null;
     var sqlQuery = `SELECT * FROM emojis WHERE emojicon = '${selection}' AND keyword = '${term}' LIMIT 1`;
@@ -144,12 +139,7 @@ function sendDisplayPopupAtCursorMessage() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup_at_cursor'});
   });
-  window.setTimeout(function() {
-    if (!popupRevealedAtCursor) {
-      // TODO: Fallback to an actual copy/paste mode
-      console.log('Fallback to Copy/Paste!');
-    }
-  }, 500);
+  chrome.alarms.create('alarm:fallback_to_copy_paste', {when: Date.now() + 500});
 }
 
 function loadDefaultDbFromStorage(callback) {
