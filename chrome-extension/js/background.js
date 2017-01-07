@@ -71,21 +71,18 @@ function queryEmoji(query, callback) {
   var exactMatchQuery = '';
   var partialMatchQuery = '';
   for (var term of query.trim().split(' ')) {
-    exactMatchQuery += `keyword='${term}' OR `;
-    partialMatchQuery += `keyword LIKE '${term}%' OR `;
+    exactMatchQuery += `keyword="${term}" OR `;
+    partialMatchQuery += `keyword MATCH "${term}*" OR `;
   }
-  exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 3);
-  partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 3);
+  exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 4);
+  partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 4);
   var sqlQuery = `SELECT emojicon, weight, SUM(CASE WHEN ${exactMatchQuery} THEN 1 ELSE 0 END) AS exactMatches
   FROM emojis WHERE ${partialMatchQuery} GROUP BY emojicon
   ORDER BY exactMatches DESC, weight DESC LIMIT 20`;
   var sqlStmt = db.prepare(sqlQuery);
   var result = [];
   while (sqlStmt.step()) {
-    var rowResult = sqlStmt.getAsObject();
-    // if (rowResult.exactMatches > 0 || rowResult.partialMatches > 0) {
-      result.push(sqlStmt.getAsObject().emojicon);
-    // }
+    result.push(sqlStmt.getAsObject().emojicon);
   }
   sqlStmt.free();
   callback(result);
@@ -107,7 +104,7 @@ function updateWeights(query, selection) {
       db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${selection}' AND keyword = '${term}'`);
     } else {
       // Create a new row with increments at 1
-      db.run(`INSERT INTO emojis VALUES ('${selection}', '${term}', '${0.5 + calculateWeightOffset(1)}', '1')`);
+      db.run(`INSERT INTO emojis VALUES ('${selection}', '${term}', '${0.5 + calculateWeightOffset(1)}', '1', '0')`);
     }
     sqlStmt.free();
     // Decrement all other matches

@@ -89,7 +89,7 @@ var Popup = function () {
         populateWithResults([]);
         return;
       }
-      performQuery(query);
+      performQuery(query)
     });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
