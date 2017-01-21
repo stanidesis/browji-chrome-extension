@@ -5,6 +5,13 @@ var UP = 38;
 var DOWN = 40;
 var ESC = 27;
 
+// The latest query performed
+var latestQuery;
+
+// Setup before functions
+var typingTimer; // Timer identifier
+var doneTypingInterval = 300;  // Time in ms, .5 seconds for example
+
 var Popup = function () {
   var $emojiPopup;
   // Initialize
@@ -78,19 +85,17 @@ var Popup = function () {
         performQuery(withQuery);
       }
     })
+
+    // Listen for input changes
+    $emojiPopup.on('input', 'input', function() {
+      var query = $(this).val();
+      clearTimeout(typingTimer);
+      typingTimer = setTimeout(function () {performQuery(query)},
+        doneTypingInterval);
+    })
+
     // Focus the input element
     $emojiPopup.find('input')[0].focus();
-
-    // Listen for input changes and perform the query
-    $emojiPopup.on('input', 'input', function() {
-      var query = $(this).val().trim();
-      if (query == '' || query.length < 2) {
-        // Fill with empty results
-        populateWithResults([]);
-        return;
-      }
-      performQuery(query)
-    });
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
     $(document).on('click.eac', function(event) {
@@ -212,8 +217,16 @@ var Popup = function () {
   }
 
   function performQuery(query) {
+    query = query.trim().toLowerCase();
+    if (query === '') {
+      populateWithResults([]);
+      return;
+    } else if (query == latestQuery) {
+      return;
+    }
     chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
       function(response) {
+        latestQuery = query;
         populateWithResults(response.result);
       }
     );

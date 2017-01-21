@@ -3,6 +3,7 @@
   "name": "Emoji Autocomplete Alpha",
   "version": "0.1",
   "permissions": [
+    "alarms",
     "storage",
     "unlimitedStorage"
   ],
@@ -10,6 +11,7 @@
     "default_icon": "icon.png"
   },
   "background": {
+    "persistent": false,
     "scripts": [
       "js/jquery-3.1.1.min.js",
       "js/q.js",
