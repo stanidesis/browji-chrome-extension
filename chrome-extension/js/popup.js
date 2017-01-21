@@ -86,20 +86,16 @@ var Popup = function () {
       }
     })
 
-    // Prepare input
-    var $input = $emojiPopup.find('input');
-    // Focus the input element
-    $input[0].focus();
-    //on keyup, start the countdown
-    $input.on('keyup', function () {
+    // Listen for input changes
+    $emojiPopup.on('input', 'input', function() {
+      var query = $(this).val();
       clearTimeout(typingTimer);
-      typingTimer = setTimeout(function () {performQuery($input.val())}, doneTypingInterval);
-    });
+      typingTimer = setTimeout(function () {performQuery(query)},
+        doneTypingInterval);
+    })
 
-    //on keydown, clear the countdown
-    $input.on('keydown', function () {
-      clearTimeout(typingTimer);
-    });
+    // Focus the input element
+    $emojiPopup.find('input')[0].focus();
 
     // Setup click outside eac-popup ("borrowed" from http://stackoverflow.com/a/3028037/372884)
     $(document).on('click.eac', function(event) {
@@ -221,7 +217,7 @@ var Popup = function () {
   }
 
   function performQuery(query) {
-    query = query.trim();
+    query = query.trim().toLowerCase();
     if (query === '') {
       populateWithResults([]);
       return;

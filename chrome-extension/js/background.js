@@ -13,9 +13,7 @@ var db;
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
     if (db == null) {
-      initializeDb(function() {
-        sendDisplayPopupAtCursorMessage();
-      });
+      initializeDb(sendDisplayPopupAtCursorMessage);
       return;
     }
     sendDisplayPopupAtCursorMessage();
@@ -72,7 +70,7 @@ function queryEmoji(query, callback) {
   var partialMatchQuery = '';
   for (var term of query.trim().split(' ')) {
     exactMatchQuery += `keyword="${term}" OR `;
-    partialMatchQuery += `keyword MATCH "${term}*" OR `;
+    partialMatchQuery += `keyword MATCH '"${term}"*' OR `;
   }
   exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 4);
   partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 4);
