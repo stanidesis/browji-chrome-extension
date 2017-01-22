@@ -10,13 +10,19 @@ var popupRevealedAtCursor = false;
 // Master DB File
 var db;
 
+chrome.contextMenus.create({
+    id: 'eac-context-menu',
+    title: 'Find an Emoji',
+    contexts: ['editable']
+});
+
+chrome.contextMenus.onClicked.addListener(function(info, tab) {
+  activateEAC();
+})
+
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
-    if (db == null) {
-      initializeDb(sendDisplayPopupAtCursorMessage);
-      return;
-    }
-    sendDisplayPopupAtCursorMessage();
+    activateEAC();
   }
 });
 
@@ -43,6 +49,14 @@ chrome.runtime.onMessage.addListener(
       popupRevealedAtCursor = true;
     }
 });
+
+function activateEAC() {
+  if (db == null) {
+    initializeDb(sendDisplayPopupAtCursorMessage);
+    return;
+  }
+  sendDisplayPopupAtCursorMessage();
+}
 
 function initializeDb(callback) {
   if (storage != null) {
