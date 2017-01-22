@@ -109,11 +109,8 @@ function escapeSpecials(term) {
   if (specials.indexOf(term.charAt(0)) == -1) {
     return term;
   }
-  var lastIndexOfSpecial = 0;
   var i = 0;
-  while (i < term.length && specials.indexOf(term.charAt(i)) > -1) {
-    i++;
-  }
+  while (i < term.length && specials.indexOf(term.charAt(i)) > -1) i++;
   return '"' + term.substring(0, i) + '"' + term.substring(i);
 }
 
