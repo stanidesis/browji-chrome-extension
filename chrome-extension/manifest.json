@@ -11,6 +11,11 @@
   "icons": {
     "16": "icon.png"
   },
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true,
+    "open_in_tab": false
+  },
   "background": {
     "persistent": false,
     "scripts": [
