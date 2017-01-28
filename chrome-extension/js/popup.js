@@ -63,6 +63,11 @@ var Popup = function () {
       notifySelectionMade(false);
     }
 
+    $emojiPopup.on('click', '#settings_icon', function() {
+      dismissPopup();
+      chrome.runtime.sendMessage({message: 'to_background:open_options'});
+    })
+
     // On click, submit selection
     $emojiPopup.on('click', 'li', function() {
       notifySelectionMade(false);
