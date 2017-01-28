@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emoji Autocomplete</title>
+  <link rel="stylesheet" href="../css/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <!-- Uses a header that contracts as the page scrolls down. -->
+  <style>
+    html {
+      min-width: 230px;
+    }
+    .demo-layout-waterfall .mdl-layout__header-row  {
+      padding-right: 0;
+    }
+  </style>
+
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <div aria-expanded="false" tabindex="0" class="mdl-layout__drawer-button" style="cursor:default;"><i class="material-icons">settings</i></div>
+        <!-- Title -->
+        <span class="mdl-layout-title">Settings</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <style>
+        .demo-list-three {
+          width: 100%;
+        }
+      </style>
+      <div class="page-content">
+        <!-- Three Line List with secondary info and action -->
+        <ul class="demo-list-three mdl-list">
+          <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-avatar">keyboard</i>
+              <span>Keyboard Shortcut</span>
+              <span class="mdl-list__item-text-body">
+                Click to customize the keyboard shortcut that launches Emoji Autocomplete.
+              </span>
+            </span>
+            <span class="mdl-list__item-secondary-content">
+              <button id="button-keyboard-shortcuts" class="mdl-button mdl-js-button mdl-button--accent">
+                Set
+              </button>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/material.min.js"></script>
+  <script src="../js/options.js"></script>
+</body>
+</html>
