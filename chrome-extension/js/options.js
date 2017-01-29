@@ -35,6 +35,12 @@ function goToKeyboardShortcuts() {
   chrome.tabs.create({url: 'chrome://extensions/configureCommands'});
 }
 
+function goToWebstoreFeedback() {
+  // TODO: Use accurate URL after publication
+  chrome.tabs.create({url: 'https://chrome.google.com/webstore/detail/emoji-autocomplete-alpha/mifjkgpdjmpdkcdehnofdglmigaldenh/support'});
+}
+
 $('document').ready(function() {
   $('#button-keyboard-shortcuts').on('click', goToKeyboardShortcuts);
+  $('#button-submit-feedback').on('click', goToWebstoreFeedback);
 })
