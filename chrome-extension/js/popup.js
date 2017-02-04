@@ -5,6 +5,11 @@ var UP = 38;
 var DOWN = 40;
 var ESC = 27;
 
+// Selector for all search results
+var RESULTS_SELECTOR = 'div.mdl-cell';
+// Selector that holds all the results
+var RESULTS_CONTAINER_SELECTOR = 'div.mdl-grid';
+
 // The latest query performed
 var latestQuery;
 
@@ -36,13 +41,10 @@ var Popup = function () {
     }
   }
 
-  function setActiveResultItem($li) {
-    var active = $emojiPopup.find('.eac-active');
-    active.find('.eac-key-hint').css('opacity', 0);
-    active.removeClass('eac-active');
-    if ($li) {
-      $li.addClass('eac-active');
-      $li.find('.eac-key-hint').css('opacity', 1);
+  function setActiveResultItem($col) {
+    $emojiPopup.find('.eac-active').removeClass('eac-active');
+    if ($col) {
+      $col.addClass('eac-active');
     }
   }
 
@@ -53,12 +55,12 @@ var Popup = function () {
     $emojiPopup.find('form')[0].onsubmit = function(event) {
       event.preventDefault();
       // Check if any results are present
-      if ($emojiPopup.find('li').length == 0) {
+      if ($emojiPopup.find(RESULTS_SELECTOR).length == 0) {
         // TODO: notify the user that they need to improve their search?
         return;
       }
       if ($emojiPopup.find('.eac-active').length == 0) {
-        setActiveResultItem($emojiPopup.find('li').first());
+        setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
       notifySelectionMade(false);
     }
@@ -69,12 +71,12 @@ var Popup = function () {
     })
 
     // On click, submit selection
-    $emojiPopup.on('click', 'li', function() {
+    $emojiPopup.on('click', RESULTS_SELECTOR, function() {
       notifySelectionMade(false);
     });
 
     // On Hover, remove .active class for list items
-    $emojiPopup.on('mouseover', 'li', function() {
+    $emojiPopup.on('mouseover', RESULTS_SELECTOR, function() {
       setActiveResultItem($(this));
     });
 
@@ -122,7 +124,7 @@ var Popup = function () {
         event.preventDefault();
         notifySelectionMade(event.keyCode == TAB);
       } else if (event.keyCode == DOWN || event.keyCode == UP) {
-        var $resultList = $emojiPopup.find('li');
+        var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
         if ($resultList.length == 0) {
           // No list to scroll through
@@ -175,18 +177,9 @@ var Popup = function () {
     // Adjust the Popup's bounds if necessary
     chrome.runtime.sendMessage({message: 'to_background:get_window_size'},
       function(response) {
-        // TODO: Maybe move this out to reuse it when the user resizes the window?
         var rect = $emojiPopup[0].getBoundingClientRect();
-        // Too far to the left
-        if (rect.left <= 0) {
-          $emojiPopup.css('left', 10);
-        }
-        // Too far up
-        if (rect.top <= 0) {
-          $emojiPopup.css('top', 10);
-        }
         // Too far down
-        if (rect.bottom > response.height && rect.height <= response.height) {
+        if (rect.bottom > response.height) {
           $emojiPopup.css('top', response.height - rect.height - 10);
         }
         // Too far right
@@ -198,25 +191,25 @@ var Popup = function () {
   }
 
   function populateWithResults(results) {
-    var $list = $emojiPopup.find('ul');
+    var $resultsContainer = $emojiPopup.find(RESULTS_CONTAINER_SELECTOR);
     // No results scenario
     if (results.length == 0) {
       // Reveal the tip and hide the list
       $emojiPopup.find('.eac-tip-container').show();
-      $list.hide();
+      $resultsContainer.hide();
       return;
     }
     // Otherwise, fill it with data
-    $list.empty();
+    $resultsContainer.empty();
     // Hide the tip
     $emojiPopup.find('.eac-tip-container').hide();
     $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
       for (var i = 0; i < results.length; i++) {
         var replaced = data.replace('{{replace-me}}', results[i]);
-        $($.parseHTML(replaced)).appendTo($list);
+        $($.parseHTML(replaced)).appendTo($resultsContainer);
       }
-      if ($list.is(':hidden')) {
-        $list.show();
+      if ($resultsContainer.is(':hidden')) {
+        $resultsContainer.show();
       }
     });
   }
