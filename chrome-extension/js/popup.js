@@ -1,9 +1,16 @@
 // Keycodes
 var TAB = 9;
 var ENTER = 13;
+var LEFT = 37;
 var UP = 38;
+var RIGHT = 39;
 var DOWN = 40;
 var ESC = 27;
+
+// Selector for all search results
+var RESULTS_SELECTOR = 'div.mdl-cell';
+// Selector that holds all the results
+var RESULTS_CONTAINER_SELECTOR = 'div.mdl-grid';
 
 // The latest query performed
 var latestQuery;
@@ -36,13 +43,10 @@ var Popup = function () {
     }
   }
 
-  function setActiveResultItem($li) {
-    var active = $emojiPopup.find('.eac-active');
-    active.find('.eac-key-hint').css('opacity', 0);
-    active.removeClass('eac-active');
-    if ($li) {
-      $li.addClass('eac-active');
-      $li.find('.eac-key-hint').css('opacity', 1);
+  function setActiveResultItem($col) {
+    $emojiPopup.find('.eac-active').removeClass('eac-active');
+    if ($col) {
+      $col.addClass('eac-active');
     }
   }
 
@@ -53,12 +57,12 @@ var Popup = function () {
     $emojiPopup.find('form')[0].onsubmit = function(event) {
       event.preventDefault();
       // Check if any results are present
-      if ($emojiPopup.find('li').length == 0) {
+      if ($emojiPopup.find(RESULTS_SELECTOR).length == 0) {
         // TODO: notify the user that they need to improve their search?
         return;
       }
       if ($emojiPopup.find('.eac-active').length == 0) {
-        setActiveResultItem($emojiPopup.find('li').first());
+        setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
       notifySelectionMade(false);
     }
@@ -69,12 +73,12 @@ var Popup = function () {
     })
 
     // On click, submit selection
-    $emojiPopup.on('click', 'li', function() {
+    $emojiPopup.on('click', RESULTS_SELECTOR, function() {
       notifySelectionMade(false);
     });
 
     // On Hover, remove .active class for list items
-    $emojiPopup.on('mouseover', 'li', function() {
+    $emojiPopup.on('mouseover', RESULTS_SELECTOR, function() {
       setActiveResultItem($(this));
     });
 
@@ -121,72 +125,57 @@ var Popup = function () {
         }
         event.preventDefault();
         notifySelectionMade(event.keyCode == TAB);
-      } else if (event.keyCode == DOWN || event.keyCode == UP) {
-        var $resultList = $emojiPopup.find('li');
+      } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
+        var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
         if ($resultList.length == 0) {
           // No list to scroll through
           return;
         }
-        // Don't do the default thing, please :D
-        event.preventDefault();
-        // Up or down, good user?
-        var goUp = event.keyCode == UP;
         // If the text input is selected
         if (document.activeElement.id === 'eac-search'
           || $emojiPopup.find('.eac-active').length == 0) {
+          // Left or right, good user?
+          if (event.keyCode == LEFT || event.keyCode == RIGHT) {
+            // Allow the keypress to proceed as natural
+            return;
+          }
+          event.preventDefault();
           document.activeElement.blur();
+          var goUp = event.keyCode == UP;
           var $newActiveElement = goUp? $resultList.last() : $resultList.first();
           setActiveResultItem($newActiveElement)
           $newActiveElement.parents('div').scrollTo($newActiveElement, 100);
-        // We have an active selection already
         } else {
+          // Don't do the default thing, please :D
+          event.preventDefault();
+          // Get the active selection
           var $activeListItem = $emojiPopup.find('.eac-active');
-          // The newly selected element
-          var $newActiveElement;
-          // Deactivate item
-          setActiveResultItem();
-          var index = $resultList.index($activeListItem);
-          var length = $resultList.length;
-          if (goUp) {
-            if (index > 0) {
-              $newActiveElement = $activeListItem.prev();
-            } else {
-              // Focus the search
-              $('#eac-search')[0].focus();
-            }
-          } else {
-            if (index < length - 1) {
-              $newActiveElement = $activeListItem.next();
-            } else {
-              // Focus the search
-              $('#eac-search')[0].focus();
-            }
-          }
-          // Scroll to the newly selected item
-          if ($newActiveElement) {
+          // Determine direction
+          var constraintOptions = ['left', 'top', 'right', 'bottom'];
+          var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR,
+            {directionConstraints:[constraintOptions[event.keyCode - LEFT]]});
+          if ($newActiveElement.size() > 0) {
+            // Set new active result
             setActiveResultItem($newActiveElement);
             $activeListItem.parents('div').scrollTo($newActiveElement, 100);
+          } else if (event.keyCode == DOWN || event.keyCode == UP) {
+            setActiveResultItem();
+            $emojiPopup.find('input')[0].focus();
           }
         }
+      } else if ($emojiPopup.find('input').is(':focus') == false) {
+        // If the input isn't focused, focus it
+        $emojiPopup.find('input')[0].focus();
       }
     });
 
     // Adjust the Popup's bounds if necessary
     chrome.runtime.sendMessage({message: 'to_background:get_window_size'},
       function(response) {
-        // TODO: Maybe move this out to reuse it when the user resizes the window?
         var rect = $emojiPopup[0].getBoundingClientRect();
-        // Too far to the left
-        if (rect.left <= 0) {
-          $emojiPopup.css('left', 10);
-        }
-        // Too far up
-        if (rect.top <= 0) {
-          $emojiPopup.css('top', 10);
-        }
         // Too far down
-        if (rect.bottom > response.height && rect.height <= response.height) {
+        if (rect.bottom > response.height) {
           $emojiPopup.css('top', response.height - rect.height - 10);
         }
         // Too far right
@@ -198,25 +187,25 @@ var Popup = function () {
   }
 
   function populateWithResults(results) {
-    var $list = $emojiPopup.find('ul');
+    var $resultsContainer = $emojiPopup.find(RESULTS_CONTAINER_SELECTOR);
     // No results scenario
     if (results.length == 0) {
       // Reveal the tip and hide the list
       $emojiPopup.find('.eac-tip-container').show();
-      $list.hide();
+      $resultsContainer.hide();
       return;
     }
     // Otherwise, fill it with data
-    $list.empty();
+    $resultsContainer.empty();
     // Hide the tip
     $emojiPopup.find('.eac-tip-container').hide();
     $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
       for (var i = 0; i < results.length; i++) {
         var replaced = data.replace('{{replace-me}}', results[i]);
-        $($.parseHTML(replaced)).appendTo($list);
+        $($.parseHTML(replaced)).appendTo($resultsContainer);
       }
-      if ($list.is(':hidden')) {
-        $list.show();
+      if ($resultsContainer.is(':hidden')) {
+        $resultsContainer.show();
       }
     });
   }

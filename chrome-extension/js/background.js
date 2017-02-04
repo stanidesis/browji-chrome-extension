@@ -10,11 +10,14 @@ var popupRevealedAtCursor = false;
 // Master DB File
 var db;
 
-chrome.contextMenus.create({
+// Remove then create context menu
+chrome.contextMenus.removeAll(function () {
+  chrome.contextMenus.create({
     id: 'eac-context-menu',
     title: 'Find an Emoji',
     contexts: ['editable']
-});
+  });
+})
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   activateEAC();
@@ -88,6 +91,12 @@ function initializeDb(callback) {
 
 function queryEmoji(query, callback) {
   if (!callback) {
+    return;
+  }
+  if (db == null) {
+    initializeDb(function() {
+      queryEmoji(query, callback);
+    });
     return;
   }
   var exactMatchQuery = '';
