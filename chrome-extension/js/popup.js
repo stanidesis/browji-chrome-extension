@@ -152,18 +152,9 @@ var Popup = function () {
           // Get the active selection
           var $activeListItem = $emojiPopup.find('.eac-active');
           // Determine direction
-          var directionConstraint = 'left';
-          switch (event.keyCode) {
-            case UP:
-              directionConstraint = 'top';
-              break;
-            case DOWN:
-              directionConstraint = 'bottom';
-              break;
-            case RIGHT:
-              directionConstraint = 'right';
-          }
-          var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR, {directionConstraints:[directionConstraint]});
+          var constraintOptions = ['left', 'top', 'right', 'bottom'];
+          var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR,
+            {directionConstraints:[constraintOptions[event.keyCode - LEFT]]});
           if ($newActiveElement.size() > 0) {
             // Set new active result
             setActiveResultItem($newActiveElement);
