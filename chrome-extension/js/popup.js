@@ -154,8 +154,9 @@ var Popup = function () {
           // Determine direction
           var constraintOptions = ['left', 'top', 'right', 'bottom'];
           var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR,
-            {directionConstraints:[constraintOptions[event.keyCode - LEFT]]});
-          if ($newActiveElement.size() > 0) {
+            {directionConstraints:[constraintOptions[event.keyCode - LEFT]],
+             sort:'nearest'}).first();
+          if ($newActiveElement.size() == 1) {
             // Set new active result
             setActiveResultItem($newActiveElement);
             $activeListItem.parents('div').scrollTo($newActiveElement, 100);
