@@ -10,3 +10,6 @@
 [submodule "dependencies/Caret.js"]
 	path = dependencies/Caret.js
 	url = git@github.com:ichord/Caret.js.git
+[submodule "dependencies/jquery-nearest"]
+	path = dependencies/jquery-nearest
+	url = https://github.com/gilmoreorless/jquery-nearest.git

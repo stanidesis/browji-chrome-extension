@@ -1,7 +1,9 @@
 // Keycodes
 var TAB = 9;
 var ENTER = 13;
+var LEFT = 37;
 var UP = 38;
+var RIGHT = 39;
 var DOWN = 40;
 var ESC = 27;
 
@@ -123,54 +125,57 @@ var Popup = function () {
         }
         event.preventDefault();
         notifySelectionMade(event.keyCode == TAB);
-      } else if (event.keyCode == DOWN || event.keyCode == UP) {
+      } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
         var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
         if ($resultList.length == 0) {
           // No list to scroll through
           return;
         }
-        // Don't do the default thing, please :D
-        event.preventDefault();
-        // Up or down, good user?
-        var goUp = event.keyCode == UP;
         // If the text input is selected
         if (document.activeElement.id === 'eac-search'
           || $emojiPopup.find('.eac-active').length == 0) {
+          // Left or right, good user?
+          if (event.keyCode == LEFT || event.keyCode == RIGHT) {
+            // Allow the keypress to proceed as natural
+            return;
+          }
+          event.preventDefault();
           document.activeElement.blur();
+          var goUp = event.keyCode == UP;
           var $newActiveElement = goUp? $resultList.last() : $resultList.first();
           setActiveResultItem($newActiveElement)
           $newActiveElement.parents('div').scrollTo($newActiveElement, 100);
-        // We have an active selection already
         } else {
+          // Don't do the default thing, please :D
+          event.preventDefault();
+          // Get the active selection
           var $activeListItem = $emojiPopup.find('.eac-active');
-          // The newly selected element
-          var $newActiveElement;
-          // Deactivate item
-          setActiveResultItem();
-          var index = $resultList.index($activeListItem);
-          var length = $resultList.length;
-          if (goUp) {
-            if (index > 0) {
-              $newActiveElement = $activeListItem.prev();
-            } else {
-              // Focus the search
-              $('#eac-search')[0].focus();
-            }
-          } else {
-            if (index < length - 1) {
-              $newActiveElement = $activeListItem.next();
-            } else {
-              // Focus the search
-              $('#eac-search')[0].focus();
-            }
+          // Determine direction
+          var directionConstraint = 'left';
+          switch (event.keyCode) {
+            case UP:
+              directionConstraint = 'top';
+              break;
+            case DOWN:
+              directionConstraint = 'bottom';
+              break;
+            case RIGHT:
+              directionConstraint = 'right';
           }
-          // Scroll to the newly selected item
-          if ($newActiveElement) {
+          var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR, {directionConstraints:[directionConstraint]});
+          if ($newActiveElement.size() > 0) {
+            // Set new active result
             setActiveResultItem($newActiveElement);
             $activeListItem.parents('div').scrollTo($newActiveElement, 100);
+          } else if (event.keyCode == DOWN || event.keyCode == UP) {
+            setActiveResultItem();
+            $emojiPopup.find('input')[0].focus();
           }
         }
+      } else if ($emojiPopup.find('input').is(':focus') == false) {
+        // If the input isn't focused, focus it
+        $emojiPopup.find('input')[0].focus();
       }
     });
 
