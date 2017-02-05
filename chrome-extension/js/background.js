@@ -160,6 +160,7 @@ function updateWeights(query, selection) {
     }
     sqlStmt.free();
   }
+  saveDbToStorage();
 }
 
 function calculateWeightOffset(incrememtCount) {
@@ -268,7 +269,7 @@ function importLatestDefinitions(activeVersion, callback) {
       db.run(`INSERT INTO emojis VALUES('${row.emojicon}','${row.keyword}','${row.weight}','${row.increments}','${row.version}')`);
     }
     stmt.free();
-    if (callback) callback();
+    saveDbToStorage(callback);
   });
 }
 
@@ -278,5 +279,6 @@ function saveDbToStorage(callback) {
       if (callback) callback();
     }).catch(function(error) {
       console.error(error);
+      if (callback) callback();
     });
 }
