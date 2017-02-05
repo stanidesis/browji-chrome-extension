@@ -1,7 +1,9 @@
-// 10 Mb should be more than enough
+// LRU Key
+var LRU_KEY = 'lru-emojis';
+// 20 Mb should be more than enough
 var DESIRED_CAPACITY = 20 * 1024;
-var DB_DOC_KEY = "emoji-database";
-var DB_DOC_ATTACHMENT = "sqlite-file";
+var DB_DOC_KEY = 'emoji-database';
+var DB_DOC_ATTACHMENT = 'sqlite-file';
 var LATEST_DB_VERSION = 1;
 var storage;
 
@@ -9,6 +11,8 @@ var storage;
 var popupRevealedAtCursor = false;
 // Master DB File
 var db;
+// LRU for recently-used Emojis
+var lruEmojis;
 
 // Remove then create context menu
 chrome.contextMenus.removeAll(function () {
@@ -20,12 +24,12 @@ chrome.contextMenus.removeAll(function () {
 })
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
-  activateEAC();
+  activateEAC(sendDisplayPopupAtCursorMessage);
 })
 
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
-    activateEAC();
+    activateEAC(sendDisplayPopupAtCursorMessage);
   }
 });
 
@@ -48,9 +52,10 @@ chrome.runtime.onMessage.addListener(
       });
     } else if (request.message == 'to_background:update_weights') {
       updateWeights(request.query, request.selection);
+      updateLRU(request.selection);
     } else if (request.message == 'to_background:popup_revealed_at_cursor') {
       popupRevealedAtCursor = true;
-    } else if (request.message === 'to_background:open_options') {
+    } else if (request.message == 'to_background:open_options') {
       if (chrome.runtime.openOptionsPage) {
         // New way to open options pages, if supported (Chrome 42+).
         chrome.runtime.openOptionsPage(function() {
@@ -60,15 +65,57 @@ chrome.runtime.onMessage.addListener(
         // Reasonable fallback.
         window.open(chrome.runtime.getURL('html/options.html'));
       }
+    } else if (request.message == 'to_background:get_lru_emojis') {
+      getLRU(function(lru) {
+        result = [];
+        for (var key of lru.keys()) {
+          result.unshift(key);
+        }
+        sendResponse({result: result});
+      });
     }
 });
 
-function activateEAC() {
+function activateEAC(callback) {
   if (db == null) {
-    initializeDb(sendDisplayPopupAtCursorMessage);
+    initializeDb(function() {
+      getLRU(callback);
+    });
     return;
   }
-  sendDisplayPopupAtCursorMessage();
+  callback();
+}
+
+function getLRU(callback) {
+  if (lruEmojis) {
+    callback(lruEmojis);
+    return;
+  }
+  chrome.storage.sync.get(LRU_KEY, function(items) {
+    if (chrome.runtime.lastError || !items[LRU_KEY]) {
+      lruEmojis = new LRUMap(24);
+    } else {
+      lruEmojis = new LRUMap(24, items[LRU_KEY]);
+    }
+    callback(lruEmojis);
+  });
+}
+
+function updateLRU(selection) {
+  getLRU(function(lru) {
+    lru.set(selection, selection);
+    var serialized = [];
+    for (var entry of lru) {
+      serialized.push(entry);
+    }
+    var keyMap = {};
+    keyMap[LRU_KEY] = serialized;
+    chrome.storage.sync.set(keyMap, function() {
+      if (chrome.runtime.lastError) {
+        console.log(chrome.runtime.lastError.message);
+      }
+    });
+  })
 }
 
 function initializeDb(callback) {
@@ -94,7 +141,7 @@ function queryEmoji(query, callback) {
     return;
   }
   if (db == null) {
-    initializeDb(function() {
+    activateEAC(function() {
       queryEmoji(query, callback);
     });
     return;

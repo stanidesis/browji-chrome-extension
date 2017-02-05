@@ -85,13 +85,18 @@ var Popup = function () {
     var oneTime = true;
     $emojiPopup.on('focus', 'input', function() {
       // Check for a baked-in query
-      if (withQuery && oneTime) {
+      if (oneTime) {
         oneTime = false;
-        $(this).val(withQuery);
-        // This is super ugly and necessary because setting
-        // the value programmatically doesn't dirty the field
-        $(this).parent().addClass("is-dirty");
-        performQuery(withQuery);
+        if (withQuery) {
+          $(this).val(withQuery);
+          // This is super ugly and necessary because setting
+          // the value programmatically doesn't dirty the field
+          $(this).parent().addClass("is-dirty");
+          performQuery(withQuery);
+        } else {
+          // This will populate the results with recent emojis
+          performQuery('');
+        }
       }
     })
 
@@ -189,17 +194,24 @@ var Popup = function () {
 
   function populateWithResults(results) {
     var $resultsContainer = $emojiPopup.find(RESULTS_CONTAINER_SELECTOR);
-    // No results scenario
-    if (results.length == 0) {
-      // Reveal the tip and hide the list
-      $emojiPopup.find('.eac-tip-container').show();
+    // Empty search with no recents
+    if (results == null) {
       $resultsContainer.hide();
+      $emojiPopup.find('#eac-no-results').hide();
+      $emojiPopup.find('#eac-no-recents').show();
+      return;
+    } else if (results.length == 0) {
+      // Reveal the tip and hide the list
+      $resultsContainer.hide();
+      $emojiPopup.find('#eac-no-recents').hide();
+      $emojiPopup.find('#eac-no-results').show();
       return;
     }
     // Otherwise, fill it with data
     $resultsContainer.empty();
-    // Hide the tip
-    $emojiPopup.find('.eac-tip-container').hide();
+    // Hide the tips
+    $emojiPopup.find('#eac-no-recents').hide();
+    $emojiPopup.find('#eac-no-results').hide();
     $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
       for (var i = 0; i < results.length; i++) {
         var replaced = data.replace('{{replace-me}}', results[i]);
@@ -213,8 +225,16 @@ var Popup = function () {
 
   function performQuery(query) {
     query = query.trim().toLowerCase();
-    if (query === '') {
-      populateWithResults([]);
+    if (query == '') {
+      chrome.runtime.sendMessage({message: 'to_background:get_lru_emojis'},
+      function(response) {
+        var recentEmojis = response.result;
+        if (recentEmojis.length == 0) {
+          populateWithResults(null);
+        } else {
+          populateWithResults(recentEmojis);
+        }
+      });
       return;
     } else if (query == latestQuery) {
       return;
