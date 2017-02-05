@@ -163,13 +163,13 @@ function updateWeights(query, selection) {
   saveDbToStorage();
 }
 
-function calculateWeightOffset(incrememtCount) {
-  var absInc = Math.abs(incrememtCount);
+function calculateWeightOffset(incrementCount) {
+  var absInc = Math.abs(incrementCount);
   var inc = 0;
   while (absInc > 0) {
     inc += Math.pow(2, -(absInc-- + 1));
   }
-  return incrememtCount > 0 ? inc : -1 * inc;
+  return incrementCount > 0 ? inc : -1 * inc;
 }
 
 function sendDisplayPopupAtCursorMessage() {
