@@ -13,3 +13,6 @@
 [submodule "dependencies/jquery-nearest"]
 	path = dependencies/jquery-nearest
 	url = https://github.com/gilmoreorless/jquery-nearest.git
+[submodule "dependencies/js-lru"]
+	path = dependencies/js-lru
+	url = https://github.com/rsms/js-lru.git
