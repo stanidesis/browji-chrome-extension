@@ -30,6 +30,7 @@
       z-index: 2147483648;
     }
     .eac-tip {
+      font-size: 16px;
       color: rgba(0,0,0,.27);
       margin: 0 auto;
     }
@@ -87,10 +88,15 @@
         <div class="eac-results">
           <div class="mdl-grid" style="display: none">
             <!-- Empty by default -->
-          </ul>
-          <div class="eac-tip-container">
+          </div>
+          <div id="eac-no-results" class="eac-tip-container">
             <span></span>
-            <span class="eac-tip" style="font-size:16px">No results? Try 'cool'... 😎</span>
+            <span class="eac-tip">No results? Try 'cool'... 😎</span>
+            <span></span>
+          </div>
+          <div id="eac-no-recents" class="eac-tip-container">
+            <span></span>
+            <span class="eac-tip">No recent emojis ☝😮</span>
             <span></span>
           </div>
         </div>

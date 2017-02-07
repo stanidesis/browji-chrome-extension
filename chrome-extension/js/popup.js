@@ -85,13 +85,17 @@ var Popup = function () {
     var oneTime = true;
     $emojiPopup.on('focus', 'input', function() {
       // Check for a baked-in query
-      if (withQuery && oneTime) {
+      if (oneTime) {
         oneTime = false;
-        $(this).val(withQuery);
-        // This is super ugly and necessary because setting
-        // the value programmatically doesn't dirty the field
-        $(this).parent().addClass("is-dirty");
-        performQuery(withQuery);
+        if (withQuery) {
+          $(this).val(withQuery);
+          // This is super ugly and necessary because setting
+          // the value programmatically doesn't dirty the field
+          $(this).parent().addClass("is-dirty");
+          performQuery(withQuery);
+        } else {
+          revealRecents();
+        }
       }
     })
 
@@ -187,22 +191,28 @@ var Popup = function () {
     );
   }
 
-  function populateWithResults(results) {
+  function revealNoRecents() {
+    $emojiPopup.find(RESULTS_CONTAINER_SELECTOR).hide();
+    $emojiPopup.find('#eac-no-results').hide();
+    $emojiPopup.find('#eac-no-recents').show();
+  }
+
+  function revealNoResults() {
+    $emojiPopup.find(RESULTS_CONTAINER_SELECTOR).hide();
+    $emojiPopup.find('#eac-no-recents').hide();
+    $emojiPopup.find('#eac-no-results').show();
+  }
+
+  function revealEmojis(emojis) {
     var $resultsContainer = $emojiPopup.find(RESULTS_CONTAINER_SELECTOR);
-    // No results scenario
-    if (results.length == 0) {
-      // Reveal the tip and hide the list
-      $emojiPopup.find('.eac-tip-container').show();
-      $resultsContainer.hide();
-      return;
-    }
     // Otherwise, fill it with data
     $resultsContainer.empty();
-    // Hide the tip
-    $emojiPopup.find('.eac-tip-container').hide();
+    // Hide the tips
+    $emojiPopup.find('#eac-no-recents').hide();
+    $emojiPopup.find('#eac-no-results').hide();
     $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
-      for (var i = 0; i < results.length; i++) {
-        var replaced = data.replace('{{replace-me}}', results[i]);
+      for (var i = 0; i < emojis.length; i++) {
+        var replaced = data.replace('{{replace-me}}', emojis[i]);
         $($.parseHTML(replaced)).appendTo($resultsContainer);
       }
       if ($resultsContainer.is(':hidden')) {
@@ -211,10 +221,22 @@ var Popup = function () {
     });
   }
 
+  function revealRecents() {
+    chrome.runtime.sendMessage({message: 'to_background:get_lru_emojis'},
+    function(response) {
+      var recentEmojis = response.result;
+      if (recentEmojis.length == 0) {
+        revealNoRecents();
+      } else {
+        revealEmojis(recentEmojis);
+      }
+    });
+  }
+
   function performQuery(query) {
     query = query.trim().toLowerCase();
-    if (query === '') {
-      populateWithResults([]);
+    if (query == '') {
+      revealRecents();
       return;
     } else if (query == latestQuery) {
       return;
@@ -222,7 +244,11 @@ var Popup = function () {
     chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
       function(response) {
         latestQuery = query;
-        populateWithResults(response.result);
+        if (response.result.length == 0) {
+          revealNoResults();
+          return;
+        }
+        revealEmojis(response.result);
       }
     );
   }
