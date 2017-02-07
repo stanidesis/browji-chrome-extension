@@ -20,16 +20,6 @@
       margin-right: 16px;
       width: 240px;
     }
-    .eac-popup .mdl-list__item {
-      -webkit-transition: background .2s; /* Safari */
-      transition: background .2s;
-      transition-timing-function: ease-in-out;
-    }
-    .eac-popup .mdl-list__item:hover,
-    .eac-popup .eac-active {
-      background: #dadada;
-      cursor: pointer;
-    }
     .eac-tip-container {
       position: absolute;
       width: 100%;
@@ -40,6 +30,7 @@
       z-index: 2147483648;
     }
     .eac-tip {
+      font-size: 16px;
       color: rgba(0,0,0,.27);
       margin: 0 auto;
     }
@@ -48,6 +39,20 @@
       height: 172px;
       overflow-y: auto;
       overflow-x: hidden;
+    }
+    .eac-results--item {
+      text-align: center;
+      padding: 2px;
+      -webkit-transition: all .2s; /* Safari */
+      transition: all .2s;
+      transition-timing-function: ease-in-out;
+    }
+    .eac-results--item:hover,
+    .eac-active {
+      text-shadow: rgba(0,0,0,.3) 0em 0em 0.2em;
+      cursor: pointer;
+      -webkit-transform: scale(1.3, 1.3); /* Safari */
+      transform: scale(1.3, 1.3);
     }
     .eac-key-hint {
       text-align: right;
@@ -61,6 +66,8 @@
     }
     </style>
     <script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-3.0.0.js"></script>
+    <script type="text/javascript" src="../js/jquery.nearest.min.js"></script>
     <script type="text/javascript" src="../js/material.min.js"></script>
     <script type="text/javascript" src="../js/popup.js"></script>
   </head>
@@ -79,13 +86,17 @@
           </button>
         </div>
         <div class="eac-results">
-          <ul class="mdl-list" style="display: none">
+          <div class="mdl-grid" style="display: none">
             <!-- Empty by default -->
-            <li></li>
-          </ul>
-          <div class="eac-tip-container">
+          </div>
+          <div id="eac-no-results" class="eac-tip-container">
             <span></span>
-            <span class="eac-tip" style="font-size:16px">No results? Try 'cool'... 😎</span>
+            <span class="eac-tip">No results? Try 'cool'... 😎</span>
+            <span></span>
+          </div>
+          <div id="eac-no-recents" class="eac-tip-container">
+            <span></span>
+            <span class="eac-tip">No recent emojis ☝😮</span>
             <span></span>
           </div>
         </div>

@@ -1,7 +1,9 @@
-// 10 Mb should be more than enough
+// LRU Key
+var LRU_KEY = 'lru-emojis';
+// 20 Mb should be more than enough
 var DESIRED_CAPACITY = 20 * 1024;
-var DB_DOC_KEY = "emoji-database";
-var DB_DOC_ATTACHMENT = "sqlite-file";
+var DB_DOC_KEY = 'emoji-database';
+var DB_DOC_ATTACHMENT = 'sqlite-file';
 var LATEST_DB_VERSION = 1;
 var storage;
 
@@ -9,20 +11,25 @@ var storage;
 var popupRevealedAtCursor = false;
 // Master DB File
 var db;
+// LRU for recently-used Emojis
+var lruEmojis;
 
-chrome.contextMenus.create({
+// Remove then create context menu
+chrome.contextMenus.removeAll(function () {
+  chrome.contextMenus.create({
     id: 'eac-context-menu',
     title: 'Find an Emoji',
     contexts: ['editable']
-});
+  });
+})
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
-  activateEAC();
+  activateEAC(sendDisplayPopupAtCursorMessage);
 })
 
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
-    activateEAC();
+    activateEAC(sendDisplayPopupAtCursorMessage);
   }
 });
 
@@ -45,9 +52,10 @@ chrome.runtime.onMessage.addListener(
       });
     } else if (request.message == 'to_background:update_weights') {
       updateWeights(request.query, request.selection);
+      updateLRU(request.selection);
     } else if (request.message == 'to_background:popup_revealed_at_cursor') {
       popupRevealedAtCursor = true;
-    } else if (request.message === 'to_background:open_options') {
+    } else if (request.message == 'to_background:open_options') {
       if (chrome.runtime.openOptionsPage) {
         // New way to open options pages, if supported (Chrome 42+).
         chrome.runtime.openOptionsPage(function() {
@@ -57,15 +65,57 @@ chrome.runtime.onMessage.addListener(
         // Reasonable fallback.
         window.open(chrome.runtime.getURL('html/options.html'));
       }
+    } else if (request.message == 'to_background:get_lru_emojis') {
+      getLRU(function(lru) {
+        result = [];
+        for (var key of lru.keys()) {
+          result.unshift(key);
+        }
+        sendResponse({result: result});
+      });
     }
 });
 
-function activateEAC() {
+function activateEAC(callback) {
   if (db == null) {
-    initializeDb(sendDisplayPopupAtCursorMessage);
+    initializeDb(function() {
+      getLRU(callback);
+    });
     return;
   }
-  sendDisplayPopupAtCursorMessage();
+  callback();
+}
+
+function getLRU(callback) {
+  if (lruEmojis) {
+    callback(lruEmojis);
+    return;
+  }
+  chrome.storage.sync.get(LRU_KEY, function(items) {
+    if (chrome.runtime.lastError || !items[LRU_KEY]) {
+      lruEmojis = new LRUMap(24);
+    } else {
+      lruEmojis = new LRUMap(24, items[LRU_KEY]);
+    }
+    callback(lruEmojis);
+  });
+}
+
+function updateLRU(selection) {
+  getLRU(function(lru) {
+    lru.set(selection, selection);
+    var serialized = [];
+    for (var entry of lru) {
+      serialized.push(entry);
+    }
+    var keyMap = {};
+    keyMap[LRU_KEY] = serialized;
+    chrome.storage.sync.set(keyMap, function() {
+      if (chrome.runtime.lastError) {
+        console.log(chrome.runtime.lastError.message);
+      }
+    });
+  })
 }
 
 function initializeDb(callback) {
@@ -90,11 +140,17 @@ function queryEmoji(query, callback) {
   if (!callback) {
     return;
   }
+  if (db == null) {
+    activateEAC(function() {
+      queryEmoji(query, callback);
+    });
+    return;
+  }
   var exactMatchQuery = '';
   var partialMatchQuery = '';
   for (var term of query.trim().split(' ')) {
     exactMatchQuery += `keyword="${term}" OR `;
-    partialMatchQuery += `keyword MATCH '${escapeSpecials(term)}*' OR `;
+    partialMatchQuery += `keyword MATCH '${escapeParens(term)}*' OR `;
   }
   exactMatchQuery = exactMatchQuery.substring(0, exactMatchQuery.length - 4);
   partialMatchQuery = partialMatchQuery.substring(0, partialMatchQuery.length - 4);
@@ -111,17 +167,13 @@ function queryEmoji(query, callback) {
 }
 
 /**
- * This allows us to use special characters in MATCH
- * queries.
+ * In this version of SQLite, the parentheses are fubar'd in MATCH queries
  */
-function escapeSpecials(term) {
-  specials = '~!@#$%^&()_+[]\\{}|:;,./<>?-';
-  if (specials.indexOf(term.charAt(0)) == -1) {
-    return term;
+function escapeParens(term) {
+  if (term.includes('(') || term.includes(')')) {
+    return `"${term}"`;
   }
-  var i = 0;
-  while (i < term.length && specials.indexOf(term.charAt(i)) > -1) i++;
-  return '"' + term.substring(0, i) + '"' + term.substring(i);
+  return term;
 }
 
 function updateWeights(query, selection) {
@@ -155,15 +207,16 @@ function updateWeights(query, selection) {
     }
     sqlStmt.free();
   }
+  saveDbToStorage();
 }
 
-function calculateWeightOffset(incrememtCount) {
-  var absInc = Math.abs(incrememtCount);
+function calculateWeightOffset(incrementCount) {
+  var absInc = Math.abs(incrementCount);
   var inc = 0;
   while (absInc > 0) {
     inc += Math.pow(2, -(absInc-- + 1));
   }
-  return incrememtCount > 0 ? inc : -1 * inc;
+  return incrementCount > 0 ? inc : -1 * inc;
 }
 
 function sendDisplayPopupAtCursorMessage() {
@@ -263,7 +316,7 @@ function importLatestDefinitions(activeVersion, callback) {
       db.run(`INSERT INTO emojis VALUES('${row.emojicon}','${row.keyword}','${row.weight}','${row.increments}','${row.version}')`);
     }
     stmt.free();
-    if (callback) callback();
+    saveDbToStorage(callback);
   });
 }
 
@@ -273,5 +326,6 @@ function saveDbToStorage(callback) {
       if (callback) callback();
     }).catch(function(error) {
       console.error(error);
+      if (callback) callback();
     });
 }

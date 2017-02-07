@@ -23,6 +23,7 @@
       "js/q.js",
       "js/LargeLocalStorage.min.js",
       "js/sql.js",
+      "js/lru.js",
       "js/background.js"
     ]
   },
