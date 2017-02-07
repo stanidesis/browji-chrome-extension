@@ -94,8 +94,7 @@ var Popup = function () {
           $(this).parent().addClass("is-dirty");
           performQuery(withQuery);
         } else {
-          // This will populate the results with recent emojis
-          performQuery('');
+          revealRecents();
         }
       }
     })
@@ -192,29 +191,28 @@ var Popup = function () {
     );
   }
 
-  function populateWithResults(results) {
+  function revealNoRecents() {
+    $emojiPopup.find(RESULTS_CONTAINER_SELECTOR).hide();
+    $emojiPopup.find('#eac-no-results').hide();
+    $emojiPopup.find('#eac-no-recents').show();
+  }
+
+  function revealNoResults() {
+    $emojiPopup.find(RESULTS_CONTAINER_SELECTOR).hide();
+    $emojiPopup.find('#eac-no-recents').hide();
+    $emojiPopup.find('#eac-no-results').show();
+  }
+
+  function revealEmojis(emojis) {
     var $resultsContainer = $emojiPopup.find(RESULTS_CONTAINER_SELECTOR);
-    // Empty search with no recents
-    if (results == null) {
-      $resultsContainer.hide();
-      $emojiPopup.find('#eac-no-results').hide();
-      $emojiPopup.find('#eac-no-recents').show();
-      return;
-    } else if (results.length == 0) {
-      // Reveal the tip and hide the list
-      $resultsContainer.hide();
-      $emojiPopup.find('#eac-no-recents').hide();
-      $emojiPopup.find('#eac-no-results').show();
-      return;
-    }
     // Otherwise, fill it with data
     $resultsContainer.empty();
     // Hide the tips
     $emojiPopup.find('#eac-no-recents').hide();
     $emojiPopup.find('#eac-no-results').hide();
     $.get(chrome.extension.getURL('/template/search-result.html'), function(data) {
-      for (var i = 0; i < results.length; i++) {
-        var replaced = data.replace('{{replace-me}}', results[i]);
+      for (var i = 0; i < emojis.length; i++) {
+        var replaced = data.replace('{{replace-me}}', emojis[i]);
         $($.parseHTML(replaced)).appendTo($resultsContainer);
       }
       if ($resultsContainer.is(':hidden')) {
@@ -223,18 +221,22 @@ var Popup = function () {
     });
   }
 
+  function revealRecents() {
+    chrome.runtime.sendMessage({message: 'to_background:get_lru_emojis'},
+    function(response) {
+      var recentEmojis = response.result;
+      if (recentEmojis.length == 0) {
+        revealNoRecents();
+      } else {
+        revealEmojis(recentEmojis);
+      }
+    });
+  }
+
   function performQuery(query) {
     query = query.trim().toLowerCase();
     if (query == '') {
-      chrome.runtime.sendMessage({message: 'to_background:get_lru_emojis'},
-      function(response) {
-        var recentEmojis = response.result;
-        if (recentEmojis.length == 0) {
-          populateWithResults(null);
-        } else {
-          populateWithResults(recentEmojis);
-        }
-      });
+      revealRecents();
       return;
     } else if (query == latestQuery) {
       return;
@@ -242,7 +244,11 @@ var Popup = function () {
     chrome.runtime.sendMessage({message: 'to_background:perform_query', query: query},
       function(response) {
         latestQuery = query;
-        populateWithResults(response.result);
+        if (response.result.length == 0) {
+          revealNoResults();
+          return;
+        }
+        revealEmojis(response.result);
       }
     );
   }
