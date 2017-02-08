@@ -202,11 +202,11 @@ var Popup = function () {
         var rect = $emojiPopup[0].getBoundingClientRect();
         // Too far down
         if (rect.bottom > response.height) {
-          $emojiPopup.css('top', response.height - rect.height - 10);
+          $emojiPopup.css('top', response.height - rect.height - 24);
         }
         // Too far right
         if (rect.right > response.width) {
-          $emojiPopup.css('left', response.width - rect.width - 10);
+          $emojiPopup.css('left', response.width - rect.width);
         }
       }
     );
