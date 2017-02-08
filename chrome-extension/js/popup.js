@@ -24,7 +24,7 @@ var Popup = function () {
   // Initialize
   this.init = function() {
     // Ammend jQuery with a Scroll feature
-    apppendToJquery();
+    appendToJquery();
     // Find EmojiPopup
     $emojiPopup = $('#eac-popup');
     // Listen to messages from content.js
@@ -50,6 +50,10 @@ var Popup = function () {
     }
   }
 
+  function getActiveSelection() {
+    return $emojiPopup.find('.eac-active span').first().text().trim();
+  }
+
   function displayPopup(withQuery) {
     // Fade that sucker in
     $emojiPopup.fadeIn();
@@ -64,7 +68,7 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
-      notifySelectionMade('return');
+      notifySelectionMade('return', getActiveSelection());
     }
 
     $emojiPopup.on('click', '#settings_icon', function() {
@@ -74,7 +78,7 @@ var Popup = function () {
 
     // On click, submit selection
     $emojiPopup.on('click', RESULTS_SELECTOR, function() {
-      notifySelectionMade('return');
+      notifySelectionMade('return', getActiveSelection());
     });
 
     // On Hover, remove .active class for list items
@@ -128,7 +132,8 @@ var Popup = function () {
           return;
         }
         event.preventDefault();
-        notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return');
+        notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return',
+          getActiveSelection());
       } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
         var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
@@ -174,8 +179,16 @@ var Popup = function () {
         if (event.keyCode == 67) {
           event.preventDefault();
           // This is a copy event!
-          copyTextToClipboard($emojiPopup.find('.eac-active span').first().text().trim());
-          notifySelectionMade('copy');
+          var emoji = getActiveSelection();
+          copyTextToClipboard(emoji, function(success) {
+            var message = `Failed to copy '${emoji}' to clipboard :'(`;
+            if (success) {
+              var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+              notifySelectionMade('copy', emoji);
+              message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+            }
+            showToast(message);
+          });
         }
       } else if ($emojiPopup.find('input').is(':focus') == false) {
         // If the input isn't focused, focus it
@@ -261,19 +274,28 @@ var Popup = function () {
     );
   }
 
+  function showToast(text) {
+    var notification = $emojiPopup.find('#eac-toast-container').first()[0];
+    notification.MaterialSnackbar.showSnackbar(
+      {
+        message: text,
+        timeout: 2750
+      }
+    );
+  }
+
   function dismissPopup() {
     window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
   }
 
-  function notifySelectionMade(method) {
-    var textToInsert = $emojiPopup.find('.eac-active').first().find('span').first().text().trim();
+  function notifySelectionMade(method, selection) {
     window.parent.postMessage({message: 'to_content:selection_made',
-      selection: textToInsert,
+      selection: selection,
       method: method,
       query: $emojiPopup.find('input').val().trim()}, '*');
   }
 
-  function apppendToJquery() {
+  function appendToJquery() {
     // Swiped from http://stackoverflow.com/a/18927969/372884
     $.fn.scrollTo = function(elem, speed) {
       $(this).animate({
@@ -284,7 +306,7 @@ var Popup = function () {
   }
 
   // Swiped from http://stackoverflow.com/a/30810322/372884
-  function copyTextToClipboard(text) {
+  function copyTextToClipboard(text, callback) {
     var textArea = document.createElement("textarea");
     //
     // *** This styling is an extra step which is likely not required. ***
@@ -324,13 +346,19 @@ var Popup = function () {
 
     try {
       var successful = document.execCommand('copy');
-      var msg = successful ? 'successful' : 'unsuccessful';
-      console.log('Copying text command was ' + msg);
     } catch (err) {
       console.log('Oops, unable to copy');
     }
-
+    if (callback) {
+      callback(successful);
+    }
     document.body.removeChild(textArea);
+  }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 };

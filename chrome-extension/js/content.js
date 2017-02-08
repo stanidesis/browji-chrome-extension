@@ -28,8 +28,6 @@ function onDomMessageReceived(event) {
       insertSelection(event.data.selection);
     } else if (event.data.method == 'return') {
       replaceWithSelection(event.data.selection);
-    } else {
-      focusOriginalTrigger();
     }
   }
 }
