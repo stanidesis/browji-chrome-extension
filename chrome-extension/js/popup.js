@@ -24,7 +24,7 @@ var Popup = function () {
   // Initialize
   this.init = function() {
     // Ammend jQuery with a Scroll feature
-    apppendToJquery();
+    appendToJquery();
     // Find EmojiPopup
     $emojiPopup = $('#eac-popup');
     // Listen to messages from content.js
@@ -50,6 +50,10 @@ var Popup = function () {
     }
   }
 
+  function getActiveSelection() {
+    return $emojiPopup.find('.eac-active span').first().text().trim();
+  }
+
   function displayPopup(withQuery) {
     // Fade that sucker in
     $emojiPopup.fadeIn();
@@ -64,7 +68,7 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
-      notifySelectionMade(false);
+      notifySelectionMade('return', getActiveSelection());
     }
 
     $emojiPopup.on('click', '#settings_icon', function() {
@@ -74,7 +78,7 @@ var Popup = function () {
 
     // On click, submit selection
     $emojiPopup.on('click', RESULTS_SELECTOR, function() {
-      notifySelectionMade(false);
+      notifySelectionMade('return', getActiveSelection());
     });
 
     // On Hover, remove .active class for list items
@@ -128,7 +132,8 @@ var Popup = function () {
           return;
         }
         event.preventDefault();
-        notifySelectionMade(event.keyCode == TAB);
+        notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return',
+          getActiveSelection());
       } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
         var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
@@ -169,6 +174,22 @@ var Popup = function () {
             $emojiPopup.find('input')[0].focus();
           }
         }
+      } else if (event.ctrlKey || event.metaKey) {
+        // Did they copy?
+        if (event.keyCode == 67) {
+          event.preventDefault();
+          // This is a copy event!
+          var emoji = getActiveSelection();
+          copyTextToClipboard(emoji, function(success) {
+            var message = `Failed to copy '${emoji}' to clipboard :'(`;
+            if (success) {
+              var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+              notifySelectionMade('copy', emoji);
+              message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+            }
+            showToast(message);
+          });
+        }
       } else if ($emojiPopup.find('input').is(':focus') == false) {
         // If the input isn't focused, focus it
         $emojiPopup.find('input')[0].focus();
@@ -181,11 +202,11 @@ var Popup = function () {
         var rect = $emojiPopup[0].getBoundingClientRect();
         // Too far down
         if (rect.bottom > response.height) {
-          $emojiPopup.css('top', response.height - rect.height - 10);
+          $emojiPopup.css('top', response.height - rect.height - 24);
         }
         // Too far right
         if (rect.right > response.width) {
-          $emojiPopup.css('left', response.width - rect.width - 10);
+          $emojiPopup.css('left', response.width - rect.width);
         }
       }
     );
@@ -253,19 +274,28 @@ var Popup = function () {
     );
   }
 
+  function showToast(text) {
+    var notification = $emojiPopup.find('#eac-toast-container').first()[0];
+    notification.MaterialSnackbar.showSnackbar(
+      {
+        message: text,
+        timeout: 2750
+      }
+    );
+  }
+
   function dismissPopup() {
     window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
   }
 
-  function notifySelectionMade(tabbed) {
-    var textToInsert = $emojiPopup.find('.eac-active').first().find('span').first().text().trim();
+  function notifySelectionMade(method, selection) {
     window.parent.postMessage({message: 'to_content:selection_made',
-      selection: textToInsert,
-      tabbed: tabbed,
+      selection: selection,
+      method: method,
       query: $emojiPopup.find('input').val().trim()}, '*');
   }
 
-  function apppendToJquery() {
+  function appendToJquery() {
     // Swiped from http://stackoverflow.com/a/18927969/372884
     $.fn.scrollTo = function(elem, speed) {
       $(this).animate({
@@ -273,6 +303,62 @@ var Popup = function () {
       }, speed == undefined ? 1000 : speed);
       return this;
     };
+  }
+
+  // Swiped from http://stackoverflow.com/a/30810322/372884
+  function copyTextToClipboard(text, callback) {
+    var textArea = document.createElement("textarea");
+    //
+    // *** This styling is an extra step which is likely not required. ***
+    //
+    // Why is it here? To ensure:
+    // 1. the element is able to have focus and selection.
+    // 2. if element was to flash render it has minimal visual impact.
+    // 3. less flakyness with selection and copying which **might** occur if
+    //    the textarea element is not visible.
+    //
+    // The likelihood is the element won't even render, not even a flash,
+    // so some of these are just precautions. However in IE the element
+    // is visible whilst the popup box asking the user for permission for
+    // the web page to copy to the clipboard.
+    //
+
+    // Place in top-left corner of screen regardless of scroll position.
+    textArea.style.position = 'fixed';
+    textArea.style.top = 0;
+    textArea.style.left = 0;
+    // Ensure it has a small width and height. Setting to 1px / 1em
+    // doesn't work as this gives a negative w/h on some browsers.
+    textArea.style.width = '2em';
+    textArea.style.height = '2em';
+    // We don't need padding, reducing the size if it does flash render.
+    textArea.style.padding = 0;
+    // Clean up any borders.
+    textArea.style.border = 'none';
+    textArea.style.outline = 'none';
+    textArea.style.boxShadow = 'none';
+    // Avoid flash of white box if rendered for any reason.
+    textArea.style.background = 'transparent';
+
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.select();
+
+    try {
+      var successful = document.execCommand('copy');
+    } catch (err) {
+      console.log('Oops, unable to copy');
+    }
+    if (callback) {
+      callback(successful);
+    }
+    document.body.removeChild(textArea);
+  }
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 };

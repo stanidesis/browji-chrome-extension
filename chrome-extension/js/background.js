@@ -42,8 +42,8 @@ chrome.alarms.onAlarm.addListener(function(alarm) {
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
     if (request.message == 'to_background:get_window_size') {
-      chrome.windows.getCurrent(function(window) {
-        sendResponse({width: window.width, height: window.height});
+      chrome.tabs.getSelected(null, function(tab) {
+        sendResponse({width: tab.width, height: tab.height});
       });
       return true;
     } else if (request.message == 'to_background:perform_query') {

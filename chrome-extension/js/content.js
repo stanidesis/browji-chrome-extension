@@ -24,9 +24,9 @@ function onDomMessageReceived(event) {
   } else if (event.data.message === 'to_content:selection_made') {
     chrome.runtime.sendMessage({message: 'to_background:update_weights',
       query: event.data.query, selection: event.data.selection});
-    if (event.data.tabbed) {
+    if (event.data.method == 'tab') {
       insertSelection(event.data.selection);
-    } else {
+    } else if (event.data.method == 'return') {
       replaceWithSelection(event.data.selection);
     }
   }
