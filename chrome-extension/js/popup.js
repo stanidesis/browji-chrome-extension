@@ -14,7 +14,8 @@ var RESULTS_CONTAINER_SELECTOR = 'div.mdl-grid';
 
 // The latest query performed
 var latestQuery;
-
+// If true, we're in clipboard mode
+var clipboardMode;
 // Setup before functions
 var typingTimer; // Timer identifier
 var doneTypingInterval = 300;  // Time in ms, .5 seconds for example
@@ -37,8 +38,15 @@ var Popup = function () {
 
   function onDomMessageReceived(event) {
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
-      $emojiPopup.css('left', event.data.left);
-      $emojiPopup.css('top', event.data.top);
+      if (event.data.clipboardMode) {
+        clipboardMode = true;
+        // This feels janky?
+        $('body').addClass('eac-clipboard-mode');
+        $('.eac-clipboard-header').css('display', 'flex');
+      } else {
+        $emojiPopup.css('left', event.data.left);
+        $emojiPopup.css('top', event.data.top);
+      }
       displayPopup(event.data.query);
     }
   }
@@ -68,6 +76,10 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
+      if (clipboardMode) {
+        copySelectionToClipboard(getActiveSelection());
+        return;
+      }
       notifySelectionMade('return', getActiveSelection());
     }
 
@@ -78,6 +90,10 @@ var Popup = function () {
 
     // On click, submit selection
     $emojiPopup.on('click', RESULTS_SELECTOR, function() {
+      if (clipboardMode) {
+        copySelectionToClipboard(getActiveSelection());
+        return;
+      }
       notifySelectionMade('return', getActiveSelection());
     });
 
@@ -132,6 +148,10 @@ var Popup = function () {
           return;
         }
         event.preventDefault();
+        if (clipboardMode) {
+          copySelectionToClipboard(getActiveSelection());
+          return;
+        }
         notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return',
           getActiveSelection());
       } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
@@ -179,16 +199,7 @@ var Popup = function () {
         if (event.keyCode == 67) {
           event.preventDefault();
           // This is a copy event!
-          var emoji = getActiveSelection();
-          copyTextToClipboard(emoji, function(success) {
-            var message = `Failed to copy '${emoji}' to clipboard :'(`;
-            if (success) {
-              var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
-              notifySelectionMade('copy', emoji);
-              message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
-            }
-            showToast(message);
-          });
+          copySelectionToClipboard(getActiveSelection());
         }
       } else if ($emojiPopup.find('input').is(':focus') == false) {
         // If the input isn't focused, focus it
@@ -272,6 +283,18 @@ var Popup = function () {
         revealEmojis(response.result);
       }
     );
+  }
+
+  function copySelectionToClipboard(emoji) {
+    copyTextToClipboard(emoji, function(success) {
+      var message = `Failed to copy '${emoji}' to clipboard :'(`;
+      if (success) {
+        var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+        notifySelectionMade('copy', emoji);
+        message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+      }
+      showToast(message);
+    });
   }
 
   function showToast(text) {

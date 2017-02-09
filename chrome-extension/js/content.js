@@ -10,14 +10,24 @@ function onDomMessageReceived(event) {
   if (event.data.message === 'to_content:popup_loaded') {
     // Send width/height data to popup so it may reveal itself
 
-    // Get the position of the cursor and input box
-    var cumulativeOffset = triggeredEditable.getOffset();
+    var top = 0;
+    var left = 0;
+    var query = '';
+
+    if (triggeredEditable) {
+      // Input mode, get the position of the cursor and input box
+      var cumulativeOffset = triggeredEditable.getOffset();
+      top = cumulativeOffset.top + cumulativeOffset.height - $(window).scrollTop();
+      left = cumulativeOffset.left - $(window).scrollLeft();
+      query = triggeredEditable.getQuery();
+    }
 
     iframe.contentWindow.postMessage({
       message: 'to_popup:display_popup_with_coordinates',
-      top: cumulativeOffset.top + cumulativeOffset.height - $(window).scrollTop(),
-      left: cumulativeOffset.left - $(window).scrollLeft(),
-      query: triggeredEditable.getQuery()
+      top: top,
+      left: left,
+      query: query,
+      clipboardMode: !triggeredEditable
     }, '*');
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger();
@@ -35,7 +45,7 @@ function onDomMessageReceived(event) {
 // Listen to messages from the background
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
-    if (request.message === 'to_content:display_popup_at_cursor') {
+    if (request.message === 'to_content:display_popup') {
       displayPopup();
     }
   }
@@ -47,10 +57,7 @@ function displayPopup() {
     return;
   }
   // This is where we need to present a little auto-complete search input
-  triggeredEditable = getEditable();
-  if (!triggeredEditable) {
-    return;
-  }
+  triggeredEditable = getEditable(); // Optional
 
   iframe = document.createElement('iframe');
   iframe.src = chrome.extension.getURL("html/popup.html");
@@ -64,9 +71,6 @@ function displayPopup() {
   $iframe.css('left', '0');
   $iframe.css('z-index', '2147483648');
   $iframe.appendTo('body');
-  chrome.runtime.sendMessage({
-    message: 'to_background:popup_revealed_at_cursor'
-  });
 }
 
 function dismissPopup(callback) {
