@@ -4,11 +4,33 @@
     <link rel="stylesheet" href="../css/material.min.css">
     <link id="eac-link-style" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style id="eac-style">
+    .eac-clipboard-mode {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .eac-clipboard-header {
+      width: 320px;
+      height: auto;
+      margin-top: 16px;
+      position: relative;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .eac-clipboard-title {
+      color: white;
+      margin: 0 4px;
+      font-size: 14px;
+      text-shadow: 0px 0px 2px #000000;
+    }
     .eac-popup {
       display: none;
       width: 320px;
       height: 220px;
-      position: absolute;
+      position: relative;
       background: #fafafa;
       overflow: hidden;
     }
@@ -100,7 +122,17 @@
             <span></span>
           </div>
         </div>
+        <div id="eac-toast-container" class="mdl-js-snackbar mdl-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button type="button" class="mdl-snackbar__action"></button>
+        </div>
       </div>
+    </div>
+    <div class="eac-clipboard-header">
+      📋<span class="eac-clipboard-title">clipboard <span id="tt1" style="cursor: help;border-bottom: 1px double white">mode</span></span>📋
+        <div class="mdl-tooltip" for="tt1">
+          No text input detected!<br>We'll copy your emoji to the clipboard 😉👍
+        </div>
     </div>
   </body>
 </html>
