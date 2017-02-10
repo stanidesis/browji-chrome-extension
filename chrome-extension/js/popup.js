@@ -14,7 +14,8 @@ var RESULTS_CONTAINER_SELECTOR = 'div.mdl-grid';
 
 // The latest query performed
 var latestQuery;
-
+// If true, we're in clipboard mode
+var clipboardMode;
 // Setup before functions
 var typingTimer; // Timer identifier
 var doneTypingInterval = 300;  // Time in ms, .5 seconds for example
@@ -37,8 +38,14 @@ var Popup = function () {
 
   function onDomMessageReceived(event) {
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
-      $emojiPopup.css('left', event.data.left);
-      $emojiPopup.css('top', event.data.top);
+      clipboardMode = event.data.clipboardMode
+      if (clipboardMode) {
+        $('body').addClass('eac-clipboard-mode');
+        $('.eac-clipboard-header').css('display', 'flex');
+      } else {
+        $emojiPopup.css('left', event.data.left);
+        $emojiPopup.css('top', event.data.top);
+      }
       displayPopup(event.data.query);
     }
   }
@@ -68,7 +75,7 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
-      notifySelectionMade('return', getActiveSelection());
+      performSelection('return')
     }
 
     $emojiPopup.on('click', '#settings_icon', function() {
@@ -78,7 +85,7 @@ var Popup = function () {
 
     // On click, submit selection
     $emojiPopup.on('click', RESULTS_SELECTOR, function() {
-      notifySelectionMade('return', getActiveSelection());
+      performSelection('return')
     });
 
     // On Hover, remove .active class for list items
@@ -132,8 +139,7 @@ var Popup = function () {
           return;
         }
         event.preventDefault();
-        notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return',
-          getActiveSelection());
+        performSelection(event.keyCode === TAB ? 'tab' : 'return')
       } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
         var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
@@ -177,18 +183,9 @@ var Popup = function () {
       } else if (event.ctrlKey || event.metaKey) {
         // Did they copy?
         if (event.keyCode == 67) {
-          event.preventDefault();
           // This is a copy event!
-          var emoji = getActiveSelection();
-          copyTextToClipboard(emoji, function(success) {
-            var message = `Failed to copy '${emoji}' to clipboard :'(`;
-            if (success) {
-              var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
-              notifySelectionMade('copy', emoji);
-              message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
-            }
-            showToast(message);
-          });
+          event.preventDefault();
+          performSelection('copy');
         }
       } else if ($emojiPopup.find('input').is(':focus') == false) {
         // If the input isn't focused, focus it
@@ -274,6 +271,23 @@ var Popup = function () {
     );
   }
 
+  function performSelection(method) {
+    var emoji = getActiveSelection();
+    if (clipboardMode || method == 'copy') {
+      copyTextToClipboard(emoji, function(success) {
+        var message = `Failed to copy '${emoji}' to clipboard :'(`;
+        if (success) {
+          var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+          notifySelectionMade('copy', emoji);
+          message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+        }
+        showToast(message);
+      });
+    } else {
+      notifySelectionMade(method, emoji);
+    }
+  }
+
   function showToast(text) {
     var notification = $emojiPopup.find('#eac-toast-container').first()[0];
     notification.MaterialSnackbar.showSnackbar(
@@ -284,15 +298,15 @@ var Popup = function () {
     );
   }
 
-  function dismissPopup() {
-    window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
-  }
-
   function notifySelectionMade(method, selection) {
     window.parent.postMessage({message: 'to_content:selection_made',
-      selection: selection,
-      method: method,
-      query: $emojiPopup.find('input').val().trim()}, '*');
+    selection: selection,
+    method: method,
+    query: $emojiPopup.find('input').val().trim()}, '*');
+  }
+
+  function dismissPopup() {
+    window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
   }
 
   function appendToJquery() {

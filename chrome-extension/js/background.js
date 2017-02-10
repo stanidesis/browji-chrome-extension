@@ -6,9 +6,6 @@ var DB_DOC_KEY = 'emoji-database';
 var DB_DOC_ATTACHMENT = 'sqlite-file';
 var LATEST_DB_VERSION = 1;
 var storage;
-
-// True if the popup was revealed
-var popupRevealedAtCursor = false;
 // Master DB File
 var db;
 // LRU for recently-used Emojis
@@ -19,25 +16,26 @@ chrome.contextMenus.removeAll(function () {
   chrome.contextMenus.create({
     id: 'eac-context-menu',
     title: 'Find an Emoji',
-    contexts: ['editable']
+    contexts: ['all']
   });
 })
 
+// When clicked on from context menu
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
-  activateEAC(sendDisplayPopupAtCursorMessage);
+  activateEAC(sendDisplayPopupMessage);
 })
 
+// When activated with keyboard shortcut
 chrome.commands.onCommand.addListener(function(command) {
   if (command === 'emoji-auto-complete') {
-    activateEAC(sendDisplayPopupAtCursorMessage);
+    activateEAC(sendDisplayPopupMessage);
   }
 });
 
-chrome.alarms.onAlarm.addListener(function(alarm) {
-  if (alarm.name === 'alarm:fallback_to_copy_paste' && !popupRevealedAtCursor) {
-    console.log('Fallback to Copy/Paste!');
-  }
-})
+// When activated via browser action
+chrome.browserAction.onClicked.addListener(function(tab) {
+  activateEAC(sendDisplayPopupMessage);
+});
 
 chrome.runtime.onMessage.addListener(
   function(request, sender, sendResponse) {
@@ -45,7 +43,6 @@ chrome.runtime.onMessage.addListener(
       chrome.tabs.getSelected(null, function(tab) {
         sendResponse({width: tab.width, height: tab.height});
       });
-      return true;
     } else if (request.message == 'to_background:perform_query') {
       queryEmoji(request.query, function(queryResult) {
         sendResponse({result: queryResult});
@@ -53,8 +50,6 @@ chrome.runtime.onMessage.addListener(
     } else if (request.message == 'to_background:update_weights') {
       updateWeights(request.query, request.selection);
       updateLRU(request.selection);
-    } else if (request.message == 'to_background:popup_revealed_at_cursor') {
-      popupRevealedAtCursor = true;
     } else if (request.message == 'to_background:open_options') {
       if (chrome.runtime.openOptionsPage) {
         // New way to open options pages, if supported (Chrome 42+).
@@ -219,13 +214,11 @@ function calculateWeightOffset(incrementCount) {
   return incrementCount > 0 ? inc : -1 * inc;
 }
 
-function sendDisplayPopupAtCursorMessage() {
-  popupRevealedAtCursor = false;
+function sendDisplayPopupMessage() {
   // Received the main keyboard command
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup_at_cursor'});
+    chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup'});
   });
-  chrome.alarms.create('alarm:fallback_to_copy_paste', {when: Date.now() + 500});
 }
 
 function loadDefaultDbFromStorage(callback) {
