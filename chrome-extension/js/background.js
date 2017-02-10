@@ -43,7 +43,6 @@ chrome.runtime.onMessage.addListener(
       chrome.tabs.getSelected(null, function(tab) {
         sendResponse({width: tab.width, height: tab.height});
       });
-      return true;
     } else if (request.message == 'to_background:perform_query') {
       queryEmoji(request.query, function(queryResult) {
         sendResponse({result: queryResult});

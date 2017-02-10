@@ -38,9 +38,8 @@ var Popup = function () {
 
   function onDomMessageReceived(event) {
     if (event.data.message === 'to_popup:display_popup_with_coordinates') {
-      if (event.data.clipboardMode) {
-        clipboardMode = true;
-        // This feels janky?
+      clipboardMode = event.data.clipboardMode
+      if (clipboardMode) {
         $('body').addClass('eac-clipboard-mode');
         $('.eac-clipboard-header').css('display', 'flex');
       } else {
@@ -76,11 +75,7 @@ var Popup = function () {
       if ($emojiPopup.find('.eac-active').length == 0) {
         setActiveResultItem($emojiPopup.find(RESULTS_SELECTOR).first());
       }
-      if (clipboardMode) {
-        copySelectionToClipboard(getActiveSelection());
-        return;
-      }
-      notifySelectionMade('return', getActiveSelection());
+      performSelection('return')
     }
 
     $emojiPopup.on('click', '#settings_icon', function() {
@@ -90,11 +85,7 @@ var Popup = function () {
 
     // On click, submit selection
     $emojiPopup.on('click', RESULTS_SELECTOR, function() {
-      if (clipboardMode) {
-        copySelectionToClipboard(getActiveSelection());
-        return;
-      }
-      notifySelectionMade('return', getActiveSelection());
+      performSelection('return')
     });
 
     // On Hover, remove .active class for list items
@@ -148,12 +139,7 @@ var Popup = function () {
           return;
         }
         event.preventDefault();
-        if (clipboardMode) {
-          copySelectionToClipboard(getActiveSelection());
-          return;
-        }
-        notifySelectionMade(event.keyCode == TAB ? 'tab' : 'return',
-          getActiveSelection());
+        performSelection(event.keyCode === TAB ? 'tab' : 'return')
       } else if (event.keyCode >= LEFT && event.keyCode <= DOWN) {
         var $resultList = $emojiPopup.find(RESULTS_SELECTOR);
         // with no results, just bail
@@ -197,9 +183,9 @@ var Popup = function () {
       } else if (event.ctrlKey || event.metaKey) {
         // Did they copy?
         if (event.keyCode == 67) {
-          event.preventDefault();
           // This is a copy event!
-          copySelectionToClipboard(getActiveSelection());
+          event.preventDefault();
+          performSelection('copy');
         }
       } else if ($emojiPopup.find('input').is(':focus') == false) {
         // If the input isn't focused, focus it
@@ -285,16 +271,21 @@ var Popup = function () {
     );
   }
 
-  function copySelectionToClipboard(emoji) {
-    copyTextToClipboard(emoji, function(success) {
-      var message = `Failed to copy '${emoji}' to clipboard :'(`;
-      if (success) {
-        var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
-        notifySelectionMade('copy', emoji);
-        message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
-      }
-      showToast(message);
-    });
+  function performSelection(method) {
+    var emoji = getActiveSelection();
+    if (clipboardMode || method == 'copy') {
+      copyTextToClipboard(emoji, function(success) {
+        var message = `Failed to copy '${emoji}' to clipboard :'(`;
+          if (success) {
+            var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+            notifySelectionMade('copy', emoji);
+            message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+          }
+          showToast(message);
+        });
+    } else {
+      notifySelectionMade(method, emoji);
+    }
   }
 
   function showToast(text) {
@@ -307,15 +298,15 @@ var Popup = function () {
     );
   }
 
-  function dismissPopup() {
-    window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
-  }
-
   function notifySelectionMade(method, selection) {
     window.parent.postMessage({message: 'to_content:selection_made',
-      selection: selection,
-      method: method,
-      query: $emojiPopup.find('input').val().trim()}, '*');
+    selection: selection,
+    method: method,
+    query: $emojiPopup.find('input').val().trim()}, '*');
+  }
+
+  function dismissPopup() {
+    window.parent.postMessage({message: 'to_content:dismiss_popup'}, '*');
   }
 
   function appendToJquery() {
