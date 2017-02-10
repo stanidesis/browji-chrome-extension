@@ -276,13 +276,13 @@ var Popup = function () {
     if (clipboardMode || method == 'copy') {
       copyTextToClipboard(emoji, function(success) {
         var message = `Failed to copy '${emoji}' to clipboard :'(`;
-          if (success) {
-            var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
-            notifySelectionMade('copy', emoji);
-            message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
-          }
-          showToast(message);
-        });
+        if (success) {
+          var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)];
+          notifySelectionMade('copy', emoji);
+          message = `Copied '${emoji}' to clipboard, ${appendToMessage}`;
+        }
+        showToast(message);
+      });
     } else {
       notifySelectionMade(method, emoji);
     }
