@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Emoji Autocomplete Alpha",
-  "version": "0.1",
+  "name": "Browji",
+  "version": "1.0",
   "permissions": [
     "alarms",
     "storage",
@@ -9,11 +9,19 @@
     "contextMenus"
   ],
   "icons": {
-    "16": "icon.png"
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png",
+    "256": "icon-256.png"
   },
   "browser_action": {
     "default_icon": {
-      "16": "icon.png"
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png",
+      "256": "icon-256.png"
     }
   },
   "options_ui": {
@@ -49,7 +57,7 @@
     }
   ],
   "commands": {
-    "emoji-auto-complete": {
+    "browji": {
       "suggested_key": {
         "default": "Ctrl+Shift+Space",
         "mac": "Command+Shift+Space"

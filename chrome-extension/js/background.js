@@ -27,7 +27,7 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
 
 // When activated with keyboard shortcut
 chrome.commands.onCommand.addListener(function(command) {
-  if (command === 'emoji-auto-complete') {
+  if (command === 'browji') {
     activateEAC(sendDisplayPopupMessage);
   }
 });
