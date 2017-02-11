@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "name": "Browji",
+  "name": "Browji: Find, Copy, and Paste Emojis",
+  "short_name": "Browji",
   "version": "1.0",
   "permissions": [
-    "alarms",
     "storage",
     "unlimitedStorage",
     "contextMenus"
