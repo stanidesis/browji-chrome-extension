@@ -1,0 +1,18 @@
+/* Fonts */
+@include font-face(SnoogleLT, "/static/fonts/SnoogleLT/SnoogleLT");
+
+/* Colors */
+$color-brandMain: #ffcc00;
+
+/* Override logo location and width */
+.logo a {
+  background: url(/static/images/browji-logo.png) no-repeat 0 0;
+}
+
+.logo-text {
+  font-family: SnoogleLT, sans-serif;
+  font-size: 3.7rem;
+  margin-left: 1.2rem;
+  color: $color-brandMain;
+  float: left;
+}
