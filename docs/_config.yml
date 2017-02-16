@@ -13,21 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
 email: stan.idesis@gmail.com
-description: ""
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: stanleyidesis
+logo: /static/images/browji-logo.png
+author: stanleyidesis
+twitter:
+  username: stanleyidesis
 github_username:  stanidesis
 permalink: :title
-# repository: stanidesis/browji-chrome-extension
 
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
