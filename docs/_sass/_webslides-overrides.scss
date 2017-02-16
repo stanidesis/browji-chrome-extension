@@ -24,3 +24,10 @@ $color-brandMain: #ffcc00;
   margin-left: 1.2rem;
   color: $color-brandMain;
 }
+
+/* The header is overlapping content on mobile */
+@media (max-width: 767px) {
+  header {
+    position: inherit;
+  }
+}
