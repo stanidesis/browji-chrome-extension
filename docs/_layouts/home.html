@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body class="bg-black-blue">
+  <body style="background-color: #123;">
     <header class="bg-trans-light">
       <nav role="navigation">
         <p class="logo"><a href="{{ site.url }}" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
@@ -31,9 +31,14 @@
           <div class="wrap">
             <div class="grid vertical-align">
               <div class="column">
-                <h2>Stop Googling, “broken heart emoji”</h2>
+                <div class="embed">
+                  <div class="youtube-player" data-id="OkRjdoAGjNI"></div>
+                </div>
+              </div>
+              <div class="column">
+                <h2>Stop Googling, “poop emoji”</h2>
                 <p class="text-intro">The iPhone figured it out years ago, so why can’t we find the right emoji as we type online?</p>
-                <p class="text-subtitle">Now we can... 💔</p>
+                <p class="text-subtitle">Now we can... 💩</p>
                 <p>
                   <a rel="external" href="#" class="button radius desktop-only" title="Download Browji on the Chrome Webstore">
                     <svg class="fa-chrome" style="vertical-align: text-bottom; margin-right: .8rem">
@@ -49,39 +54,75 @@
                   </a>
                 </p>
               </div>
-              <div class="column">
-                <div class="embed">
-                  <div class="youtube-player" data-id="OkRjdoAGjNI"></div>
-                </div>
+            </div>
+          </div>
+        </section>
+        <section class="slide bg-blue">
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column flex-content">
+                <h2>Browji is Simple to Use</h2>
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-search">
+                        <use xlink:href="#fa-search"></use>
+                      </svg>
+                      <h3>Find</h3>
+                      Describe the emoji you desperately seek.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-clipboard">
+                        <use xlink:href="#fa-clipboard"></use>
+                      </svg>
+                      <h3>Copy</h3>
+                      Use the keyboard to select and copy the emoji.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-file">
+                        <use xlink:href="#fa-file"></use>
+                      </svg>
+                      <h3>Paste</h3>
+                      Paste that sucker <strong>anywhere</strong>.
+                    </div>
+                  </li>
+                </ul>
               </div>
+              <div class="column">
+                <figure>
+                  <img class="aligncenter" src="/static/images/find-emoji-browji-screenshot.png"
+                    alt="Screenshot showing emoji search results in Browji"
+                    title="Search for 'heart' emojis in Browji"
+                    style="max-width: 80%;">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="slide fullscreen bg-black-blue">
+          <div class="card-50">
+            <figure class="cycle-slideshow">
+              <img src="/static/images/find-and-swap-emoji-browji-screenshot-search.png"
+                alt="Find emojis on Twitter as you update yor status"
+                title="Find Emojis as you Type on Twitter">
+              <img src="/static/images/find-and-swap-emoji-browji-screenshot-swap.png"
+                alt="Swap emojis on Twitter as you update yor status"
+                title="Swap Emojis with search terms on Twitter">
+            </figure>
+            <div class="flex-content">
+              <h2>Or Search as You Type</h2>
+              <p>Browji can search for emojis as you type online and swap your pick in-place. Transform 'winky face' into '😉'.</p>
             </div>
           </div>
         </section>
         <section class="bg-blue slide">
           <div class="wrap">
             <div class="content-center">
-              <video width="100%" autoplay="true" controls="true" src="/static/videos/browji-copy-paste-emoji-demo.mp4">
-            </div>
-            <div class="grid">
-              <div class="column content-left">
-                <h3>Find 🔎</h3>
-                <p>Describe the emoji you desperately seek.</p>
-              </div>
-              <div class="column content-left">
-                <h3>Copy ➡📋</h3>
-                <p>Use standard keyboard shortcuts to navigate and copy the emoji.</p>
-              </div>
-              <div class="column content-left">
-                <h3>Paste 📋➡</h3>
-                <p>You’ve pasted stuff before, it’s just like pasting, but <strong>better</strong>.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bg-black-blue slide">
-          <div class="wrap">
-            <div class="content-center">
-              <h2>Where can you use Browji?</h2>
+              <h2>Where Browji Works</h2>
               <p class="text-subtitle">Everywhere fine emojis are sold</p>
             </div>
             <ul class="flexblock metrics">
@@ -142,6 +183,30 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="slide bg-black-blue">
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">FAQs</h3>
+                <p>Browji is a free, Open-Source Chrome extension built by <a href="http://www.stanleyidesis.com">Stanley Idesis</a>. If you have additional questions, <a href="mailto:contact@stanleyidesis.com" title="Email Stanley">get in touch!</a></p>
+              </div>
+              <div class="column">
+                <h6>Why WebSlides?</h6>
+                <p>There are excellent presentation tools out there. WebSlides is about good karma and sharing content. Hypertext, clean code, and beauty as narrative elements.</p>
+                <p class="text-symbols">* * *</p>
+                <h6>Is WebSlides a framework?</h6>
+                <p>We're all tired of heavy CSS frameworks. WebSlides is a starting point that provides basic <a href="../demos/components" title="WebSlides Components">structural components</a> and a scalable <a href="../demos/classes" title="WebSlides Classes">CSS architecture</a>.</p>
+              </div>
+              <div class="column">
+                <h6>Why WebSlides?</h6>
+                <p>There are excellent presentation tools out there. WebSlides is about good karma and sharing content. Hypertext, clean code, and beauty as narrative elements.</p>
+                <p class="text-symbols">* * *</p>
+                <h6>Is WebSlides a framework?</h6>
+                <p>We're all tired of heavy CSS frameworks. WebSlides is a starting point that provides basic <a href="../demos/components" title="WebSlides Components">structural components</a> and a scalable <a href="../demos/classes" title="WebSlides Classes">CSS architecture</a>.</p>
+              </div>
+            </div>
           </div>
         </section>
       </article>
