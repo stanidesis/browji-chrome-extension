@@ -5,31 +5,18 @@
     <header>
       <nav class="navigation">
         <p class="logo"><a href="#hero" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
+        <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />
         <ul>
           <li><a href="#copy-paste">Copy Paste</a></li>
           <li><a href="#swap-replace">Swap</a></li>
           <li><a href="#where-browji-works">Where it works</a></li>
           <li><a href="#faq">FAQs</a></li>
         </ul>
-        <button class="hamburger hamburger--collapse mobile-only" type="button" onclick="toggleHamburger();">
+        <label class="hamburger hamburger--collapse mobile-only" for="menu-collapsed" type="button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
-        </button>
-        <script>
-        function toggleHamburger () {
-          var hamburger = document.querySelector(".hamburger");
-          // Toggle class "is-active"
-          hamburger.classList.toggle("is-active")
-          // Do something else, like open/close menu
-          var $nav = $('nav ul')
-          if ($nav.is(':visible')) {
-            $nav.fadeOut()
-          } else {
-            $nav.fadeIn()
-          }
-        }
-        </script>
+        </label>
       </nav>
     </header>
     <main role="main">
