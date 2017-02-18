@@ -25,9 +25,18 @@ $color-brandMain: #ffcc00;
   color: $color-brandMain;
 }
 
+header {
+  z-index: 2147483647;
+  background-color: rgba(0,0,0,0.5);
+}
 /* The header is overlapping content on mobile */
 @media (max-width: 767px) {
   header {
-    position: inherit;
+    background-color: #123;
+    position: fixed;
+  }
+  /* Give room for content beneath the header to fit */
+  main {
+    margin-top: 6.5rem;
   }
 }

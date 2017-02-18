@@ -11,6 +11,48 @@
   }
 }
 
+// Navigation stuff
+
+.navigation button {
+  float: right;
+}
+
+.navigation ul {
+  @media screen and (min-width: 768px) {
+    display: inherit;
+    float: right;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 9.6rem;
+    text-align: center;
+    width: 100%;
+    background-color: #123;
+  }
+}
+
+.navigation li {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.navigation li a {
+    text-transform: uppercase;
+    line-height: 4.8rem;
+    color: $color-brandMain;
+    border-bottom: .3rem solid rgba(0,0,0,0);
+}
+.navigation li a:hover {
+    border-bottom: .3rem solid $color-brandMain;
+  }
+}
+
+// End navigation
+
 // Light YouTube
 .youtube-player {
   position: relative;
@@ -66,3 +108,5 @@
   background: url("//i.imgur.com/TxzC70f.png") no-repeat;
   cursor: pointer;
 }
+
+// End Light YouTuve

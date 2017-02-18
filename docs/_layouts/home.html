@@ -2,31 +2,39 @@
 <html lang="en">
   {% include head.html %}
   <body style="background-color: #123;">
-    <header class="bg-trans-light">
-      <nav role="navigation">
-        <p class="logo"><a href="{{ site.url }}" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
+    <header>
+      <nav class="navigation">
+        <p class="logo"><a href="#hero" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
         <ul>
-          <li class="github">
-            <a rel="external" href="https://github.com/stanidesis/browji-chrome-extension" title="Chrome Webstore">
-              <svg class="fa-chrome">
-                <use xlink:href="#fa-chrome"></use>
-              </svg>
-              <em>Chrome Webstore</em>
-            </a>
-          </li>
-          <li class="github">
-            <a rel="external" href="https://github.com/stanidesis/browji-chrome-extension" title="Github">
-              <svg class="fa-github">
-                <use xlink:href="#fa-github"></use>
-              </svg>
-              <em>Browji</em>
-            </a>
-          </li>
+          <li><a href="#copy-paste">Copy Paste</a></li>
+          <li><a href="#swap-replace">Swap</a></li>
+          <li><a href="#where-browji-works">Where it works</a></li>
+          <li><a href="#faq">FAQs</a></li>
         </ul>
+        <button class="hamburger hamburger--collapse mobile-only" type="button" onclick="toggleHamburger();">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <script>
+        function toggleHamburger () {
+          var hamburger = document.querySelector(".hamburger");
+          // Toggle class "is-active"
+          hamburger.classList.toggle("is-active")
+          // Do something else, like open/close menu
+          var $nav = $('nav ul')
+          if ($nav.is(':visible')) {
+            $nav.fadeOut()
+          } else {
+            $nav.fadeIn()
+          }
+        }
+        </script>
       </nav>
     </header>
     <main role="main">
       <article id="webslides" class="vertical">
+        <a name="hero"></a>
         <section class="bg-black-blue slide">
           <div class="wrap">
             <div class="grid vertical-align">
@@ -57,6 +65,7 @@
             </div>
           </div>
         </section>
+        <a name="copy-paste"></a>
         <section class="slide bg-blue">
           <div class="wrap">
             <div class="grid vertical-align">
@@ -103,6 +112,7 @@
             </div>
           </div>
         </section>
+        <a name="swap-replace"></a>
         <section class="slide fullscreen bg-black-blue">
           <div class="card-50">
             <figure class="cycle-slideshow">
@@ -119,6 +129,7 @@
             </div>
           </div>
         </section>
+        <a name="where-browji-works"></a>
         <section class="bg-blue slide">
           <div class="wrap">
             <div class="content-center">
@@ -185,6 +196,7 @@
             </ul>
           </div>
         </section>
+        <a name="faq"></a>
         <section class="slide bg-black-blue">
           <div class="wrap">
             <div class="grid">
