@@ -27,7 +27,7 @@ $color-brandMain: #ffcc00;
 
 header {
   @extend .bg-black-blue;
-  z-index: 2147483647;
+  z-index: 2147483646;
   position: fixed;
   border-bottom: .2rem solid $color-brandMain;
 }
