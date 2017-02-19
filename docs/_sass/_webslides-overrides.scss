@@ -26,17 +26,13 @@ $color-brandMain: #ffcc00;
 }
 
 header {
+  @extend .bg-black-blue;
   z-index: 2147483647;
-  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  border-bottom: .2rem solid $color-brandMain;
 }
-/* The header is overlapping content on mobile */
-@media (max-width: 767px) {
-  header {
-    background-color: #123;
-    position: fixed;
-  }
-  /* Give room for content beneath the header to fit */
-  main {
-    margin-top: 6.5rem;
-  }
+
+/* Give room for content beneath the header to fit */
+main {
+  margin-top: 6.5rem;
 }

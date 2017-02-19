@@ -13,13 +13,9 @@
 
 // Navigation stuff
 
-.navigation button {
-  float: right;
-}
-
 .navigation ul {
-  -webkit-transition: opacity .3s ease-in, visibility .3s ease-in; /* Safari */
-  transition: opacity .3s ease-in, visibility .3s ease-in;
+  -webkit-transition: all .3s ease-in; /* Safari */
+  transition: all .3s ease-in;
 
   // Desktop
   @media screen and (min-width: 768px) {
@@ -28,10 +24,8 @@
   }
   // Mobile
   @media screen and (max-width: 767px) {
-    position: absolute;
-    top: 7rem;
+    position: relative;
     width: 100%;
-    text-align: center;
     background-color: #123;
   }
 }
@@ -44,25 +38,27 @@
   display: none;
 }
 
-#menu-collapsed:not(:checked) {
-  @media screen and (max-width: 767px) {
-    ~ ul {
-      // display: none;
-      visibility: hidden;
-      opacity: 0;
+#menu-collapsed {
+  &:not(:checked) {
+    @media screen and (max-width: 767px) {
+      ~ ul {
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+      }
     }
   }
-}
 
-#menu-collapsed:checked {
-  @media screen and (max-width: 767px) {
-    ~ ul {
-      visibility: visible;
-      opacity: 1.0;
+  &:checked {
+    @media screen and (max-width: 767px) {
+      ~ ul {
+        visibility: visible;
+        opacity: 1.0;
+      }
     }
-  }
-  ~ label {
-    @extend .is-active;
+    ~ label {
+      @extend .is-active;
+    }
   }
 }
 
@@ -74,14 +70,18 @@
 }
 
 .navigation li a {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    width: 100%;
+  }
   text-transform: uppercase;
   line-height: 4.8rem;
   color: $color-brandMain;
   border-bottom: .3rem solid rgba(0,0,0,0);
-}
 
-.navigation li a:hover {
-  border-bottom: .3rem solid $color-brandMain;
+  &:hover {
+    border-bottom: .3rem solid $color-brandMain;
+  }
 }
 
 // End navigation
