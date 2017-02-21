@@ -13,13 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+title: Browji
 email: stan.idesis@gmail.com
 logo: /static/images/browji-logo.png
 author: stanleyidesis
 twitter:
   username: stanleyidesis
 github_username:  stanidesis
-permalink: :title
+permalink: /:slug
 
 # Build settings
 markdown: kramdown
@@ -30,3 +31,6 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+collections:
+  posts:
+    output: true

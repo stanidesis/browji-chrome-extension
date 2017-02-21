@@ -34,5 +34,7 @@ header {
 
 /* Give room for content beneath the header to fit */
 main {
-  margin-top: 6.5rem;
+  @media screen and (max-width: 767px) {
+    margin-top: 8.5rem;
+  }
 }
