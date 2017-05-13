@@ -59,7 +59,7 @@ function displayPopup () {
     return
   }
   // This is where we need to present a little auto-complete search input
-  triggeredEditable = getEditable() // Optional
+  triggeredEditable = getEditable()
 
   iframe = document.createElement('iframe')
   iframe.src = chrome.extension.getURL("html/popup.html")
@@ -87,21 +87,23 @@ function insertSelection (textToInsert) {
   if (!triggeredEditable) {
     return
   }
-  focusOriginalTrigger()
   triggeredEditable.insertSelection(textToInsert)
+  focusOriginalTrigger()
 }
 
 function replaceWithSelection (textToSwap) {
   if (!triggeredEditable) {
     return
   }
-  focusOriginalTrigger()
   triggeredEditable.replaceWithSelection(textToSwap)
+  focusOriginalTrigger()
 }
 
 function focusOriginalTrigger () {
-  if (triggeredEditable) {
-    triggeredEditable.focus()
-  }
-  dismissPopup()
+  dismissPopup(function () {
+    window.focus()
+    if (triggeredEditable) {
+      triggeredEditable.focus()
+    }
+  })
 }
