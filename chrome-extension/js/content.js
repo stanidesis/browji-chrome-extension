@@ -31,16 +31,22 @@ function onDomMessageReceived (event) {
     }, '*')
   } else if (event.data.message === 'to_content:dismiss_popup') {
     focusOriginalTrigger()
+    dismissPopup()
   } else if (event.data.message === 'to_content:selection_made') {
-    chrome.runtime.sendMessage({
-      message: 'to_background:update_weights',
-      query: event.data.query,
-      selection: event.data.selection})
+    if (event.data.method === 'copy') {
+      sendUpdateWeightsRequest(event.data.query, event.data.selection)
+      return
+    }
+
     if (event.data.method === 'tab') {
       insertSelection(event.data.selection)
     } else if (event.data.method === 'return') {
       replaceWithSelection(event.data.selection)
     }
+    focusOriginalTrigger()
+    dismissPopup(function () {
+      sendUpdateWeightsRequest(event.data.query, event.data.selection)
+    })
   }
 }
 
@@ -83,12 +89,18 @@ function dismissPopup (callback) {
   })
 }
 
+function sendUpdateWeightsRequest (query, selection) {
+  chrome.runtime.sendMessage({
+    message: 'to_background:update_weights',
+    query: query,
+    selection: selection})
+}
+
 function insertSelection (textToInsert) {
   if (!triggeredEditable) {
     return
   }
   triggeredEditable.insertSelection(textToInsert)
-  focusOriginalTrigger()
 }
 
 function replaceWithSelection (textToSwap) {
@@ -96,14 +108,11 @@ function replaceWithSelection (textToSwap) {
     return
   }
   triggeredEditable.replaceWithSelection(textToSwap)
-  focusOriginalTrigger()
 }
 
 function focusOriginalTrigger () {
-  dismissPopup(function () {
-    window.focus()
-    if (triggeredEditable) {
-      triggeredEditable.focus()
-    }
-  })
+  window.focus()
+  if (triggeredEditable) {
+    triggeredEditable.focus()
+  }
 }

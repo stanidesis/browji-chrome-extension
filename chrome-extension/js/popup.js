@@ -280,10 +280,11 @@ var Popup = function () {
         var message = `Failed to copy '${emoji}' to clipboard :'(`
         if (success) {
           var appendToMessage = ['woot!', 'heck yes!', 'sweet!', 'awsm!'][getRandomInt(0, 4)]
-          notifySelectionMade('copy', emoji)
           message = `Copied '${emoji}' to clipboard, ${appendToMessage}`
         }
         showToast(message)
+        // Execute DB writes after the toast renders
+        notifySelectionMade('copy', emoji)
       })
     } else {
       notifySelectionMade(method, emoji)
@@ -294,8 +295,7 @@ var Popup = function () {
     var notification = $emojiPopup.find('#eac-toast-container').first()[0]
     notification.MaterialSnackbar.showSnackbar(
       {
-        message: text,
-        timeout: 2750
+        message: text
       }
     )
   }
