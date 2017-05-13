@@ -137,7 +137,7 @@ class InputTextAreaEditable extends Editable {
   }
 
   focus () {
-    this.$element[0].focus()
+    this.$element.focus()
   }
 
   insertSelection (emoji) {

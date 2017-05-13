@@ -172,6 +172,9 @@ function escapeParens (term) {
 }
 
 function updateWeights (query, selection) {
+  if (!query) {
+    return
+  }
   for (var term of query.trim().split(' ')) {
     var incrementedRow = null
     var sqlQuery = `SELECT * FROM emojis WHERE emojicon = '${selection}' AND keyword = '${term}' LIMIT 1`
@@ -182,7 +185,7 @@ function updateWeights (query, selection) {
     }
     if (incrementedRow) {
       // Update existing row
-      var increments = incrementedRow.increments + 1
+      var increments = parseInt(incrementedRow.increments) + 1
       var weight = 0.5 + calculateWeightOffset(increments)
       db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${selection}' AND keyword = '${term}'`)
     } else {
@@ -196,7 +199,7 @@ function updateWeights (query, selection) {
     sqlStmt.bind()
     while (sqlStmt.step()) {
       var row = sqlStmt.getAsObject()
-      var increments = row.increments - 1
+      var increments = parseInt(row.increments) - 1
       var weight = 0.5 + calculateWeightOffset(increments)
       db.run(`UPDATE emojis SET weight = '${weight}', increments = '${increments}' WHERE emojicon = '${row.emojicon}' AND keyword = '${row.keyword}'`)
     }
@@ -217,6 +220,10 @@ function calculateWeightOffset (incrementCount) {
 function sendDisplayPopupMessage () {
   // Received the main keyboard command
   chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+    if (tabs.length === 0) {
+      console.log('Unable to find active tab in current window');
+      return
+    }
     chrome.tabs.sendMessage(tabs[0].id, {'message': 'to_content:display_popup'})
   })
 }
