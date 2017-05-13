@@ -22,19 +22,19 @@ chrome.contextMenus.removeAll(function () {
 
 // When clicked on from context menu
 chrome.contextMenus.onClicked.addListener(function (info, tab) {
-  activateEAC(sendDisplayPopupMessage)
+  sendDisplayPopupMessage()
 })
 
 // When activated with keyboard shortcut
 chrome.commands.onCommand.addListener(function (command) {
   if (command === 'browji') {
-    activateEAC(sendDisplayPopupMessage)
+    sendDisplayPopupMessage()
   }
 })
 
 // When activated via browser action
 chrome.browserAction.onClicked.addListener(function (tab) {
-  activateEAC(sendDisplayPopupMessage)
+  sendDisplayPopupMessage()
 })
 
 chrome.runtime.onMessage.addListener(
@@ -69,6 +69,7 @@ chrome.runtime.onMessage.addListener(
         sendResponse({result: result})
       })
     }
+    return true
   })
 
 function activateEAC (callback) {
