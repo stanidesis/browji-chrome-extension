@@ -170,7 +170,9 @@ var Popup = function () {
           var constraintOptions = ['left', 'top', 'right', 'bottom']
           var $newActiveElement = $activeListItem.nearest(RESULTS_SELECTOR,
             {directionConstraints: [constraintOptions[event.keyCode - LEFT]],
-              sort: 'nearest'}).first()
+              sort: 'nearest',
+              sameY: event.keyCode === LEFT || event.keyCode === RIGHT,
+              sameX: event.keyCode === DOWN || event.keyCode === UP}).first()
           if ($newActiveElement.size() === 1) {
             // Set new active result
             setActiveResultItem($newActiveElement)
