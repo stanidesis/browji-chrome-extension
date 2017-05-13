@@ -32,7 +32,7 @@
   "background": {
     "persistent": false,
     "scripts": [
-      "js/jquery-3.1.1.min.js",
+      "js/jquery-3.2.1.min.js",
       "js/q.js",
       "js/LargeLocalStorage.min.js",
       "js/sql.js",
@@ -46,7 +46,7 @@
         "<all_urls>"
       ],
       "js": [
-        "js/jquery-3.1.1.min.js",
+        "js/jquery-3.2.1.min.js",
         "js/jquery.caret.min.js",
         "js/utils.js",
         "js/editable.js",
