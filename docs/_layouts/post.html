@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body style="background-color: #123;">
+    {% include splash-screen.html %}
+    <header>
+      <nav class="navigation">
+        <p class="logo"><a href="/" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
+        <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />
+        <label class="hamburger hamburger--collapse mobile-only" for="menu-collapsed" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </label>
+        <ul>
+          <li><a href="/blog/">All Posts</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides" class="vertical">
+        <a name="post"></a>
+        <section class="bg-black-blue slide">
+          <div class="wrap size-50">
+            <p class="text-subtitle">{{ page.date | date: "%c" }}</p>
+            <h1 class="text-shadow">{{ page.title }}</h1>
+            <div class="post">
+              {{ page.content }}
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

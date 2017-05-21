@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body style="background-color: #123;">
+    {% include splash-screen.html %}
+    <header>
+      <nav class="navigation">
+        <p class="logo"><a href="#hero" title="Browji">Browji</a><span class="logo-text">Browji</span></p>
+        <input type="checkbox" id="menu-collapsed" name="menu-collapsed" />
+        <label class="hamburger hamburger--collapse mobile-only" for="menu-collapsed" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </label>
+        <ul>
+          <li><a href="#copy-paste">Copy Paste</a></li>
+          <li><a href="#swap-replace">Swap</a></li>
+          <li><a href="#where-browji-works">Where it works</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main role="main">
+      <article id="webslides" class="vertical">
+        <a name="hero"></a>
+        <section class="bg-black-blue slide">
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <div class="embed">
+                  <div class="youtube-player"
+                       data-id="OkRjdoAGjNI"
+                       ga-on="click"
+                       ga-event-category="interaction"
+                       ga-event-action="play"
+                       ga-event-label="demo_video">
+                  </div>
+                </div>
+              </div>
+              <div class="column">
+                <h2>Stop Googling, “poop emoji”</h2>
+                <p class="text-intro">The iPhone figured it out years ago, so why can’t we find the right emoji as we type online?</p>
+                <p class="text-subtitle">Now we can... 💩</p>
+                <p>
+                  <a rel="external"
+                     href="#"
+                     class="button radius desktop-only"
+                     title="Download Browji on the Chrome Webstore"
+                     ga-on="click"
+                     ga-event-category="interaction"
+                     ga-event-action="click"
+                     ga-event-label="download_browji_top_cta">
+                    <svg class="fa-chrome svg-button">
+                      <use xlink:href="#fa-chrome"></use>
+                    </svg>
+                    Download Browji for Chrome
+                  </a>
+                  <a rel="external"
+                     href="mailto:?&subject=Check out Browji for Chrome&body=Find,%20copy,%20and%20paste%20emojis%20into%20Chrome.%20http%3A//www.browji.com"
+                     class="button radius mobile-only"
+                     title="Mail Yourself a Link to Browji"
+                     ga-on="click"
+                     ga-event-category="interaction"
+                     ga-event-action="click"
+                     ga-event-label="email_link_to_browji_top_cta">
+                    <svg class="fa-envelope svg-button">
+                      <use xlink:href="#fa-envelope"></use>
+                    </svg>
+                    Mail Yourself a Link to Browji
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <a name="copy-paste"></a>
+        <section class="slide bg-blue">
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column flex-content">
+                <h2>Browji is Simple to Use</h2>
+                <ul class="flexblock specs">
+                  <li>
+                    <div>
+                      <svg class="fa-search">
+                        <use xlink:href="#fa-search"></use>
+                      </svg>
+                      <h3>Find</h3>
+                      Describe the emoji you desperately seek.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-clipboard">
+                        <use xlink:href="#fa-clipboard"></use>
+                      </svg>
+                      <h3>Copy</h3>
+                      Use the keyboard to select and copy the emoji.
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <svg class="fa-file">
+                        <use xlink:href="#fa-file"></use>
+                      </svg>
+                      <h3>Paste</h3>
+                      Paste that sucker <strong>anywhere</strong>.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="column">
+                <figure>
+                  <img class="aligncenter" src="/static/images/find-emoji-browji-screenshot.png"
+                    alt="Screenshot showing emoji search results in Browji"
+                    title="Search for 'heart' emojis in Browji"
+                    style="max-width: 80%;">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+        <a name="swap-replace"></a>
+        <section class="slide fullscreen bg-black-blue">
+          <div class="card-50">
+            <figure class="cycle-slideshow">
+              <img src="/static/images/find-and-swap-emoji-browji-screenshot-search.png"
+                alt="Find emojis on Twitter as you update yor status"
+                title="Find Emojis as you Type on Twitter">
+              <img src="/static/images/find-and-swap-emoji-browji-screenshot-swap.png"
+                alt="Swap emojis on Twitter as you update yor status"
+                title="Swap Emojis with search terms on Twitter">
+            </figure>
+            <div class="flex-content">
+              <h2>Or Search as You Type</h2>
+              <p>Browji can search for emojis as you type online and swap your pick in-place. Transform 'winky face' into '😉'.</p>
+            </div>
+          </div>
+        </section>
+        <a name="where-browji-works"></a>
+        <section class="bg-blue slide">
+          <div class="wrap">
+            <div class="content-center">
+              <h2>Where Browji Works</h2>
+              <p class="text-subtitle">Everywhere fine emojis are sold</p>
+            </div>
+            <ul class="flexblock metrics">
+              <li>
+                <div>
+                  <svg class="fa-twitter">
+                    <use xlink:href="#fa-twitter"></use>
+                  </svg>
+                  Twitter
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-facebook">
+                    <use xlink:href="#fa-facebook"></use>
+                  </svg>
+                  Facebook
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-reddit">
+                    <use xlink:href="#fa-reddit"></use>
+                  </svg>
+                  Reddit
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-google-plus">
+                    <use xlink:href="#fa-google-plus"></use>
+                  </svg>
+                  Google+
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-pinterest">
+                    <use xlink:href="#fa-pinterest"></use>
+                  </svg>
+                  Pinterest
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-medium">
+                    <use xlink:href="#fa-medium"></use>
+                  </svg>
+                  Medium
+                </div>
+              </li>
+              <li>
+                <div>
+                  <svg class="fa-google">
+                    <use xlink:href="#fa-google"></use>
+                  </svg>
+                  Gmail
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <a name="support"></a>
+        <section class="bg-black-blue">
+          <div class="wrap">
+            <h2>Support</h2>
+            <hr>
+            <div class="text-cols">
+              <p>I built Browji after struggling to find the perfect emoji to send my mom on our daily Google Hangout chats -- yes, <em>daily</em>. <strong>No more.</strong> With Browji, I feel like I've built the foundations of a better emoji experience on the web.</p>
+              <p>That said, Browji is my first major web project so there's bound to be a couple kinks. I'm proud of the work I did but there's always room for improvement. If you enjoy Browji, please <a href="mailto:contact@stanleyidesis.com">send me an email</a>, <a href="">contribute on Github</a>, or <a href="https://www.paypal.me/stanleyidesis/10">make a small donation</a>.</p>
+            </div>
+            <div class="flexblock">
+              <li>
+                <div style="display:flex; flex-direction: column;">
+                  <p>If you're happy 😃 with Browji, I'd love to hear from you!</p>
+                  <!-- <br> -->
+                  <a rel="external" href="mailto:contact@stanleyidesis.com" class="button radius" title="Contact the Creator">
+                    <svg class="fa-envelope svg-button">
+                      <use xlink:href="#fa-envelope"></use>
+                    </svg>
+                    Contact the Creator
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div style="display:flex; flex-direction: column;">
+                  <p>Found a bug 🐛 or have a killer feature request!?</p>
+                  <a rel="external" href="" class="button radius ghost" title="Submit on Github">
+                    <svg class="fa-github svg-button">
+                      <use xlink:href="#fa-github"></use>
+                    </svg>
+                    Submit on Github
+                  </a>
+                </div>
+              </li>
+              <li>
+                <div style="display:flex; flex-direction: column;">
+                  <p>Want to keep the Browji party going? Send some beer 🍺 money my way!</p>
+                  <!-- <br> -->
+                  <a rel="external" href="https://www.paypal.me/stanleyidesis/10" class="button radius" title="Donate to Stanly Idesis on PayPal">
+                    <svg class="fa-paypal svg-button">
+                      <use xlink:href="#fa-paypal"></use>
+                    </svg>
+                    Donate on PayPal
+                  </a>
+                </div>
+              </li>
+            </div>
+          </div>
+        </section>
+        <a name="faq"></a>
+        <section class="slide bg-blue">
+          <div class="wrap">
+            <div class="grid">
+              <div class="column">
+                <h3 class="text-context">FAQs</h3>
+                <p>Browji is a free, Open-Source Chrome extension built by <a href="http://www.stanleyidesis.com">Stanley Idesis</a>. If you have additional questions, <a href="mailto:contact@stanleyidesis.com" title="Email Stanley">get in touch!</a></p>
+                <p>
+                  <a rel="external"
+                     href="#"
+                     class="button radius desktop-only"
+                     title="Download Browji on the Chrome Webstore"
+                     ga-on="click"
+                     ga-event-category="interaction"
+                     ga-event-action="click"
+                     ga-event-label="download_browji_bottom_cta">
+                    <svg class="fa-chrome svg-button">
+                      <use xlink:href="#fa-chrome"></use>
+                    </svg>
+                    Download Browji for Chrome
+                  </a>
+                  <a rel="external"
+                     href="mailto:?&subject=Check out Browji for Chrome&body=Find,%20copy,%20and%20paste%20emojis%20into%20Chrome.%20http%3A//www.browji.com"
+                     class="button radius mobile-only"
+                     title="Mail Yourself a Link to Browji"
+                     ga-on="click"
+                     ga-event-category="interaction"
+                     ga-event-action="click"
+                     ga-event-label="email_link_to_browji_bottom_cta">
+                    <svg class="fa-envelope svg-button">
+                      <use xlink:href="#fa-envelope"></use>
+                    </svg>
+                    Mail Yourself a Link to Browji
+                  </a>
+                </p>
+              </div>
+              <div class="column">
+                <h6>What is Browji again? 🤔</h6>
+                <p>Browji is a Google Chrome extension that helps you insert emojis as you browse and type on the web. Also, it’s free!</p>
+                <p class="text-symbols">* * *</p>
+                <h6>Why do some emojis show up as squares?</h6>
+                <p>Unfortunately, unicode adds new emojis all the time and your operating system can’t keep up! Try updating your OS (Windows/Mac/Linux) and see if that fixes the issue.</p>
+              </div>
+              <div class="column">
+                <h6>How do I use Browji?</h6>
+                <p>There are three ways to activate Browji: the keyboard shortcut (ctrl/cmd + shift + space), clicking the icon, or right-clicking and selecting, “Find an Emoji.” Refer to the <a href="" title="Browji Tutorial">Browji tutorial</a> for more details.</p>
+                <p class="text-symbols">* * *</p>
+                <h6>Does Browji work offline?</h6>
+                <p>Browji is completely offline and <em>never makes a network request</em>.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
