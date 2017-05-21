@@ -80,10 +80,9 @@
     display: inline-block;
     width: 100%;
   }
-  text-transform: uppercase;
   line-height: 4.8rem;
-  color: $color-brandMain;
   border-bottom: .3rem solid rgba(0,0,0,0);
+  color: white;
 
   &:hover {
     border-bottom: .3rem solid $color-brandMain;
