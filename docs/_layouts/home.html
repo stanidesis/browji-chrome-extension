@@ -19,7 +19,21 @@
           <li><a href="#where-browji-works">Where it works</a></li>
           <li><a href="#support">Support</a></li>
           <li><a href="#faq">FAQs</a></li> -->
-          <li><a class="button radius" href="">Download for Chrome</a></li>
+          <li>
+            <a rel="external"
+               href="#"
+               class="button radius desktop-only"
+               title="Install Browji"
+               ga-on="click"
+               ga-event-category="interaction"
+               ga-event-action="click"
+               ga-event-label="download_browji_header_cta">
+              <svg class="fa-chrome svg-button">
+                <use xlink:href="#fa-chrome"></use>
+              </svg>
+              Install Browji
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -41,22 +55,21 @@
                 </div>
               </div>
               <div class="column">
-                <h2>Stop Googling, “poop emoji”</h2>
-                <p class="text-intro">The iPhone figured it out years ago, so why can’t we find the right emoji as we type online?</p>
-                <p class="text-subtitle">Now we can... 💩</p>
+                <h2>Finally: Emojis on the Web</h2>
+                <p class="text-intro">Phones have had emojis for years, so why is using them on the web so difficult?<br><strong>F that noise.</strong></p>
                 <p>
                   <a rel="external"
                      href="#"
                      class="button radius desktop-only"
-                     title="Download Browji on the Chrome Webstore"
+                     title="Install Browji for Chrome"
                      ga-on="click"
                      ga-event-category="interaction"
                      ga-event-action="click"
-                     ga-event-label="download_browji_top_cta">
+                     ga-event-label="install_browji_top_cta">
                     <svg class="fa-chrome svg-button">
                       <use xlink:href="#fa-chrome"></use>
                     </svg>
-                    Download Browji for Chrome
+                    Install Browji for Chrome
                   </a>
                   <a rel="external"
                      href="mailto:?&subject=Check out Browji for Chrome&body=Find,%20copy,%20and%20paste%20emojis%20into%20Chrome.%20http%3A//www.browji.com"
@@ -117,10 +130,12 @@
               </div>
               <div class="column">
                 <figure>
-                  <img class="aligncenter" src="/static/images/find-emoji-browji-screenshot.png"
+                  <video controls autoplay loop class="aligncenter" width="100%"
                     alt="Screenshot showing emoji search results in Browji"
-                    title="Search for 'heart' emojis in Browji"
-                    style="max-width: 80%;">
+                    title="Search for 'heart' emojis in Browji">
+                    <source type="video/mp4"
+                      src="/static/videos/browji-in-browser-out.mp4">
+                  </video>
                 </figure>
               </div>
             </div>
@@ -231,10 +246,6 @@
             <div class="flexblock">
               <li>
                 <div style="display:flex; flex-direction: column;">
-                </div>
-              </li>
-              <li>
-                <div style="display:flex; flex-direction: column;">
                   <p>Want to keep the Browji party going? Donate generously and help keep the lights on at Browji HQ.*</p>
                   <a rel="external" href="https://www.paypal.me/stanleyidesis/10" class="button radius" title="Donate to Stanly Idesis on PayPal">
                     <svg class="fa-paypal svg-button">
@@ -244,6 +255,10 @@
                   </a>
                   <br>
                   <small>* jk I'll spend it on 🍺</small>
+                </div>
+              </li>
+              <li>
+                <div style="display:flex; flex-direction: column;">
                 </div>
               </li>
               <li>
@@ -263,34 +278,6 @@
               <div class="column">
                 <h3 class="text-context">FAQs</h3>
                 <p>Browji is a free, Open-Source Chrome extension built by <a href="http://www.stanleyidesis.com">Stanley Idesis</a>. If you have additional questions, <a href="mailto:contact@stanleyidesis.com" title="Email Stanley">get in touch with me.</a></p>
-                <p>
-                  <a rel="external"
-                     href="#"
-                     class="button radius desktop-only"
-                     title="Download Browji on the Chrome Webstore"
-                     ga-on="click"
-                     ga-event-category="interaction"
-                     ga-event-action="click"
-                     ga-event-label="download_browji_bottom_cta">
-                    <svg class="fa-chrome svg-button">
-                      <use xlink:href="#fa-chrome"></use>
-                    </svg>
-                    Download Browji for Chrome
-                  </a>
-                  <a rel="external"
-                     href="mailto:?&subject=Check out Browji for Chrome&body=Find,%20copy,%20and%20paste%20emojis%20into%20Chrome.%20http%3A//www.browji.com"
-                     class="button radius mobile-only"
-                     title="Mail Yourself a Link to Browji"
-                     ga-on="click"
-                     ga-event-category="interaction"
-                     ga-event-action="click"
-                     ga-event-label="email_link_to_browji_bottom_cta">
-                    <svg class="fa-envelope svg-button">
-                      <use xlink:href="#fa-envelope"></use>
-                    </svg>
-                    Mail Yourself a Link to Browji
-                  </a>
-                </p>
               </div>
               <div class="column">
                 <h6>What is Browji again? 🤔</h6>
@@ -307,6 +294,9 @@
                 <p>Browji is completely offline -- it does not require Internet access.</p>
               </div>
             </div>
+          </div>
+          <div id="slide-6-prev" class="desktop-only" style="text-align: center; position:absolute; right: 2rem; left:2rem; bottom:4rem">
+            <a class="button radius ghost" href="#hero">Back to the top ⬆</a>
           </div>
         </section>
       </article>
