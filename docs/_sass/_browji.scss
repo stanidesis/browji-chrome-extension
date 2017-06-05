@@ -1,0 +1,167 @@
+// All browji-specific classes
+.desktop-only {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// Buttons
+.svg-button {
+  vertical-align: text-bottom;
+  margin-right: .8rem
+}
+
+// Navigation stuff
+
+.navigation ul {
+  -webkit-transition: all .3s ease-in; /* Safari */
+  transition: all .3s ease-in;
+
+  // Desktop
+  @media screen and (min-width: 768px) {
+    display: inherit;
+    float: right;
+  }
+  // Mobile
+  @media screen and (max-width: 767px) {
+    position: relative;
+    width: 100%;
+    background-color: #123;
+  }
+}
+
+.navigation label {
+  float: right;
+}
+
+.navigation input {
+  display: none;
+}
+
+#menu-collapsed {
+  &:not(:checked) {
+    @media screen and (max-width: 767px) {
+      ~ ul {
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+      }
+    }
+  }
+
+  &:checked {
+    @media screen and (max-width: 767px) {
+      ~ ul {
+        visibility: visible;
+        opacity: 1.0;
+      }
+    }
+    ~ label {
+      @extend .is-active;
+    }
+  }
+}
+
+.navigation li {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.navigation li a {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    width: 100%;
+  }
+  line-height: 4.8rem;
+  border-bottom: .3rem solid rgba(0,0,0,0);
+  color: white;
+
+  &:hover {
+    border-bottom: .3rem solid $color-brandMain;
+  }
+}
+
+// End navigation
+
+// Posts
+
+.post > p,
+.post ul li {
+  @extend .text-intro;
+}
+
+.post blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 5rem;
+  padding-left: 1.5rem;
+  border-left: .3rem solid $color-brandMain;
+}
+
+// End post
+
+// Light YouTube
+.youtube-player {
+  position: relative;
+  padding-bottom: 56.23%;
+  /* Use 75% for 4:3 videos */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  margin: 5px;
+}
+
+.youtube-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: transparent;
+}
+
+.youtube-player img {
+  bottom: 0;
+  display: block;
+  left: 0;
+  margin: auto;
+  max-width: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: none;
+  height: auto;
+  cursor: pointer;
+  -webkit-transition: .4s all;
+  -moz-transition: .4s all;
+  transition: .4s all;
+}
+
+.youtube-player img:hover {
+  -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+  height: 72px;
+  width: 72px;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+  position: absolute;
+  background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+  cursor: pointer;
+}
+
+// End Light YouTuve

@@ -1,3 +1,18 @@
 [submodule "dependencies/textarea-caret-position"]
 	path = dependencies/textarea-caret-position
 	url = git@github.com:component/textarea-caret-position.git
+[submodule "dependencies/LargeLocalStorage"]
+	path = dependencies/LargeLocalStorage
+	url = git@github.com:tantaman/LargeLocalStorage.git
+[submodule "dependencies/q"]
+	path = dependencies/q
+	url = git@github.com:kriskowal/q.git
+[submodule "dependencies/Caret.js"]
+	path = dependencies/Caret.js
+	url = git@github.com:ichord/Caret.js.git
+[submodule "dependencies/jquery-nearest"]
+	path = dependencies/jquery-nearest
+	url = https://github.com/gilmoreorless/jquery-nearest.git
+[submodule "dependencies/js-lru"]
+	path = dependencies/js-lru
+	url = https://github.com/rsms/js-lru.git

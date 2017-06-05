@@ -1,40 +1,75 @@
 {
   "manifest_version": 2,
-  "name": "Emoji Autocomplete",
-  "version": "0.1",
+  "name": "Browji: Find, Copy, and Paste Emojis",
+  "short_name": "Browji",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "contextMenus"
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "32": "icon-32.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png",
+    "256": "icon-256.png"
+  },
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png",
+      "256": "icon-256.png"
+    }
+  },
+  "options_ui": {
+    "page": "html/options.html",
+    "chrome_style": true,
+    "open_in_tab": false
   },
   "background": {
-    "scripts": ["background.js"]
+    "persistent": false,
+    "scripts": [
+      "js/jquery-3.2.1.min.js",
+      "js/q.js",
+      "js/LargeLocalStorage.min.js",
+      "js/sql.js",
+      "js/lru.js",
+      "js/background.js"
+    ]
   },
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "css": [
-        "material.min.css"
-      ],
       "js": [
-        "jquery-3.1.1.min.js",
-        "textarea-caret-position.js",
-        "material.min.js",
-        "utils.js",
-        "content.js"
+        "js/jquery-3.2.1.min.js",
+        "js/jquery.caret.min.js",
+        "js/utils.js",
+        "js/editable.js",
+        "js/content.js"
       ],
-      "run_at": "document_end"
+      "run_at": "document_start",
+      "all_frames": false
     }
   ],
   "commands": {
-    "emoji-auto-complete": {
+    "browji": {
       "suggested_key": {
-        "default": "Ctrl+Space"
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
       },
       "description": "Search for Emojis"
     }
   },
   "web_accessible_resources": [
-    "popup.html"
-  ]
+    "database/*",
+    "html/*",
+    "template/*"
+  ],
+  "content_security_policy":
+    "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

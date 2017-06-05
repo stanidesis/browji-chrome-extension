@@ -1,0 +1,40 @@
+/* Fonts */
+@include font-face(SnoogleLT, "/static/fonts/SnoogleLT/SnoogleLT");
+
+/* Colors */
+$color-brandMain: #ffcc00;
+
+.logo {
+  display: flex;
+  align-items: center;
+  float: left;
+}
+
+/* Override logo location and width */
+.logo a {
+  background: url(/static/images/browji-logo.png) no-repeat 0 0;
+  width: 3.4rem;
+  height: 3.4rem;
+  background-size: 3.4rem;
+}
+
+.logo-text {
+  font-family: SnoogleLT, sans-serif;
+  font-size: 3.7rem;
+  margin-left: 1.2rem;
+  color: $color-brandMain;
+}
+
+header {
+  @extend .bg-black-blue;
+  z-index: 2147483646;
+  position: fixed;
+  border-bottom: .2rem solid $color-brandMain;
+}
+
+/* Give room for content beneath the header to fit */
+main {
+  @media screen and (max-width: 767px) {
+    margin-top: 8.5rem;
+  }
+}

@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  !function(a){var b=function(b,c){"use strict";var d=a.document.getElementsByTagName("script")[0],e=a.document.createElement("script");return e.src=b,e.async=!0,d.parentNode.insertBefore(e,d),c&&"function"==typeof c&&(e.onload=c),e};"undefined"!=typeof module?module.exports=b:a.loadJS=b}("undefined"!=typeof global?global:this);
+  // SVG Icon Handling from WebSlides
+  loadJS('/static/js/svg-icons.js')
+  // jQuery...duh
+  loadJS('/static/js/jquery-3.1.1.min.js', function () {
+    // Cycling images if necessary
+    loadJS('/static/js/jquery.cycle2.min.js')
+    // Remove loading screen when ready
+    loadJS('/static/js/jquery.splash.screen.js')
+    // loadJS('/static/js/webslides.js', function() {
+    //   jQuery('#webslides').webslides()
+    // })
+  })
+  // Google Analytics
+  loadJS('https://www.google-analytics.com/analytics.js')
+  // Autotrack.js https://github.com/googleanalytics/autotrack
+  loadJS('/static/js/autotrack.js', function () {
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date
+    ga('create', 'UA-37480432-8', 'auto')
+
+    // Plugins
+    ga('require', 'cleanUrlTracker')
+    ga('require', 'eventTracker')
+    ga('require', 'impressionTracker')
+    ga('require', 'maxScrollTracker')
+    ga('require', 'outboundLinkTracker')
+
+    ga('send', 'pageview')
+  })
+</script>

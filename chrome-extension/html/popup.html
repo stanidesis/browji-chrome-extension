@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/material.min.css">
+    <link id="eac-link-style" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style id="eac-style">
+    .eac-clipboard-mode {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: rgba(0,0,0,0.6);
+    }
+    .eac-clipboard-header {
+      width: 320px;
+      height: auto;
+      margin-top: 16px;
+      position: relative;
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+    .eac-clipboard-title {
+      color: white;
+      margin: 0 4px;
+      font-size: 14px;
+      text-shadow: 0px 0px 2px #000000;
+    }
+    .eac-popup {
+      display: none;
+      width: 320px;
+      height: 220px;
+      position: relative;
+      background: #fafafa;
+      overflow: hidden;
+    }
+    .eac-popup form {
+      display: inline-block;
+    }
+    .eac-popup .mdl-textfield {
+      margin-left: 16px;
+      margin-right: 16px;
+      width: 240px;
+    }
+    .eac-tip-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 2147483648;
+    }
+    .eac-tip {
+      font-size: 16px;
+      color: rgba(0,0,0,.27);
+      margin: 0 auto;
+    }
+    .eac-results {
+      position: relative;
+      height: 172px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .eac-results--item {
+      text-align: center;
+      padding: 2px;
+      -webkit-transition: all .2s; /* Safari */
+      transition: all .2s;
+      transition-timing-function: ease-in-out;
+    }
+    .eac-results--item--span {
+      font-size: 22px;
+    }
+    .eac-results--item:hover,
+    .eac-active {
+      text-shadow: rgba(0,0,0,.3) 0em 0em 0.2em;
+      cursor: pointer;
+      -webkit-transform: scale(1.3, 1.3); /* Safari */
+      transform: scale(1.3, 1.3);
+    }
+    .eac-key-hint {
+      text-align: right;
+      font-size: 12px;
+      -webkit-transition: opacity .2s; /* Safari */
+      transition: opacity .2s;
+      transition-timing-function: ease-in-out;
+    }
+    #settings_icon {
+      display: inline-block;
+    }
+    </style>
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-3.0.0.js"></script>
+    <script type="text/javascript" src="../js/jquery.nearest.min.js"></script>
+    <script type="text/javascript" src="../js/material.min.js"></script>
+    <script type="text/javascript" src="../js/popup.js"></script>
+  </head>
+  <body>
+    <div class="eac-popup mdl-shadow--4dp" id="eac-popup">
+      <div class="mdl-layout mdl-js-layout">
+        <div>
+          <form action="#" autocomplete="off">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="eac-search" autocomplete="off">
+              <label class="mdl-textfield__label" for="eac-search">Search emojis</label>
+            </div>
+          </form>
+          <button id="settings_icon" class="mdl-button mdl-js-button mdl-button--icon mdl-button--colored">
+            <i class="material-icons">settings</i>
+          </button>
+        </div>
+        <div class="eac-results">
+          <div class="mdl-grid" style="display: none">
+            <!-- Empty by default -->
+          </div>
+          <div id="eac-no-results" class="eac-tip-container">
+            <span></span>
+            <span class="eac-tip">No results? Try 'cool'... 😎</span>
+            <span></span>
+          </div>
+          <div id="eac-no-recents" class="eac-tip-container">
+            <span></span>
+            <span class="eac-tip">No recent emojis ☝😮</span>
+            <span></span>
+          </div>
+        </div>
+        <div id="eac-toast-container" class="mdl-js-snackbar mdl-snackbar">
+          <div class="mdl-snackbar__text"></div>
+          <button type="button" class="mdl-snackbar__action"></button>
+        </div>
+      </div>
+    </div>
+    <div class="eac-clipboard-header">
+      📋<span class="eac-clipboard-title">clipboard <span id="tt1" style="cursor: help;border-bottom: 1px double white">mode</span></span>📋
+        <div class="mdl-tooltip" for="tt1">
+          No text input detected!<br>We'll copy your emoji to the clipboard 😉👍
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browji Settings</title>
+  <link rel="stylesheet" href="../css/material.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <!-- Uses a header that contracts as the page scrolls down. -->
+  <style>
+    html {
+      min-width: 600px;
+      min-height: 400px;
+    }
+    .demo-layout-waterfall .mdl-layout__header-row  {
+      padding-right: 0;
+    }
+    .demo-list-three {
+      width: 100%;
+    }
+    .made-with-love {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      display: flex;
+      padding: 10px 0;
+    }
+    .made-with-love > div {
+      margin: 0 auto;
+      display: flex;
+    }
+    .made-with-love p, .made-with-love a {
+      margin: 0;
+      margin-right: 10px;
+      color: rgba(0,0,0,.87);
+    }
+    .made-with-love a {
+      color: rgb(68,138,255);
+    }
+  </style>
+
+  <!-- Always shows a header, even in smaller screens. -->
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <div aria-expanded="false" tabindex="0" class="mdl-layout__drawer-button" style="cursor:default;"><i class="material-icons">settings</i></div>
+        <!-- Title -->
+        <span class="mdl-layout-title">Settings</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <!-- Three Line List with secondary info and action -->
+        <ul class="demo-list-three mdl-list">
+          <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-icon">keyboard</i>
+              <span>Keyboard Shortcut</span>
+              <span class="mdl-list__item-text-body">
+                Click to customize the keyboard shortcut that launches Browji.
+              </span>
+            </span>
+            <span class="mdl-list__item-secondary-content">
+              <button id="button-keyboard-shortcuts" class="mdl-button mdl-js-button mdl-js-ripple-effect">Change</button>
+            </span>
+          </li>
+          <li class="mdl-list__item mdl-list__item--three-line">
+            <span class="mdl-list__item-primary-content">
+              <i class="material-icons mdl-list__item-icon">feedback</i>
+              <span>Feeling 😍, 👿, or ☝🤓?</span>
+              <span class="mdl-list__item-text-body">
+                Help improve the extension for everyone by providing feedback.
+              </span>
+            </span>
+            <span class="mdl-list__item-secondary-content">
+              <button id="button-submit-feedback" class="mdl-button mdl-js-button mdl-js-ripple-effect">Submit</button>
+            </span>
+          </li>
+        </ul>
+        <div class="made-with-love">
+          <div>
+            <p>Made with 💙 by Stanley Idesis</p>
+            <a target="_blank" href="mailto:contact@stanleyidesis.com"><span class="material-icons">email</span></a>
+            <a href="https://github.com/stanidesis"><span class="material-icons">code</span></a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../js/jquery-3.2.1.min.js"></script>
+  <script src="../js/material.min.js"></script>
+  <script src="../js/options.js"></script>
+</body>
+</html>
