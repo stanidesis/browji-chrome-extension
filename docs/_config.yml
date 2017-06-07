@@ -21,6 +21,7 @@ twitter:
   username: stanleyidesis
 github_username:  stanidesis
 permalink: /:slug
+webstore-url: https://chrome.google.com/webstore/detail/browji-find-copy-and-past/mifjkgpdjmpdkcdehnofdglmigaldenh
 
 # Build settings
 markdown: kramdown

@@ -1,6 +1,6 @@
 ---
-title: Copy and Paste Emojis into Chrome
-description: Tired of finding, copying, then pasting an emoji from one site to the next? Use Browji to look up emojis as you type in Chrome 🔎😃.
+title: Use Emojis on the Web — Fast | Browji
+description: Tired of finding, copying, then pasting an emoji from one site to the next? Use Browji to find emojis as you type in Chrome 🔎😃.
 image: /static/images/browji-logo.png
 seo:
   type: Product
