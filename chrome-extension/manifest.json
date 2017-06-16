@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Browji: Find, Copy, and Paste Emojis",
   "short_name": "Browji",
-  "version": "1.0",
+  "version": "1.0.2",
   "permissions": [
     "storage",
     "unlimitedStorage",
